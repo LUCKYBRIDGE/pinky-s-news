@@ -211,8 +211,8 @@
             </div>
             <p class="text-xs leading-relaxed mb-4 text-slate-500">
                 이 웹사이트는 미디어 리터러시 교육을 목적으로 제작된 어린이 뉴스 플랫폼입니다.<br>
-                평소 기사 목록에는 <strong>공공누리 제1유형(출처표시)</strong> 조건에 따라 제공된 실제 국가 정책 뉴스(출처: 정책브리핑)를 바탕으로 한 진짜 뉴스만 표시됩니다. 가짜 뉴스는 별도 활동 코너에서만 제공합니다.<br>
-                공공누리 제1유형에 해당하는 기사만 본문을 교육용으로 각색해 제공하며, 그 외 기사·자료는 제목과 최소 정보만 표시하고 원문 사이트로 이동하도록 안내합니다.
+                평소 기사 목록에는 <strong>공공누리 제1유형, CC BY, CC0</strong>처럼 본문 재구성이 허용되는 공개 라이선스 자료를 바탕으로 한 진짜 뉴스만 표시됩니다. 가짜 뉴스는 별도 활동 코너에서만 제공합니다.<br>
+                본문 재구성이 허용되는 원문은 출처와 라이선스 조건을 표시해 교육용으로 각색하며, 변경금지·권리 확인이 어려운 기사·자료는 제목과 최소 정보만 표시하고 원문 사이트로 이동하도록 안내합니다.
             </p>
             <p class="text-xs leading-relaxed mb-4 text-slate-500">
                 트루핑키스 뉴스는 교육용 서비스이며, 저작권자 또는 권리자의 정당한 삭제 요청이 있을 경우 관련 게시글은 검토 후 삭제될 수 있습니다.
@@ -226,13 +226,13 @@
         let currentFontSize = 17.6; // 1.1rem eq
         let activeNewsMode = 'home';
         const EDUCATIONAL_SERVICE_NOTICE = '트루핑키스 뉴스는 미디어 리터러시 교육용 서비스입니다. 저작권자 또는 권리자의 정당한 삭제 요청이 있을 경우 관련 게시글은 검토 후 삭제될 수 있습니다.';
-        const CONTENT_SOURCE_NOTICE = '현재 본문 형태로 제공하는 실제 뉴스는 공공누리 제1유형(출처표시) 기사만 사용합니다. 공공누리 제1유형이 아닌 기사·자료는 제목과 최소 정보만 표시하고 원문 사이트로 이동하도록 안내합니다.';
+        const CONTENT_SOURCE_NOTICE = '현재 본문 형태로 제공하는 실제 뉴스는 공공누리 제1유형, CC BY, CC0처럼 출처 표시와 재구성이 가능한 공개 라이선스 자료만 사용합니다. 변경금지 또는 권리 확인이 어려운 기사·자료는 제목과 최소 정보만 표시하고 원문 사이트로 이동하도록 안내합니다.';
         const NEWS_MODES = {
             home: {
                 label: '일반 뉴스',
                 title: '주요 뉴스',
-                description: '정책브리핑 공공저작물을 바탕으로 한 진짜 뉴스',
-                sidebar: '평소 홈페이지에는 진짜 정책 뉴스만 표시됩니다. 아래 가짜 뉴스 판별에서는 여러 기사를 읽고 직접 진짜인지 가짜인지 판단할 수 있습니다.'
+                description: '공개 라이선스 원문을 바탕으로 한 진짜 뉴스',
+                sidebar: '평소 홈페이지에는 공개 라이선스 원문을 확인한 진짜 뉴스만 표시됩니다. 아래 가짜 뉴스 판별에서는 여러 기사를 읽고 직접 진짜인지 가짜인지 판단할 수 있습니다.'
             },
             mission: {
                 label: '가짜 뉴스 판별',
@@ -390,6 +390,7 @@
             const originalMeta = escapeHtml(renderAuthorMeta(news.author));
             const isRealArticle = news?.type === 'real';
             const hideSourceContext = activeNewsMode === 'mission';
+            const sourceLicenseLabel = escapeHtml(describeRealSourceLicense(news));
 
             return `
                 <div class="mb-10 rounded-2xl border border-amber-200 bg-amber-50 px-5 py-4 text-[14px] text-amber-900 leading-relaxed font-medium">
@@ -402,7 +403,7 @@
                                 기사처럼 보이는 형식, 주장, 근거 제시 방식을 함께 살펴보며 스스로 확인할 부분을 찾아보세요.
                             </p>` : isRealArticle ? `<p>
                                 원문 작성자/제공기관: <strong>${originalCredit}</strong>${originalMeta ? ` (${originalMeta})` : ''}.
-                                이 글은 공공누리 제1유형 원문을 바탕으로 AI의 도움을 받아 어린이가 읽기 쉽도록 설명을 덧붙여 재구성했습니다.
+                                이 글은 ${sourceLicenseLabel}을 바탕으로 AI의 도움을 받아 어린이가 읽기 쉽도록 설명을 덧붙여 재구성했습니다.
                                 쉬운 표현과 문단 구성을 위해 원문과 표현·순서에 약간의 차이가 있을 수 있으며, 정확한 원문은 원문 링크에서 확인할 수 있습니다.
                             </p>` : `<p>
                                 이 글은 미디어 리터러시 활동에서 어린이가 읽고 판단할 수 있도록 문장과 문단 구조를 어린이 독자에게 맞춰 정리했습니다.
@@ -423,6 +424,15 @@
                     어린이용 재구성
                 </span>
             `;
+        }
+
+        function describeRealSourceLicense(news) {
+            const note = news?.sourceNote || '';
+            if (/CC0|Creative Commons Zero/.test(note)) return 'CC0 공개 원문';
+            if (/CC BY/.test(note)) return 'CC BY 공개 원문';
+            if (/공공누리 제\s*0유형|공공누리 제0유형/.test(note)) return '공공누리 제0유형 원문';
+            if (/공공누리 제\s*1유형|공공누리 제1유형/.test(note)) return '공공누리 제1유형 원문';
+            return '출처와 재구성 가능 조건을 확인한 공개 원문';
         }
 
         function renderOriginalSourceLink(news, variant = 'compact') {
@@ -1157,7 +1167,7 @@
                             <h4 class="text-[22px] font-black text-emerald-800 tracking-tight">정답입니다! 훌륭한 비판적 사고입니다.</h4>
                         </div>
                         <p class="text-slate-700 text-[16px] leading-relaxed mb-6 font-medium">
-                            이 기사는 <strong>${isActualReal ? '공공누리 제1유형의 진짜 정책 뉴스' : '미디어 교육을 위해 만들어진 가짜 뉴스'}</strong>가 맞습니다. <br>
+                            이 기사는 <strong>${isActualReal ? '출처와 공개 라이선스를 확인한 진짜 뉴스' : '미디어 교육을 위해 만들어진 가짜 뉴스'}</strong>가 맞습니다. <br>
                             작성해주신 단서 <span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded italic">"${safeReason}"</span> 가 아주 날카롭습니다!
                         </p>
                         <div class="bg-white p-5 rounded-xl border border-emerald-200 text-[14px] text-slate-600 shadow-sm leading-relaxed">
@@ -1176,7 +1186,7 @@
                             <h4 class="text-[22px] font-black text-red-800 tracking-tight">아쉽게도 틀렸습니다. 판별 근거를 다시 확인해 보세요.</h4>
                         </div>
                         <p class="text-slate-700 text-[16px] leading-relaxed mb-6 font-medium">
-                            이 기사는 사실 <strong>${isActualReal ? '공공누리 제1유형의 진짜 정책 뉴스' : '미디어 교육을 위해 만들어진 가짜 뉴스'}</strong>입니다.<br>
+                            이 기사는 사실 <strong>${isActualReal ? '출처와 공개 라이선스를 확인한 진짜 뉴스' : '미디어 교육을 위해 만들어진 가짜 뉴스'}</strong>입니다.<br>
                             적어주신 내용 <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded italic">"${safeReason}"</span> 을 바탕으로 본문을 다시 한번 확인해 보세요.
                         </p>
                         <div class="bg-white p-5 rounded-xl border border-red-200 text-[14px] text-slate-600 shadow-sm leading-relaxed">
@@ -1230,7 +1240,7 @@
 
                         <section>
                             <h3 class="text-[17px] font-black text-slate-800 mb-2">제4조 (콘텐츠 출처 및 삭제 요청 안내)</h3>
-                            <p>본 사이트의 일반 기사 목록은 <strong>공공누리 제1유형(출처표시)</strong> 조건의 공공저작물을 바탕으로 한 진짜 뉴스 중심으로 운영됩니다. 미디어 리터러시 활동 코너에서는 교육을 위해 허구로 창작된 가짜 뉴스도 별도로 제공합니다.</p>
+                            <p>본 사이트의 일반 기사 목록은 <strong>공공누리 제1유형, CC BY, CC0</strong>처럼 본문 재구성이 허용되는 공개 라이선스 자료를 바탕으로 한 진짜 뉴스 중심으로 운영됩니다. 미디어 리터러시 활동 코너에서는 교육을 위해 허구로 창작된 가짜 뉴스도 별도로 제공합니다.</p>
                             <p class="mt-2">${CONTENT_SOURCE_NOTICE}</p>
                             <p class="mt-2">${EDUCATIONAL_SERVICE_NOTICE}</p>
                             <p class="mt-2">기사 하단의 댓글과 반응 수는 기사의 진짜/가짜 여부와 별개로 모두 가상 예시입니다.</p>
