@@ -24,6 +24,7 @@ const questionKeywords = [
 
 const issues = [];
 const evidenceInfoFields = ['sourceDetail', 'sampleOrScope', 'timeRange', 'caution'];
+const embeddedAuditKeys = new Set();
 const embeddedEvidenceFields = [
   'title',
   'auditKey',
@@ -152,6 +153,12 @@ topics.forEach((topic, index) => {
                 issues.push(`${resourceLabel}: embeddedEvidence.${field} must be a non-empty string`);
               }
             });
+            if (resource.embeddedEvidence.auditKey) {
+              if (embeddedAuditKeys.has(resource.embeddedEvidence.auditKey)) {
+                issues.push(`${resourceLabel}: embeddedEvidence.auditKey duplicates another embeddedEvidence`);
+              }
+              embeddedAuditKeys.add(resource.embeddedEvidence.auditKey);
+            }
             const columns = resource.embeddedEvidence.columns;
             const rows = resource.embeddedEvidence.rows;
             if (!Array.isArray(columns) || columns.length < 2 || columns.some(column => typeof column !== 'string' || !column.trim())) {

@@ -35,6 +35,7 @@ python -m http.server 8000
 - 근거로 직접 쓰기 쉬운 통계·조사·연구 자료는 `evidenceInfo`로 출처, 조사대상·범위, 시점, 주의점을 분리해 표시합니다.
 - 재사용 조건이 명확한 원자료 CSV/API는 `embeddedEvidence`로 작은 표를 재생산할 수 있으며, 원자료 링크, 라이선스, 단위, 발췌 기준, 반올림·단위 변환 기준을 함께 적습니다. 두 개 이상의 원자료를 조합한 표는 `sourceUrls`에 각 원자료 링크를 남깁니다.
 - 재생산 표는 `auditKey`, `verificationNote`, `copyrightBasis`를 함께 두고, 원자료와 대조할 수 없거나 저작권 조건이 불명확하면 표를 만들지 않고 외부 링크만 남깁니다.
+- 사이트 안에서 직접 보여주는 데이터·표·그래프는 `scripts/audit-embedded-evidence.mjs`에 항목별 감사 케이스를 추가해 제목, 단위, 열, 원자료 링크, 표시값을 원자료와 하나씩 대조합니다.
 - 번역·어린이용 재구성이 가능한 핵심 자료는 원문 링크만 두지 말고 `news-*.json` 내부 읽기 글로 만들어 토의 주제의 `internal` 근거자료에 연결합니다.
 - 자세한 기준은 `docs/discussion-topic-guidelines.md`를 따릅니다.
 
