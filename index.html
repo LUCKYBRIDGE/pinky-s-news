@@ -765,6 +765,19 @@
             return (topic.resources || []).filter(resource => resource.type === 'external').length;
         }
 
+        function renderDiscussionTypeBadge(topic) {
+            const type = topic.discussionType || '토의 주제';
+            const isDesign = type.includes('설계');
+            const classes = isDesign
+                ? 'bg-violet-50 text-violet-700 border-violet-100'
+                : 'bg-rose-50 text-rose-700 border-rose-100';
+            const icon = isDesign ? 'fa-screwdriver-wrench' : 'fa-scale-balanced';
+            return `<span class="inline-flex items-center gap-1 rounded-full px-3 py-1 text-[12px] font-black border ${classes}">
+                <i class="fa-solid ${icon}"></i>
+                ${escapeHtml(type)}
+            </span>`;
+        }
+
         function renderDiscussionHome() {
             const mainContainer = document.getElementById('app-main');
             mainContainer.innerHTML = `
@@ -801,11 +814,27 @@
                     </div>
                 </section>
 
+                <section class="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                        <span class="text-[12px] font-black text-slate-400">큰 주제</span>
+                        <p class="mt-2 text-[15px] font-black text-slate-800 leading-relaxed">어떤 분야와 문제를 다루는지 알려주는 넓은 주제입니다.</p>
+                    </div>
+                    <div class="rounded-2xl border border-sky-100 bg-sky-50 p-5 shadow-sm">
+                        <span class="text-[12px] font-black text-sky-600">토의 질문</span>
+                        <p class="mt-2 text-[15px] font-black text-sky-950 leading-relaxed">이 질문에 답하기 위해 의견과 근거를 모읍니다.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                        <span class="text-[12px] font-black text-slate-400">생각해 볼 관점</span>
+                        <p class="mt-2 text-[15px] font-black text-slate-800 leading-relaxed">입장, 기준, 조건, 책임을 따져 보는 보조 질문입니다.</p>
+                    </div>
+                </section>
+
                 <section class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     ${discussionTopics.map(topic => `
                         <a href="#discussion-topic-${escapeHtml(topic.id)}" class="group block rounded-2xl border border-slate-200 bg-white p-6 shadow-sm card-hover">
                             <div class="flex flex-wrap items-center gap-2 mb-4">
                                 <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-[12px] font-black text-slate-700">${escapeHtml(topic.category)}</span>
+                                ${renderDiscussionTypeBadge(topic)}
                                 <span class="inline-flex items-center gap-1 rounded-full bg-sky-50 px-3 py-1 text-[12px] font-black text-sky-700 border border-sky-100">
                                     <i class="fa-regular fa-file-lines"></i>
                                     근거 ${getDiscussionResourceCount(topic)}개
@@ -817,8 +846,12 @@
                                     원문 ${getDiscussionExternalCount(topic)}개
                                 </span>
                             </div>
+                            <span class="text-[12px] font-black text-slate-400">큰 주제</span>
                             <h3 class="text-[22px] font-black text-slate-900 leading-snug tracking-tight group-hover:text-sky-700">${escapeHtml(topic.title)}</h3>
-                            <p class="mt-3 text-[15px] text-slate-800 leading-relaxed font-black">${escapeHtml(topic.essentialQuestion || '')}</p>
+                            <div class="mt-4 rounded-2xl bg-sky-50 border border-sky-100 px-4 py-3">
+                                <span class="text-[12px] font-black text-sky-600">토의 질문</span>
+                                <p class="mt-1 text-[15px] text-sky-950 leading-relaxed font-black">${escapeHtml(topic.essentialQuestion || '')}</p>
+                            </div>
                             ${topic.debateReason ? `<p class="mt-3 rounded-xl bg-slate-50 border border-slate-100 px-3 py-2 text-[12px] text-slate-500 leading-relaxed font-bold">실제 쟁점: ${escapeHtml(topic.debateReason)}</p>` : ''}
                             <p class="mt-3 text-[14px] text-slate-600 leading-relaxed font-medium">${escapeHtml(topic.summary)}</p>
                             <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4 text-[13px] font-black text-sky-700">
@@ -893,12 +926,18 @@
                         </button>
                         <div class="flex flex-wrap items-center gap-2 mb-4">
                             <span class="inline-flex items-center rounded-full bg-sky-50 px-3 py-1 text-[12px] font-black text-sky-700 border border-sky-100">${escapeHtml(topic.category)}</span>
+                            ${renderDiscussionTypeBadge(topic)}
                             <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-[12px] font-black text-slate-600">근거 ${resources.length}개</span>
                             <span class="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-[12px] font-black text-emerald-700 border border-emerald-100">재구성 ${getDiscussionInternalCount(topic)}개</span>
                             <span class="inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-[12px] font-black text-amber-700 border border-amber-100">원문 ${getDiscussionExternalCount(topic)}개</span>
                         </div>
+                        <span class="text-[12px] font-black text-slate-400">큰 주제</span>
                         <h2 class="text-[30px] sm:text-[40px] font-black text-slate-900 tracking-tight leading-tight">${escapeHtml(topic.title)}</h2>
-                        <p class="mt-4 text-[18px] text-slate-600 leading-relaxed font-bold">${escapeHtml(topic.essentialQuestion || topic.summary)}</p>
+                        ${topic.discussionTypeDescription ? `<p class="mt-3 text-[14px] text-slate-500 leading-relaxed font-bold">${escapeHtml(topic.discussionTypeDescription)}</p>` : ''}
+                        <div class="mt-5 rounded-2xl bg-sky-50 border border-sky-100 px-5 py-4">
+                            <span class="text-[12px] font-black text-sky-600">토의 질문</span>
+                            <p class="mt-2 text-[19px] text-sky-950 leading-relaxed font-black">${escapeHtml(topic.essentialQuestion || topic.summary)}</p>
+                        </div>
                         ${topic.debateReason ? `<p class="mt-4 rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 text-[14px] text-slate-600 leading-relaxed font-bold">왜 실제 쟁점인가: ${escapeHtml(topic.debateReason)}</p>` : ''}
                         <p class="mt-4 text-[14px] text-slate-500 leading-relaxed font-medium">${escapeHtml(topic.summary)}</p>
                     </section>
@@ -909,6 +948,7 @@
                                 <i class="fa-solid fa-scale-balanced mr-2 text-sky-600"></i>
                                 생각해 볼 관점
                             </h3>
+                            <p class="mb-4 text-[13px] text-slate-500 leading-relaxed font-bold">토의 질문에 답하기 전, 근거를 고르고 기준·조건·책임을 따져 보는 보조 질문입니다.</p>
                             <ul class="space-y-3">
                                 ${frames.map(frame => `
                                     <li class="rounded-xl bg-slate-50 border border-slate-100 p-4 text-[14px] text-slate-700 leading-relaxed font-bold">${escapeHtml(frame)}</li>
