@@ -31,7 +31,8 @@ python -m http.server 8000
 - 사회적으로 필요성이 큰 주제는 `어떻게 할까`를 묻는 `해결 설계형 토의`로 둡니다.
 - 토의 질문은 선택, 기준, 조건, 책임 중 하나 이상을 포함합니다.
 - 하나의 큰 주제에는 여러 `discussionQuestions`를 둘 수 있고, 첫 번째 질문은 대표 질문인 `essentialQuestion`과 같게 둡니다.
-- 통계·조사·연구·논문 링크는 `resourceKind`, `readingFocus`, `relatedQuestions`로 자료 성격과 읽을 초점을 함께 표시합니다.
+- 모든 근거자료는 `readingFocus`, `relatedQuestions`로 읽을 초점과 연결되는 토의 질문을 표시합니다.
+- 통계·조사·연구·논문 링크는 `resourceKind`로 자료 성격도 함께 표시합니다.
 - 근거로 직접 쓰기 쉬운 통계·조사·연구 자료는 `evidenceInfo`로 출처, 조사대상·범위, 시점, 주의점을 분리해 표시합니다.
 - 재사용 조건이 명확한 원자료 CSV/API는 `embeddedEvidence`로 작은 표를 재생산할 수 있으며, 원자료 링크, 라이선스, 단위, 발췌 기준, 반올림·단위 변환 기준을 함께 적습니다. 두 개 이상의 원자료를 조합한 표는 `sourceUrls`에 각 원자료 링크를 남깁니다.
 - 재생산 표는 `auditKey`, `verificationNote`, `copyrightBasis`를 함께 두고, 원자료와 대조할 수 없거나 저작권 조건이 불명확하면 표를 만들지 않고 외부 링크만 남깁니다.

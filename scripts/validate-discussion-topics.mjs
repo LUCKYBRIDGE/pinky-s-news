@@ -104,6 +104,19 @@ topics.forEach((topic, index) => {
     topic.resources.forEach((resource, resourceIndex) => {
       const resourceLabel = `${label}.resources[${resourceIndex}]`;
 
+      if (!resource.readingFocus || typeof resource.readingFocus !== 'string') {
+        issues.push(`${resourceLabel}: missing string field "readingFocus"`);
+      }
+      if (!Array.isArray(resource.relatedQuestions) || resource.relatedQuestions.length === 0) {
+        issues.push(`${resourceLabel}: relatedQuestions must be a non-empty array`);
+      } else {
+        resource.relatedQuestions.forEach((questionNumber, relatedIndex) => {
+          if (!Number.isInteger(questionNumber) || questionNumber < 1 || questionNumber > discussionQuestionCount) {
+            issues.push(`${resourceLabel}: relatedQuestions[${relatedIndex}] must reference an existing discussion question`);
+          }
+        });
+      }
+
       if (resource.type === 'internal') {
         if (!articleIds.has(resource.articleId)) {
           issues.push(`${resourceLabel}: missing internal article ${resource.articleId}`);
@@ -122,17 +135,6 @@ topics.forEach((topic, index) => {
             issues.push(`${resourceLabel}: optional field "${field}" must be a string`);
           }
         });
-        if (resource.relatedQuestions !== undefined) {
-          if (!Array.isArray(resource.relatedQuestions)) {
-            issues.push(`${resourceLabel}: relatedQuestions must be an array when present`);
-          } else {
-            resource.relatedQuestions.forEach((questionNumber, relatedIndex) => {
-              if (!Number.isInteger(questionNumber) || questionNumber < 1 || questionNumber > discussionQuestionCount) {
-                issues.push(`${resourceLabel}: relatedQuestions[${relatedIndex}] must reference an existing discussion question`);
-              }
-            });
-          }
-        }
         if (resource.evidenceInfo !== undefined) {
           if (!isObject(resource.evidenceInfo)) {
             issues.push(`${resourceLabel}: evidenceInfo must be an object when present`);

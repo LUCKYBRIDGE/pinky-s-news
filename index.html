@@ -986,6 +986,7 @@
                         </div>
                         <h4 class="text-[16px] font-black text-slate-900 leading-snug group-hover:text-sky-700">${escapeHtml(article.title)}</h4>
                         <p class="mt-2 text-[13px] text-slate-600 leading-relaxed font-medium">${escapeHtml(resource.stance || article.subtitle || '')}</p>
+                        ${renderDiscussionResourceMeta(resource)}
                     </div>
                 </a>
             `;

@@ -2,8 +2,8 @@
   {
     "id": "plastic-responsibility",
     "category": "환경과 생활",
-    "discussionType": "찬반 토론형",
-    "discussionTypeDescription": "서로 다른 입장을 비교해 더 설득력 있는 쪽을 정하는 주제입니다.",
+    "discussionType": "해결 설계형 토의",
+    "discussionTypeDescription": "플라스틱 감축의 필요성을 인정한 뒤 개인·정부·기업의 책임 기준과 실행 조건을 설계하는 주제입니다.",
     "title": "플라스틱 오염과 책임 나누기",
     "summary": "분리배출, 다회용기, 폐기물 수거 체계, 제품 설계 책임을 비교하며 누가 무엇을 먼저 맡아야 할지 토론합니다.",
     "essentialQuestion": "플라스틱 오염을 줄일 때 개인 실천, 정부 규칙, 기업 책임 중 무엇을 먼저 강하게 추진해야 하며, 판단 기준은 무엇이어야 할까요?",
@@ -12,7 +12,7 @@
       "학교와 가게에서 일회용품을 줄일 때 금지, 보증금, 재사용 지원 중 어떤 방법을 어떤 조건에서 먼저 써야 할까요?",
       "재활용이 어려운 제품이 많을 때 기업은 포장 설계와 회수 비용을 어디까지 책임져야 할까요?"
     ],
-    "debateReason": "일회용품 금지, 재활용 책임, 기업 규제는 여러 나라에서 계속 논의되는 환경 정책 쟁점입니다.",
+    "debateReason": "일회용품 금지, 보증금, 재활용 책임, 기업 규제는 여러 나라에서 실제로 논의되는 환경 정책 쟁점입니다.",
     "discussionFrame": [
       "개인의 분리배출과 소비 습관 변화는 어떤 조건에서 가장 빠르게 효과를 낼까?",
       "정부 규제와 수거·처리 시설 확충은 비용과 시간이 들더라도 어느 문제를 더 크게 줄일까?",
@@ -26,21 +26,37 @@
         "articleId": "news-042",
         "perspective": "국제 데이터",
         "stance": "쓰레기가 환경으로 새어 나가지 않게 모으고 관리하는 체계가 중요하다는 근거",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "플라스틱이 어디에서 새어 나가는지 보고 개인 실천과 수거 체계의 차이를 구분하기"
       },
       {
         "type": "internal",
         "articleId": "news-041",
         "perspective": "정부 정책",
         "stance": "다회용기, 분리배출, 폐자원 회수처럼 제도와 산업 구조를 바꾸려는 근거",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "순환경제 정책이 개인 실천, 정부 규칙, 기업 책임을 어떻게 연결하는지 확인하기"
       },
       {
         "type": "internal",
         "articleId": "news-052",
         "perspective": "일회용품 규제",
         "stance": "플라스틱 감축 정책은 금지, 예외, 재사용 기준, 책임 분담을 함께 정해야 한다는 관점",
-        "usage": "OGL 원문을 어린이용으로 재구성한 글"
+        "usage": "OGL 원문을 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          2,
+          3
+        ],
+        "readingFocus": "금지와 예외, 판매자·소비자·정부 책임이 어떻게 나뉘는지 살펴보기"
       },
       {
         "type": "external",
@@ -51,7 +67,12 @@
         "perspective": "원문 데이터",
         "stance": "플라스틱 오염을 줄이려면 기본 폐기물 관리 인프라가 중요하다는 원문 자료",
         "license": "CC BY",
-        "usage": "번역·어린이용 재구성 가능"
+        "usage": "번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "플라스틱 오염을 줄이는 데 개인 행동과 폐기물 관리 체계 중 무엇이 더 큰 조건인지 비교하기"
       },
       {
         "type": "external",
@@ -62,7 +83,13 @@
         "perspective": "정책 원문",
         "stance": "생활 속 실천과 산업 정책을 함께 다루는 정부 발표 원문",
         "license": "공공누리 확인 필요",
-        "usage": "공개 조건 확인 후 재구성 또는 링크 안내"
+        "usage": "공개 조건 확인 후 재구성 또는 링크 안내",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "정부 정책이 생활 실천과 산업 책임을 어떻게 함께 다루는지 보기"
       },
       {
         "type": "external",
@@ -73,7 +100,11 @@
         "perspective": "개인 실천",
         "stance": "플라스틱을 덜 만들고 재사용·재활용을 제대로 하는 개인과 학교의 실천 관점",
         "license": "미국 연방정부 공개 자료",
-        "usage": "제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 검토 가능"
+        "usage": "제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 검토 가능",
+        "relatedQuestions": [
+          1
+        ],
+        "readingFocus": "개인과 학교가 바로 할 수 있는 실천이 어느 범위까지 효과를 낼 수 있는지 확인하기"
       },
       {
         "type": "external",
@@ -84,7 +115,11 @@
         "perspective": "제품 설계·규제",
         "stance": "포장재를 처음 만들 때부터 재사용·회수·재활용이 가능하게 설계해야 한다는 정책 관점",
         "license": "CC BY 4.0 적용 가능 범위 확인",
-        "usage": "EU 저작권 고지 확인 후 번역·재구성 가능"
+        "usage": "EU 저작권 고지 확인 후 번역·재구성 가능",
+        "relatedQuestions": [
+          3
+        ],
+        "readingFocus": "포장 설계와 회수 책임을 기업에 요구하는 기준을 찾아보기"
       },
       {
         "type": "external",
@@ -95,7 +130,12 @@
         "perspective": "규제 정책",
         "stance": "일부 일회용 플라스틱은 개인 선택만으로 줄이기 어려워 판매·공급 규제가 필요하다는 관점",
         "license": "Open Government Licence v3.0",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          2,
+          3
+        ],
+        "readingFocus": "일회용품 금지에서 예외와 책임 기준이 어떻게 정해지는지 보기"
       },
       {
         "type": "external",
@@ -228,35 +268,60 @@
         "articleId": "news-045",
         "perspective": "세계 교육 데이터",
         "stance": "학교에 다닐 권리가 사회 조건과 연결되어 있다는 근거",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "학교 밖 어린이 문제가 개인 선택이 아니라 사회 조건과 어떻게 연결되는지 보기"
       },
       {
         "type": "internal",
         "articleId": "news-053",
         "perspective": "출석과 지원 기준",
         "stance": "결석 문제를 처벌만이 아니라 건강, 가정 형편, 지원 책임과 함께 봐야 한다는 관점",
-        "usage": "OGL 원문을 어린이용으로 재구성한 글"
+        "usage": "OGL 원문을 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "결석 문제를 처벌보다 지원 기준과 책임 분담으로 읽기"
       },
       {
         "type": "internal",
         "articleId": "news-016",
         "perspective": "경제적 지원",
         "stance": "가정 형편 때문에 배움이 줄어들지 않도록 교육비를 지원하는 근거",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          2,
+          3
+        ],
+        "readingFocus": "교육비 지원이 필요한 대상을 어떤 기준으로 정할 수 있는지 살펴보기"
       },
       {
         "type": "internal",
         "articleId": "news-013",
         "perspective": "돌봄과 방과후",
         "stance": "학교와 지역기관이 함께 초등학생 돌봄과 활동 기회를 넓히는 근거",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "방과후·돌봄 지원이 기본 지원인지 집중 지원인지 판단하기"
       },
       {
         "type": "internal",
         "articleId": "news-035",
         "perspective": "맞춤형 지원",
         "stance": "학습, 복지, 건강, 진로, 상담을 학생 중심으로 연결하는 근거",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "학생 맞춤 지원이 낙인 없이 작동하려면 어떤 연결이 필요한지 보기"
       },
       {
         "type": "external",
@@ -267,7 +332,12 @@
         "perspective": "원문 데이터",
         "stance": "세계 여러 지역의 학교 밖 어린이 규모를 비교할 수 있는 데이터 자료",
         "license": "CC BY",
-        "usage": "번역·어린이용 재구성 가능"
+        "usage": "번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "학교 밖 어린이 규모를 보며 지원 기준을 넓게 잡아야 하는 이유 찾기"
       },
       {
         "type": "external",
@@ -351,7 +421,12 @@
         "perspective": "교육 의무",
         "stance": "교육을 받을 권리와 보호자의 책임, 지역기관의 지원을 함께 볼 수 있는 관점",
         "license": "Open Government Licence v3.0",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "교육받을 권리와 보호자·학교·지역기관 책임을 함께 보기"
       },
       {
         "type": "external",
@@ -362,7 +437,12 @@
         "perspective": "가정·학교 협력",
         "stance": "결석을 벌로만 다루지 않고 학교와 가정이 소통해 지원해야 한다는 관점",
         "license": "Open Government Licence v3.0",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "결석 학생을 지원할 때 학교와 가정의 소통 조건을 찾아보기"
       },
       {
         "type": "external",
@@ -440,28 +520,48 @@
         "articleId": "news-046",
         "perspective": "탄소 데이터",
         "stance": "기후 문제를 감정이 아니라 배출량 데이터로 살펴보는 근거",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "총배출량과 1인당 배출량을 구분해 책임 기준을 세우기"
       },
       {
         "type": "internal",
         "articleId": "news-054",
         "perspective": "기후 과학 근거",
         "stance": "기온, 바다, 얼음, 해수면 자료처럼 여러 증거를 함께 읽어야 한다는 관점",
-        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글"
+        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "기후 과학 근거와 정책 속도 판단을 구분해 읽기"
       },
       {
         "type": "internal",
         "articleId": "news-022",
         "perspective": "교통 정책",
         "stance": "공공기관이 전기차·수소차 전환을 확대하는 정책 근거",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          2,
+          3
+        ],
+        "readingFocus": "교통 전환 비용을 누가 부담해야 하는지 정책 사례로 따져 보기"
       },
       {
         "type": "internal",
         "articleId": "news-041",
         "perspective": "자원 순환",
         "stance": "일회용품과 폐자원 문제를 줄이는 순환경제 관점",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          2,
+          3
+        ],
+        "readingFocus": "순환경제가 배출 감축과 생활 부담을 어떻게 함께 다루는지 보기"
       },
       {
         "type": "external",
@@ -472,7 +572,12 @@
         "perspective": "원문 데이터",
         "stance": "나라별 이산화탄소 배출량을 비교할 수 있는 공개 데이터",
         "license": "CC BY",
-        "usage": "번역·어린이용 재구성 가능"
+        "usage": "번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "나라별 총배출량을 비교하되 인구 규모와 1인당 기준의 차이를 함께 생각하기"
       },
       {
         "type": "external",
@@ -483,7 +588,11 @@
         "perspective": "과학 근거",
         "stance": "기후변화를 주장이나 느낌이 아니라 관측 자료와 과학 근거로 살펴보는 관점",
         "license": "NASA 공개 재사용 가능 자료",
-        "usage": "NASA 외 제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 가능"
+        "usage": "NASA 외 제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1
+        ],
+        "readingFocus": "정책 속도 논쟁 전에 과학적으로 확인된 근거와 의견을 구분하기"
       },
       {
         "type": "external",
@@ -494,7 +603,12 @@
         "perspective": "에너지 배출 데이터",
         "stance": "전기, 교통, 산업처럼 부문별 배출을 비교해 에너지 선택의 영향을 따져보는 관점",
         "license": "미국 연방정부 공공영역 자료",
-        "usage": "제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 가능"
+        "usage": "제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "전기·교통·산업 배출 자료가 비용 분담 논의와 어떻게 연결되는지 보기"
       },
       {
         "type": "external",
@@ -505,7 +619,12 @@
         "perspective": "기후 원인 설명",
         "stance": "화석연료, 농업, 산림 훼손 등 배출 원인을 넓게 살펴보는 관점",
         "license": "CC BY 4.0 적용 가능 범위 확인",
-        "usage": "EU 저작권 고지 확인 후 번역·재구성 가능"
+        "usage": "EU 저작권 고지 확인 후 번역·재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "배출 원인이 여러 부문에 나뉘어 있다는 점을 정책 우선순위와 연결하기"
       },
       {
         "type": "external",
@@ -516,7 +635,12 @@
         "perspective": "산업·교통 정책",
         "stance": "개인 절약만이 아니라 경제 전반의 배출 구조를 바꾸는 정책이 필요하다는 관점",
         "license": "Open Government Licence v3.0",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          2,
+          3
+        ],
+        "readingFocus": "경제 전환 정책이 비용 부담과 보완 조건을 어떻게 다루는지 살펴보기"
       },
       {
         "type": "external",
@@ -660,35 +784,61 @@
         "articleId": "news-012",
         "perspective": "학교폭력 예방",
         "stance": "디지털 공간의 갈등과 폭력 예방도 학교 생활 규칙과 연결된다는 근거",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "디지털 갈등과 학교폭력 예방을 학교 규칙과 연결해 보기"
       },
       {
         "type": "internal",
         "articleId": "news-015",
         "perspective": "마음건강",
         "stance": "학생 마음건강 지원은 온라인 생활과 학교 환경을 함께 살펴봐야 한다는 근거",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "마음건강 지원이 사용 제한만으로 해결되는지 따져 보기"
       },
       {
         "type": "internal",
         "articleId": "news-019",
         "perspective": "디지털 포용",
         "stance": "디지털 기기를 제한할 때도 기술을 쓰기 어려운 사람과 필요한 사람을 함께 고려해야 한다는 관점",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "제한 규칙 속에서도 접근성 예외가 필요한 경우를 찾기"
       },
       {
         "type": "internal",
         "articleId": "news-049",
         "perspective": "학교 휴대전화 규칙",
         "stance": "수업 집중, 안전 연락, 접근성 예외를 함께 고려해 학교 스마트폰 규칙을 설계해야 한다는 관점",
-        "usage": "OGL 원문을 어린이용으로 재구성한 글"
+        "usage": "OGL 원문을 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "휴대전화 제한, 예외, 책임 분담을 학교 규칙 사례로 비교하기"
       },
       {
         "type": "internal",
         "articleId": "news-055",
         "perspective": "청소년 마음건강",
         "stance": "소셜미디어의 이익과 위험을 함께 보고 학생, 가정, 학교, 플랫폼 책임을 나누어야 한다는 관점",
-        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글"
+        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "소셜미디어의 도움과 위험을 모두 보며 플랫폼 책임을 따져 보기"
       },
       {
         "type": "external",
@@ -699,7 +849,12 @@
         "perspective": "학교 규칙",
         "stance": "학교가 휴대전화 사용을 제한해 집중과 질서를 지키려는 정책 관점",
         "license": "Open Government Licence v3.0",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "휴대전화 제한 정책이 수업 집중과 예외 기준을 어떻게 정하는지 보기"
       },
       {
         "type": "external",
@@ -710,26 +865,34 @@
         "perspective": "기술 사용 기준",
         "stance": "기술은 학습에 분명히 도움이 될 때 쓰고, 방해가 되면 제한해야 한다는 국제 교육 관점",
         "license": "CC BY-SA 3.0 IGO 적용 범위 확인",
-        "usage": "보고서 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 검토 가능"
+        "usage": "보고서 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 검토 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "기술 사용이 학습에 도움이 되는 조건과 방해가 되는 조건을 구분하기"
       },
       {
         "type": "external",
-        "resourceKind": "공공 보건 보고서",
-        "title": "Social Media and Youth Mental Health",
-        "source": "SchoolSafety.gov / U.S. Surgeon General",
-        "date": "2023 Advisory",
-        "url": "https://www.schoolsafety.gov/resource/social-media-and-youth-mental-health-us-surgeon-generals-advisory",
+        "resourceKind": "조사/통계 분석",
+        "title": "Frequent Social Media Use and Experiences with Bullying Victimization, Persistent Feelings of Sadness or Hopelessness, and Suicide Risk Among High School Students",
+        "source": "CDC MMWR",
+        "date": "2024.10.10",
+        "url": "https://www.cdc.gov/mmwr/volumes/73/su/su7304a3.htm",
         "perspective": "마음건강",
-        "stance": "소셜미디어가 청소년에게 도움과 위험을 모두 줄 수 있어 보호 장치가 필요하다는 관점",
-        "license": "미국 연방정부 공개 자료",
-        "usage": "제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 가능",
-        "readingFocus": "소셜미디어의 장점과 위험을 함께 보고, 학생·가정·기업·정책 담당자의 책임을 나누어 보기",
-        "relatedQuestions": [1, 3],
+        "stance": "미국 고등학생 2023 YRBS 자료로 소셜미디어 사용 빈도와 괴롭힘·마음건강 지표의 관련을 분석한 자료",
+        "license": "미국 연방정부 공개 자료(일부 제3자 자료 제외)",
+        "usage": "외부 원문 링크, 표 재생산은 별도 감사 후 가능",
+        "readingFocus": "자주 쓰는 소셜미디어와 괴롭힘·슬픔·자살 위험의 관련을 보되, 원인이라고 단정하지 않기",
+        "relatedQuestions": [
+          1,
+          3
+        ],
         "evidenceInfo": {
-          "sourceDetail": "미국 Surgeon General이 낸 청소년 소셜미디어와 마음건강 공공 보건 권고 자료입니다.",
-          "sampleOrScope": "청소년, 가족, 기술기업, 정책 담당자, 연구자를 대상으로 한 공공 보건 근거와 권고입니다.",
-          "timeRange": "2023년 Advisory 자료입니다.",
-          "caution": "소셜미디어의 위험과 이익을 함께 다루며, 사용 시간만으로 원인을 단정하지 않도록 읽어야 합니다."
+          "sourceDetail": "CDC MMWR에 실린 2023 Youth Risk Behavior Survey 분석 보고서입니다.",
+          "sampleOrScope": "미국 9~12학년 공·사립학교 학생을 대표하도록 설계한 표본 조사이며, 보고서 분석에는 20,103명의 응답이 포함되었습니다.",
+          "timeRange": "2023년 조사 자료를 2024년 10월 10일 MMWR Supplement로 공개했습니다.",
+          "caution": "단면 조사라 소셜미디어 사용이 마음건강 문제의 직접 원인이라고 단정할 수 없고, 미국 고등학생 자료라는 범위를 확인해야 합니다."
         }
       },
       {
@@ -741,7 +904,11 @@
         "perspective": "플랫폼 책임",
         "stance": "온라인 플랫폼이 미성년자를 보호할 책임을 져야 한다는 규제 관점",
         "license": "CC BY 4.0 적용 가능 범위 확인",
-        "usage": "EU 저작권 고지 확인 후 번역·재구성 가능"
+        "usage": "EU 저작권 고지 확인 후 번역·재구성 가능",
+        "relatedQuestions": [
+          3
+        ],
+        "readingFocus": "플랫폼이 미성년자 보호를 위해 어떤 책임을 져야 하는지 보기"
       },
       {
         "type": "external",
@@ -819,35 +986,57 @@
         "articleId": "news-001",
         "perspective": "교육 기술",
         "stance": "AI 디지털교과서가 맞춤형 학습을 돕는다는 관점",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "AI가 학습을 돕는 활동과 평가 공정성을 해칠 수 있는 활동을 구분하기"
       },
       {
         "type": "internal",
         "articleId": "news-019",
         "perspective": "디지털 포용",
         "stance": "AI를 쓰는 학교에서도 기기·인터넷·도움이 부족한 학생이 소외되지 않아야 한다는 관점",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          3
+        ],
+        "readingFocus": "AI 학습 도구 이용에서 소외될 수 있는 학생 조건을 찾기"
       },
       {
         "type": "internal",
         "articleId": "news-050",
         "perspective": "디지털 포용 정책",
         "stance": "AI 학습 도구를 도입할 때 기기, 인터넷, 디지털 기술, 오프라인 선택지를 함께 보장해야 한다는 관점",
-        "usage": "OGL 원문을 어린이용으로 재구성한 글"
+        "usage": "OGL 원문을 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          3
+        ],
+        "readingFocus": "기기·인터넷·도움 인력·오프라인 선택지를 접근성 조건으로 보기"
       },
       {
         "type": "internal",
         "articleId": "news-036",
         "perspective": "개인정보 보호",
         "stance": "공공기관 시스템 보안과 사람의 실수 예방이 모두 필요하다는 근거",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "개인정보와 보안 책임이 AI 사용 규칙에 어떻게 들어가야 하는지 살펴보기"
       },
       {
         "type": "internal",
         "articleId": "news-011",
         "perspective": "접근성",
         "stance": "키오스크와 돌봄 서비스가 모두에게 이용 가능해야 한다는 관점",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          3
+        ],
+        "readingFocus": "디지털 도구가 모두에게 이용 가능하려면 어떤 보조가 필요한지 보기"
       },
       {
         "type": "external",
@@ -858,7 +1047,12 @@
         "perspective": "정책 원문",
         "stance": "AI와 디지털 학습 도구를 쓸 때 개인정보 보호 원칙을 함께 봐야 하는 근거",
         "license": "공공누리 확인 필요",
-        "usage": "공개 조건 확인 후 재구성 또는 링크 안내"
+        "usage": "공개 조건 확인 후 재구성 또는 링크 안내",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "AI 학습 도구 사용에서 개인정보와 보안 책임을 어디에 넣을지 보기"
       },
       {
         "type": "external",
@@ -869,7 +1063,11 @@
         "perspective": "디지털 접근권",
         "stance": "AI 학습 도구가 늘어날수록 기기·인터넷·교육 접근권을 함께 보장해야 한다는 관점",
         "license": "Open Government Licence v3.0",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          3
+        ],
+        "readingFocus": "AI 학습 도구 접근성을 보장하려면 기기·인터넷·교육 지원이 어떻게 필요할지 보기"
       },
       {
         "type": "external",
@@ -880,7 +1078,11 @@
         "perspective": "포용과 접근성",
         "stance": "AI와 디지털 기술을 학교에 넣을 때 장애, 지역, 가정 환경 차이를 줄여야 한다는 관점",
         "license": "CC BY 4.0 적용 가능 범위 확인",
-        "usage": "EU 저작권 고지 확인 후 번역·재구성 가능"
+        "usage": "EU 저작권 고지 확인 후 번역·재구성 가능",
+        "relatedQuestions": [
+          3
+        ],
+        "readingFocus": "디지털 포용 기준을 AI 학교 사용 조건으로 옮겨 보기"
       },
       {
         "type": "external",
@@ -891,7 +1093,12 @@
         "perspective": "AI 사용 규칙",
         "stance": "생성형 AI를 교육에 사용할 때 나이, 개인정보, 교사 역할, 검증 책임을 정해야 한다는 관점",
         "license": "CC BY-SA 3.0 IGO 적용 범위 확인",
-        "usage": "자료 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 검토 가능"
+        "usage": "자료 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 검토 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "생성형 AI 사용에서 나이, 개인정보, 교사 역할, 검증 책임을 기준으로 보기"
       },
       {
         "type": "external",
@@ -902,7 +1109,12 @@
         "perspective": "AI 위험 관리",
         "stance": "교육처럼 사람의 기회에 영향을 줄 수 있는 AI는 위험을 따져 관리해야 한다는 규제 관점",
         "license": "CC BY 4.0 적용 가능 범위 확인",
-        "usage": "EU 저작권 고지 확인 후 번역·재구성 가능"
+        "usage": "EU 저작권 고지 확인 후 번역·재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "교육에 영향을 주는 AI를 왜 위험 관리 대상으로 보는지 확인하기"
       },
       {
         "type": "external",
@@ -959,21 +1171,21 @@
     "category": "미디어와 정보",
     "discussionType": "해결 설계형 토의",
     "discussionTypeDescription": "허위정보 대응의 필요성을 인정한 뒤 확인 기준과 책임 분담을 설계하는 주제입니다.",
-    "title": "허위정보와 AI 합성물 대응 책임",
-    "summary": "가짜 뉴스 판별 사례, AI 생성 콘텐츠, 온라인 광고·플랫폼 환경을 연결해 확인 기준과 책임 분담을 토의합니다.",
-    "essentialQuestion": "허위정보나 AI 합성물을 만났을 때 학생은 무엇을 확인하고, 학교·가정·플랫폼은 어떤 기준과 책임으로 대응해야 할까요?",
+    "title": "허위정보 공유와 플랫폼 대응 책임",
+    "summary": "가짜 뉴스 판별 사례, 출처 확인, 공유 중단, 경고 표시, 플랫폼 추천 책임을 연결해 허위정보 대응 기준을 토의합니다.",
+    "essentialQuestion": "허위정보를 만났을 때 학생은 무엇을 확인하고, 학교·가정·플랫폼은 어떤 기준과 책임으로 대응해야 할까요?",
     "discussionQuestions": [
-      "허위정보나 AI 합성물을 만났을 때 학생은 무엇을 확인하고, 학교·가정·플랫폼은 어떤 기준과 책임으로 대응해야 할까요?",
-      "의심스러운 뉴스나 영상은 공유를 멈추고 확인해야 할까요, 어떤 조건에서는 경고 문구를 붙여 토의 자료로 사용할 수 있을까요?",
+      "허위정보를 만났을 때 학생은 무엇을 확인하고, 학교·가정·플랫폼은 어떤 기준과 책임으로 대응해야 할까요?",
+      "의심스러운 뉴스나 영상은 언제 공유를 멈추고 확인해야 하며, 어떤 조건에서는 경고 문구를 붙여 토의 자료로 사용할 수 있을까요?",
       "플랫폼이 허위정보를 줄일 때 삭제, 경고 표시, 추천 제한 중 어떤 방법을 어떤 기준으로 써야 할까요?"
     ],
     "debateReason": "디지털 리터러시, 생성형 AI 허위정보, 소셜미디어 알고리즘, 온라인 광고 구분은 교육 현장과 사회 정책에서 실제로 논의되는 주제입니다.",
     "discussionFrame": [
       "학생이 정보를 공유하기 전 확인해야 할 출처, 근거, 날짜, 이미지 단서는 무엇일까?",
       "학교와 가정은 허위정보를 벌로만 다루지 않고 어떤 기준으로 배우고 고치게 도울 수 있을까?",
-      "플랫폼과 광고주는 추천 알고리즘, 표시, 신고 처리에서 어떤 책임을 져야 할까?",
+      "플랫폼은 추천 알고리즘, 경고 표시, 신고 처리에서 어떤 책임을 져야 할까?",
       "허위정보 대응에서 빠른 삭제와 표현의 자유가 충돌할 때 어떤 기준으로 판단할까?",
-      "AI 합성물, 광고성 정보, 풍자 콘텐츠를 구별하기 위해 학생에게 어떤 확인 절차를 가르칠까?"
+      "풍자, 실수, 오래된 정보, 의도적인 허위정보를 구별하기 위해 학생에게 어떤 확인 절차를 가르칠까?"
     ],
     "resources": [
       {
@@ -981,42 +1193,72 @@
         "articleId": "news-023",
         "perspective": "AI 허위 주장",
         "stance": "AI가 숙제를 자동 제출한다는 주장을 학교 적용 절차와 근거로 확인하는 사례",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "공식 발표가 없는 AI 관련 주장을 어떻게 확인하는지 사례로 보기"
       },
       {
         "type": "internal",
         "articleId": "news-025",
         "perspective": "개인정보와 확인",
         "stance": "스마트워치 출석 의무화처럼 보이는 글을 공식 안내와 개인정보 기준으로 확인하는 사례",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "출석·개인정보 관련 주장을 공식 근거와 절차로 확인하기"
       },
       {
         "type": "internal",
         "articleId": "news-024",
         "perspective": "광고성 정보",
         "stance": "건강 효과를 내세우는 홍보성 글을 실험 근거와 광고 표시 기준으로 따져 보는 사례",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "광고처럼 보이는 건강 주장을 실험 근거와 출처로 따져 보기"
       },
       {
         "type": "internal",
         "articleId": "news-036",
         "perspective": "개인정보 보호",
         "stance": "디지털 서비스를 믿고 쓰려면 시스템 보안과 사람의 확인 책임이 함께 필요하다는 관점",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "시스템 보안과 사람의 확인 책임을 허위정보 대응과 연결해 보기"
       },
       {
         "type": "internal",
         "articleId": "news-051",
         "perspective": "어린이 온라인 안전",
         "stance": "개인정보, 광고, 사기, 디지털 시민성을 학생이 직접 확인하고 배워야 한다는 관점",
-        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글"
+        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "온라인 정보 확인 습관을 학생이 직접 적용할 수 있는 기준으로 정리하기"
       },
       {
         "type": "internal",
         "articleId": "news-056",
         "perspective": "허위정보 공유 연구",
         "stance": "거짓 정보가 퍼지는 이유를 개인 책임뿐 아니라 메시지 형식과 플랫폼 환경까지 넓혀 봐야 한다는 관점",
-        "usage": "CC BY 논문을 어린이용으로 재구성한 글"
+        "usage": "CC BY 논문을 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "허위정보가 퍼지는 이유를 개인 책임과 플랫폼 환경으로 나누어 보기"
       },
       {
         "type": "external",
@@ -1027,7 +1269,12 @@
         "perspective": "교실 활동 기준",
         "stance": "허위정보, 생성형 AI, 소셜미디어, 인플루언서 문제를 수업에서 다루는 기준과 활동 예시",
         "license": "EU 저작권 고지에 따라 CC BY 4.0 적용 가능 범위 확인",
-        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 가능"
+        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "수업에서 허위정보를 처벌보다 확인 활동으로 다루는 기준 찾기"
       },
       {
         "type": "external",
@@ -1038,7 +1285,12 @@
         "perspective": "미디어·정보 리터러시",
         "stance": "AI, 디지털 시민성, 허위정보와 혐오표현을 미디어 리터러시 교육의 핵심 주제로 다루는 관점",
         "license": "UNESCO Open Access, 개별 CC 라이선스 확인 필요",
-        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 또는 링크 안내"
+        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 또는 링크 안내",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "정보 확인, 표현 책임, 디지털 시민성을 함께 가르치는 틀로 보기"
       },
       {
         "type": "external",
@@ -1049,7 +1301,12 @@
         "perspective": "사회적 대응",
         "stance": "허위정보와 정보 조작에 대응하려면 시민의 비판적 정보 판단 능력과 플랫폼 도구가 함께 필요하다는 관점",
         "license": "EU 저작권 고지에 따라 CC BY 4.0 적용 가능 범위 확인",
-        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 가능"
+        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 가능",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "시민의 비판적 판단 능력과 플랫폼 도구가 어떻게 함께 필요한지 보기"
       },
       {
         "type": "external",
@@ -1060,7 +1317,11 @@
         "perspective": "플랫폼 책임",
         "stance": "온라인 플랫폼이 미성년자 보호, 위험 완화, 투명성 조치를 마련해야 한다는 규제 관점",
         "license": "EU 저작권 고지에 따라 CC BY 4.0 적용 가능 범위 확인",
-        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 가능"
+        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 가능",
+        "relatedQuestions": [
+          3
+        ],
+        "readingFocus": "허위정보 위험을 줄이기 위해 플랫폼에 어떤 투명성 책임을 요구하는지 보기"
       },
       {
         "type": "external",
@@ -1071,7 +1332,12 @@
         "perspective": "어린이 실천",
         "stance": "어린이가 개인정보, 온라인 시민성, 광고 이해, 사기 피하기를 활동으로 배울 수 있는 자료",
         "license": "미국 연방정부 공개 자료",
-        "usage": "외부 원문 링크, 제3자 권리 표시 확인 후 재구성 가능"
+        "usage": "외부 원문 링크, 제3자 권리 표시 확인 후 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "어린이가 직접 적용할 수 있는 온라인 정보 확인 활동을 찾기"
       },
       {
         "type": "external",
@@ -1149,28 +1415,49 @@
         "articleId": "news-057",
         "perspective": "AI 표시 책임",
         "stance": "AI 합성물은 창작 도구가 될 수 있지만 실제처럼 보이는 경우 표시와 동의 기준이 필요하다는 관점",
-        "usage": "CC BY 4.0 원문을 어린이용으로 재구성한 글"
+        "usage": "CC BY 4.0 원문을 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "AI 합성물 표시, 동의, 삭제 책임을 한꺼번에 기준으로 정리하기"
       },
       {
         "type": "internal",
         "articleId": "news-023",
         "perspective": "AI 허위 주장",
         "stance": "AI 관련 주장은 학교 적용 절차와 공식 근거를 확인해야 한다는 사례",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          2,
+          3
+        ],
+        "readingFocus": "AI 관련 주장이 실제 학교 제도인지 확인하는 방법을 적용하기"
       },
       {
         "type": "internal",
         "articleId": "news-051",
         "perspective": "어린이 온라인 안전",
         "stance": "온라인 정보와 광고, 개인정보를 직접 확인하는 습관이 AI 합성물 판단에도 필요하다는 관점",
-        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글"
+        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "온라인 정보 확인 습관을 AI 합성물 판단에 옮겨 보기"
       },
       {
         "type": "internal",
         "articleId": "news-056",
         "perspective": "허위정보 확산 조건",
         "stance": "거짓 정보가 퍼지는 구조를 이해하면 AI 합성물 대응 기준도 더 구체적으로 세울 수 있다는 관점",
-        "usage": "CC BY 논문을 어린이용으로 재구성한 글"
+        "usage": "CC BY 논문을 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "합성물이 허위정보로 퍼지는 조건을 메시지와 플랫폼 환경에서 찾기"
       },
       {
         "type": "external",
@@ -1181,7 +1468,12 @@
         "perspective": "AI 투명성 규칙",
         "stance": "딥페이크와 일부 AI 생성 공개 콘텐츠에는 투명한 표시 의무가 필요하다는 규제 관점",
         "license": "EU 저작권 고지에 따라 CC BY 4.0 적용 가능 범위 확인",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "AI 합성물 표시 의무가 어떤 경우에 필요한지 규칙 관점에서 보기"
       },
       {
         "type": "external",
@@ -1192,7 +1484,12 @@
         "perspective": "AI 표시 실무",
         "stance": "AI 생성 콘텐츠 표시와 딥페이크 라벨링을 실제로 어떻게 이행할지 논의하는 자료",
         "license": "EU 저작권 고지에 따라 CC BY 4.0 적용 가능 범위 확인",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "표시 위치와 방식, 실제 이행 책임을 구체적으로 살펴보기"
       },
       {
         "type": "external",
@@ -1247,28 +1544,48 @@
         "articleId": "news-058",
         "perspective": "광고 표시 기준",
         "stance": "인플루언서 추천과 협찬은 보는 사람이 알 수 있도록 관계를 분명히 표시해야 한다는 관점",
-        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글"
+        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "광고 표시, 협찬 관계, 어린이 보호 조건을 기준별로 정리하기"
       },
       {
         "type": "internal",
         "articleId": "news-024",
         "perspective": "광고성 정보 판별",
         "stance": "건강 효과를 내세우는 홍보성 글을 실험 근거와 광고 표시 기준으로 따져 보는 사례",
-        "usage": "어린이용 재구성 글"
+        "usage": "어린이용 재구성 글",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "홍보성 건강 정보를 광고 표시와 근거 확인 기준으로 따져 보기"
       },
       {
         "type": "internal",
         "articleId": "news-051",
         "perspective": "어린이 온라인 안전",
         "stance": "개인정보, 광고, 사기, 디지털 시민성을 함께 배워야 광고성 정보를 더 잘 판단할 수 있다는 관점",
-        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글"
+        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "광고·개인정보·사기 구분을 어린이가 확인할 수 있는 단서로 보기"
       },
       {
         "type": "internal",
         "articleId": "news-055",
         "perspective": "청소년 마음건강",
         "stance": "소셜미디어 사용 환경과 추천 구조가 학생 생활과 마음건강에 영향을 줄 수 있다는 관점",
-        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글"
+        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글",
+        "relatedQuestions": [
+          3
+        ],
+        "readingFocus": "추천 구조와 소셜미디어 환경이 어린이 보호 기준과 어떻게 연결되는지 보기"
       },
       {
         "type": "external",
@@ -1279,7 +1596,12 @@
         "perspective": "광고 표시",
         "stance": "브랜드와의 관계가 있으면 인플루언서가 분명하게 표시해야 한다는 소비자 보호 관점",
         "license": "미국 연방정부 공개 자료",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "광고 관계를 언제, 어디에, 어떤 말로 표시해야 하는지 보기"
       },
       {
         "type": "external",
@@ -1313,7 +1635,12 @@
         "perspective": "플랫폼 책임",
         "stance": "온라인 플랫폼의 투명성, 미성년자 보호, 광고와 추천 시스템 책임을 함께 보는 규제 관점",
         "license": "EU 저작권 고지에 따라 CC BY 4.0 적용 가능 범위 확인",
-        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 가능"
+        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 가능",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "플랫폼의 광고 투명성과 미성년자 보호 책임을 함께 보기"
       }
     ],
     "writingPrompt": "나는 온라인 추천 콘텐츠가 광고일 때 ___ 방식으로 표시해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인할 수 있기 때문이다."
