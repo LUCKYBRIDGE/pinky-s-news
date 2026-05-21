@@ -32,6 +32,7 @@ python -m http.server 8000
 - 토의 질문은 선택, 기준, 조건, 책임 중 하나 이상을 포함합니다.
 - 하나의 큰 주제에는 여러 `discussionQuestions`를 둘 수 있고, 첫 번째 질문은 대표 질문인 `essentialQuestion`과 같게 둡니다.
 - 통계·조사·연구·논문 링크는 `resourceKind`, `readingFocus`, `relatedQuestions`로 자료 성격과 읽을 초점을 함께 표시합니다.
+- 근거로 직접 쓰기 쉬운 통계·조사·연구 자료는 `evidenceInfo`로 출처, 조사대상·범위, 시점, 주의점을 분리해 표시합니다.
 - 자세한 기준은 `docs/discussion-topic-guidelines.md`를 따릅니다.
 
 토의 주제 데이터를 고친 뒤에는 아래 검사를 실행합니다.

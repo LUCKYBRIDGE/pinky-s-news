@@ -23,6 +23,7 @@ const questionKeywords = [
 ];
 
 const issues = [];
+const evidenceInfoFields = ['sourceDetail', 'sampleOrScope', 'timeRange', 'caution'];
 
 function isObject(value) {
   return value && typeof value === 'object' && !Array.isArray(value);
@@ -115,6 +116,17 @@ topics.forEach((topic, index) => {
             resource.relatedQuestions.forEach((questionNumber, relatedIndex) => {
               if (!Number.isInteger(questionNumber) || questionNumber < 1 || questionNumber > discussionQuestionCount) {
                 issues.push(`${resourceLabel}: relatedQuestions[${relatedIndex}] must reference an existing discussion question`);
+              }
+            });
+          }
+        }
+        if (resource.evidenceInfo !== undefined) {
+          if (!isObject(resource.evidenceInfo)) {
+            issues.push(`${resourceLabel}: evidenceInfo must be an object when present`);
+          } else {
+            evidenceInfoFields.forEach((field) => {
+              if (!resource.evidenceInfo[field] || typeof resource.evidenceInfo[field] !== 'string') {
+                issues.push(`${resourceLabel}: evidenceInfo.${field} must be a non-empty string`);
               }
             });
           }

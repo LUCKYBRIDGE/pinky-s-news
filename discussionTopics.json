@@ -100,7 +100,16 @@
         "license": "CC BY",
         "usage": "출처 표시 후 그래프·수치 재구성 가능",
         "readingFocus": "총생산량만 보지 말고 폐기물 수거·처리 체계와 해양 유입의 관계를 함께 확인하기",
-        "relatedQuestions": [1, 2]
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "Our World in Data가 여러 공개 데이터와 연구를 모아 정리한 플라스틱 오염 데이터 허브입니다.",
+          "sampleOrScope": "세계 여러 나라와 지역의 플라스틱 생산, 폐기물 관리, 해양 유입 관련 데이터입니다.",
+          "timeRange": "자료별 시점이 다르며 페이지는 2026년 2월에 크게 업데이트되었습니다.",
+          "caution": "그래프마다 원자료와 측정 기준이 다를 수 있으므로 국가 비교, 1인당 수치, 폐기물 처리 기준을 구분해야 합니다."
+        }
       },
       {
         "type": "external",
@@ -114,7 +123,16 @@
         "license": "CC BY",
         "usage": "출처 표시 후 어린이용 재구성 가능",
         "readingFocus": "조사 지점과 추정 방법을 살펴보며 숫자가 어떻게 계산되었는지 확인하기",
-        "relatedQuestions": [1, 3]
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "PLOS ONE에 공개된 해양 플라스틱 조사·모델링 논문입니다.",
+          "sampleOrScope": "여러 해역의 해양 플라스틱 관측 자료와 모델 추정을 결합한 연구입니다.",
+          "timeRange": "2014년 논문으로, 현재 상황을 볼 때는 최신 연구와 함께 비교해야 합니다.",
+          "caution": "바다 전체를 직접 센 값이 아니라 조사 지점 자료와 모델을 바탕으로 한 추정치라는 점을 확인해야 합니다."
+        }
       }
     ],
     "writingPrompt": "나는 플라스틱 문제에서 ___을 먼저 추진해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인할 수 있기 때문이다."
@@ -223,7 +241,16 @@
         "license": "UNESCO 권리 표시 확인 필요",
         "usage": "외부 원문 링크, 다운로드 데이터의 권리 표시 확인 후 재구성 검토",
         "readingFocus": "비율과 실제 인원 수가 서로 다른 의미를 가진다는 점을 구분해서 보기",
-        "relatedQuestions": [1, 3]
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "UNESCO와 UIS/GEM Report 데이터로 만든 학교 밖 어린이 추정 자료입니다.",
+          "sampleOrScope": "국가, 지역, 소득집단별 초등·중등 단계의 학교 밖 어린이 비율과 인원입니다.",
+          "timeRange": "2026년 3월 16일 업데이트 자료입니다.",
+          "caution": "비율과 실제 인원 수는 의미가 다르며, 추정치에는 불확실성 구간이 포함될 수 있습니다."
+        }
       },
       {
         "type": "external",
@@ -237,7 +264,16 @@
         "license": "CC BY",
         "usage": "출처 표시 후 어린이용 재구성 가능",
         "readingFocus": "가정 형편뿐 아니라 학교·지역의 디지털 자원 차이도 지원 기준이 될 수 있는지 확인하기",
-        "relatedQuestions": [2, 3]
+        "relatedQuestions": [
+          2,
+          3
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "PLOS ONE에 공개된 교육 디지털 격차 연구 논문입니다.",
+          "sampleOrScope": "K-12 교육에서 컴퓨터·인터넷 접근성과 학교·지역 자원 차이를 다룬 연구입니다.",
+          "timeRange": "2024년 공개 논문입니다.",
+          "caution": "특정 국가·자료 조건에서 분석한 결과이므로 한국 학교 상황에 적용할 때는 맥락 차이를 고려해야 합니다."
+        }
       }
     ],
     "writingPrompt": "나는 교육 지원을 ___ 기준으로 나누어 운영해야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있다."
@@ -350,7 +386,16 @@
         "license": "CC BY",
         "usage": "출처 표시 후 그래프·수치 재구성 가능",
         "readingFocus": "총배출량, 1인당 배출량, 누적 배출량이 각각 어떤 판단 기준이 되는지 비교하기",
-        "relatedQuestions": [1, 2]
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "Our World in Data가 Global Carbon Project 등 공개 데이터를 가공해 제공하는 배출량 데이터 허브입니다.",
+          "sampleOrScope": "세계 각국의 이산화탄소와 온실가스 배출량, 1인당 배출량, 누적 배출량 등입니다.",
+          "timeRange": "장기 시계열과 최신 데이터가 함께 제공되며 그래프별 기준 연도가 다릅니다.",
+          "caution": "총배출량, 1인당 배출량, 누적 배출량은 서로 다른 공정성 판단 기준이므로 섞어 쓰지 않아야 합니다."
+        }
       },
       {
         "type": "external",
@@ -364,7 +409,16 @@
         "license": "IPCC 저작권, 정확한 원문 사용 조건 확인 필요",
         "usage": "외부 원문 링크와 최소 설명만 제공",
         "readingFocus": "과학 보고서를 근거로 삼을 때도 그래프·문구를 그대로 복사할 수 있는지 권리 조건 확인하기",
-        "relatedQuestions": [1, 3]
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "IPCC 보고서와 그림 사용 조건을 안내하는 저작권 페이지입니다.",
+          "sampleOrScope": "기후 과학 보고서, 그림, 표, 인용문 사용 조건에 관한 안내입니다.",
+          "timeRange": "IPCC의 현재 저작권 안내 페이지입니다.",
+          "caution": "보고서 내용은 중요한 근거지만 그래프나 문장을 그대로 가져오려면 별도 사용 조건을 확인해야 합니다."
+        }
       }
     ],
     "writingPrompt": "나는 기후 대응을 ___ 방식으로 추진해야 한다고 생각한다. 그 이유는 ___ 자료가 보여 주는 ___ 때문이다."
@@ -434,6 +488,7 @@
       },
       {
         "type": "external",
+        "resourceKind": "공공 보건 보고서",
         "title": "Social Media and Youth Mental Health",
         "source": "SchoolSafety.gov / U.S. Surgeon General",
         "date": "2023 Advisory",
@@ -441,7 +496,15 @@
         "perspective": "마음건강",
         "stance": "소셜미디어가 청소년에게 도움과 위험을 모두 줄 수 있어 보호 장치가 필요하다는 관점",
         "license": "미국 연방정부 공개 자료",
-        "usage": "제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 가능"
+        "usage": "제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 가능",
+        "readingFocus": "소셜미디어의 장점과 위험을 함께 보고, 학생·가정·기업·정책 담당자의 책임을 나누어 보기",
+        "relatedQuestions": [1, 3],
+        "evidenceInfo": {
+          "sourceDetail": "미국 Surgeon General이 낸 청소년 소셜미디어와 마음건강 공공 보건 권고 자료입니다.",
+          "sampleOrScope": "청소년, 가족, 기술기업, 정책 담당자, 연구자를 대상으로 한 공공 보건 근거와 권고입니다.",
+          "timeRange": "2023년 Advisory 자료입니다.",
+          "caution": "소셜미디어의 위험과 이익을 함께 다루며, 사용 시간만으로 원인을 단정하지 않도록 읽어야 합니다."
+        }
       },
       {
         "type": "external",
@@ -466,7 +529,16 @@
         "license": "Open Access, CC BY 적용 여부 확인 필요",
         "usage": "외부 원문 링크, 논문 권리 표시 확인 후 재구성 검토",
         "readingFocus": "금지 효과가 학년, 학교 상황, 함께 시행한 교육 조치에 따라 달라지는지 확인하기",
-        "relatedQuestions": [1, 2]
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "학교 스마트폰 금지 효과에 관한 연구들을 검토한 오픈액세스 리뷰 논문입니다.",
+          "sampleOrScope": "스마트폰 제한과 학업, 사이버폭력, 마음건강, 학교 규칙 관련 연구들을 모아 검토했습니다.",
+          "timeRange": "2024년 공개 리뷰입니다.",
+          "caution": "검토한 연구들의 국가, 학년, 정책 강도가 다르므로 하나의 결론으로 모든 학교에 적용하기 어렵습니다."
+        }
       },
       {
         "type": "external",
@@ -480,7 +552,16 @@
         "license": "미국 연방정부 공개 자료",
         "usage": "제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 가능",
         "readingFocus": "소셜미디어 사용 시간만이 아니라 수면, 관계, 괴롭힘, 보호 장치를 함께 보기",
-        "relatedQuestions": [1, 3]
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "미국 Surgeon General이 낸 청소년 소셜미디어와 마음건강 공공 보건 권고 자료입니다.",
+          "sampleOrScope": "청소년, 가족, 기술기업, 정책 담당자, 연구자를 대상으로 한 공공 보건 근거와 권고입니다.",
+          "timeRange": "2023년 Advisory 자료입니다.",
+          "caution": "소셜미디어의 위험과 이익을 함께 다루며, 사용 시간만으로 원인을 단정하지 않도록 읽어야 합니다."
+        }
       }
     ],
     "writingPrompt": "나는 학교의 스마트폰·소셜미디어 규칙을 ___ 방식으로 정해야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있기 때문이다."
@@ -600,7 +681,16 @@
         "license": "EU/플랫폼 저작권 고지 확인 필요",
         "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 검토",
         "readingFocus": "교사들이 기대하는 장점과 걱정하는 위험이 무엇인지 구분해서 보기",
-        "relatedQuestions": [1, 3]
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "European School Education Platform이 학교 관계자를 대상으로 모은 AI 교육 설문 결과입니다.",
+          "sampleOrScope": "유럽의 교사, 학교장 등 1,130명 응답을 바탕으로 한 조사 결과입니다.",
+          "timeRange": "2026년 공개된 조사 결과입니다.",
+          "caution": "응답자가 유럽 학교 관계자 중심이므로 한국 학생·교사 전체 의견으로 일반화하면 안 됩니다."
+        }
       },
       {
         "type": "external",
@@ -614,7 +704,17 @@
         "license": "Open Access, 개별 논문 라이선스 확인 필요",
         "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 검토",
         "readingFocus": "AI 활용 효과뿐 아니라 개인정보, 의존, 공정성, 접근성 문제가 함께 제시되는지 확인하기",
-        "relatedQuestions": [1, 2, 3]
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "K-12 생성형 AI 교육 연구를 모아 분석한 체계적 문헌 검토 논문입니다.",
+          "sampleOrScope": "2020년부터 2024년까지의 생성형 AI 관련 초·중등교육 연구 45편을 검토했습니다.",
+          "timeRange": "2026년 공개 논문입니다.",
+          "caution": "연구 수가 빠르게 늘고 있어 최신 정책과 학교 현장 사례를 함께 확인해야 합니다."
+        }
       }
     ],
     "writingPrompt": "나는 학교에서 AI를 ___에는 사용할 수 있지만 ___에는 조심해야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있다."
@@ -734,7 +834,16 @@
         "license": "EU 오픈데이터 포털, 개별 데이터셋 권리 표시 확인 필요",
         "usage": "외부 원문 링크, 데이터셋 권리 표시 확인 후 재구성 검토",
         "readingFocus": "사람들이 어떤 확인 방법을 쓰는지와 그 방법의 한계를 함께 보기",
-        "relatedQuestions": [1, 2]
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "data.europa.eu가 Eurobarometer 등 EU 공개 데이터를 바탕으로 만든 데이터 스토리입니다.",
+          "sampleOrScope": "유럽 시민의 허위정보 접촉 경험, 식별 자신감, 확인 방법에 관한 조사 자료입니다.",
+          "timeRange": "2026년 공개 데이터 스토리이며 인용 데이터셋별 조사 시점이 다릅니다.",
+          "caution": "유럽 시민 대상 조사이므로 한국 어린이의 행동과 바로 같다고 볼 수 없고, 자기보고 응답의 한계를 고려해야 합니다."
+        }
       },
       {
         "type": "external",
@@ -748,7 +857,16 @@
         "license": "CC BY",
         "usage": "출처 표시 후 어린이용 재구성 가능",
         "readingFocus": "허위정보가 퍼지는 이유를 개인 책임만이 아니라 메시지 형식과 플랫폼 환경까지 넓혀 보기",
-        "relatedQuestions": [1, 3]
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "PLOS ONE에 공개된 온라인 허위정보 공유 가능성 연구 논문입니다.",
+          "sampleOrScope": "소셜미디어 이용자가 허위정보를 공유할 가능성에 영향을 주는 메시지와 이용자 특성을 조사했습니다.",
+          "timeRange": "2020년 공개 논문입니다.",
+          "caution": "자기보고식 공유 가능성을 다룬 연구라 실제 플랫폼 행동과 차이가 있을 수 있습니다."
+        }
       }
     ],
     "writingPrompt": "나는 허위정보나 AI 합성물을 만났을 때 ___을 먼저 확인하고, ___은 ___ 책임을 져야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있다."
