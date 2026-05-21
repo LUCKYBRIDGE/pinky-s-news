@@ -112,6 +112,7 @@
         },
         "embeddedEvidence": {
           "title": "2020년 총 플라스틱 오염량 일부 지역 비교",
+          "auditKey": "plastic-pollution-2020",
           "source": "Our World in Data Grapher: plastic-pollution.csv",
           "sourceUrl": "https://ourworldindata.org/grapher/plastic-pollution.csv",
           "sourceUrls": [
@@ -160,7 +161,9 @@
             ]
           ],
           "note": "원자료의 Entity, Year, Total plastic pollution 열에서 수업 비교에 필요한 일부 지역만 발췌했습니다.",
-          "reproductionNote": "소수점은 반올림하고 천 단위 구분 기호를 붙였습니다."
+          "reproductionNote": "소수점은 반올림하고 천 단위 구분 기호를 붙였습니다.",
+          "verificationNote": "scripts/audit-embedded-evidence.mjs로 원자료 CSV의 같은 지역·연도 값과 대조했습니다.",
+          "copyrightBasis": "Our World in Data 지표 메타데이터의 nonRedistributable=false와 CC BY 재사용 안내를 확인했습니다."
         }
       },
       {
@@ -272,6 +275,7 @@
         },
         "embeddedEvidence": {
           "title": "초등학교 나이 학교 밖 아동 비율 일부 국가 비교",
+          "auditKey": "world-bank-out-of-school-latest",
           "source": "World Bank API: SE.PRM.UNER.ZS",
           "sourceUrl": "https://api.worldbank.org/v2/country/KOR;USA;JPN;FIN;IND/indicator/SE.PRM.UNER.ZS?format=json&per_page=1000",
           "sourceUrls": [
@@ -315,7 +319,9 @@
             ]
           ],
           "note": "각 국가의 최신 비공백 값을 World Bank API에서 가져왔습니다.",
-          "reproductionNote": "비율은 소수 둘째 자리까지 반올림했습니다."
+          "reproductionNote": "비율은 소수 둘째 자리까지 반올림했습니다.",
+          "verificationNote": "scripts/audit-embedded-evidence.mjs로 World Bank API의 국가별 최신 비공백 값과 대조했습니다.",
+          "copyrightBasis": "World Bank Dataset Terms의 CC BY 4.0 조건과 API 사용 가능 조건을 확인했습니다."
         }
       },
       {
@@ -509,6 +515,7 @@
         },
         "embeddedEvidence": {
           "title": "2024년 이산화탄소 배출량과 1인당 배출량 비교",
+          "auditKey": "co2-emissions-2024",
           "source": "Our World in Data Grapher: annual-co2-emissions-per-country.csv, co-emissions-per-capita.csv",
           "sourceUrl": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country.csv",
           "sourceUrls": [
@@ -568,7 +575,9 @@
             ]
           ],
           "note": "총배출량과 1인당 배출량은 서로 다른 원자료 CSV에서 같은 연도 값을 맞춰 가져왔습니다.",
-          "reproductionNote": "총배출량은 톤 단위를 십억 톤으로 바꾸고, 표시는 소수 한 자리로 반올림했습니다."
+          "reproductionNote": "총배출량은 톤 단위를 십억 톤으로 바꾸고, 표시는 소수 한 자리로 반올림했습니다.",
+          "verificationNote": "scripts/audit-embedded-evidence.mjs로 두 원자료 CSV의 같은 지역·연도 값을 조합해 대조했습니다.",
+          "copyrightBasis": "Our World in Data 지표 메타데이터의 nonRedistributable=false와 CC BY 재사용 안내를 확인했습니다."
         }
       },
       {

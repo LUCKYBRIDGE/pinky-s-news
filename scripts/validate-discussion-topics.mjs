@@ -24,7 +24,18 @@ const questionKeywords = [
 
 const issues = [];
 const evidenceInfoFields = ['sourceDetail', 'sampleOrScope', 'timeRange', 'caution'];
-const embeddedEvidenceFields = ['title', 'source', 'sourceUrl', 'license', 'unit', 'note', 'reproductionNote'];
+const embeddedEvidenceFields = [
+  'title',
+  'auditKey',
+  'source',
+  'sourceUrl',
+  'license',
+  'unit',
+  'note',
+  'reproductionNote',
+  'verificationNote',
+  'copyrightBasis',
+];
 
 function isObject(value) {
   return value && typeof value === 'object' && !Array.isArray(value);
