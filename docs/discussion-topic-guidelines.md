@@ -58,6 +58,13 @@
 - 나머지 질문은 수업에서 선택할 수 있는 대안 질문으로 쓰되, 생각해 볼 관점보다 크고 중심적인 질문이어야 한다.
 - 각 질문은 한 차시 안에 근거를 비교할 수 있을 만큼 범위를 좁힌다.
 
+초등학교 고학년용 문구를 함께 둘 때:
+
+- 기존 큰 주제, 토의 질문, 생각해 볼 관점은 유지하고 `elementaryTitle`, `elementarySummary`, `elementaryDiscussionQuestions`, `elementaryDiscussionFrame`, `elementaryWritingPrompt`를 별도로 둔다.
+- 초등 고학년용 질문도 선택, 기준, 조건, 책임 중 하나 이상을 포함해야 한다.
+- 쉬운 말로 바꾸되 쟁점의 핵심 판단은 약하게 만들지 않는다.
+- `elementaryDiscussionQuestions`와 `elementaryDiscussionFrame`은 기존 질문·관점과 같은 개수를 유지해 자료의 `relatedQuestions` 번호가 그대로 통하도록 한다.
+
 피해야 할 질문:
 
 - 정답이 이미 정해진 사실 확인 질문

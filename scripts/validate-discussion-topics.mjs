@@ -56,6 +56,12 @@ topics.forEach((topic, index) => {
     }
   });
 
+  ['elementaryTitle', 'elementarySummary', 'elementaryWritingPrompt'].forEach((field) => {
+    if (!topic[field] || typeof topic[field] !== 'string') {
+      issues.push(`${label}: missing elementary string field "${field}"`);
+    }
+  });
+
   if (topic.discussionType && !allowedTypes.has(topic.discussionType)) {
     issues.push(`${label}: discussionType must be one of ${Array.from(allowedTypes).join(', ')}`);
   }
@@ -87,6 +93,29 @@ topics.forEach((topic, index) => {
     }
   }
 
+  if (!Array.isArray(topic.elementaryDiscussionQuestions) || topic.elementaryDiscussionQuestions.length < 2) {
+    issues.push(`${label}: elementaryDiscussionQuestions should contain at least 2 selectable questions`);
+  } else {
+    const seenQuestions = new Set();
+    topic.elementaryDiscussionQuestions.forEach((question, questionIndex) => {
+      if (typeof question !== 'string' || !question.trim().endsWith('?')) {
+        issues.push(`${label}: elementaryDiscussionQuestions[${questionIndex}] should be a question string`);
+        return;
+      }
+      if (!questionKeywords.some((keyword) => question.includes(keyword))) {
+        issues.push(`${label}: elementaryDiscussionQuestions[${questionIndex}] should include a choice, standard, condition, or responsibility keyword`);
+      }
+      if (seenQuestions.has(question)) {
+        issues.push(`${label}: elementaryDiscussionQuestions[${questionIndex}] duplicates another elementary discussion question`);
+      }
+      seenQuestions.add(question);
+    });
+
+    if (Array.isArray(topic.discussionQuestions) && topic.elementaryDiscussionQuestions.length !== topic.discussionQuestions.length) {
+      issues.push(`${label}: elementaryDiscussionQuestions should match discussionQuestions length`);
+    }
+  }
+
   if (!Array.isArray(topic.discussionFrame) || topic.discussionFrame.length < 2) {
     issues.push(`${label}: discussionFrame should contain at least 2 perspective questions`);
   } else {
@@ -95,6 +124,20 @@ topics.forEach((topic, index) => {
         issues.push(`${label}: discussionFrame[${frameIndex}] should be a question string`);
       }
     });
+  }
+
+  if (!Array.isArray(topic.elementaryDiscussionFrame) || topic.elementaryDiscussionFrame.length < 2) {
+    issues.push(`${label}: elementaryDiscussionFrame should contain at least 2 perspective questions`);
+  } else {
+    topic.elementaryDiscussionFrame.forEach((frame, frameIndex) => {
+      if (typeof frame !== 'string' || !frame.trim().endsWith('?')) {
+        issues.push(`${label}: elementaryDiscussionFrame[${frameIndex}] should be a question string`);
+      }
+    });
+
+    if (Array.isArray(topic.discussionFrame) && topic.elementaryDiscussionFrame.length !== topic.discussionFrame.length) {
+      issues.push(`${label}: elementaryDiscussionFrame should match discussionFrame length`);
+    }
   }
 
   if (!Array.isArray(topic.resources) || topic.resources.length === 0) {

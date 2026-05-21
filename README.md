@@ -31,6 +31,7 @@ python -m http.server 8000
 - 사회적으로 필요성이 큰 주제는 `어떻게 할까`를 묻는 `해결 설계형 토의`로 둡니다.
 - 토의 질문은 선택, 기준, 조건, 책임 중 하나 이상을 포함합니다.
 - 하나의 큰 주제에는 여러 `discussionQuestions`를 둘 수 있고, 첫 번째 질문은 대표 질문인 `essentialQuestion`과 같게 둡니다.
+- 각 주제에는 기존 질문을 유지한 채 `elementaryTitle`, `elementarySummary`, `elementaryDiscussionQuestions`, `elementaryDiscussionFrame`, `elementaryWritingPrompt`로 초등학교 고학년용 쉬운 버전을 함께 둡니다.
 - 모든 근거자료는 `readingFocus`, `relatedQuestions`로 읽을 초점과 연결되는 토의 질문을 표시합니다.
 - 통계·조사·연구·논문 링크는 `resourceKind`로 자료 성격도 함께 표시합니다.
 - 근거로 직접 쓰기 쉬운 통계·조사·연구 자료는 `evidenceInfo`로 출처, 조사대상·범위, 시점, 주의점을 분리해 표시합니다.
