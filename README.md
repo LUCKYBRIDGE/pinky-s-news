@@ -16,8 +16,27 @@ python -m http.server 8000
 
 - `index.html`: 단일 페이지 앱, 화면 구성과 클라이언트 로직
 - `articleList.json`: 기사 ID 목록
+- `discussionTopics.json`: 토의·토론 주제와 근거자료 묶음
 - `news-*.json`: 기사 데이터
 - `assets/`: 기사 본문에 쓰는 로컬 이미지
+- `docs/discussion-topic-guidelines.md`: 토의·토론 주제 편성 지침
+- `scripts/validate-discussion-topics.mjs`: 토의 주제 데이터 검증 스크립트
+
+## 토의·토론 주제 편성
+
+토의·토론 주제는 `찬반 토론형`과 `해결 설계형 토의`로 구분합니다.
+
+- 억지 찬반으로 만들지 않습니다.
+- 실제 논쟁이 있는 주제는 `찬반 토론형`으로 둡니다.
+- 사회적으로 필요성이 큰 주제는 `어떻게 할까`를 묻는 `해결 설계형 토의`로 둡니다.
+- 토의 질문은 선택, 기준, 조건, 책임 중 하나 이상을 포함합니다.
+- 자세한 기준은 `docs/discussion-topic-guidelines.md`를 따릅니다.
+
+토의 주제 데이터를 고친 뒤에는 아래 검사를 실행합니다.
+
+```bash
+node scripts/validate-discussion-topics.mjs
+```
 
 ## 저작권/출처 메모
 
