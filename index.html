@@ -881,6 +881,47 @@
             return renderDiscussionExternalResource(resource);
         }
 
+        function renderEmbeddedEvidence(resource) {
+            const evidence = resource.embeddedEvidence;
+            if (!evidence || !Array.isArray(evidence.columns) || !Array.isArray(evidence.rows)) return '';
+            const sourceLinks = Array.isArray(evidence.sourceUrls)
+                ? evidence.sourceUrls.filter(link => link && link.label && link.url)
+                : (evidence.sourceUrl ? [{ label: '원자료', url: evidence.sourceUrl }] : []);
+
+            return `
+                <div class="mt-4 rounded-xl border border-emerald-200 bg-emerald-50/60 p-4">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                        <strong class="text-[13px] font-black text-emerald-800">${escapeHtml(evidence.title || '재생산 표')}</strong>
+                        ${evidence.unit ? `<span class="rounded-full bg-white px-2.5 py-1 text-[11px] font-black text-emerald-700 border border-emerald-100">단위: ${escapeHtml(evidence.unit)}</span>` : ''}
+                    </div>
+                    <div class="overflow-x-auto rounded-lg border border-emerald-100 bg-white">
+                        <table class="min-w-full text-left text-[12px]">
+                            <thead class="bg-emerald-50 text-emerald-900">
+                                <tr>
+                                    ${evidence.columns.map(column => `<th class="px-3 py-2 font-black whitespace-nowrap">${escapeHtml(column)}</th>`).join('')}
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-emerald-50">
+                                ${evidence.rows.map(row => `
+                                    <tr>
+                                        ${row.map(cell => `<td class="px-3 py-2 font-bold text-slate-700 whitespace-nowrap">${escapeHtml(cell)}</td>`).join('')}
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                    ${evidence.note ? `<p class="mt-3 text-[12px] leading-relaxed font-bold text-emerald-900">자료 메모: ${escapeHtml(evidence.note)}</p>` : ''}
+                    ${evidence.reproductionNote ? `<p class="mt-1 text-[12px] leading-relaxed font-bold text-emerald-900">재생산 방법: ${escapeHtml(evidence.reproductionNote)}</p>` : ''}
+                    <p class="mt-2 text-[11px] leading-relaxed font-bold text-slate-500">원자료: ${escapeHtml(evidence.source || evidence.sourceUrl || '')} · ${escapeHtml(evidence.license || '')}</p>
+                    ${sourceLinks.length ? `
+                        <div class="mt-2 flex flex-wrap gap-2">
+                            ${sourceLinks.map(link => `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer" class="rounded-full border border-emerald-200 bg-white px-2.5 py-1 text-[11px] font-black text-emerald-700 hover:bg-emerald-100">${escapeHtml(link.label)}</a>`).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+
         function renderDiscussionResourceMeta(resource) {
             const relatedQuestions = Array.isArray(resource.relatedQuestions)
                 ? resource.relatedQuestions.filter(number => Number.isInteger(number) && number > 0)
@@ -951,7 +992,7 @@
         function renderDiscussionExternalResource(resource) {
             const licenseMeta = [resource.license, resource.usage].filter(Boolean).join(' · ');
             return `
-                <a href="${escapeHtml(resource.url)}" target="_blank" rel="noopener noreferrer" class="group block rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:border-sky-200 hover:shadow-md transition">
+                <article class="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:border-sky-200 hover:shadow-md transition">
                     <div class="mb-3 flex flex-wrap items-center gap-2">
                         <span class="rounded-full bg-amber-50 px-2.5 py-1 text-[11px] font-black text-amber-700 border border-amber-100">외부 원문</span>
                         <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-black text-slate-600">${escapeHtml(resource.perspective || '원문 링크')}</span>
@@ -961,12 +1002,13 @@
                     <p class="mt-2 text-[13px] text-slate-500 font-bold">${escapeHtml(resource.source)} · ${escapeHtml(resource.date || '날짜 확인 필요')}</p>
                     <p class="mt-3 text-[13px] text-slate-600 leading-relaxed font-medium">${escapeHtml(resource.stance || '')}</p>
                     ${renderDiscussionResourceMeta(resource)}
+                    ${renderEmbeddedEvidence(resource)}
                     ${licenseMeta ? `<p class="mt-3 rounded-xl bg-slate-50 border border-slate-100 px-3 py-2 text-[12px] text-slate-500 leading-relaxed font-bold">${escapeHtml(licenseMeta)}</p>` : ''}
-                    <div class="mt-4 inline-flex items-center gap-2 text-[13px] font-black text-sky-700">
+                    <a href="${escapeHtml(resource.url)}" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-[13px] font-black text-sky-700 hover:text-sky-900">
                         원문 사이트에서 보기
                         <i class="fa-solid fa-arrow-up-right-from-square text-[12px]"></i>
-                    </div>
-                </a>
+                    </a>
+                </article>
             `;
         }
 

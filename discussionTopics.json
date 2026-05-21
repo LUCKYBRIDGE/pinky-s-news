@@ -109,6 +109,58 @@
           "sampleOrScope": "세계 여러 나라와 지역의 플라스틱 생산, 폐기물 관리, 해양 유입 관련 데이터입니다.",
           "timeRange": "자료별 시점이 다르며 페이지는 2026년 2월에 크게 업데이트되었습니다.",
           "caution": "그래프마다 원자료와 측정 기준이 다를 수 있으므로 국가 비교, 1인당 수치, 폐기물 처리 기준을 구분해야 합니다."
+        },
+        "embeddedEvidence": {
+          "title": "2020년 총 플라스틱 오염량 일부 지역 비교",
+          "source": "Our World in Data Grapher: plastic-pollution.csv",
+          "sourceUrl": "https://ourworldindata.org/grapher/plastic-pollution.csv",
+          "sourceUrls": [
+            {
+              "label": "원자료 CSV",
+              "url": "https://ourworldindata.org/grapher/plastic-pollution.csv"
+            }
+          ],
+          "license": "CC BY",
+          "unit": "톤",
+          "columns": [
+            "지역",
+            "연도",
+            "총 플라스틱 오염량"
+          ],
+          "rows": [
+            [
+              "세계",
+              "2020",
+              "52,106,292"
+            ],
+            [
+              "인도",
+              "2020",
+              "9,275,777"
+            ],
+            [
+              "중국",
+              "2020",
+              "2,808,179"
+            ],
+            [
+              "미국",
+              "2020",
+              "47,649"
+            ],
+            [
+              "일본",
+              "2020",
+              "6,185"
+            ],
+            [
+              "대한민국",
+              "2020",
+              "2,857"
+            ]
+          ],
+          "note": "원자료의 Entity, Year, Total plastic pollution 열에서 수업 비교에 필요한 일부 지역만 발췌했습니다.",
+          "reproductionNote": "소수점은 반올림하고 천 단위 구분 기호를 붙였습니다."
         }
       },
       {
@@ -198,14 +250,73 @@
       },
       {
         "type": "external",
+        "resourceKind": "통계/데이터",
         "title": "Primary school age children out-of-school (%)",
         "source": "World Bank Data",
         "date": "데이터 페이지",
-        "url": "https://data.worldbank.org/indicator/SE.LPV.PRIM.SD",
+        "url": "https://data.worldbank.org/indicator/SE.PRM.UNER.ZS",
         "perspective": "세계 교육 데이터",
         "stance": "학교 밖 어린이 규모를 비교해 교육 기회 격차를 살펴볼 수 있는 데이터 관점",
         "license": "CC BY 4.0",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "readingFocus": "나라별 최신 자료의 기준 연도가 서로 다를 수 있다는 점을 확인하며 비교하기",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "evidenceInfo": {
+          "sourceDetail": "World Bank Data API의 'Children out of school (% of primary school age)' 지표입니다.",
+          "sampleOrScope": "초등학교 나이 아동 중 학교에 등록되어 있지 않은 비율을 국가별로 제공합니다.",
+          "timeRange": "국가마다 최신 비공백 자료 연도가 다릅니다.",
+          "caution": "최신값 연도가 서로 다르므로 한 해의 세계 순위처럼 해석하지 않아야 합니다."
+        },
+        "embeddedEvidence": {
+          "title": "초등학교 나이 학교 밖 아동 비율 일부 국가 비교",
+          "source": "World Bank API: SE.PRM.UNER.ZS",
+          "sourceUrl": "https://api.worldbank.org/v2/country/KOR;USA;JPN;FIN;IND/indicator/SE.PRM.UNER.ZS?format=json&per_page=1000",
+          "sourceUrls": [
+            {
+              "label": "World Bank API",
+              "url": "https://api.worldbank.org/v2/country/KOR;USA;JPN;FIN;IND/indicator/SE.PRM.UNER.ZS?format=json&per_page=1000"
+            }
+          ],
+          "license": "CC BY 4.0",
+          "unit": "%",
+          "columns": [
+            "국가",
+            "자료 연도",
+            "학교 밖 아동 비율"
+          ],
+          "rows": [
+            [
+              "대한민국",
+              "2024",
+              "0.06"
+            ],
+            [
+              "일본",
+              "2023",
+              "0.07"
+            ],
+            [
+              "인도",
+              "2025",
+              "0.12"
+            ],
+            [
+              "핀란드",
+              "2024",
+              "1.77"
+            ],
+            [
+              "미국",
+              "2022",
+              "3.98"
+            ]
+          ],
+          "note": "각 국가의 최신 비공백 값을 World Bank API에서 가져왔습니다.",
+          "reproductionNote": "비율은 소수 둘째 자리까지 반올림했습니다."
+        }
       },
       {
         "type": "external",
@@ -395,6 +506,69 @@
           "sampleOrScope": "세계 각국의 이산화탄소와 온실가스 배출량, 1인당 배출량, 누적 배출량 등입니다.",
           "timeRange": "장기 시계열과 최신 데이터가 함께 제공되며 그래프별 기준 연도가 다릅니다.",
           "caution": "총배출량, 1인당 배출량, 누적 배출량은 서로 다른 공정성 판단 기준이므로 섞어 쓰지 않아야 합니다."
+        },
+        "embeddedEvidence": {
+          "title": "2024년 이산화탄소 배출량과 1인당 배출량 비교",
+          "source": "Our World in Data Grapher: annual-co2-emissions-per-country.csv, co-emissions-per-capita.csv",
+          "sourceUrl": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country.csv",
+          "sourceUrls": [
+            {
+              "label": "총배출량 CSV",
+              "url": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country.csv"
+            },
+            {
+              "label": "1인당 배출량 CSV",
+              "url": "https://ourworldindata.org/grapher/co-emissions-per-capita.csv"
+            }
+          ],
+          "license": "CC BY",
+          "unit": "총배출량: 십억 톤, 1인당 배출량: 톤/명",
+          "columns": [
+            "지역",
+            "연도",
+            "총배출량",
+            "1인당 배출량"
+          ],
+          "rows": [
+            [
+              "세계",
+              "2024",
+              "38.6",
+              "4.7"
+            ],
+            [
+              "중국",
+              "2024",
+              "12.3",
+              "8.7"
+            ],
+            [
+              "미국",
+              "2024",
+              "4.9",
+              "14.2"
+            ],
+            [
+              "인도",
+              "2024",
+              "3.2",
+              "2.2"
+            ],
+            [
+              "일본",
+              "2024",
+              "1.0",
+              "7.8"
+            ],
+            [
+              "대한민국",
+              "2024",
+              "0.6",
+              "11.3"
+            ]
+          ],
+          "note": "총배출량과 1인당 배출량은 서로 다른 원자료 CSV에서 같은 연도 값을 맞춰 가져왔습니다.",
+          "reproductionNote": "총배출량은 톤 단위를 십억 톤으로 바꾸고, 표시는 소수 한 자리로 반올림했습니다."
         }
       },
       {

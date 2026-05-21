@@ -24,6 +24,7 @@ const questionKeywords = [
 
 const issues = [];
 const evidenceInfoFields = ['sourceDetail', 'sampleOrScope', 'timeRange', 'caution'];
+const embeddedEvidenceFields = ['title', 'source', 'sourceUrl', 'license', 'unit', 'note', 'reproductionNote'];
 
 function isObject(value) {
   return value && typeof value === 'object' && !Array.isArray(value);
@@ -129,6 +130,42 @@ topics.forEach((topic, index) => {
                 issues.push(`${resourceLabel}: evidenceInfo.${field} must be a non-empty string`);
               }
             });
+          }
+        }
+        if (resource.embeddedEvidence !== undefined) {
+          if (!isObject(resource.embeddedEvidence)) {
+            issues.push(`${resourceLabel}: embeddedEvidence must be an object when present`);
+          } else {
+            embeddedEvidenceFields.forEach((field) => {
+              if (!resource.embeddedEvidence[field] || typeof resource.embeddedEvidence[field] !== 'string') {
+                issues.push(`${resourceLabel}: embeddedEvidence.${field} must be a non-empty string`);
+              }
+            });
+            const columns = resource.embeddedEvidence.columns;
+            const rows = resource.embeddedEvidence.rows;
+            if (!Array.isArray(columns) || columns.length < 2 || columns.some(column => typeof column !== 'string' || !column.trim())) {
+              issues.push(`${resourceLabel}: embeddedEvidence.columns must contain at least 2 string columns`);
+            }
+            if (!Array.isArray(rows) || rows.length === 0) {
+              issues.push(`${resourceLabel}: embeddedEvidence.rows must not be empty`);
+            } else if (Array.isArray(columns)) {
+              rows.forEach((row, rowIndex) => {
+                if (!Array.isArray(row) || row.length !== columns.length || row.some(cell => typeof cell !== 'string' || !cell.trim())) {
+                  issues.push(`${resourceLabel}: embeddedEvidence.rows[${rowIndex}] must contain ${columns.length} string cells`);
+                }
+              });
+            }
+            if (resource.embeddedEvidence.sourceUrls !== undefined) {
+              if (!Array.isArray(resource.embeddedEvidence.sourceUrls) || resource.embeddedEvidence.sourceUrls.length === 0) {
+                issues.push(`${resourceLabel}: embeddedEvidence.sourceUrls must be a non-empty array when present`);
+              } else {
+                resource.embeddedEvidence.sourceUrls.forEach((link, linkIndex) => {
+                  if (!isObject(link) || typeof link.label !== 'string' || !link.label.trim() || typeof link.url !== 'string' || !link.url.trim()) {
+                    issues.push(`${resourceLabel}: embeddedEvidence.sourceUrls[${linkIndex}] must include label and url strings`);
+                  }
+                });
+              }
+            }
           }
         }
       } else {
