@@ -167,7 +167,7 @@
     <header class="glass-header sticky top-0 z-50 border-b border-slate-200 shadow-sm">
         <div class="max-w-[1150px] mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-5">
-                <a href="#" onclick="showNewsCorner('real'); return false;" class="flex items-center gap-2 group">
+                <a href="#" onclick="showDiscussionCorner(); return false;" class="flex items-center gap-2 group">
                     <div class="w-10 h-10 bg-gradient-to-br from-rose-500 to-pink-700 rounded-lg flex items-center justify-center text-white font-black text-xl shadow-lg group-hover:rotate-12 transition-transform">
                         TP
                     </div>
@@ -200,7 +200,7 @@
             <div class="max-w-[1150px] mx-auto px-4 py-2 flex items-center gap-2 text-[13px] sm:text-[14px] font-black tracking-tight">
                 <i class="fa-solid fa-magnifying-glass-chart"></i>
                 <span>현재 모드: 가짜 뉴스 판별</span>
-                <span class="hidden sm:inline text-rose-100 font-bold">기사를 읽고 근거를 찾아 직접 판단하세요.</span>
+                <span class="hidden sm:inline text-rose-100 font-bold">글을 읽고 근거를 찾아 직접 판단하세요.</span>
             </div>
         </div>
     </header>
@@ -245,10 +245,10 @@
         const CONTENT_SOURCE_NOTICE = '현재 본문 형태로 제공하는 실제 뉴스는 공공누리 제1유형, CC BY, CC0처럼 출처 표시와 재구성이 가능한 공개 라이선스 자료만 사용합니다. 변경금지 또는 권리 확인이 어려운 기사·자료는 제목과 최소 정보만 표시하고 원문 사이트로 이동하도록 안내합니다.';
         const NEWS_MODES = {
             home: {
-                label: '뉴스·해설',
-                title: '주요 뉴스·해설',
-                description: '공개 라이선스 원문을 바탕으로 한 뉴스, 해설, 정보',
-                sidebar: '평소 홈페이지에는 공개 라이선스 원문을 확인한 진짜 뉴스와 해설·정보 자료만 표시됩니다. 아래 가짜 뉴스 판별에서는 여러 글을 읽고 직접 진짜인지 가짜인지 판단할 수 있습니다.'
+                label: '자료 전체 보기',
+                title: '자료 전체 보기',
+                description: '토의·토론에 활용할 수 있는 뉴스, 해설, 정보 자료',
+                sidebar: '이 화면은 기존 글을 보관하고 찾아보는 자료실입니다. 첫 화면에서는 쟁점별 토의·토론 주제를 먼저 보여주고, 여기서는 필요한 글을 보조 근거로 찾아볼 수 있습니다.'
             },
             mission: {
                 label: '가짜 뉴스 판별',
@@ -258,7 +258,7 @@
             }
         };
         const CATEGORY_GROUPS = [
-            { id: '전체', label: '전체 뉴스', icon: 'fa-house', description: '현재 화면의 모든 기사를 한 번에 봅니다.' },
+            { id: '전체', label: '전체 자료', icon: 'fa-box-archive', description: '현재 화면의 모든 자료를 한 번에 봅니다.' },
             { id: '학교생활', label: '학교생활', icon: 'fa-school', description: '수업, 숙제, 방과후, 학교에서 생기는 일' },
             { id: '안전', label: '안전', icon: 'fa-shield-halved', description: '통학길, 체험학습, 사고 예방' },
             { id: '건강과 마음', label: '건강과 마음', icon: 'fa-heart-pulse', description: '몸 건강, 식생활, 마음 돌봄' },
@@ -442,23 +442,26 @@
 
         function renderCategoryNav() {
             const nav = document.getElementById('main-nav');
-            const categoryNav = CATEGORY_GROUPS.map(category => `
-                <li class="h-12 flex items-center nav-item hover:text-slate-900 transition" data-cat="${category.id}">
-                    <a href="#" onclick="filterCategory('${category.id}'); return false;" class="px-1 flex items-center gap-1.5">
-                        <i class="fa-solid ${category.icon} text-[12px]"></i>
-                        ${category.label}
-                    </a>
-                </li>
-            `).join('');
-            const discussionNav = `
+            nav.innerHTML = `
                 <li class="h-12 flex items-center nav-item hover:text-slate-900 transition" data-cat="토의">
                     <a href="#discussion" onclick="showDiscussionCorner(); return false;" class="px-1 flex items-center gap-1.5">
                         <i class="fa-solid fa-comments text-[12px]"></i>
-                        토의 근거자료
+                        토의·토론 주제
+                    </a>
+                </li>
+                <li class="h-12 flex items-center nav-item hover:text-slate-900 transition" data-cat="자료">
+                    <a href="#archive" onclick="showArchiveCorner(); return false;" class="px-1 flex items-center gap-1.5">
+                        <i class="fa-solid fa-box-archive text-[12px]"></i>
+                        자료 전체 보기
+                    </a>
+                </li>
+                <li class="h-12 flex items-center nav-item hover:text-slate-900 transition" data-cat="판별">
+                    <a href="#fact-check" onclick="showNewsCorner('mission'); return false;" class="px-1 flex items-center gap-1.5">
+                        <i class="fa-solid fa-magnifying-glass-chart text-[12px]"></i>
+                        가짜 뉴스 판별
                     </a>
                 </li>
             `;
-            nav.innerHTML = categoryNav + discussionNav;
         }
 
         function getNewsModeMeta(mode = activeNewsMode) {
@@ -587,7 +590,7 @@
         }
 
         function replaceRouteToActiveMode() {
-            const nextHash = activeNewsMode === 'mission' ? '#fact-check' : '';
+            const nextHash = activeNewsMode === 'mission' ? '#fact-check' : '#archive';
             history.replaceState(null, '', `${window.location.pathname}${window.location.search}${nextHash}`);
         }
 
@@ -596,12 +599,16 @@
             const searchInput = document.getElementById('search-input');
             if (searchInput) searchInput.value = '';
 
-            const nextHash = activeNewsMode === 'mission' ? '#fact-check' : '';
+            const nextHash = activeNewsMode === 'mission' ? '#fact-check' : '#archive';
             if (window.location.hash === nextHash) {
                 renderPage();
             } else {
                 window.location.hash = nextHash;
             }
+        }
+
+        function showArchiveCorner() {
+            showNewsCorner('home');
         }
 
         function showDiscussionCorner() {
@@ -617,23 +624,38 @@
         }
 
         function returnToCornerList() {
-            showNewsCorner(activeNewsMode);
+            if (activeNewsMode === 'mission') {
+                showNewsCorner('mission');
+            } else {
+                showDiscussionCorner();
+            }
         }
 
         function renderModeSwitcher() {
             const isMission = activeNewsMode === 'mission';
             const isDiscussion = window.location.hash === '#discussion' || window.location.hash.startsWith('#discussion-topic-');
-            const isHome = !isMission && !isDiscussion;
+            const isArchive = window.location.hash === '#archive' || (!isMission && !isDiscussion && window.location.hash !== '');
             return `
                 <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                    <button onclick="showNewsCorner('home')" class="text-left bg-white border-2 ${isHome ? 'border-emerald-600 bg-emerald-50' : 'border-slate-200'} rounded-xl p-5 shadow-sm hover:shadow-md transition group">
+                    <button onclick="showDiscussionCorner()" class="text-left bg-white border-2 ${isDiscussion ? 'border-sky-600 bg-sky-50' : 'border-slate-200'} rounded-xl p-5 shadow-sm hover:shadow-md transition group">
                         <span class="flex items-start gap-4">
-                            <span class="w-11 h-11 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-emerald-700 shadow-sm">
-                                <i class="fa-solid fa-newspaper"></i>
+                            <span class="w-11 h-11 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-sky-700 shadow-sm">
+                                <i class="fa-solid fa-comments"></i>
                             </span>
                             <span>
-                                <strong class="block text-[20px] font-black text-slate-900 tracking-tight">뉴스·해설</strong>
-                                <span class="block text-[13px] text-slate-500 leading-snug mt-1">새 소식과 배경 설명을 구분해 읽습니다.</span>
+                                <strong class="block text-[20px] font-black text-slate-900 tracking-tight">토의·토론 주제</strong>
+                                <span class="block text-[13px] text-slate-500 leading-snug mt-1">쟁점별로 뉴스, 해설, 정보, 원문 링크를 묶어 봅니다.</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button onclick="showArchiveCorner()" class="text-left bg-white border-2 ${isArchive ? 'border-emerald-600 bg-emerald-50' : 'border-slate-200'} rounded-xl p-5 shadow-sm hover:shadow-md transition group">
+                        <span class="flex items-start gap-4">
+                            <span class="w-11 h-11 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-emerald-700 shadow-sm">
+                                <i class="fa-solid fa-box-archive"></i>
+                            </span>
+                            <span>
+                                <strong class="block text-[20px] font-black text-slate-900 tracking-tight">자료 전체 보기</strong>
+                                <span class="block text-[13px] text-slate-500 leading-snug mt-1">기존 글을 보관하고 필요한 자료를 검색합니다.</span>
                             </span>
                         </span>
                     </button>
@@ -645,17 +667,6 @@
                             <span>
                                 <strong class="block text-[20px] font-black text-slate-900 tracking-tight">가짜 뉴스 판별</strong>
                                 <span class="block text-[13px] text-slate-500 leading-snug mt-1">글의 진위 단서를 숨긴 상태에서 읽고 직접 판별합니다.</span>
-                            </span>
-                        </span>
-                    </button>
-                    <button onclick="showDiscussionCorner()" class="text-left bg-white border-2 ${isDiscussion ? 'border-sky-600 bg-sky-50' : 'border-slate-200'} rounded-xl p-5 shadow-sm hover:shadow-md transition group">
-                        <span class="flex items-start gap-4">
-                            <span class="w-11 h-11 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-sky-700 shadow-sm">
-                                <i class="fa-solid fa-comments"></i>
-                            </span>
-                            <span>
-                                <strong class="block text-[20px] font-black text-slate-900 tracking-tight">토의 근거자료</strong>
-                                <span class="block text-[13px] text-slate-500 leading-snug mt-1">하나의 쟁점을 여러 관점의 기사와 원문으로 비교합니다.</span>
                             </span>
                         </span>
                     </button>
@@ -705,7 +716,7 @@
             const keyword = document.getElementById('search-input').value.trim().toLowerCase();
             replaceRouteToActiveMode();
             
-            updateNavUI('전체');
+            updateNavUI(activeNewsMode === 'mission' ? '판별' : '자료');
 
             if (!keyword) {
                 renderHomeView(getCurrentArticles());
@@ -727,7 +738,7 @@
             replaceRouteToActiveMode();
             document.getElementById('search-input').value = ''; 
             
-            updateNavUI(categoryKeyword);
+            updateNavUI(activeNewsMode === 'mission' ? '판별' : '자료');
             const scopedArticles = getCurrentArticles();
 
             if (categoryKeyword === '전체') {
@@ -746,21 +757,47 @@
             return Array.isArray(topic.resources) ? topic.resources.length : 0;
         }
 
+        function getDiscussionInternalCount(topic) {
+            return (topic.resources || []).filter(resource => resource.type === 'internal').length;
+        }
+
+        function getDiscussionExternalCount(topic) {
+            return (topic.resources || []).filter(resource => resource.type === 'external').length;
+        }
+
         function renderDiscussionHome() {
             const mainContainer = document.getElementById('app-main');
             mainContainer.innerHTML = `
                 ${renderModeSwitcher()}
                 ${renderEducationalNotice()}
-                <section class="mb-8 rounded-3xl border border-slate-200 bg-white p-7 sm:p-9 shadow-sm">
-                    <div class="max-w-3xl">
-                        <span class="inline-flex items-center gap-2 rounded-full bg-sky-50 px-3 py-1 text-[12px] font-black text-sky-700 border border-sky-100">
-                            <i class="fa-solid fa-comments"></i>
-                            토의 근거자료
-                        </span>
-                        <h2 class="mt-4 text-[30px] sm:text-[38px] font-black text-slate-900 tracking-tight leading-tight">하나의 쟁점을 여러 근거로 비교해 보세요</h2>
-                        <p class="mt-3 text-[15px] sm:text-[16px] text-slate-600 leading-relaxed font-medium">
-                            내부 기사는 어린이용으로 재구성된 공개 라이선스 뉴스입니다. 외부 자료는 저작권 보호를 위해 제목, 출처, 날짜, 관점만 안내하며 본문은 원문 사이트에서 확인합니다.
-                        </p>
+                <section class="mb-8 rounded-3xl border border-slate-200 bg-white p-7 sm:p-10 shadow-sm overflow-hidden relative">
+                    <div class="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-sky-50 to-transparent hidden md:block"></div>
+                    <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+                        <div class="lg:col-span-8">
+                            <span class="inline-flex items-center gap-2 rounded-full bg-sky-50 px-3 py-1 text-[12px] font-black text-sky-700 border border-sky-100">
+                                <i class="fa-solid fa-comments"></i>
+                                토의·토론 자료실
+                            </span>
+                            <h2 class="mt-4 text-[32px] sm:text-[44px] font-black text-slate-900 tracking-tight leading-tight">쟁점을 고르고, 근거를 비교하고, 내 생각을 만드세요</h2>
+                            <p class="mt-4 text-[15px] sm:text-[17px] text-slate-600 leading-relaxed font-medium">
+                                토의·토론 주제마다 어린이용으로 재구성한 글, 데이터 해설, 정책 원문 링크를 함께 묶었습니다.
+                                저작권 확인이 어려운 자료는 본문을 옮기지 않고 원문 링크로만 안내합니다.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-4 grid grid-cols-3 gap-3">
+                            <div class="rounded-2xl bg-slate-50 border border-slate-100 p-4 text-center">
+                                <strong class="block text-[28px] font-black text-slate-900">${discussionTopics.length}</strong>
+                                <span class="text-[12px] font-bold text-slate-500">토의 주제</span>
+                            </div>
+                            <div class="rounded-2xl bg-slate-50 border border-slate-100 p-4 text-center">
+                                <strong class="block text-[28px] font-black text-slate-900">${discussionTopics.reduce((total, topic) => total + getDiscussionInternalCount(topic), 0)}</strong>
+                                <span class="text-[12px] font-bold text-slate-500">재구성 글</span>
+                            </div>
+                            <div class="rounded-2xl bg-slate-50 border border-slate-100 p-4 text-center">
+                                <strong class="block text-[28px] font-black text-slate-900">${discussionTopics.reduce((total, topic) => total + getDiscussionExternalCount(topic), 0)}</strong>
+                                <span class="text-[12px] font-bold text-slate-500">원문 링크</span>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -773,11 +810,18 @@
                                     <i class="fa-regular fa-file-lines"></i>
                                     근거 ${getDiscussionResourceCount(topic)}개
                                 </span>
+                                <span class="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-[12px] font-black text-emerald-700 border border-emerald-100">
+                                    재구성 ${getDiscussionInternalCount(topic)}개
+                                </span>
+                                <span class="inline-flex items-center gap-1 rounded-full bg-amber-50 px-3 py-1 text-[12px] font-black text-amber-700 border border-amber-100">
+                                    원문 ${getDiscussionExternalCount(topic)}개
+                                </span>
                             </div>
                             <h3 class="text-[22px] font-black text-slate-900 leading-snug tracking-tight group-hover:text-sky-700">${escapeHtml(topic.title)}</h3>
+                            <p class="mt-3 text-[15px] text-slate-800 leading-relaxed font-black">${escapeHtml(topic.essentialQuestion || '')}</p>
                             <p class="mt-3 text-[14px] text-slate-600 leading-relaxed font-medium">${escapeHtml(topic.summary)}</p>
                             <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4 text-[13px] font-black text-sky-700">
-                                <span>토의 자료 보기</span>
+                                <span>쟁점과 근거 보기</span>
                                 <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
                             </div>
                         </a>
@@ -802,7 +846,7 @@
                     </div>
                     <div class="min-w-0 flex-1">
                         <div class="mb-2 flex flex-wrap items-center gap-2">
-                            <span class="rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-black text-emerald-700 border border-emerald-100">내부 기사</span>
+                            <span class="rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-black text-emerald-700 border border-emerald-100">어린이용 재구성 글</span>
                             <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-black text-slate-600">${escapeHtml(resource.perspective || renderCategoryLabel(article))}</span>
                         </div>
                         <h4 class="text-[16px] font-black text-slate-900 leading-snug group-hover:text-sky-700">${escapeHtml(article.title)}</h4>
@@ -842,11 +886,13 @@
                     <section class="rounded-3xl border border-slate-200 bg-white p-7 sm:p-9 shadow-sm">
                         <button onclick="showDiscussionCorner()" class="mb-5 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-[13px] font-black text-slate-600 hover:border-sky-300 hover:text-sky-700 transition">
                             <i class="fa-solid fa-arrow-left"></i>
-                            토의 주제 목록
+                            토의·토론 주제 목록
                         </button>
                         <div class="flex flex-wrap items-center gap-2 mb-4">
                             <span class="inline-flex items-center rounded-full bg-sky-50 px-3 py-1 text-[12px] font-black text-sky-700 border border-sky-100">${escapeHtml(topic.category)}</span>
                             <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-[12px] font-black text-slate-600">근거 ${resources.length}개</span>
+                            <span class="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-[12px] font-black text-emerald-700 border border-emerald-100">재구성 ${getDiscussionInternalCount(topic)}개</span>
+                            <span class="inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-[12px] font-black text-amber-700 border border-amber-100">원문 ${getDiscussionExternalCount(topic)}개</span>
                         </div>
                         <h2 class="text-[30px] sm:text-[40px] font-black text-slate-900 tracking-tight leading-tight">${escapeHtml(topic.title)}</h2>
                         <p class="mt-4 text-[18px] text-slate-600 leading-relaxed font-bold">${escapeHtml(topic.essentialQuestion || topic.summary)}</p>
@@ -868,10 +914,10 @@
                         <div class="lg:col-span-2 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                             <h3 class="text-[18px] font-black text-slate-900 mb-4">
                                 <i class="fa-regular fa-file-lines mr-2 text-sky-600"></i>
-                                토의 근거자료
+                                근거자료 묶음
                             </h3>
                             <div class="mb-5 rounded-xl bg-sky-50 border border-sky-100 px-4 py-3 text-[13px] text-sky-900 leading-relaxed font-semibold">
-                                외부 원문 카드는 본문을 복사하지 않고 제목·출처·관점만 안내합니다. 자세한 내용은 공식 원문 사이트에서 확인하세요.
+                                어린이용 재구성 글은 저작권 조건을 확인한 자료만 본문으로 제공합니다. 외부 원문 카드는 본문을 복사하지 않고 제목·출처·관점만 안내합니다.
                             </div>
                             <div class="grid grid-cols-1 gap-4">
                                 ${resources.map(resource => renderDiscussionResourceCard(resource)).join('')}
@@ -927,8 +973,17 @@
             if (hash === '#fact-check') {
                 activeNewsMode = 'mission';
                 updatePageModeChrome();
-                updateNavUI('전체');
+                updateNavUI('판별');
                 updateDocumentMeta('가짜 뉴스 판별', '기사처럼 보이는 글을 읽고 출처, 근거, 표현을 살펴 직접 진짜인지 가짜인지 판단하는 활동입니다.');
+                renderHomeView(getCurrentArticles());
+                return;
+            }
+
+            if (hash === '#archive') {
+                activeNewsMode = 'home';
+                updatePageModeChrome();
+                updateNavUI('자료');
+                updateDocumentMeta('자료 전체 보기', '토의·토론 주제에 활용할 수 있는 기존 뉴스, 해설, 정보 자료를 보관하고 검색하는 화면입니다.');
                 renderHomeView(getCurrentArticles());
                 return;
             }
@@ -953,16 +1008,16 @@
                 activeNewsMode = 'home';
                 updatePageModeChrome();
                 updateNavUI('토의');
-                updateDocumentMeta('토의 근거자료', '하나의 쟁점을 여러 관점의 내부 기사와 외부 원문 링크로 비교하는 토의 자료입니다.');
+                updateDocumentMeta('토의·토론 주제', '하나의 쟁점을 여러 관점의 내부 글과 외부 원문 링크로 비교하는 토의·토론 자료실입니다.');
                 renderDiscussionHome();
                 return;
             }
 
             activeNewsMode = 'home';
             updatePageModeChrome();
-            updateNavUI('전체');
+            updateNavUI('토의');
             updateDocumentMeta();
-            renderHomeView(getCurrentArticles());
+            renderDiscussionHome();
         }
 
         // ==========================================
