@@ -37,9 +37,26 @@ const embeddedEvidenceFields = [
   'verificationNote',
   'copyrightBasis',
 ];
+const reconstructionFields = ['title', 'body'];
 
 function isObject(value) {
   return value && typeof value === 'object' && !Array.isArray(value);
+}
+
+function validateReconstruction(resourceLabel, fieldName, reconstruction) {
+  if (!isObject(reconstruction)) {
+    issues.push(`${resourceLabel}: ${fieldName} must be an object when present`);
+    return;
+  }
+  reconstructionFields.forEach((field) => {
+    if (field === 'body') {
+      if (!Array.isArray(reconstruction.body) || reconstruction.body.length === 0 || reconstruction.body.some(paragraph => typeof paragraph !== 'string' || !paragraph.trim())) {
+        issues.push(`${resourceLabel}: ${fieldName}.body must contain non-empty paragraph strings`);
+      }
+    } else if (!reconstruction[field] || typeof reconstruction[field] !== 'string') {
+      issues.push(`${resourceLabel}: ${fieldName}.${field} must be a non-empty string`);
+    }
+  });
 }
 
 topics.forEach((topic, index) => {
@@ -191,6 +208,12 @@ topics.forEach((topic, index) => {
               }
             });
           }
+        }
+        if (resource.koreanReconstruction !== undefined) {
+          validateReconstruction(resourceLabel, 'koreanReconstruction', resource.koreanReconstruction);
+        }
+        if (resource.elementaryKoreanReconstruction !== undefined) {
+          validateReconstruction(resourceLabel, 'elementaryKoreanReconstruction', resource.elementaryKoreanReconstruction);
         }
         if (resource.embeddedEvidence !== undefined) {
           if (!isObject(resource.embeddedEvidence)) {
