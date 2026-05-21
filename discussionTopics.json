@@ -87,6 +87,34 @@
         "stance": "일부 일회용 플라스틱은 개인 선택만으로 줄이기 어려워 판매·공급 규제가 필요하다는 관점",
         "license": "Open Government Licence v3.0",
         "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+      },
+      {
+        "type": "external",
+        "resourceKind": "통계/데이터",
+        "title": "Plastic Pollution",
+        "source": "Our World in Data",
+        "date": "2026.02 업데이트",
+        "url": "https://ourworldindata.org/plastic-pollution",
+        "perspective": "통계와 그래프",
+        "stance": "플라스틱 생산량, 폐기물 관리, 해양 유입을 데이터로 비교할 수 있는 자료",
+        "license": "CC BY",
+        "usage": "출처 표시 후 그래프·수치 재구성 가능",
+        "readingFocus": "총생산량만 보지 말고 폐기물 수거·처리 체계와 해양 유입의 관계를 함께 확인하기",
+        "relatedQuestions": [1, 2]
+      },
+      {
+        "type": "external",
+        "resourceKind": "연구/논문",
+        "title": "Plastic Pollution in the World's Oceans",
+        "source": "PLOS ONE",
+        "date": "2014.12.10",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0111913",
+        "perspective": "해양 플라스틱 연구",
+        "stance": "바다 위 플라스틱 조각의 규모를 조사·모델링한 공개 논문",
+        "license": "CC BY",
+        "usage": "출처 표시 후 어린이용 재구성 가능",
+        "readingFocus": "조사 지점과 추정 방법을 살펴보며 숫자가 어떻게 계산되었는지 확인하기",
+        "relatedQuestions": [1, 3]
       }
     ],
     "writingPrompt": "나는 플라스틱 문제에서 ___을 먼저 추진해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인할 수 있기 때문이다."
@@ -182,6 +210,34 @@
         "stance": "결석을 벌로만 다루지 않고 학교와 가정이 소통해 지원해야 한다는 관점",
         "license": "Open Government Licence v3.0",
         "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+      },
+      {
+        "type": "external",
+        "resourceKind": "통계/데이터",
+        "title": "Out-of-school estimates",
+        "source": "UNESCO",
+        "date": "2026.03.16",
+        "url": "https://www.unesco.org/en/education/view/outofschool/estimates",
+        "perspective": "세계 교육 통계",
+        "stance": "초등·중등 단계별 학교 밖 어린이 비율과 수를 국가·지역별로 비교할 수 있는 자료",
+        "license": "UNESCO 권리 표시 확인 필요",
+        "usage": "외부 원문 링크, 다운로드 데이터의 권리 표시 확인 후 재구성 검토",
+        "readingFocus": "비율과 실제 인원 수가 서로 다른 의미를 가진다는 점을 구분해서 보기",
+        "relatedQuestions": [1, 3]
+      },
+      {
+        "type": "external",
+        "resourceKind": "연구/논문",
+        "title": "The persistent educational digital divide and its impact on societal inequality",
+        "source": "PLOS ONE",
+        "date": "2024.04.11",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0286795",
+        "perspective": "디지털 교육 격차 연구",
+        "stance": "컴퓨터와 인터넷 접근 차이가 교육 기회와 사회적 불평등에 어떤 영향을 줄 수 있는지 분석한 공개 논문",
+        "license": "CC BY",
+        "usage": "출처 표시 후 어린이용 재구성 가능",
+        "readingFocus": "가정 형편뿐 아니라 학교·지역의 디지털 자원 차이도 지원 기준이 될 수 있는지 확인하기",
+        "relatedQuestions": [2, 3]
       }
     ],
     "writingPrompt": "나는 교육 지원을 ___ 기준으로 나누어 운영해야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있다."
@@ -281,6 +337,34 @@
         "stance": "개인 절약만이 아니라 경제 전반의 배출 구조를 바꾸는 정책이 필요하다는 관점",
         "license": "Open Government Licence v3.0",
         "usage": "출처 표시 후 번역·어린이용 재구성 가능"
+      },
+      {
+        "type": "external",
+        "resourceKind": "통계/데이터",
+        "title": "CO₂ and Greenhouse Gas Emissions",
+        "source": "Our World in Data",
+        "date": "데이터 허브",
+        "url": "https://ourworldindata.org/co2-and-greenhouse-gas-emissions",
+        "perspective": "기후 배출 통계",
+        "stance": "나라별·부문별·1인당 배출량을 비교해 책임과 전환 속도를 따져 볼 수 있는 자료",
+        "license": "CC BY",
+        "usage": "출처 표시 후 그래프·수치 재구성 가능",
+        "readingFocus": "총배출량, 1인당 배출량, 누적 배출량이 각각 어떤 판단 기준이 되는지 비교하기",
+        "relatedQuestions": [1, 2]
+      },
+      {
+        "type": "external",
+        "resourceKind": "과학 보고서",
+        "title": "IPCC Copyright",
+        "source": "Intergovernmental Panel on Climate Change",
+        "date": "저작권 안내",
+        "url": "https://www.ipcc.ch/copyright/",
+        "perspective": "과학 보고서 활용 주의",
+        "stance": "IPCC 보고서는 기후 과학의 핵심 근거지만, 자료를 그대로 쓰려면 저작권 조건을 따로 확인해야 한다는 안내",
+        "license": "IPCC 저작권, 정확한 원문 사용 조건 확인 필요",
+        "usage": "외부 원문 링크와 최소 설명만 제공",
+        "readingFocus": "과학 보고서를 근거로 삼을 때도 그래프·문구를 그대로 복사할 수 있는지 권리 조건 확인하기",
+        "relatedQuestions": [1, 3]
       }
     ],
     "writingPrompt": "나는 기후 대응을 ___ 방식으로 추진해야 한다고 생각한다. 그 이유는 ___ 자료가 보여 주는 ___ 때문이다."
@@ -369,6 +453,34 @@
         "stance": "온라인 플랫폼이 미성년자를 보호할 책임을 져야 한다는 규제 관점",
         "license": "CC BY 4.0 적용 가능 범위 확인",
         "usage": "EU 저작권 고지 확인 후 번역·재구성 가능"
+      },
+      {
+        "type": "external",
+        "resourceKind": "연구/검토논문",
+        "title": "To Ban or Not to Ban? A Rapid Review on the Impact of Smartphone Bans in Schools",
+        "source": "Education Sciences / MDPI",
+        "date": "2024.08.16",
+        "url": "https://www.mdpi.com/2227-7102/14/8/906",
+        "perspective": "스마트폰 금지 연구 검토",
+        "stance": "학교 스마트폰 금지 정책이 학업과 사회·정서적 안녕에 미치는 연구들을 빠르게 검토한 공개 논문",
+        "license": "Open Access, CC BY 적용 여부 확인 필요",
+        "usage": "외부 원문 링크, 논문 권리 표시 확인 후 재구성 검토",
+        "readingFocus": "금지 효과가 학년, 학교 상황, 함께 시행한 교육 조치에 따라 달라지는지 확인하기",
+        "relatedQuestions": [1, 2]
+      },
+      {
+        "type": "external",
+        "resourceKind": "공공 보건 보고서",
+        "title": "Social Media and Youth Mental Health",
+        "source": "U.S. Surgeon General / HHS",
+        "date": "2023 Advisory",
+        "url": "https://www.hhs.gov/surgeongeneral/reports-and-publications/youth-mental-health/social-media/index.html",
+        "perspective": "청소년 마음건강",
+        "stance": "소셜미디어의 이익과 위험을 함께 보며 청소년, 가족, 기업, 정책 담당자의 역할을 제시하는 공공 보고서",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 가능",
+        "readingFocus": "소셜미디어 사용 시간만이 아니라 수면, 관계, 괴롭힘, 보호 장치를 함께 보기",
+        "relatedQuestions": [1, 3]
       }
     ],
     "writingPrompt": "나는 학교의 스마트폰·소셜미디어 규칙을 ___ 방식으로 정해야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있기 때문이다."
@@ -475,6 +587,34 @@
         "stance": "교육처럼 사람의 기회에 영향을 줄 수 있는 AI는 위험을 따져 관리해야 한다는 규제 관점",
         "license": "CC BY 4.0 적용 가능 범위 확인",
         "usage": "EU 저작권 고지 확인 후 번역·재구성 가능"
+      },
+      {
+        "type": "external",
+        "resourceKind": "조사/설문",
+        "title": "Survey on artificial intelligence for teaching and learning - Results",
+        "source": "European School Education Platform",
+        "date": "2026 조사 결과",
+        "url": "https://school-education.ec.europa.eu/en/discover/surveys/survey-artificial-intelligence-teaching-and-learning",
+        "perspective": "교사·학교 현장 조사",
+        "stance": "유럽 학교 관계자들이 AI 활용, 우려, 필요한 지원을 어떻게 보고 있는지 보여 주는 조사 결과",
+        "license": "EU/플랫폼 저작권 고지 확인 필요",
+        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 검토",
+        "readingFocus": "교사들이 기대하는 장점과 걱정하는 위험이 무엇인지 구분해서 보기",
+        "relatedQuestions": [1, 3]
+      },
+      {
+        "type": "external",
+        "resourceKind": "연구/검토논문",
+        "title": "Generative artificial intelligence in K-12 education: A systematic review",
+        "source": "Research and Practice in Technology Enhanced Learning",
+        "date": "2026",
+        "url": "https://rptel.apsce.net/index.php/RPTEL/article/view/2026-21034",
+        "perspective": "K-12 생성형 AI 연구",
+        "stance": "초·중등교육에서 생성형 AI가 어떻게 쓰이고 어떤 장점과 과제가 보고되는지 검토한 공개 논문",
+        "license": "Open Access, 개별 논문 라이선스 확인 필요",
+        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 검토",
+        "readingFocus": "AI 활용 효과뿐 아니라 개인정보, 의존, 공정성, 접근성 문제가 함께 제시되는지 확인하기",
+        "relatedQuestions": [1, 2, 3]
       }
     ],
     "writingPrompt": "나는 학교에서 AI를 ___에는 사용할 수 있지만 ___에는 조심해야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있다."
@@ -581,6 +721,34 @@
         "stance": "어린이가 개인정보, 온라인 시민성, 광고 이해, 사기 피하기를 활동으로 배울 수 있는 자료",
         "license": "미국 연방정부 공개 자료",
         "usage": "외부 원문 링크, 제3자 권리 표시 확인 후 재구성 가능"
+      },
+      {
+        "type": "external",
+        "resourceKind": "조사/통계",
+        "title": "Spotting disinformation: How confident are Europeans in a digital age?",
+        "source": "data.europa.eu",
+        "date": "2026.04",
+        "url": "https://data.europa.eu/en/publications/datastories/spotting-disinformation-how-confident-are-europeans-digital-age-0",
+        "perspective": "허위정보 인식 조사",
+        "stance": "유럽 시민이 허위정보를 얼마나 자주 접하고 어떻게 확인한다고 답했는지 살펴볼 수 있는 데이터 스토리",
+        "license": "EU 오픈데이터 포털, 개별 데이터셋 권리 표시 확인 필요",
+        "usage": "외부 원문 링크, 데이터셋 권리 표시 확인 후 재구성 검토",
+        "readingFocus": "사람들이 어떤 확인 방법을 쓰는지와 그 방법의 한계를 함께 보기",
+        "relatedQuestions": [1, 2]
+      },
+      {
+        "type": "external",
+        "resourceKind": "연구/논문",
+        "title": "Why do people spread false information online?",
+        "source": "PLOS ONE",
+        "date": "2020.10.07",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0239666",
+        "perspective": "허위정보 공유 연구",
+        "stance": "사람들이 온라인 허위정보를 공유할 가능성에 영향을 주는 메시지·이용자 요인을 조사한 공개 논문",
+        "license": "CC BY",
+        "usage": "출처 표시 후 어린이용 재구성 가능",
+        "readingFocus": "허위정보가 퍼지는 이유를 개인 책임만이 아니라 메시지 형식과 플랫폼 환경까지 넓혀 보기",
+        "relatedQuestions": [1, 3]
       }
     ],
     "writingPrompt": "나는 허위정보나 AI 합성물을 만났을 때 ___을 먼저 확인하고, ___은 ___ 책임을 져야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있다."

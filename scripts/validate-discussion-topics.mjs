@@ -86,6 +86,7 @@ topics.forEach((topic, index) => {
   if (!Array.isArray(topic.resources) || topic.resources.length === 0) {
     issues.push(`${label}: resources must not be empty`);
   } else {
+    const discussionQuestionCount = Array.isArray(topic.discussionQuestions) ? topic.discussionQuestions.length : 0;
     topic.resources.forEach((resource, resourceIndex) => {
       const resourceLabel = `${label}.resources[${resourceIndex}]`;
 
@@ -101,6 +102,22 @@ topics.forEach((topic, index) => {
         });
         if (resource.url && !/^https?:\/\//.test(resource.url)) {
           issues.push(`${resourceLabel}: external url must start with http:// or https://`);
+        }
+        ['resourceKind', 'readingFocus'].forEach((field) => {
+          if (resource[field] !== undefined && typeof resource[field] !== 'string') {
+            issues.push(`${resourceLabel}: optional field "${field}" must be a string`);
+          }
+        });
+        if (resource.relatedQuestions !== undefined) {
+          if (!Array.isArray(resource.relatedQuestions)) {
+            issues.push(`${resourceLabel}: relatedQuestions must be an array when present`);
+          } else {
+            resource.relatedQuestions.forEach((questionNumber, relatedIndex) => {
+              if (!Number.isInteger(questionNumber) || questionNumber < 1 || questionNumber > discussionQuestionCount) {
+                issues.push(`${resourceLabel}: relatedQuestions[${relatedIndex}] must reference an existing discussion question`);
+              }
+            });
+          }
         }
       } else {
         issues.push(`${resourceLabel}: type must be "internal" or "external"`);
