@@ -185,6 +185,27 @@ topics.forEach((topic, index) => {
             }
           });
         }
+        if (reference.readingMaterials !== undefined) {
+          if (!Array.isArray(reference.readingMaterials) || reference.readingMaterials.length === 0) {
+            issues.push(`${referenceLabel}: readingMaterials must be a non-empty array when present`);
+          } else {
+            reference.readingMaterials.forEach((material, materialIndex) => {
+              const materialLabel = `${referenceLabel}.readingMaterials[${materialIndex}]`;
+              if (!isObject(material)) {
+                issues.push(`${materialLabel}: reading material must be an object`);
+                return;
+              }
+              ['title', 'source', 'url', 'materialType', 'usageNote', 'copyrightNote'].forEach((field) => {
+                if (!material[field] || typeof material[field] !== 'string') {
+                  issues.push(`${materialLabel}: missing string field "${field}"`);
+                }
+              });
+              if (material.url && !/^https?:\/\//.test(material.url)) {
+                issues.push(`${materialLabel}: url must start with http:// or https://`);
+              }
+            });
+          }
+        }
       });
     }
   }

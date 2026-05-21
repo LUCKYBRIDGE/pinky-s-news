@@ -1871,6 +1871,16 @@
         "sourceUrl": "https://culedu.pusan.ac.kr/bbs/culedu/1827/1433493/artclView.do?layout=unknown",
         "originalMotion": "대학의 글쓰기 과제에 생성형 AI 사용을 금지해야 한다.",
         "adaptationNote": "대학 토론 논제를 초중등 수업 맥락에 맞게 과제·평가에서 AI 사용 조건을 정하는 질문으로 낮춰 씁니다.",
+        "readingMaterials": [
+          {
+            "title": "2026-1학기 독서토론대회 주제 도서 및 예선 논제 안내",
+            "source": "부산대학교 교양교육원",
+            "url": "https://culedu.pusan.ac.kr/bbs/culedu/1827/1433493/artclView.do?layout=unknown",
+            "materialType": "대회 주제도서 안내",
+            "usageNote": "대회가 지정한 주제도서와 AI 관련 논제 목록을 확인하는 링크입니다. 도서 본문은 저작권 보호 자료라 앱에 옮기지 않습니다.",
+            "copyrightNote": "대회 공지와 도서 정보 링크만 제공하며, 책 본문·번역·요약은 재사용하지 않습니다."
+          }
+        ],
         "relatedQuestions": [
           1,
           2
@@ -2465,6 +2475,16 @@
         "sourceUrl": "https://culedu.pusan.ac.kr/bbs/culedu/1827/1433493/artclView.do?layout=unknown",
         "originalMotion": "AI가 생성한 결과물은 창의적인 예술 작품으로 인정받을 수 있다.",
         "adaptationNote": "AI 창작물 인정 논점을 초등 고학년에게 맞게 표시, 동의, 창작과 허위정보의 경계 질문으로 바꿉니다.",
+        "readingMaterials": [
+          {
+            "title": "2026-1학기 독서토론대회 주제 도서 및 AI 생성물 논제 안내",
+            "source": "부산대학교 교양교육원",
+            "url": "https://culedu.pusan.ac.kr/bbs/culedu/1827/1433493/artclView.do?layout=unknown",
+            "materialType": "대회 주제도서 안내",
+            "usageNote": "AI 생성 결과물의 창작성 논제와 대회 지정 도서를 확인하는 링크입니다. 학생에게는 책 전체를 요구하기보다 쟁점 구조 확인용으로 안내합니다.",
+            "copyrightNote": "대회 공지와 도서 정보 링크만 제공하며, 책 본문·번역·요약은 재사용하지 않습니다."
+          }
+        ],
         "relatedQuestions": [
           1,
           2,
@@ -3350,6 +3370,16 @@
         "sourceUrl": "https://culedu.pusan.ac.kr/bbs/culedu/1827/1433493/artclView.do?layout=unknown",
         "originalMotion": "AI가 생성한 결과물은 창의적인 예술 작품으로 인정받을 수 있다.",
         "adaptationNote": "AI 생성물의 창작성 논점을 초중등 과제에서 원자료 권리, AI 사용 표시, 사람의 기여를 밝히는 기준 질문으로 바꿉니다.",
+        "readingMaterials": [
+          {
+            "title": "2026-1학기 독서토론대회 주제 도서 및 AI 생성물 논제 안내",
+            "source": "부산대학교 교양교육원",
+            "url": "https://culedu.pusan.ac.kr/bbs/culedu/1827/1433493/artclView.do?layout=unknown",
+            "materialType": "대회 주제도서 안내",
+            "usageNote": "AI 생성 결과물을 창작물로 볼 수 있는지 다룬 대회 논제와 지정 도서를 확인하는 링크입니다.",
+            "copyrightNote": "대회 공지와 도서 정보 링크만 제공하며, 책 본문·번역·요약은 재사용하지 않습니다."
+          }
+        ],
         "relatedQuestions": [
           3
         ]
