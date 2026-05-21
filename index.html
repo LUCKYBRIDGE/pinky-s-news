@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>트루핑키스 뉴스 - 진실을 밝히는 포털</title>
+    <title>트루핑키스 뉴스·해설 | 어린이 미디어 리터러시</title>
+    <meta name="description" content="어린이를 위한 공개 라이선스 뉴스·데이터 해설, 가짜 뉴스 판별 활동, 토의 근거자료를 제공하는 미디어 리터러시 교육 서비스입니다.">
+    <link rel="canonical" href="https://luckybridge.github.io/truepinkys-news/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="트루핑키스 뉴스">
+    <meta property="og:title" content="트루핑키스 뉴스·해설 | 어린이 미디어 리터러시">
+    <meta property="og:description" content="어린이를 위한 공개 라이선스 뉴스·데이터 해설, 가짜 뉴스 판별 활동, 토의 근거자료를 제공합니다.">
+    <meta property="og:url" content="https://luckybridge.github.io/truepinkys-news/">
+    <meta property="og:image" content="https://luckybridge.github.io/truepinkys-news/assets/generated/news-001.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="트루핑키스 뉴스·해설 | 어린이 미디어 리터러시">
+    <meta name="twitter:description" content="어린이를 위한 공개 라이선스 뉴스·데이터 해설, 가짜 뉴스 판별 활동, 토의 근거자료를 제공합니다.">
+    <meta name="twitter:image" content="https://luckybridge.github.io/truepinkys-news/assets/generated/news-001.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Premium Fonts: Pretendard for UI, Noto Serif KR for Article Body -->
@@ -226,6 +238,9 @@
         let discussionTopics = [];
         let currentFontSize = 17.6; // 1.1rem eq
         let activeNewsMode = 'home';
+        const SITE_TITLE = '트루핑키스 뉴스·해설';
+        const SITE_SUBTITLE = '어린이 미디어 리터러시';
+        const SITE_DESCRIPTION = '어린이를 위한 공개 라이선스 뉴스·데이터 해설, 가짜 뉴스 판별 활동, 토의 근거자료를 제공하는 미디어 리터러시 교육 서비스입니다.';
         const EDUCATIONAL_SERVICE_NOTICE = '트루핑키스 뉴스는 미디어 리터러시 교육용 서비스입니다. 저작권자 또는 권리자의 정당한 삭제 요청이 있을 경우 관련 게시글은 검토 후 삭제될 수 있습니다.';
         const CONTENT_SOURCE_NOTICE = '현재 본문 형태로 제공하는 실제 뉴스는 공공누리 제1유형, CC BY, CC0처럼 출처 표시와 재구성이 가능한 공개 라이선스 자료만 사용합니다. 변경금지 또는 권리 확인이 어려운 기사·자료는 제목과 최소 정보만 표시하고 원문 사이트로 이동하도록 안내합니다.';
         const NEWS_MODES = {
@@ -303,6 +318,21 @@
 
         function renderCategoryLabel(article) {
             return getArticleCategories(article).join(' · ');
+        }
+
+        function setMetaContent(selector, content) {
+            const element = document.querySelector(selector);
+            if (element) element.setAttribute('content', content);
+        }
+
+        function updateDocumentMeta(title = SITE_TITLE, description = SITE_DESCRIPTION) {
+            const fullTitle = title === SITE_TITLE ? `${SITE_TITLE} | ${SITE_SUBTITLE}` : `${title} | ${SITE_TITLE}`;
+            document.title = fullTitle;
+            setMetaContent('meta[name="description"]', description);
+            setMetaContent('meta[property="og:title"]', fullTitle);
+            setMetaContent('meta[property="og:description"]', description);
+            setMetaContent('meta[name="twitter:title"]', fullTitle);
+            setMetaContent('meta[name="twitter:description"]', description);
         }
 
         function getContentKind(news) {
@@ -888,6 +918,7 @@
                     if (article.type === 'fake') activeNewsMode = 'mission';
                     updatePageModeChrome();
                     updateNavUI(getArticleCategories(article)[0]);
+                    updateDocumentMeta(article.title, article.subtitle || SITE_DESCRIPTION);
                     renderArticleView(article);
                     return;
                 }
@@ -897,6 +928,7 @@
                 activeNewsMode = 'mission';
                 updatePageModeChrome();
                 updateNavUI('전체');
+                updateDocumentMeta('가짜 뉴스 판별', '기사처럼 보이는 글을 읽고 출처, 근거, 표현을 살펴 직접 진짜인지 가짜인지 판단하는 활동입니다.');
                 renderHomeView(getCurrentArticles());
                 return;
             }
@@ -908,8 +940,10 @@
                 const topicId = hash.replace('#discussion-topic-', '');
                 const topic = discussionTopics.find(item => item.id === topicId);
                 if (topic) {
+                    updateDocumentMeta(topic.title, topic.essentialQuestion || topic.summary || SITE_DESCRIPTION);
                     renderDiscussionTopic(topic);
                 } else {
+                    updateDocumentMeta('토의 근거자료', '하나의 쟁점을 여러 관점의 내부 기사와 외부 원문 링크로 비교하는 토의 자료입니다.');
                     renderDiscussionHome();
                 }
                 return;
@@ -919,6 +953,7 @@
                 activeNewsMode = 'home';
                 updatePageModeChrome();
                 updateNavUI('토의');
+                updateDocumentMeta('토의 근거자료', '하나의 쟁점을 여러 관점의 내부 기사와 외부 원문 링크로 비교하는 토의 자료입니다.');
                 renderDiscussionHome();
                 return;
             }
@@ -926,6 +961,7 @@
             activeNewsMode = 'home';
             updatePageModeChrome();
             updateNavUI('전체');
+            updateDocumentMeta();
             renderHomeView(getCurrentArticles());
         }
 
