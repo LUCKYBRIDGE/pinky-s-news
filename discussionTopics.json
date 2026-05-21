@@ -237,6 +237,67 @@
           "timeRange": "2014년 논문으로, 현재 상황을 볼 때는 최신 연구와 함께 비교해야 합니다.",
           "caution": "바다 전체를 직접 센 값이 아니라 조사 지점 자료와 모델을 바탕으로 한 추정치라는 점을 확인해야 합니다."
         }
+      },
+      {
+        "type": "external",
+        "title": "National Strategy to Prevent Plastic Pollution",
+        "source": "U.S. Environmental Protection Agency",
+        "date": "2024 전략",
+        "url": "https://www.epa.gov/circulareconomy/national-strategy-prevent-plastic-pollution",
+        "perspective": "플라스틱 오염 예방 전략",
+        "stance": "플라스틱 오염은 생산, 사용, 폐기, 회수 전 과정에서 줄여야 한다는 정책 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "제3자 권리 표시 확인 후 출처 표시·어린이용 재구성 가능",
+        "resourceKind": "정책 전략",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "플라스틱을 버린 뒤 처리하는 일뿐 아니라 처음부터 덜 만들고 덜 새어 나가게 하는 조건을 확인하기",
+        "elementaryReadingFocus": "플라스틱을 덜 만들기, 다시 쓰기, 잘 모으기 중 어떤 방법이 나오는지 찾아보기",
+        "evidenceInfo": {
+          "sourceDetail": "EPA의 플라스틱 오염 예방 국가 전략 안내입니다.",
+          "sampleOrScope": "미국의 플라스틱 생산·사용·폐기·회수 관련 정책 방향을 다룹니다.",
+          "timeRange": "2024년 전략 자료입니다.",
+          "caution": "미국 정책이므로 한국 학교나 지역에 적용할 때는 제도와 생활 조건 차이를 고려해야 합니다."
+        }
+      },
+      {
+        "type": "external",
+        "title": "National Recycling Strategy",
+        "source": "U.S. Environmental Protection Agency",
+        "date": "재활용 전략",
+        "url": "https://www.epa.gov/circulareconomy/national-recycling-strategy",
+        "perspective": "재활용 체계",
+        "stance": "재활용은 개인 분리배출만이 아니라 지역 수거, 시장, 정보 표시, 공정한 시설 접근이 함께 필요하다는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "제3자 권리 표시 확인 후 출처 표시·어린이용 재구성 가능",
+        "resourceKind": "정책 전략",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "재활용이 잘 되려면 개인, 지역, 기업, 정부가 각각 어떤 조건을 갖춰야 하는지 보기",
+        "elementaryReadingFocus": "분리배출만 잘하면 되는지, 수거·공장·회사 책임도 필요한지 생각해 보기"
+      },
+      {
+        "type": "external",
+        "title": "Plastic Pollution",
+        "source": "UN Environment Programme",
+        "date": "정책·캠페인 안내",
+        "url": "https://www.unep.org/plastic-pollution",
+        "perspective": "국제 대응",
+        "stance": "플라스틱 오염은 세계 여러 나라가 함께 줄여야 하는 환경 문제라는 관점",
+        "license": "UNEP 저작권, 자유 재사용 조건 확인 필요",
+        "usage": "외부 원문 링크와 최소 설명만 제공",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "국제기구가 플라스틱 오염을 어떤 문제로 보고 어떤 행동을 강조하는지 확인하기",
+        "elementaryReadingFocus": "플라스틱 문제가 왜 우리 동네만의 문제가 아니라 세계 문제인지 찾아보기"
       }
     ],
     "writingPrompt": "나는 플라스틱 문제에서 ___을 먼저 추진해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인할 수 있기 때문이다.",
@@ -504,6 +565,69 @@
           "timeRange": "2024년 공개 논문입니다.",
           "caution": "특정 국가·자료 조건에서 분석한 결과이므로 한국 학교 상황에 적용할 때는 맥락 차이를 고려해야 합니다."
         }
+      },
+      {
+        "type": "external",
+        "title": "Learning Poverty",
+        "source": "World Bank",
+        "date": "교육 지표 안내",
+        "url": "https://www.worldbank.org/en/topic/education/brief/learning-poverty",
+        "perspective": "기초 학습 격차",
+        "stance": "학교에 다니는 것뿐 아니라 읽고 이해하는 기초 학습을 보장해야 한다는 관점",
+        "license": "World Bank 자료, 재사용 조건 확인 필요",
+        "usage": "외부 원문 링크와 최소 설명만 제공",
+        "resourceKind": "교육 지표",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "학교 출석률과 실제 학습 성취가 서로 다를 수 있다는 점을 구분해서 보기",
+        "elementaryReadingFocus": "학교에 가는 것과 글을 읽고 이해하는 것이 왜 둘 다 중요한지 생각하기",
+        "evidenceInfo": {
+          "sourceDetail": "World Bank의 Learning Poverty 지표 안내입니다.",
+          "sampleOrScope": "10세 아동이 간단한 글을 읽고 이해하지 못하는 비율을 중심으로 교육 격차를 설명합니다.",
+          "timeRange": "현재 World Bank 교육 주제 안내입니다.",
+          "caution": "나라별 자료 수집 방식과 시점이 다르므로 단순 순위처럼 해석하지 않아야 합니다."
+        }
+      },
+      {
+        "type": "external",
+        "title": "Education Statistics - EdStats",
+        "source": "World Bank",
+        "date": "데이터 포털",
+        "url": "https://datatopics.worldbank.org/education/",
+        "perspective": "교육 데이터 포털",
+        "stance": "교육 지원 기준은 출석, 학습, 성별, 지역, 소득 같은 여러 지표를 함께 보고 정해야 한다는 관점",
+        "license": "World Bank 데이터 조건 확인 필요",
+        "usage": "외부 원문 링크, 데이터 재생산은 별도 감사 후 가능",
+        "resourceKind": "통계/데이터 포털",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "교육 문제를 하나의 숫자가 아니라 여러 지표로 비교해야 하는 이유 확인하기",
+        "elementaryReadingFocus": "교육 문제를 볼 때 학교에 못 가는 어린이, 읽기 어려운 어린이, 지역 차이를 함께 보기"
+      },
+      {
+        "type": "external",
+        "title": "Education Progress",
+        "source": "UNESCO / partners",
+        "date": "SDG4 데이터 도구",
+        "url": "https://www.education-progress.org/en",
+        "perspective": "교육 목표 진척",
+        "stance": "교육 기회와 학습 수준은 국제 목표를 기준으로 계속 점검해야 한다는 관점",
+        "license": "UNESCO 및 협력기관 권리 표시 확인 필요",
+        "usage": "외부 원문 링크, 데이터 재생산은 권리와 원자료 확인 후 가능",
+        "resourceKind": "통계/데이터 도구",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "교육 목표를 볼 때 접근, 학습, 형평성 지표가 어떻게 나뉘는지 확인하기",
+        "elementaryReadingFocus": "모두가 학교에 가고 잘 배운다는 목표를 어떤 숫자로 살펴보는지 찾아보기"
       }
     ],
     "writingPrompt": "나는 교육 지원을 ___ 기준으로 나누어 운영해야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있다.",
@@ -783,6 +907,58 @@
           "timeRange": "IPCC의 현재 저작권 안내 페이지입니다.",
           "caution": "보고서 내용은 중요한 근거지만 그래프나 문장을 그대로 가져오려면 별도 사용 조건을 확인해야 합니다."
         }
+      },
+      {
+        "type": "external",
+        "title": "Basics of Climate Change",
+        "source": "U.S. Environmental Protection Agency",
+        "date": "기후 과학 안내",
+        "url": "https://www.epa.gov/climatechange-science/basics-climate-change",
+        "perspective": "기후 기본 개념",
+        "stance": "기후 대응 속도를 논의하기 전 온실가스와 기후 변화의 기본 원리를 확인해야 한다는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "제3자 권리 표시 확인 후 출처 표시·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "온실가스, 기온 상승, 해수면, 극한 날씨 같은 기본 개념을 정책 논의와 구분해 읽기",
+        "elementaryReadingFocus": "기후 변화가 왜 생기는지 기본 원인을 먼저 찾아보기"
+      },
+      {
+        "type": "external",
+        "title": "Climate change impacts",
+        "source": "National Oceanic and Atmospheric Administration",
+        "date": "교육 자료",
+        "url": "https://prod-01-alb-www-noaa.woc.noaa.gov/education/resource-collections/climate/climate-change-impacts",
+        "perspective": "기후 영향",
+        "stance": "기후 변화는 건강, 물, 생태계, 해안, 재난 위험에 서로 다른 영향을 준다는 관점",
+        "license": "미국 연방정부 공개 자료(제3자 자료 제외)",
+        "usage": "출처 표시 후 어린이용 재구성 가능, 원문 이미지 사용은 별도 확인 필요",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "기후 대응을 늦추거나 빠르게 할 때 어떤 피해를 줄이려는지 영향별로 확인하기",
+        "elementaryReadingFocus": "기후 변화가 사람, 동물, 바다, 날씨에 어떤 영향을 주는지 찾아보기"
+      },
+      {
+        "type": "external",
+        "title": "Key findings from the United Nations climate science reports",
+        "source": "United Nations",
+        "date": "기후 과학 핵심 설명",
+        "url": "https://www.un.org/en/climatechange/science/key-findings",
+        "perspective": "국제 과학 요약",
+        "stance": "기후 대응은 과학 보고서의 핵심 발견을 바탕으로 판단해야 한다는 관점",
+        "license": "UN 저작권, 자유 재사용 조건 확인 필요",
+        "usage": "외부 원문 링크와 최소 설명만 제공",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "국제기구가 기후 위험과 대응 필요성을 어떤 핵심 문장으로 정리하는지 확인하기",
+        "elementaryReadingFocus": "세계가 기후 문제를 왜 급한 문제로 보는지 핵심 이유를 찾아보기"
       }
     ],
     "writingPrompt": "나는 기후 대응을 ___ 방식으로 추진해야 한다고 생각한다. 그 이유는 ___ 자료가 보여 주는 ___ 때문이다.",
@@ -1000,6 +1176,58 @@
           "timeRange": "2023년 Advisory 자료입니다.",
           "caution": "소셜미디어의 위험과 이익을 함께 다루며, 사용 시간만으로 원인을 단정하지 않도록 읽어야 합니다."
         }
+      },
+      {
+        "type": "external",
+        "title": "Youth Risk Behavior Survey Data Summary & Trends Report",
+        "source": "Centers for Disease Control and Prevention",
+        "date": "2023 조사 요약",
+        "url": "https://www.cdc.gov/yrbs/dstr/index.html",
+        "perspective": "청소년 건강 조사",
+        "stance": "청소년의 온라인 경험과 마음건강은 큰 표본 조사 자료와 함께 조심스럽게 읽어야 한다는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "출처 표시 후 어린이용 재구성 가능, 표 재생산은 별도 감사 후 가능",
+        "resourceKind": "조사/통계",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "소셜미디어, 괴롭힘, 마음건강 자료를 볼 때 조사대상과 원인 단정의 한계를 함께 확인하기",
+        "elementaryReadingFocus": "조사 결과를 볼 때 누가 조사에 답했는지, 원인인지 관련인지 구분하기"
+      },
+      {
+        "type": "external",
+        "title": "Online Safety Act",
+        "source": "GOV.UK / Department for Science, Innovation and Technology",
+        "date": "2025~2026 안내",
+        "url": "https://www.gov.uk/government/collections/online-safety-act",
+        "perspective": "온라인 안전 법제",
+        "stance": "플랫폼은 어린이가 위험한 콘텐츠를 만나지 않도록 시스템과 신고 절차를 마련해야 한다는 관점",
+        "license": "Open Government Licence v3.0",
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "학교 규칙만이 아니라 플랫폼의 법적 책임이 어떻게 논의되는지 보기",
+        "elementaryReadingFocus": "학교와 집뿐 아니라 앱 회사도 어린이 안전에 어떤 책임이 있는지 찾아보기"
+      },
+      {
+        "type": "external",
+        "title": "Online Safety Act: explainer",
+        "source": "GOV.UK / Department for Science, Innovation and Technology",
+        "date": "2025 업데이트",
+        "url": "https://www.gov.uk/government/publications/online-safety-act-explainer/online-safety-act-explainer",
+        "perspective": "온라인 안전 설명",
+        "stance": "유해 콘텐츠, 신고, 나이에 맞는 경험, 알고리즘 책임을 쉽게 비교할 수 있는 정부 설명 자료",
+        "license": "Open Government Licence v3.0",
+        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "어린이를 보호하기 위한 규칙이 표현의 자유, 신고, 추천 시스템과 어떻게 연결되는지 보기",
+        "elementaryReadingFocus": "나이에 맞지 않는 콘텐츠를 줄이기 위해 어떤 규칙이 필요한지 보기"
       }
     ],
     "writingPrompt": "나는 학교의 스마트폰·소셜미디어 규칙을 ___ 방식으로 정해야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있기 때문이다.",
@@ -1222,6 +1450,62 @@
           "timeRange": "2026년 공개 논문입니다.",
           "caution": "연구 수가 빠르게 늘고 있어 최신 정책과 학교 현장 사례를 함께 확인해야 합니다."
         }
+      },
+      {
+        "type": "external",
+        "title": "Artificial Intelligence and the Future of Teaching and Learning",
+        "source": "U.S. Department of Education / Office of Educational Technology",
+        "date": "2023 보고서",
+        "url": "https://www.ed.gov/sites/ed/files/documents/ai-report/ai-report.pdf",
+        "perspective": "AI 교육 정책",
+        "stance": "AI는 교사를 대신하기보다 학습을 돕는 도구로 쓰되 안전, 공정성, 개인정보 기준이 필요하다는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "출처 표시 후 어린이용 재구성 가능, PDF 표·그림 사용은 별도 확인",
+        "resourceKind": "정책 보고서",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "AI를 수업에 쓸 때 사람 교사의 역할, 평가 공정성, 개인정보 보호가 어떻게 함께 제시되는지 보기",
+        "elementaryReadingFocus": "AI가 선생님을 대신하는지, 도와주는 도구인지 구분해서 보기"
+      },
+      {
+        "type": "external",
+        "title": "AI Risk Management Framework",
+        "source": "National Institute of Standards and Technology",
+        "date": "AI 위험관리 안내",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "perspective": "AI 위험 관리",
+        "stance": "AI 시스템은 정확성, 안전성, 설명 가능성, 공정성 같은 위험을 미리 관리해야 한다는 관점",
+        "license": "미국 연방정부 공개 자료(제3자 자료 제외)",
+        "usage": "외부 원문 링크, 어려운 프레임워크 내용은 교사용 참고로 활용",
+        "resourceKind": "AI 위험관리 프레임워크",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "학교 AI 도구를 고를 때 정확성, 편향, 안전, 책임을 어떤 기준으로 점검할 수 있는지 보기",
+        "elementaryReadingFocus": "AI가 틀리거나 불공정할 수 있다면 어떤 점을 확인해야 하는지 보기"
+      },
+      {
+        "type": "external",
+        "title": "AI competency framework for students",
+        "source": "UNESCO",
+        "date": "2024 안내",
+        "url": "https://www.unesco.org/en/articles/ai-competency-framework-students",
+        "perspective": "학생 AI 역량",
+        "stance": "학생은 AI를 쓰는 기술뿐 아니라 비판적으로 판단하고 책임 있게 사용하는 역량을 배워야 한다는 관점",
+        "license": "UNESCO 권리 표시 확인 필요",
+        "usage": "외부 원문 링크, 권리 표시 확인 후 재구성 검토",
+        "resourceKind": "역량 프레임워크",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "학생이 AI를 쓸 때 알아야 할 지식, 태도, 책임이 어떻게 나뉘는지 확인하기",
+        "elementaryReadingFocus": "AI를 잘 쓰는 것과 책임 있게 쓰는 것이 어떻게 다른지 찾아보기"
       }
     ],
     "writingPrompt": "나는 학교에서 AI를 ___에는 사용할 수 있지만 ___에는 조심해야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있다.",
@@ -1459,6 +1743,59 @@
           "timeRange": "2020년 공개 논문입니다.",
           "caution": "자기보고식 공유 가능성을 다룬 연구라 실제 플랫폼 행동과 차이가 있을 수 있습니다."
         }
+      },
+      {
+        "type": "external",
+        "title": "Foreign Influence Operations and Disinformation",
+        "source": "Cybersecurity and Infrastructure Security Agency",
+        "date": "보안 안내",
+        "url": "https://www.cisa.gov/topics/election-security/foreign-influence-operations-and-disinformation",
+        "perspective": "허위정보 대응",
+        "stance": "허위정보는 개인의 실수뿐 아니라 사회적 신뢰를 흔드는 조직적 활동이 될 수 있다는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "출처 표시 후 어린이용 재구성 가능",
+        "resourceKind": "보안/허위정보 안내",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "허위정보 대응에서 개인 확인과 기관·플랫폼 대응이 어떻게 함께 필요한지 보기",
+        "elementaryReadingFocus": "거짓 정보가 왜 개인 문제가 아니라 사회 문제도 될 수 있는지 생각하기"
+      },
+      {
+        "type": "external",
+        "title": "How To Recognize and Avoid Phishing Scams",
+        "source": "Federal Trade Commission Consumer Advice",
+        "date": "소비자 안내",
+        "url": "https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams",
+        "perspective": "사기 정보 판별",
+        "stance": "출처 확인, 링크 조심, 개인정보 요구 확인은 허위정보와 사기 대응의 기본 절차라는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "출처 표시 후 어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "수상한 메시지를 볼 때 링크, 보낸 사람, 개인정보 요구를 어떤 순서로 확인하는지 보기",
+        "elementaryReadingFocus": "수상한 링크나 메시지를 받았을 때 먼저 확인할 단서를 찾아보기"
+      },
+      {
+        "type": "external",
+        "title": "Infodemic",
+        "source": "World Health Organization",
+        "date": "건강 정보 안내",
+        "url": "https://www.who.int/health-topics/infodemic",
+        "perspective": "정보 과잉과 건강 허위정보",
+        "stance": "정보가 너무 많고 뒤섞이면 올바른 결정을 어렵게 만들 수 있어 신뢰할 출처 확인이 필요하다는 관점",
+        "license": "WHO 저작권, 자유 재사용 조건 확인 필요",
+        "usage": "외부 원문 링크와 최소 설명만 제공",
+        "resourceKind": "건강 정보 안내",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "건강 관련 정보가 많을수록 왜 출처와 근거를 더 꼼꼼히 확인해야 하는지 보기",
+        "elementaryReadingFocus": "건강 정보가 많을 때 어떤 말을 믿어야 할지 기준을 생각하기"
       }
     ],
     "writingPrompt": "나는 허위정보나 AI 합성물을 만났을 때 ___을 먼저 확인하고, ___은 ___ 책임을 져야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있다.",
@@ -1603,6 +1940,60 @@
           "timeRange": "2023년 공개 안내입니다.",
           "caution": "보안 기관 관점의 자료이므로 학교 생활 규칙으로 옮길 때는 학생 권리와 교육 목적을 함께 고려해야 합니다."
         }
+      },
+      {
+        "type": "external",
+        "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+        "source": "National Institute of Standards and Technology",
+        "date": "2024 보고서",
+        "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "perspective": "생성형 AI 위험",
+        "stance": "생성형 AI는 허위정보, 사칭, 저작권, 편향 같은 위험을 따로 관리해야 한다는 관점",
+        "license": "미국 연방정부 공개 자료(제3자 자료 제외)",
+        "usage": "외부 원문 링크, 어려운 보고서 내용은 교사용 참고로 활용",
+        "resourceKind": "AI 위험관리 보고서",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "생성형 AI가 만든 글·사진·영상에서 어떤 위험이 생길 수 있는지 분류해 보기",
+        "elementaryReadingFocus": "AI가 만든 사진과 글에서 어떤 위험이 생길 수 있는지 찾아보기"
+      },
+      {
+        "type": "external",
+        "title": "FTC Voice Cloning Challenge",
+        "source": "Federal Trade Commission",
+        "date": "2024 도전 과제",
+        "url": "https://www.ftc.gov/news-events/contests/ftc-voice-cloning-challenge",
+        "perspective": "AI 음성 사칭",
+        "stance": "AI 음성 복제는 사기와 사칭 피해로 이어질 수 있어 예방 기술과 책임 기준이 필요하다는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "출처 표시 후 어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "목소리 합성이 장난을 넘어 사칭과 피해가 되는 조건을 확인하기",
+        "elementaryReadingFocus": "내 목소리나 가족 목소리를 AI가 따라 하면 어떤 문제가 생길지 생각하기"
+      },
+      {
+        "type": "external",
+        "title": "Copyright and Artificial Intelligence",
+        "source": "U.S. Copyright Office",
+        "date": "AI 저작권 이슈 안내",
+        "url": "https://www.copyright.gov/ai/",
+        "perspective": "AI 창작과 권리",
+        "stance": "AI 생성물은 표시, 사람의 창작 기여, 학습자료 권리 문제와 함께 다뤄야 한다는 관점",
+        "license": "미국 연방정부 공개 자료(제3자 자료 제외)",
+        "usage": "외부 원문 링크, 어려운 법률 내용은 교사용 참고로 활용",
+        "resourceKind": "정책/저작권 안내",
+        "relatedQuestions": [
+          2,
+          3
+        ],
+        "readingFocus": "AI 합성물을 창작물로 쓸 때 사람의 동의와 권리 문제가 왜 함께 생기는지 보기",
+        "elementaryReadingFocus": "AI가 만든 그림이나 글을 쓸 때 누구의 권리를 생각해야 하는지 보기"
       }
     ],
     "writingPrompt": "나는 AI 합성물을 ___ 경우에는 허용하되, ___ 경우에는 반드시 표시하거나 제한해야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있기 때문이다.",
@@ -1746,6 +2137,58 @@
           3
         ],
         "readingFocus": "플랫폼의 광고 투명성과 미성년자 보호 책임을 함께 보기"
+      },
+      {
+        "type": "external",
+        "title": "FTC’s Endorsement Guides: What People Are Asking",
+        "source": "Federal Trade Commission",
+        "date": "광고 표시 Q&A",
+        "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+        "perspective": "추천·후기 광고 표시",
+        "stance": "후기와 추천에 광고 관계가 있으면 보는 사람이 알 수 있게 분명히 밝혀야 한다는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "출처 표시 후 어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "추천, 후기, 무료 제품, 협찬 관계를 언제 광고로 표시해야 하는지 확인하기",
+        "elementaryReadingFocus": "좋아 보이는 추천이 광고인지 알 수 있게 무엇을 써야 하는지 찾아보기"
+      },
+      {
+        "type": "external",
+        "title": "Native Advertising: A Guide for Businesses",
+        "source": "Federal Trade Commission",
+        "date": "광고 안내",
+        "url": "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses",
+        "perspective": "콘텐츠처럼 보이는 광고",
+        "stance": "기사나 영상처럼 보이는 광고도 소비자가 광고임을 알 수 있게 표시해야 한다는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "출처 표시 후 어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          3
+        ],
+        "readingFocus": "광고가 일반 콘텐츠처럼 보일 때 어떤 표시가 필요하다고 설명하는지 보기",
+        "elementaryReadingFocus": "광고가 영상이나 글 속에 숨어 있을 때 어떻게 알아볼 수 있을지 생각하기"
+      },
+      {
+        "type": "external",
+        "title": "Advertising FAQs: A Guide for Small Business",
+        "source": "Federal Trade Commission",
+        "date": "광고 법규 Q&A",
+        "url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business",
+        "perspective": "광고 기본 원칙",
+        "stance": "광고는 거짓이거나 소비자를 속여서는 안 되며 중요한 조건을 숨기지 않아야 한다는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "출처 표시 후 어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "광고에서 사실, 증거, 중요한 조건을 숨기지 않는 원칙을 확인하기",
+        "elementaryReadingFocus": "광고가 속이는 말인지 보려면 어떤 증거와 조건을 확인해야 할까?"
       }
     ],
     "writingPrompt": "나는 온라인 추천 콘텐츠가 광고일 때 ___ 방식으로 표시해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인할 수 있기 때문이다.",
@@ -1926,6 +2369,60 @@
           "timeRange": "현재 NIST Privacy Framework 안내 페이지입니다.",
           "caution": "어린이 전용 규칙은 아니므로 학교와 어린이 서비스에 적용할 때는 COPPA, Children’s code 같은 어린이 보호 자료와 함께 읽어야 합니다."
         }
+      },
+      {
+        "type": "external",
+        "title": "Children’s Online Privacy Protection Rule (COPPA)",
+        "source": "Federal Trade Commission",
+        "date": "법규 원문",
+        "url": "https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa",
+        "perspective": "어린이 개인정보 법규",
+        "stance": "어린이 대상 온라인 서비스는 개인정보 수집과 보호자 동의에 특별한 규칙을 따라야 한다는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "외부 원문 링크, 법률 문구는 교사용 참고로 활용",
+        "resourceKind": "법규 원문",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "어린이 정보 수집에서 보호자 동의와 사업자 책임이 왜 따로 규정되는지 보기",
+        "elementaryReadingFocus": "어린이 정보는 왜 어른 정보보다 더 조심해서 모아야 하는지 생각하기"
+      },
+      {
+        "type": "external",
+        "title": "Student Privacy Policy Office",
+        "source": "U.S. Department of Education",
+        "date": "학생 개인정보 안내",
+        "url": "https://studentprivacy.ed.gov/",
+        "perspective": "학생 개인정보",
+        "stance": "학교와 교육기관은 학생 기록과 학습 데이터를 보호하고 알맞게 사용해야 한다는 관점",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "출처 표시 후 어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "학교가 가진 학생 정보와 앱이 모으는 정보의 보호 책임을 비교하기",
+        "elementaryReadingFocus": "학교가 가진 내 정보는 누가 어떻게 지켜야 하는지 생각하기"
+      },
+      {
+        "type": "external",
+        "title": "Complying with COPPA: Frequently Asked Questions",
+        "source": "Federal Trade Commission",
+        "date": "COPPA Q&A",
+        "url": "https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions",
+        "perspective": "어린이 개인정보 실무",
+        "stance": "어린이 대상 서비스가 어떤 경우에 COPPA를 따라야 하는지 구체적으로 설명하는 자료",
+        "license": "미국 연방정부 공개 자료",
+        "usage": "출처 표시 후 어린이용 재구성 가능",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ],
+        "readingFocus": "앱이나 웹사이트가 어린이 정보를 모을 때 어떤 상황에서 더 강한 책임이 생기는지 보기",
+        "elementaryReadingFocus": "어린이가 쓰는 앱은 어떤 때 부모님께 알려야 하는지 찾아보기"
       }
     ],
     "writingPrompt": "나는 어린이 개인정보를 모을 때 ___ 정보는 ___ 조건에서만 허용해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인할 수 있기 때문이다.",
@@ -2093,6 +2590,59 @@
           3
         ],
         "readingFocus": "AI 결과물을 과제에 쓸 때 AI 사용 표시와 사람의 창작 기여를 왜 구분해야 하는지 보기"
+      },
+      {
+        "type": "external",
+        "title": "Fair Use Index",
+        "source": "U.S. Copyright Office",
+        "date": "공정이용 사례 안내",
+        "url": "https://www.copyright.gov/fair-use/",
+        "perspective": "공정이용 판단",
+        "stance": "교육 목적이라도 모든 사용이 자동으로 허용되는 것은 아니며 목적, 분량, 시장 영향 등을 함께 따져야 한다는 관점",
+        "license": "미국 연방정부 공개 자료(사례 원문 권리 제외)",
+        "usage": "외부 원문 링크, 어려운 법률 내용은 교사용 참고로 활용",
+        "resourceKind": "저작권 사례 안내",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "교육 목적 사용도 왜 자료의 양, 목적, 출처, 영향에 따라 다르게 판단되는지 보기",
+        "elementaryReadingFocus": "학교 과제라고 해서 아무 자료나 마음대로 써도 되는지 생각하기"
+      },
+      {
+        "type": "external",
+        "title": "Copyright Basics",
+        "source": "U.S. Copyright Office",
+        "date": "저작권 기본 안내 PDF",
+        "url": "https://www.copyright.gov/circs/circ01.pdf",
+        "perspective": "저작권 기본",
+        "stance": "저작권은 글, 그림, 음악, 영상 같은 창작물을 보호하며 사용 조건을 확인해야 한다는 기본 관점",
+        "license": "미국 연방정부 공개 자료(제3자 자료 제외)",
+        "usage": "외부 원문 링크, PDF 내용은 교사용 참고와 어린이용 재구성 가능",
+        "resourceKind": "저작권 기본 안내",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "저작권이 무엇을 보호하고 왜 출처 표시만으로 충분하지 않을 수 있는지 확인하기",
+        "elementaryReadingFocus": "글, 사진, 음악을 만든 사람에게 어떤 권리가 있는지 알아보기"
+      },
+      {
+        "type": "external",
+        "title": "Public Domain Mark",
+        "source": "Creative Commons",
+        "date": "공공영역 표시 안내",
+        "url": "https://creativecommons.org/public-domain/pdm/",
+        "perspective": "공공영역 표시",
+        "stance": "공공영역 자료는 저작권 제한이 없거나 끝난 자료이지만 출처와 맥락 확인은 여전히 중요하다는 관점",
+        "license": "Creative Commons 공식 안내",
+        "usage": "출처 표시 후 원문 링크와 어린이용 설명 가능",
+        "relatedQuestions": [
+          1,
+          2
+        ],
+        "readingFocus": "CC0와 Public Domain Mark가 어떻게 다르고, 자료를 쓸 때 무엇을 확인해야 하는지 보기",
+        "elementaryReadingFocus": "저작권이 끝난 자료와 만든 사람이 권리를 포기한 자료가 어떻게 다른지 살펴보기"
       }
     ],
     "writingPrompt": "나는 온라인 자료를 과제에 사용할 때 ___ 조건을 먼저 확인해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인할 수 있기 때문이다.",

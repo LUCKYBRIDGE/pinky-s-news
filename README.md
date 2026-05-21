@@ -33,6 +33,7 @@ python -m http.server 8000
 - 하나의 큰 주제에는 여러 `discussionQuestions`를 둘 수 있고, 첫 번째 질문은 대표 질문인 `essentialQuestion`과 같게 둡니다.
 - 각 주제에는 기존 질문을 유지한 채 `elementaryTitle`, `elementarySummary`, `elementaryDiscussionQuestions`, `elementaryDiscussionFrame`, `elementaryWritingPrompt`로 초등학교 고학년용 쉬운 버전을 함께 둡니다.
 - 모든 근거자료는 `readingFocus`, `relatedQuestions`로 읽을 초점과 연결되는 토의 질문을 표시합니다.
+- 초등 고학년 보기에서 더 쉬운 읽기 안내가 필요하면 자료에 `elementaryReadingFocus`를 함께 둡니다.
 - 통계·조사·연구·논문 링크는 `resourceKind`로 자료 성격도 함께 표시합니다.
 - 근거로 직접 쓰기 쉬운 통계·조사·연구 자료는 `evidenceInfo`로 출처, 조사대상·범위, 시점, 주의점을 분리해 표시합니다.
 - 재사용 조건이 명확한 원자료 CSV/API는 `embeddedEvidence`로 작은 표를 재생산할 수 있으며, 원자료 링크, 라이선스, 단위, 발췌 기준, 반올림·단위 변환 기준을 함께 적습니다. 두 개 이상의 원자료를 조합한 표는 `sourceUrls`에 각 원자료 링크를 남깁니다.

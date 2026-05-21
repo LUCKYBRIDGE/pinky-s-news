@@ -150,6 +150,9 @@ topics.forEach((topic, index) => {
       if (!resource.readingFocus || typeof resource.readingFocus !== 'string') {
         issues.push(`${resourceLabel}: missing string field "readingFocus"`);
       }
+      if (resource.elementaryReadingFocus !== undefined && typeof resource.elementaryReadingFocus !== 'string') {
+        issues.push(`${resourceLabel}: optional field "elementaryReadingFocus" must be a string`);
+      }
       if (!Array.isArray(resource.relatedQuestions) || resource.relatedQuestions.length === 0) {
         issues.push(`${resourceLabel}: relatedQuestions must be a non-empty array`);
       } else {
