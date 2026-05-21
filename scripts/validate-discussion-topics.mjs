@@ -210,6 +210,41 @@ topics.forEach((topic, index) => {
     }
   }
 
+  if (topic.classroomReadingMaterials !== undefined) {
+    if (!Array.isArray(topic.classroomReadingMaterials) || topic.classroomReadingMaterials.length === 0) {
+      issues.push(`${label}: classroomReadingMaterials must be a non-empty array when present`);
+    } else {
+      const discussionQuestionCount = Array.isArray(topic.discussionQuestions) ? topic.discussionQuestions.length : 0;
+      topic.classroomReadingMaterials.forEach((material, materialIndex) => {
+        const materialLabel = `${label}.classroomReadingMaterials[${materialIndex}]`;
+        if (!isObject(material)) {
+          issues.push(`${materialLabel}: classroom reading material must be an object`);
+          return;
+        }
+        ['title', 'materialType', 'usageNote', 'copyrightNote'].forEach((field) => {
+          if (!material[field] || typeof material[field] !== 'string') {
+            issues.push(`${materialLabel}: missing string field "${field}"`);
+          }
+        });
+        if (!Array.isArray(material.body) || material.body.length < 2 || material.body.some(paragraph => typeof paragraph !== 'string' || !paragraph.trim())) {
+          issues.push(`${materialLabel}: body must contain at least 2 non-empty paragraph strings`);
+        }
+        if (!Array.isArray(material.relatedQuestions) || material.relatedQuestions.length === 0) {
+          issues.push(`${materialLabel}: relatedQuestions must be a non-empty array`);
+        } else {
+          material.relatedQuestions.forEach((questionNumber, relatedIndex) => {
+            if (!Number.isInteger(questionNumber) || questionNumber < 1 || questionNumber > discussionQuestionCount) {
+              issues.push(`${materialLabel}: relatedQuestions[${relatedIndex}] must reference an existing discussion question`);
+            }
+          });
+        }
+        if (!material.copyrightNote || !material.copyrightNote.includes('창작 자료')) {
+          issues.push(`${materialLabel}: copyrightNote should state that this is original created material`);
+        }
+      });
+    }
+  }
+
   if (!Array.isArray(topic.resources) || topic.resources.length === 0) {
     issues.push(`${label}: resources must not be empty`);
   } else {

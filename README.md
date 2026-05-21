@@ -43,6 +43,7 @@ python -m http.server 8000
 - 별도 기사로 만들기 전에도 재사용 조건이 명확한 외부 원문은 `koreanReconstruction`, `elementaryKoreanReconstruction`으로 카드 안에 한국어 재구성 읽기 글을 둘 수 있습니다.
 - 실제 세계·국내 토론대회 논제를 참고해 주제의 토론 가능성을 점검한 경우 `competitionReferences`에 원 논제, 출처, 수업용 변환 이유, 연결 질문 번호를 남깁니다.
 - 대회가 공개한 논제 참고자료나 주제도서 안내가 있으면 `competitionReferences.readingMaterials`로 연결하되, 저작권 보호 자료의 본문·번역·요약은 앱에 옮기지 않습니다.
+- 외부 자료를 본문으로 재사용하기 어렵지만 수업 전 이해 자료가 필요하면 `classroomReadingMaterials`에 사이트 자체 창작 읽기 자료를 둡니다.
 - 자세한 기준은 `docs/discussion-topic-guidelines.md`를 따릅니다.
 
 토의 주제 데이터를 고친 뒤에는 아래 검사를 실행합니다.
