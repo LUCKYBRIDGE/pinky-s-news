@@ -230,10 +230,10 @@
         const CONTENT_SOURCE_NOTICE = '현재 본문 형태로 제공하는 실제 뉴스는 공공누리 제1유형, CC BY, CC0처럼 출처 표시와 재구성이 가능한 공개 라이선스 자료만 사용합니다. 변경금지 또는 권리 확인이 어려운 기사·자료는 제목과 최소 정보만 표시하고 원문 사이트로 이동하도록 안내합니다.';
         const NEWS_MODES = {
             home: {
-                label: '일반 뉴스',
-                title: '주요 뉴스',
-                description: '공개 라이선스 원문을 바탕으로 한 진짜 뉴스',
-                sidebar: '평소 홈페이지에는 공개 라이선스 원문을 확인한 진짜 뉴스만 표시됩니다. 아래 가짜 뉴스 판별에서는 여러 기사를 읽고 직접 진짜인지 가짜인지 판단할 수 있습니다.'
+                label: '뉴스·해설',
+                title: '주요 뉴스·해설',
+                description: '공개 라이선스 원문을 바탕으로 한 진짜 뉴스와 배경 해설',
+                sidebar: '평소 홈페이지에는 공개 라이선스 원문을 확인한 진짜 뉴스와 정보 해설만 표시됩니다. 아래 가짜 뉴스 판별에서는 여러 글을 읽고 직접 진짜인지 가짜인지 판단할 수 있습니다.'
             },
             mission: {
                 label: '가짜 뉴스 판별',
@@ -303,6 +303,69 @@
 
         function renderCategoryLabel(article) {
             return getArticleCategories(article).join(' · ');
+        }
+
+        function getContentKind(news) {
+            const sourceNote = news?.sourceNote || '';
+            const authorName = news?.author?.name || '';
+            const authorDepartment = news?.author?.department || '';
+
+            if (activeNewsMode === 'mission') {
+                return {
+                    label: '판별 자료',
+                    description: '진짜인지 가짜인지 직접 판단해 보는 글',
+                    icon: 'fa-magnifying-glass-chart',
+                    classes: 'bg-rose-50 text-rose-700 border-rose-200'
+                };
+            }
+
+            if (news?.externalOnly) {
+                return {
+                    label: '원문 링크',
+                    description: '저작권 보호를 위해 원문 사이트로 안내하는 글',
+                    icon: 'fa-arrow-up-right-from-square',
+                    classes: 'bg-slate-100 text-slate-700 border-slate-200'
+                };
+            }
+
+            if (/Our World in Data|데이터 페이지|데이터 자료|CC BY 데이터/.test(sourceNote + authorName + authorDepartment)) {
+                return {
+                    label: '데이터 해설',
+                    description: '공개 데이터를 어린이가 읽기 쉽게 풀어쓴 설명 글',
+                    icon: 'fa-chart-line',
+                    classes: 'bg-sky-50 text-sky-700 border-sky-200'
+                };
+            }
+
+            if (/Smithsonian|Open Access|CC0|공개 자료/.test(sourceNote + authorName + authorDepartment)) {
+                return {
+                    label: '정보 해설',
+                    description: '공개 자료나 개념을 어린이가 이해하기 쉽게 설명한 글',
+                    icon: 'fa-circle-info',
+                    classes: 'bg-violet-50 text-violet-700 border-violet-200'
+                };
+            }
+
+            return {
+                label: '뉴스 기사',
+                description: '정책·행사·사회 변화처럼 새 소식을 전하는 글',
+                icon: 'fa-newspaper',
+                classes: 'bg-emerald-50 text-emerald-700 border-emerald-200'
+            };
+        }
+
+        function renderContentKindBadge(news, size = 'compact') {
+            const kind = getContentKind(news);
+            const classes = size === 'large'
+                ? 'inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-[13px] font-black'
+                : 'inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-black';
+
+            return `
+                <span class="${classes} ${kind.classes}" title="${escapeHtml(kind.description)}">
+                    <i class="fa-solid ${kind.icon} ${size === 'large' ? 'text-[12px]' : 'text-[9px]'}"></i>
+                    ${kind.label}
+                </span>
+            `;
         }
 
         function escapeRegex(value) {
@@ -539,8 +602,8 @@
                                 <i class="fa-solid fa-newspaper"></i>
                             </span>
                             <span>
-                                <strong class="block text-[20px] font-black text-slate-900 tracking-tight">일반 뉴스</strong>
-                                <span class="block text-[13px] text-slate-500 leading-snug mt-1">평소 홈페이지에는 진짜 뉴스만 게시됩니다.</span>
+                                <strong class="block text-[20px] font-black text-slate-900 tracking-tight">뉴스·해설</strong>
+                                <span class="block text-[13px] text-slate-500 leading-snug mt-1">새 소식과 배경 설명을 구분해 읽습니다.</span>
                             </span>
                         </span>
                     </button>
@@ -551,7 +614,7 @@
                             </span>
                             <span>
                                 <strong class="block text-[20px] font-black text-slate-900 tracking-tight">가짜 뉴스 판별</strong>
-                                <span class="block text-[13px] text-slate-500 leading-snug mt-1">기사 유형을 숨긴 상태에서 읽고 직접 판별합니다.</span>
+                                <span class="block text-[13px] text-slate-500 leading-snug mt-1">글의 진위 단서를 숨긴 상태에서 읽고 직접 판별합니다.</span>
                             </span>
                         </span>
                     </button>
@@ -896,6 +959,7 @@
                         <div class="flex-1 flex flex-col justify-center">
                             <div class="mb-1.5 flex flex-wrap items-center gap-2">
                                 <span class="text-xs text-rose-600 font-black">${renderCategoryLabel(n)}</span>
+                                ${renderContentKindBadge(n)}
                                 ${renderPreviewAdaptationBadge(n)}
                             </div>
                             <h3 class="text-[22px] font-bold group-hover:text-rose-700 leading-tight text-slate-900 tracking-tight">${n.title}</h3>
@@ -947,6 +1011,7 @@
                                 <div class="p-5">
                                     <div class="flex flex-wrap items-center gap-2">
                                         <span class="text-[11px] text-rose-600 font-black">${renderCategoryLabel(mainNews)}</span>
+                                        ${renderContentKindBadge(mainNews)}
                                         ${renderPreviewAdaptationBadge(mainNews)}
                                     </div>
                                     <h3 class="text-[18px] font-black mt-1 leading-snug text-slate-900 group-hover:text-rose-700 line-clamp-2" style="word-break:keep-all">${mainNews.title}</h3>
@@ -966,6 +1031,7 @@
                                         <div class="flex-1 min-w-0">
                                             <div class="flex flex-wrap items-center gap-1.5">
                                                 <span class="text-[11px] text-rose-600 font-black">${renderCategoryLabel(n)}</span>
+                                                ${renderContentKindBadge(n)}
                                                 ${renderPreviewAdaptationBadge(n)}
                                             </div>
                                             <h3 class="text-[15px] font-bold mt-0.5 leading-snug text-slate-900 group-hover:text-rose-700 line-clamp-3" style="word-break:keep-all">${n.title}</h3>
@@ -992,6 +1058,7 @@
                                     <div class="p-4">
                                         <div class="flex flex-wrap items-center gap-1.5">
                                             <span class="text-[11px] text-rose-600 font-black">${renderCategoryLabel(n)}</span>
+                                            ${renderContentKindBadge(n)}
                                             ${renderPreviewAdaptationBadge(n)}
                                         </div>
                                         <h3 class="text-[15px] font-bold mt-1 leading-snug text-slate-900 group-hover:text-rose-700 line-clamp-2" style="word-break:keep-all">${n.title}</h3>
@@ -1028,6 +1095,7 @@
                                         <div class="min-w-0">
                                             <p class="text-[14px] text-slate-800 group-hover:text-rose-700 font-medium leading-snug line-clamp-2" style="word-break: keep-all;">${n.title}</p>
                                             <div class="mt-2 flex flex-wrap items-center gap-2">
+                                                ${renderContentKindBadge(n)}
                                                 ${renderPreviewAdaptationBadge(n)}
                                                 ${renderPreviewSourceButton(n)}
                                             </div>
@@ -1184,6 +1252,7 @@
                             <div class="text-slate-800 font-bold text-[13px] mb-4 border border-slate-200 inline-block px-3 py-1 rounded-full bg-slate-50">
                                 ${renderCategoryLabel(news)}
                             </div>
+                            <div class="mb-4">${renderContentKindBadge(news, 'large')}</div>
                             <h2 class="text-[38px] font-black leading-[1.3] text-slate-900 mb-5 tracking-tight" style="word-break: keep-all;">${news.title}</h2>
                             <h3 class="text-[20px] text-slate-500 font-medium leading-relaxed">${news.subtitle}</h3>
                         </header>
