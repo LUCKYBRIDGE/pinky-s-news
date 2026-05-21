@@ -34,6 +34,13 @@
         "usage": "어린이용 재구성 글"
       },
       {
+        "type": "internal",
+        "articleId": "news-052",
+        "perspective": "일회용품 규제",
+        "stance": "플라스틱 감축 정책은 금지, 예외, 재사용 기준, 책임 분담을 함께 정해야 한다는 관점",
+        "usage": "OGL 원문을 어린이용으로 재구성한 글"
+      },
+      {
         "type": "external",
         "title": "Why cheap waste management is key to stopping plastic pollution",
         "source": "Our World in Data",
@@ -218,6 +225,13 @@
         "perspective": "세계 교육 데이터",
         "stance": "학교에 다닐 권리가 사회 조건과 연결되어 있다는 근거",
         "usage": "어린이용 재구성 글"
+      },
+      {
+        "type": "internal",
+        "articleId": "news-053",
+        "perspective": "출석과 지원 기준",
+        "stance": "결석 문제를 처벌만이 아니라 건강, 가정 형편, 지원 책임과 함께 봐야 한다는 관점",
+        "usage": "OGL 원문을 어린이용으로 재구성한 글"
       },
       {
         "type": "internal",
@@ -421,6 +435,13 @@
         "perspective": "탄소 데이터",
         "stance": "기후 문제를 감정이 아니라 배출량 데이터로 살펴보는 근거",
         "usage": "어린이용 재구성 글"
+      },
+      {
+        "type": "internal",
+        "articleId": "news-054",
+        "perspective": "기후 과학 근거",
+        "stance": "기온, 바다, 얼음, 해수면 자료처럼 여러 증거를 함께 읽어야 한다는 관점",
+        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글"
       },
       {
         "type": "internal",
@@ -653,6 +674,13 @@
         "perspective": "학교 휴대전화 규칙",
         "stance": "수업 집중, 안전 연락, 접근성 예외를 함께 고려해 학교 스마트폰 규칙을 설계해야 한다는 관점",
         "usage": "OGL 원문을 어린이용으로 재구성한 글"
+      },
+      {
+        "type": "internal",
+        "articleId": "news-055",
+        "perspective": "청소년 마음건강",
+        "stance": "소셜미디어의 이익과 위험을 함께 보고 학생, 가정, 학교, 플랫폼 책임을 나누어야 한다는 관점",
+        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글"
       },
       {
         "type": "external",
@@ -970,6 +998,13 @@
         "perspective": "어린이 온라인 안전",
         "stance": "개인정보, 광고, 사기, 디지털 시민성을 학생이 직접 확인하고 배워야 한다는 관점",
         "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글"
+      },
+      {
+        "type": "internal",
+        "articleId": "news-056",
+        "perspective": "허위정보 공유 연구",
+        "stance": "거짓 정보가 퍼지는 이유를 개인 책임뿐 아니라 메시지 형식과 플랫폼 환경까지 넓혀 봐야 한다는 관점",
+        "usage": "CC BY 논문을 어린이용으로 재구성한 글"
       },
       {
         "type": "external",
