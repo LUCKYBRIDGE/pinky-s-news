@@ -41,6 +41,7 @@ python -m http.server 8000
 - 사이트 안에서 직접 보여주는 데이터·표·그래프는 `scripts/audit-embedded-evidence.mjs`에 항목별 감사 케이스를 추가해 제목, 단위, 열, 원자료 링크, 표시값을 원자료와 하나씩 대조합니다.
 - 번역·어린이용 재구성이 가능한 핵심 자료는 원문 링크만 두지 말고 `news-*.json` 내부 읽기 글로 만들어 토의 주제의 `internal` 근거자료에 연결합니다.
 - 별도 기사로 만들기 전에도 재사용 조건이 명확한 외부 원문은 `koreanReconstruction`, `elementaryKoreanReconstruction`으로 카드 안에 한국어 재구성 읽기 글을 둘 수 있습니다.
+- 실제 세계·국내 토론대회 논제를 참고해 주제의 토론 가능성을 점검한 경우 `competitionReferences`에 원 논제, 출처, 수업용 변환 이유, 연결 질문 번호를 남깁니다.
 - 자세한 기준은 `docs/discussion-topic-guidelines.md`를 따릅니다.
 
 토의 주제 데이터를 고친 뒤에는 아래 검사를 실행합니다.

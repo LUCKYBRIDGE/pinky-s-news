@@ -357,7 +357,34 @@
       "작은 가게나 가정이 너무 힘들지 않게 하려면 누가 어떤 도움을 줘야 할까?",
       "바다 오염 줄이기, 비용 줄이기, 편리함 지키기 중 어떤 기준을 먼저 볼까?"
     ],
-    "elementaryWritingPrompt": "나는 플라스틱을 줄이기 위해 ___가 먼저 ___해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 보았기 때문이다."
+    "elementaryWritingPrompt": "나는 플라스틱을 줄이기 위해 ___가 먼저 ___해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 보았기 때문이다.",
+    "competitionReferences": [
+      {
+        "tournament": "Indiana Schools Speech & Debate Association World Schools Debate Topics",
+        "year": "2024",
+        "source": "Indiana Schools Speech & Debate Association",
+        "sourceUrl": "https://www.inspeechanddebate.org/resources/debate/wsd-topics",
+        "originalMotion": "This House Believes that the discovery of microplastics in humans is the greatest threat to public health moving forward.",
+        "adaptationNote": "인체 미세플라스틱 위험을 사실 찬반으로 다루지 않고, 감축 책임과 정책 우선순위를 정하는 토의 질문으로 바꾸어 사용합니다.",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "tournament": "Indiana Schools Speech & Debate Association World Schools Debate Topics",
+        "year": "2024",
+        "source": "Indiana Schools Speech & Debate Association",
+        "sourceUrl": "https://www.inspeechanddebate.org/resources/debate/wsd-topics",
+        "originalMotion": "This House Believes That entities that generate cross border pollution must be held responsible for damages.",
+        "adaptationNote": "오염을 만든 주체의 책임이라는 대회 논점을 기업 포장 설계와 회수 비용 책임 질문에 연결합니다.",
+        "relatedQuestions": [
+          1,
+          3
+        ]
+      }
+    ]
   },
   {
     "id": "education-fairness",
@@ -729,7 +756,33 @@
       "학교에 자주 못 오는 학생과 인터넷을 쓰기 어려운 학생에게 필요한 도움은 어떻게 다를까?",
       "학교, 지역, 정부는 각각 어떤 책임을 맡아야 할까?"
     ],
-    "elementaryWritingPrompt": "나는 배움의 기회를 넓히기 위해 ___ 지원을 먼저 해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인했기 때문이다."
+    "elementaryWritingPrompt": "나는 배움의 기회를 넓히기 위해 ___ 지원을 먼저 해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인했기 때문이다.",
+    "competitionReferences": [
+      {
+        "tournament": "Indiana Schools Speech & Debate Association World Schools Debate Topics",
+        "year": "2023",
+        "source": "Indiana Schools Speech & Debate Association",
+        "sourceUrl": "https://www.inspeechanddebate.org/resources/debate/wsd-topics",
+        "originalMotion": "This House regrets attempts to erode free public education.",
+        "adaptationNote": "공교육 접근권 논점을 초등 수업에 맞게 기본 지원과 집중 지원의 기준을 정하는 질문으로 재구성합니다.",
+        "relatedQuestions": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "Indiana Schools Speech & Debate Association World Schools Debate Topics",
+        "year": "2024",
+        "source": "Indiana Schools Speech & Debate Association",
+        "sourceUrl": "https://www.inspeechanddebate.org/resources/debate/wsd-topics",
+        "originalMotion": "This House Would require all children to participate in early childhood education programs.",
+        "adaptationNote": "보편 참여와 선별 지원의 긴장을 교육 기회 보장 기준 토의에 반영합니다.",
+        "relatedQuestions": [
+          1,
+          3
+        ]
+      }
+    ]
   },
   {
     "id": "climate-energy-choice",
@@ -1130,7 +1183,45 @@
       "지금 드는 돈과 나중에 줄일 피해를 어떤 기간 기준으로 비교해야 할까?",
       "전기요금이나 교통비가 부담되는 사람은 누가 어떻게 도와야 할까?"
     ],
-    "elementaryWritingPrompt": "나는 기후 대응을 ___ 속도로 해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인했기 때문이다."
+    "elementaryWritingPrompt": "나는 기후 대응을 ___ 속도로 해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인했기 때문이다.",
+    "competitionReferences": [
+      {
+        "tournament": "전국 청소년 하브루타 토론대회",
+        "year": "2025",
+        "source": "글로벌리더코리아·포항시 행사 공지",
+        "sourceUrl": "https://glkorea.co.kr/?kboard_content_redirect=7",
+        "originalMotion": "신재생에너지 활성화 계속되어야 한다",
+        "adaptationNote": "초등 3학년부터 중학생까지 다룬 국내 청소년 논제를 바탕으로, 재생에너지 확대의 속도와 부담 분담을 묻는 질문으로 구체화합니다.",
+        "relatedQuestions": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "Nova Titan Invitational World Schools Debate",
+        "year": "2025",
+        "source": "Tabroom tournament page",
+        "sourceUrl": "https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=36314&webpage_id=34683",
+        "originalMotion": "This House would require corporations to publish independent climate risk audits.",
+        "adaptationNote": "기업의 기후 책임과 비용 공개 논점을 기업·정부·소비자의 부담 분담 질문에 연결합니다.",
+        "relatedQuestions": [
+          2,
+          3
+        ]
+      },
+      {
+        "tournament": "Indiana Schools Speech & Debate Association World Schools Debate Topics",
+        "year": "2025",
+        "source": "Indiana Schools Speech & Debate Association",
+        "sourceUrl": "https://www.inspeechanddebate.org/resources/debate/wsd-topics",
+        "originalMotion": "This House Believes that regulation is necessary to slow the effects anthropogenic climate change.",
+        "adaptationNote": "정부 규제의 필요성과 속도 논점을 기후 대응 속도 찬반 질문에 반영합니다.",
+        "relatedQuestions": [
+          1,
+          3
+        ]
+      }
+    ]
   },
   {
     "id": "school-phone-social-media",
@@ -1427,7 +1518,33 @@
       "연락, 촬영, 게임, 소셜미디어는 어떤 기준으로 다르게 다룰까?",
       "규칙을 어겼을 때 벌만 주기보다 다시 배우게 하려면 어떤 절차가 필요할까?"
     ],
-    "elementaryWritingPrompt": "나는 학교에서 스마트폰을 ___ 조건으로 사용해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 보았기 때문이다."
+    "elementaryWritingPrompt": "나는 학교에서 스마트폰을 ___ 조건으로 사용해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 보았기 때문이다.",
+    "competitionReferences": [
+      {
+        "tournament": "Indiana Schools Speech & Debate Association World Schools Debate Topics",
+        "year": "2025",
+        "source": "Indiana Schools Speech & Debate Association",
+        "sourceUrl": "https://www.inspeechanddebate.org/resources/debate/wsd-topics",
+        "originalMotion": "This House would ban student cell phone use during the school day.",
+        "adaptationNote": "휴대전화 전면 금지 논제를 수업·쉬는 시간·등하교 시간별 허용 조건을 따지는 학교 규칙 질문으로 조정합니다.",
+        "relatedQuestions": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "오산학생 토론대회",
+        "year": "2019",
+        "source": "오산토론 공식 연혁",
+        "sourceUrl": "https://debate.osanedu.go.kr/contest/",
+        "originalMotion": "본 의회는 SNS를 통해 스스로의 사생활을 공유하는 문화의 확산을 반대한다.",
+        "adaptationNote": "SNS 사생활 공유 논점을 학교 소셜미디어 규칙과 사이버폭력 예방 책임 질문에 연결합니다.",
+        "relatedQuestions": [
+          1,
+          3
+        ]
+      }
+    ]
   },
   {
     "id": "ai-school-use",
@@ -1733,28 +1850,54 @@
       "AI를 썼다는 기록을 남기면 학습 확인과 개인정보 보호를 어떻게 함께 지킬까?",
       "기기나 인터넷이 부족한 학생도 함께 쓰려면 학교가 어떤 도움을 마련해야 할까?"
     ],
-    "elementaryWritingPrompt": "나는 AI를 ___ 활동에는 써도 되지만 ___ 활동에는 조심해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인했기 때문이다."
+    "elementaryWritingPrompt": "나는 AI를 ___ 활동에는 써도 되지만 ___ 활동에는 조심해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인했기 때문이다.",
+    "competitionReferences": [
+      {
+        "tournament": "Indiana Schools Speech & Debate Association World Schools Debate Topics",
+        "year": "2023",
+        "source": "Indiana Schools Speech & Debate Association",
+        "sourceUrl": "https://www.inspeechanddebate.org/resources/debate/wsd-topics",
+        "originalMotion": "This House believes AI is good for education.",
+        "adaptationNote": "AI 교육 효과를 단순 찬반으로 묻기보다, 허용 활동과 제한 활동의 기준을 정하는 질문으로 바꿉니다.",
+        "relatedQuestions": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "부산대학교 독서토론대회",
+        "year": "2026",
+        "source": "부산대학교 교양교육원 공지",
+        "sourceUrl": "https://culedu.pusan.ac.kr/bbs/culedu/1827/1433493/artclView.do?layout=unknown",
+        "originalMotion": "대학의 글쓰기 과제에 생성형 AI 사용을 금지해야 한다.",
+        "adaptationNote": "대학 토론 논제를 초중등 수업 맥락에 맞게 과제·평가에서 AI 사용 조건을 정하는 질문으로 낮춰 씁니다.",
+        "relatedQuestions": [
+          1,
+          2
+        ]
+      }
+    ]
   },
   {
     "id": "misinformation-responsibility",
     "category": "미디어와 정보",
-    "discussionType": "해결 설계형 토의",
-    "discussionTypeDescription": "허위정보 대응의 필요성을 인정한 뒤 확인 기준과 책임 분담을 설계하는 주제입니다.",
-    "title": "허위정보 공유와 플랫폼 대응 책임",
-    "summary": "가짜 뉴스 판별 사례, 출처 확인, 공유 중단, 경고 표시, 플랫폼 추천 책임을 연결해 허위정보 대응 기준을 토의합니다.",
-    "essentialQuestion": "허위정보를 만났을 때 학생은 무엇을 확인하고, 학교·가정·플랫폼은 어떤 기준과 책임으로 대응해야 할까요?",
+    "discussionType": "찬반 토론형",
+    "discussionTypeDescription": "플랫폼 책임을 강하게 물을지, 이용자 교육·경고 표시·자율규제를 우선할지 입장을 나누어 근거를 비교하는 주제입니다.",
+    "title": "허위정보와 플랫폼 책임 논쟁",
+    "summary": "가짜 뉴스 판별 사례, 출처 확인, 공유 중단, 경고 표시, 추천 알고리즘과 플랫폼 책임을 비교합니다.",
+    "essentialQuestion": "허위정보와 알고리즘 피해를 줄이기 위해 플랫폼에 더 강한 책임을 물어야 할까요, 이용자 교육·경고 표시·자율규제를 우선해야 할까요?",
     "discussionQuestions": [
-      "허위정보를 만났을 때 학생은 무엇을 확인하고, 학교·가정·플랫폼은 어떤 기준과 책임으로 대응해야 할까요?",
-      "의심스러운 뉴스나 영상은 언제 공유를 멈추고 확인해야 하며, 어떤 조건에서는 경고 문구를 붙여 토의 자료로 사용할 수 있을까요?",
-      "플랫폼이 허위정보를 줄일 때 삭제, 경고 표시, 추천 제한 중 어떤 방법을 어떤 기준으로 써야 할까요?"
+      "허위정보와 알고리즘 피해를 줄이기 위해 플랫폼에 더 강한 책임을 물어야 할까요, 이용자 교육·경고 표시·자율규제를 우선해야 할까요?",
+      "의심스러운 뉴스나 영상은 피해를 막기 위해 빠르게 삭제해야 할까요, 표현의 자유를 위해 경고 표시와 공유 제한을 먼저 써야 할까요?",
+      "학교에서 학생이 허위정보를 공유했을 때 징계보다 교육과 정정을 우선해야 할까요, 반복되거나 피해가 큰 경우 책임을 물어야 할까요?"
     ],
-    "debateReason": "디지털 리터러시, 생성형 AI 허위정보, 소셜미디어 알고리즘, 온라인 광고 구분은 교육 현장과 사회 정책에서 실제로 논의되는 주제입니다.",
+    "debateReason": "소셜미디어 플랫폼의 알고리즘 책임, 허위정보 삭제와 표현의 자유, 이용자 교육은 최근 World Schools 형식 대회와 국내 학생 토론에서 반복되는 실제 쟁점입니다.",
     "discussionFrame": [
+      "플랫폼이 추천 알고리즘으로 정보를 널리 퍼뜨렸다면 어떤 책임을 져야 할까?",
       "학생이 정보를 공유하기 전 확인해야 할 출처, 근거, 날짜, 이미지 단서는 무엇일까?",
-      "학교와 가정은 허위정보를 벌로만 다루지 않고 어떤 기준으로 배우고 고치게 도울 수 있을까?",
-      "플랫폼은 추천 알고리즘, 경고 표시, 신고 처리에서 어떤 책임을 져야 할까?",
-      "허위정보 대응에서 빠른 삭제와 표현의 자유가 충돌할 때 어떤 기준으로 판단할까?",
-      "풍자, 실수, 오래된 정보, 의도적인 허위정보를 구별하기 위해 학생에게 어떤 확인 절차를 가르칠까?"
+      "허위정보를 빨리 지우는 것과 표현의 자유를 지키는 것은 어떤 경우에 충돌할까?",
+      "경고 표시, 추천 제한, 삭제, 계정 제재는 각각 어떤 조건에서 써야 할까?",
+      "풍자, 실수, 오래된 정보, 의도적인 허위정보를 구별하기 위해 어떤 절차가 필요할까?"
     ],
     "resources": [
       {
@@ -2037,21 +2180,57 @@
       }
     ],
     "writingPrompt": "나는 허위정보나 AI 합성물을 만났을 때 ___을 먼저 확인하고, ___은 ___ 책임을 져야 한다고 생각한다. 근거는 ___ 자료에서 ___를 확인할 수 있다.",
-    "elementaryTitle": "수상한 정보는 어떻게 확인하고 공유할까?",
-    "elementarySummary": "가짜 뉴스, 오래된 정보, 실수로 퍼진 글, 일부러 속이는 글을 구분하고 공유 전 확인 방법을 생각합니다.",
+    "elementaryTitle": "수상한 정보, 플랫폼이 더 책임져야 할까?",
+    "elementarySummary": "가짜 뉴스, 오래된 정보, 실수로 퍼진 글, 일부러 속이는 글을 보며 학생 확인과 플랫폼 책임을 비교합니다.",
     "elementaryDiscussionQuestions": [
-      "수상한 정보나 뉴스를 봤을 때 학생은 무엇을 확인하고, 학교·가정·플랫폼은 어떤 책임을 맡아야 할까요?",
-      "의심스러운 글이나 영상은 언제 공유를 멈추고 확인해야 하며, 수업 자료로 쓸 때는 어떤 경고 표시가 필요할까요?",
-      "플랫폼은 허위정보를 줄이기 위해 삭제, 경고 표시, 추천 줄이기 중 어떤 방법을 어떤 기준으로 써야 할까요?"
+      "수상한 정보가 많이 퍼질 때 플랫폼이 더 강하게 책임져야 할까요, 학생과 이용자가 확인하는 힘을 먼저 길러야 할까요?",
+      "의심스러운 글이나 영상은 바로 지우는 것이 좋을까요, 먼저 경고 표시와 공유 줄이기를 해야 할까요?",
+      "친구가 틀린 정보를 공유했을 때 교육과 정정을 먼저 해야 할까요, 반복되거나 피해가 크면 책임을 물어야 할까요?"
     ],
     "elementaryDiscussionFrame": [
+      "플랫폼 추천 때문에 수상한 정보가 더 널리 퍼졌다면 누가 책임져야 할까?",
       "공유하기 전에 출처, 날짜, 사진, 근거 중 무엇을 먼저 확인해야 할까?",
-      "틀린 정보를 믿거나 공유한 친구를 벌하기보다 배우게 하려면 어떤 기준이 필요할까?",
-      "플랫폼은 추천, 경고 표시, 신고 처리에서 어떤 책임을 져야 할까?",
       "빨리 지우는 것과 의견을 말할 자유가 부딪힐 때 어떤 기준으로 판단할까?",
+      "경고 표시, 추천 줄이기, 삭제는 각각 어떤 경우에 필요할까?",
       "장난, 풍자, 실수, 일부러 속이는 정보를 어떤 단서로 구별할까?"
     ],
-    "elementaryWritingPrompt": "나는 수상한 정보를 보면 먼저 ___해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 배웠기 때문이다."
+    "elementaryWritingPrompt": "나는 수상한 정보를 보면 먼저 ___해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 배웠기 때문이다.",
+    "competitionReferences": [
+      {
+        "tournament": "Nova Titan Invitational World Schools Debate",
+        "year": "2025",
+        "source": "Tabroom tournament page",
+        "sourceUrl": "https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=36314&webpage_id=34683",
+        "originalMotion": "This House would hold social media platforms liable for harms caused by their algorithms.",
+        "adaptationNote": "알고리즘 피해에 대한 플랫폼 책임 논점을 허위정보 대응의 대표 찬반 질문으로 반영합니다.",
+        "relatedQuestions": [
+          1
+        ]
+      },
+      {
+        "tournament": "Indiana Schools Speech & Debate Association World Schools Debate Topics",
+        "year": "2023",
+        "source": "Indiana Schools Speech & Debate Association",
+        "sourceUrl": "https://www.inspeechanddebate.org/resources/debate/wsd-topics",
+        "originalMotion": "This House Believes That free speech principles need to be updated to accommodate the dynamics of digital media.",
+        "adaptationNote": "디지털 미디어에서 표현의 자유와 플랫폼 개입 기준이 충돌하는 지점을 삭제·경고 표시 질문에 연결합니다.",
+        "relatedQuestions": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "오산학생 토론대회",
+        "year": "2024",
+        "source": "오산토론 공식 연혁",
+        "sourceUrl": "https://debate.osanedu.go.kr/contest/",
+        "originalMotion": "본 의회는 때때로 정부가 언론의 자유를 제한한다는 것이 옳을 수 있다고 생각한다.",
+        "adaptationNote": "표현의 자유 제한 논점을 초중등 수업에 맞게 허위정보 삭제와 경고 표시 기준으로 좁힙니다.",
+        "relatedQuestions": [
+          2
+        ]
+      }
+    ]
   },
   {
     "id": "ai-synthetic-media-labeling",
@@ -2277,7 +2456,34 @@
       "창작이나 풍자까지 너무 막지 않으려면 어떤 예외 기준이 필요할까?",
       "피해자가 지워 달라고 했을 때 누가 얼마나 빨리 어떤 절차로 도와야 할까?"
     ],
-    "elementaryWritingPrompt": "나는 AI 합성물을 ___ 경우에 반드시 표시해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인했기 때문이다."
+    "elementaryWritingPrompt": "나는 AI 합성물을 ___ 경우에 반드시 표시해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인했기 때문이다.",
+    "competitionReferences": [
+      {
+        "tournament": "부산대학교 독서토론대회",
+        "year": "2026",
+        "source": "부산대학교 교양교육원 공지",
+        "sourceUrl": "https://culedu.pusan.ac.kr/bbs/culedu/1827/1433493/artclView.do?layout=unknown",
+        "originalMotion": "AI가 생성한 결과물은 창의적인 예술 작품으로 인정받을 수 있다.",
+        "adaptationNote": "AI 창작물 인정 논점을 초등 고학년에게 맞게 표시, 동의, 창작과 허위정보의 경계 질문으로 바꿉니다.",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "tournament": "전국 고등학생 바이오안전성·바이오산업 토론대회",
+        "year": "2025",
+        "source": "전국과학교사협회 공지",
+        "sourceUrl": "https://k-sta.org/15th_bio/",
+        "originalMotion": "생성형 AI를 활용한 합성생물학 기술로 생물체를 설계·제작하는 것이 바람직한가",
+        "adaptationNote": "생성형 AI가 실제 세계에 영향을 줄 때의 안전·책임 논점을, 이 주제에서는 사람 얼굴·목소리 합성의 동의와 피해 책임으로 낮춰 적용합니다.",
+        "relatedQuestions": [
+          2,
+          3
+        ]
+      }
+    ]
   },
   {
     "id": "online-ad-disclosure",
@@ -2818,7 +3024,34 @@
       "학교가 새 앱이나 AI 도구를 쓰기 전에 개인정보 위험을 누가 어떻게 확인해야 할까?",
       "개인정보 제공을 원하지 않는 학생도 불이익을 받지 않으려면 어떤 대안이 필요할까?"
     ],
-    "elementaryWritingPrompt": "나는 어린이 개인정보 중 ___는 ___ 조건에서만 모아야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 보았기 때문이다."
+    "elementaryWritingPrompt": "나는 어린이 개인정보 중 ___는 ___ 조건에서만 모아야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 보았기 때문이다.",
+    "competitionReferences": [
+      {
+        "tournament": "Indiana Schools Speech & Debate Association World Schools Debate Topics",
+        "year": "2025",
+        "source": "Indiana Schools Speech & Debate Association",
+        "sourceUrl": "https://www.inspeechanddebate.org/resources/debate/wsd-topics",
+        "originalMotion": "This House believes an individual has the \"right to be forgotten.”",
+        "adaptationNote": "잊힐 권리 논점을 어린이 개인정보의 보관 기간, 삭제 책임, 학생 선택권 질문에 연결합니다.",
+        "relatedQuestions": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "tournament": "오산학생 토론대회",
+        "year": "2014",
+        "source": "오산토론 공식 연혁",
+        "sourceUrl": "https://debate.osanedu.go.kr/contest/",
+        "originalMotion": "본 의회는 학교 내 고화질 CCTV 설치를 확대해야 한다고 생각한다.",
+        "adaptationNote": "안전과 사생활의 충돌을 위치·사진·생체정보 수집 조건 질문에 반영합니다.",
+        "relatedQuestions": [
+          2,
+          3
+        ]
+      }
+    ]
   },
   {
     "id": "open-content-copyright-attribution",
@@ -3108,6 +3341,19 @@
       "AI가 만든 결과와 내가 직접 생각하고 고친 부분을 어떻게 나눠 말할까?",
       "권리 조건을 잘 모르겠는 자료는 본문에 넣지 않고 링크만 남기는 기준을 어떻게 정할까?"
     ],
-    "elementaryWritingPrompt": "나는 인터넷 자료를 과제에 쓸 때 먼저 ___를 확인해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 배웠기 때문이다."
+    "elementaryWritingPrompt": "나는 인터넷 자료를 과제에 쓸 때 먼저 ___를 확인해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 배웠기 때문이다.",
+    "competitionReferences": [
+      {
+        "tournament": "부산대학교 독서토론대회",
+        "year": "2026",
+        "source": "부산대학교 교양교육원 공지",
+        "sourceUrl": "https://culedu.pusan.ac.kr/bbs/culedu/1827/1433493/artclView.do?layout=unknown",
+        "originalMotion": "AI가 생성한 결과물은 창의적인 예술 작품으로 인정받을 수 있다.",
+        "adaptationNote": "AI 생성물의 창작성 논점을 초중등 과제에서 원자료 권리, AI 사용 표시, 사람의 기여를 밝히는 기준 질문으로 바꿉니다.",
+        "relatedQuestions": [
+          3
+        ]
+      }
+    ]
   }
 ]

@@ -157,6 +157,38 @@ topics.forEach((topic, index) => {
     }
   }
 
+  if (topic.competitionReferences !== undefined) {
+    if (!Array.isArray(topic.competitionReferences)) {
+      issues.push(`${label}: competitionReferences must be an array when present`);
+    } else {
+      const discussionQuestionCount = Array.isArray(topic.discussionQuestions) ? topic.discussionQuestions.length : 0;
+      topic.competitionReferences.forEach((reference, referenceIndex) => {
+        const referenceLabel = `${label}.competitionReferences[${referenceIndex}]`;
+        if (!isObject(reference)) {
+          issues.push(`${referenceLabel}: competition reference must be an object`);
+          return;
+        }
+        ['tournament', 'year', 'source', 'sourceUrl', 'originalMotion', 'adaptationNote'].forEach((field) => {
+          if (!reference[field] || typeof reference[field] !== 'string') {
+            issues.push(`${referenceLabel}: missing string field "${field}"`);
+          }
+        });
+        if (reference.sourceUrl && !/^https?:\/\//.test(reference.sourceUrl)) {
+          issues.push(`${referenceLabel}: sourceUrl must start with http:// or https://`);
+        }
+        if (!Array.isArray(reference.relatedQuestions) || reference.relatedQuestions.length === 0) {
+          issues.push(`${referenceLabel}: relatedQuestions must be a non-empty array`);
+        } else {
+          reference.relatedQuestions.forEach((questionNumber, relatedIndex) => {
+            if (!Number.isInteger(questionNumber) || questionNumber < 1 || questionNumber > discussionQuestionCount) {
+              issues.push(`${referenceLabel}: relatedQuestions[${relatedIndex}] must reference an existing discussion question`);
+            }
+          });
+        }
+      });
+    }
+  }
+
   if (!Array.isArray(topic.resources) || topic.resources.length === 0) {
     issues.push(`${label}: resources must not be empty`);
   } else {
