@@ -50,6 +50,29 @@ topics.forEach((topic, index) => {
     issues.push(`${label}: essentialQuestion should include a choice, standard, condition, or responsibility keyword`);
   }
 
+  if (!Array.isArray(topic.discussionQuestions) || topic.discussionQuestions.length < 2) {
+    issues.push(`${label}: discussionQuestions should contain at least 2 selectable questions`);
+  } else {
+    const seenQuestions = new Set();
+    topic.discussionQuestions.forEach((question, questionIndex) => {
+      if (typeof question !== 'string' || !question.trim().endsWith('?')) {
+        issues.push(`${label}: discussionQuestions[${questionIndex}] should be a question string`);
+        return;
+      }
+      if (!questionKeywords.some((keyword) => question.includes(keyword))) {
+        issues.push(`${label}: discussionQuestions[${questionIndex}] should include a choice, standard, condition, or responsibility keyword`);
+      }
+      if (seenQuestions.has(question)) {
+        issues.push(`${label}: discussionQuestions[${questionIndex}] duplicates another discussion question`);
+      }
+      seenQuestions.add(question);
+    });
+
+    if (topic.essentialQuestion && topic.discussionQuestions[0] !== topic.essentialQuestion) {
+      issues.push(`${label}: essentialQuestion should match discussionQuestions[0] for backward compatibility`);
+    }
+  }
+
   if (!Array.isArray(topic.discussionFrame) || topic.discussionFrame.length < 2) {
     issues.push(`${label}: discussionFrame should contain at least 2 perspective questions`);
   } else {

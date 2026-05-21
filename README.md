@@ -30,6 +30,7 @@ python -m http.server 8000
 - 실제 논쟁이 있는 주제는 `찬반 토론형`으로 둡니다.
 - 사회적으로 필요성이 큰 주제는 `어떻게 할까`를 묻는 `해결 설계형 토의`로 둡니다.
 - 토의 질문은 선택, 기준, 조건, 책임 중 하나 이상을 포함합니다.
+- 하나의 큰 주제에는 여러 `discussionQuestions`를 둘 수 있고, 첫 번째 질문은 대표 질문인 `essentialQuestion`과 같게 둡니다.
 - 자세한 기준은 `docs/discussion-topic-guidelines.md`를 따릅니다.
 
 토의 주제 데이터를 고친 뒤에는 아래 검사를 실행합니다.

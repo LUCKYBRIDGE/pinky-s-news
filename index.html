@@ -765,6 +765,14 @@
             return (topic.resources || []).filter(resource => resource.type === 'external').length;
         }
 
+        function getDiscussionQuestions(topic) {
+            const questions = Array.isArray(topic.discussionQuestions)
+                ? topic.discussionQuestions.filter(question => typeof question === 'string' && question.trim())
+                : [];
+            const fallbackQuestion = topic.essentialQuestion || topic.summary || '';
+            return questions.length ? questions : (fallbackQuestion ? [fallbackQuestion] : []);
+        }
+
         function renderDiscussionTypeBadge(topic) {
             const type = topic.discussionType || '토의 주제';
             const isDesign = type.includes('설계');
@@ -845,12 +853,16 @@
                                 <span class="inline-flex items-center gap-1 rounded-full bg-amber-50 px-3 py-1 text-[12px] font-black text-amber-700 border border-amber-100">
                                     원문 ${getDiscussionExternalCount(topic)}개
                                 </span>
+                                <span class="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-3 py-1 text-[12px] font-black text-indigo-700 border border-indigo-100">
+                                    질문 ${getDiscussionQuestions(topic).length}개
+                                </span>
                             </div>
                             <span class="text-[12px] font-black text-slate-400">큰 주제</span>
                             <h3 class="text-[22px] font-black text-slate-900 leading-snug tracking-tight group-hover:text-sky-700">${escapeHtml(topic.title)}</h3>
                             <div class="mt-4 rounded-2xl bg-sky-50 border border-sky-100 px-4 py-3">
-                                <span class="text-[12px] font-black text-sky-600">토의 질문</span>
-                                <p class="mt-1 text-[15px] text-sky-950 leading-relaxed font-black">${escapeHtml(topic.essentialQuestion || '')}</p>
+                                <span class="text-[12px] font-black text-sky-600">대표 토의 질문</span>
+                                <p class="mt-1 text-[15px] text-sky-950 leading-relaxed font-black">${escapeHtml(getDiscussionQuestions(topic)[0] || '')}</p>
+                                ${getDiscussionQuestions(topic).length > 1 ? `<p class="mt-2 text-[12px] font-black text-sky-700">상세 화면에서 ${getDiscussionQuestions(topic).length}개 질문 중 선택할 수 있습니다.</p>` : ''}
                             </div>
                             ${topic.debateReason ? `<p class="mt-3 rounded-xl bg-slate-50 border border-slate-100 px-3 py-2 text-[12px] text-slate-500 leading-relaxed font-bold">실제 쟁점: ${escapeHtml(topic.debateReason)}</p>` : ''}
                             <p class="mt-3 text-[14px] text-slate-600 leading-relaxed font-medium">${escapeHtml(topic.summary)}</p>
@@ -867,6 +879,30 @@
         function renderDiscussionResourceCard(resource) {
             if (resource.type === 'internal') return renderDiscussionInternalResource(resource);
             return renderDiscussionExternalResource(resource);
+        }
+
+        function renderDiscussionQuestionOptions(topic) {
+            const questions = getDiscussionQuestions(topic);
+            return `
+                <div class="mt-5 rounded-2xl bg-sky-50 border border-sky-100 px-5 py-4">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <span class="text-[12px] font-black text-sky-600">토의 질문 선택</span>
+                        <span class="rounded-full bg-white px-3 py-1 text-[12px] font-black text-sky-700 border border-sky-100">질문 ${questions.length}개</span>
+                    </div>
+                    <p id="selected-discussion-question" class="mt-2 text-[19px] text-sky-950 leading-relaxed font-black">${escapeHtml(questions[0] || '')}</p>
+                    <div class="mt-4 grid grid-cols-1 gap-3">
+                        ${questions.map((question, index) => `
+                            <button type="button" onclick="selectDiscussionQuestion(${index})" data-question-index="${index}" data-question="${escapeHtml(question)}" class="discussion-question-option text-left rounded-xl border p-4 transition ${index === 0 ? 'bg-white border-sky-300 shadow-sm' : 'bg-slate-50 border-slate-100 hover:border-sky-200 hover:bg-white'}">
+                                <span class="flex items-center justify-between gap-3">
+                                    <span class="text-[12px] font-black ${index === 0 ? 'text-sky-700' : 'text-slate-500'}">질문 ${index + 1}</span>
+                                    <span class="discussion-question-state rounded-full px-2.5 py-1 text-[11px] font-black ${index === 0 ? 'bg-sky-100 text-sky-700' : 'bg-white text-slate-500 border border-slate-200'}">${index === 0 ? '선택됨' : '선택'}</span>
+                                </span>
+                                <span class="mt-2 block text-[15px] leading-relaxed font-black ${index === 0 ? 'text-sky-950' : 'text-slate-700'}">${escapeHtml(question)}</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
         }
 
         function renderDiscussionInternalResource(resource) {
@@ -914,6 +950,7 @@
             const mainContainer = document.getElementById('app-main');
             const frames = Array.isArray(topic.discussionFrame) ? topic.discussionFrame : [];
             const resources = Array.isArray(topic.resources) ? topic.resources : [];
+            const questions = getDiscussionQuestions(topic);
 
             mainContainer.innerHTML = `
                 ${renderModeSwitcher()}
@@ -930,14 +967,12 @@
                             <span class="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-[12px] font-black text-slate-600">근거 ${resources.length}개</span>
                             <span class="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-[12px] font-black text-emerald-700 border border-emerald-100">재구성 ${getDiscussionInternalCount(topic)}개</span>
                             <span class="inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-[12px] font-black text-amber-700 border border-amber-100">원문 ${getDiscussionExternalCount(topic)}개</span>
+                            <span class="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-[12px] font-black text-indigo-700 border border-indigo-100">질문 ${questions.length}개</span>
                         </div>
                         <span class="text-[12px] font-black text-slate-400">큰 주제</span>
                         <h2 class="text-[30px] sm:text-[40px] font-black text-slate-900 tracking-tight leading-tight">${escapeHtml(topic.title)}</h2>
                         ${topic.discussionTypeDescription ? `<p class="mt-3 text-[14px] text-slate-500 leading-relaxed font-bold">${escapeHtml(topic.discussionTypeDescription)}</p>` : ''}
-                        <div class="mt-5 rounded-2xl bg-sky-50 border border-sky-100 px-5 py-4">
-                            <span class="text-[12px] font-black text-sky-600">토의 질문</span>
-                            <p class="mt-2 text-[19px] text-sky-950 leading-relaxed font-black">${escapeHtml(topic.essentialQuestion || topic.summary)}</p>
-                        </div>
+                        ${renderDiscussionQuestionOptions(topic)}
                         ${topic.debateReason ? `<p class="mt-4 rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 text-[14px] text-slate-600 leading-relaxed font-bold">왜 실제 쟁점인가: ${escapeHtml(topic.debateReason)}</p>` : ''}
                         <p class="mt-4 text-[14px] text-slate-500 leading-relaxed font-medium">${escapeHtml(topic.summary)}</p>
                     </section>
@@ -980,6 +1015,47 @@
                     </section>
                 </article>
             `;
+        }
+
+        function selectDiscussionQuestion(index) {
+            const options = Array.from(document.querySelectorAll('.discussion-question-option'));
+            const selectedOption = options.find(option => Number(option.dataset.questionIndex) === index);
+            if (!selectedOption) return;
+
+            options.forEach(option => {
+                const isSelected = option === selectedOption;
+                option.classList.toggle('bg-white', isSelected);
+                option.classList.toggle('border-sky-300', isSelected);
+                option.classList.toggle('shadow-sm', isSelected);
+                option.classList.toggle('bg-slate-50', !isSelected);
+                option.classList.toggle('border-slate-100', !isSelected);
+
+                const label = option.querySelector('span span:first-child');
+                if (label) {
+                    label.classList.toggle('text-sky-700', isSelected);
+                    label.classList.toggle('text-slate-500', !isSelected);
+                }
+
+                const state = option.querySelector('.discussion-question-state');
+                if (state) {
+                    state.textContent = isSelected ? '선택됨' : '선택';
+                    state.classList.toggle('bg-sky-100', isSelected);
+                    state.classList.toggle('text-sky-700', isSelected);
+                    state.classList.toggle('bg-white', !isSelected);
+                    state.classList.toggle('text-slate-500', !isSelected);
+                    state.classList.toggle('border', !isSelected);
+                    state.classList.toggle('border-slate-200', !isSelected);
+                }
+
+                const questionText = option.querySelector('span.mt-2');
+                if (questionText) {
+                    questionText.classList.toggle('text-sky-950', isSelected);
+                    questionText.classList.toggle('text-slate-700', !isSelected);
+                }
+            });
+
+            const selectedQuestion = document.getElementById('selected-discussion-question');
+            if (selectedQuestion) selectedQuestion.textContent = selectedOption.dataset.question || '';
         }
 
         function updateNavUI(categoryKeyword) {
