@@ -2152,45 +2152,6 @@
     "resources": [
       {
         "type": "internal",
-        "articleId": "news-023",
-        "perspective": "AI 허위 주장",
-        "stance": "AI가 숙제를 자동 제출한다는 주장을 학교 적용 절차와 근거로 확인하는 사례",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "공식 발표가 없는 AI 관련 주장을 어떻게 확인하는지 사례로 보기",
-        "elementaryReadingFocus": "AI가 만든 가짜 정보처럼 보이는 단서를 찾아보기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-025",
-        "perspective": "개인정보와 확인",
-        "stance": "스마트워치 출석 의무화처럼 보이는 글을 공식 안내와 개인정보 기준으로 확인하는 사례",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "출석·개인정보 관련 주장을 공식 근거와 절차로 확인하기",
-        "elementaryReadingFocus": "스마트기기 사용이 편리함과 내 정보 문제를 어떻게 함께 만들 수 있는지 보기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-024",
-        "perspective": "광고성 정보",
-        "stance": "건강 효과를 내세우는 홍보성 글을 실험 근거와 광고 표시 기준으로 따져 보는 사례",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "광고처럼 보이는 건강 주장을 실험 근거와 출처로 따져 보기",
-        "elementaryReadingFocus": "좋아 보이는 광고나 주장에 어떤 근거가 빠져 있는지 보기"
-      },
-      {
-        "type": "internal",
         "articleId": "news-036",
         "perspective": "개인정보 보호",
         "stance": "디지털 서비스를 믿고 쓰려면 시스템 보안과 사람의 확인 책임이 함께 필요하다는 관점",
@@ -2562,19 +2523,6 @@
       },
       {
         "type": "internal",
-        "articleId": "news-023",
-        "perspective": "AI 허위 주장",
-        "stance": "AI 관련 주장은 학교 적용 절차와 공식 근거를 확인해야 한다는 사례",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          2,
-          3
-        ],
-        "readingFocus": "AI 관련 주장이 실제 학교 제도인지 확인하는 방법을 적용하기",
-        "elementaryReadingFocus": "AI가 만든 가짜 정보처럼 보이는 단서를 찾아보기"
-      },
-      {
-        "type": "internal",
         "articleId": "news-051",
         "perspective": "어린이 온라인 안전",
         "stance": "온라인 정보와 광고, 개인정보를 직접 확인하는 습관이 AI 합성물 판단에도 필요하다는 관점",
@@ -2859,19 +2807,6 @@
         ],
         "readingFocus": "광고 표시, 협찬 관계, 어린이 보호 조건을 기준별로 정리하기",
         "elementaryReadingFocus": "추천 글이 광고인지 확인할 단서를 찾아보기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-024",
-        "perspective": "광고성 정보 판별",
-        "stance": "건강 효과를 내세우는 홍보성 글을 실험 근거와 광고 표시 기준으로 따져 보는 사례",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "홍보성 건강 정보를 광고 표시와 근거 확인 기준으로 따져 보기",
-        "elementaryReadingFocus": "좋아 보이는 광고나 주장에 어떤 근거가 빠져 있는지 보기"
       },
       {
         "type": "internal",
@@ -3160,19 +3095,6 @@
         ],
         "readingFocus": "개인정보 보호 책임이 시스템 점검, 직원 교육, 사고 대응으로 어떻게 나뉘는지 보기",
         "elementaryReadingFocus": "내 정보를 지키려면 해킹뿐 아니라 실수도 막아야 하는 이유 보기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-025",
-        "perspective": "생체정보와 학교 안내 확인",
-        "stance": "스마트워치 출석 의무화처럼 보이는 주장을 개인정보 수집 절차와 공식 안내로 확인하는 사례",
-        "usage": "어린이용 가짜 뉴스 판별 글",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "출석과 안전을 이유로 민감한 정보를 요구할 때 어떤 공식 절차와 동의가 필요한지 따져 보기",
-        "elementaryReadingFocus": "스마트기기 사용이 편리함과 개인정보 문제를 어떻게 함께 만들 수 있는지 보기"
       },
       {
         "type": "internal",

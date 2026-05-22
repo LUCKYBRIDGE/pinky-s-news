@@ -38,6 +38,7 @@ python -m http.server 8000
 - 각 주제에는 기존 질문을 유지한 채 `elementaryTitle`, `elementarySummary`, `elementaryDiscussionQuestions`, `elementaryDiscussionFrame`, `elementaryWritingPrompt`로 초등학교 고학년용 쉬운 버전을 함께 둡니다.
 - 초등 고학년 보기에서는 핵심 용어를 쉬운 말로 없애지 않고, 화면에서 용어를 눌러 짧은 설명을 볼 수 있게 합니다.
 - 모든 근거자료는 `readingFocus`, `relatedQuestions`로 읽을 초점과 연결되는 토의 질문을 표시합니다.
+- 토의·토론 근거자료의 `internal` 항목은 `type: "fake"`인 가짜 뉴스 판별 연습용 기사를 연결하지 않습니다.
 - 초등 고학년 보기에서 더 쉬운 읽기 안내가 필요하면 자료에 `elementaryReadingFocus`를 함께 둡니다.
 - 통계·조사·연구·논문 링크는 `resourceKind`로 자료 성격도 함께 표시합니다.
 - 근거로 직접 쓰기 쉬운 통계·조사·연구 자료는 `evidenceInfo`로 출처, 조사대상·범위, 시점, 주의점을 분리해 표시합니다.

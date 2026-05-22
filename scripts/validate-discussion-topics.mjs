@@ -2,6 +2,14 @@ import fs from 'node:fs';
 
 const articleIds = new Set(JSON.parse(fs.readFileSync('articleList.json', 'utf8')));
 const topics = JSON.parse(fs.readFileSync('discussionTopics.json', 'utf8'));
+const articleTypes = new Map();
+
+articleIds.forEach((articleId) => {
+  const articlePath = `${articleId}.json`;
+  if (!fs.existsSync(articlePath)) return;
+  const article = JSON.parse(fs.readFileSync(articlePath, 'utf8'));
+  articleTypes.set(articleId, article.type);
+});
 
 const allowedTypes = new Set(['찬반 토론형', '해결 설계형 토의']);
 const allowedQuestionTypes = new Set(['토론 질문', '토의 질문']);
@@ -306,6 +314,8 @@ topics.forEach((topic, index) => {
       if (resource.type === 'internal') {
         if (!articleIds.has(resource.articleId)) {
           issues.push(`${resourceLabel}: missing internal article ${resource.articleId}`);
+        } else if (articleTypes.get(resource.articleId) === 'fake') {
+          issues.push(`${resourceLabel}: internal resources must not reference fake-news practice article ${resource.articleId}`);
         }
       } else if (resource.type === 'external') {
         ['title', 'source', 'url', 'perspective', 'stance', 'license', 'usage'].forEach((field) => {
