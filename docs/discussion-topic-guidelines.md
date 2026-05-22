@@ -63,6 +63,7 @@
 - 기존 큰 주제, 토의 질문, 생각해 볼 관점은 유지하고 `elementaryTitle`, `elementarySummary`, `elementaryDiscussionQuestions`, `elementaryDiscussionFrame`, `elementaryWritingPrompt`를 별도로 둔다.
 - 초등 고학년용 질문도 선택, 기준, 조건, 책임 중 하나 이상을 포함해야 한다.
 - 쉬운 말로 바꾸되 쟁점의 핵심 판단은 약하게 만들지 않는다.
+- `개인정보`, `플랫폼`, `허위정보`, `AI 합성물`, `라이선스`, `확률형 아이템`처럼 수업에서 익혀야 할 핵심 용어는 초등용에서도 유지하고, 화면에서 용어 설명으로 연결되게 한다.
 - `elementaryDiscussionQuestions`와 `elementaryDiscussionFrame`은 기존 질문·관점과 같은 개수를 유지해 자료의 `relatedQuestions` 번호가 그대로 통하도록 한다.
 
 피해야 할 질문:
