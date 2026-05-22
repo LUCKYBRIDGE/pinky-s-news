@@ -931,19 +931,6 @@
         "elementaryReadingFocus": "매연이 적은 교통을 늘릴 때 정부와 공공기관이 무엇을 해야 하는지 보기"
       },
       {
-        "type": "internal",
-        "articleId": "news-041",
-        "perspective": "자원 순환",
-        "stance": "일회용품과 폐자원 문제를 줄이는 순환경제 관점",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          2,
-          3
-        ],
-        "readingFocus": "순환경제가 배출 감축과 생활 부담을 어떻게 함께 다루는지 보기",
-        "elementaryReadingFocus": "한 번 쓰고 버리는 물건을 줄이려면 누가 무엇을 해야 하는지 보기"
-      },
-      {
         "type": "external",
         "title": "Annual CO₂ emissions",
         "source": "Our World in Data",
@@ -1418,32 +1405,6 @@
       },
       {
         "type": "internal",
-        "articleId": "news-015",
-        "perspective": "마음건강",
-        "stance": "학생 마음건강 지원은 온라인 생활과 학교 환경을 함께 살펴봐야 한다는 근거",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          1,
-          3
-        ],
-        "readingFocus": "마음건강 지원이 사용 제한만으로 해결되는지 따져 보기",
-        "elementaryReadingFocus": "마음건강 지원이 학교에서 왜 필요한지 보기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-019",
-        "perspective": "디지털 포용",
-        "stance": "디지털 기기를 제한할 때도 기술을 쓰기 어려운 사람과 필요한 사람을 함께 고려해야 한다는 관점",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "제한 규칙 속에서도 접근성 예외가 필요한 경우를 찾기",
-        "elementaryReadingFocus": "디지털 포용(컴퓨터와 인터넷 혜택을 모두가 쓰게 하는 일)에 어떤 도움이 필요한지 보기"
-      },
-      {
-        "type": "internal",
         "articleId": "news-049",
         "perspective": "학교 휴대전화 규칙",
         "stance": "수업 집중, 안전 연락, 접근성 예외를 함께 고려해 학교 스마트폰 규칙을 설계해야 한다는 관점",
@@ -1782,18 +1743,6 @@
       },
       {
         "type": "internal",
-        "articleId": "news-019",
-        "perspective": "디지털 포용",
-        "stance": "AI를 쓰는 학교에서도 기기·인터넷·도움이 부족한 학생이 소외되지 않아야 한다는 관점",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          3
-        ],
-        "readingFocus": "AI 학습 도구 이용에서 소외될 수 있는 학생 조건을 찾기",
-        "elementaryReadingFocus": "디지털 포용(컴퓨터와 인터넷 혜택을 모두가 쓰게 하는 일)에 어떤 도움이 필요한지 보기"
-      },
-      {
-        "type": "internal",
         "articleId": "news-050",
         "perspective": "디지털 포용 정책",
         "stance": "AI 학습 도구를 도입할 때 기기, 인터넷, 디지털 기술, 오프라인 선택지를 함께 보장해야 한다는 관점",
@@ -1803,31 +1752,6 @@
         ],
         "readingFocus": "기기·인터넷·도움 인력·오프라인 선택지를 접근성 조건으로 보기",
         "elementaryReadingFocus": "기기만 있어도 디지털 격차(컴퓨터와 인터넷 차이)가 해결되는지 생각하기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-036",
-        "perspective": "개인정보 보호",
-        "stance": "공공기관 시스템 보안과 사람의 실수 예방이 모두 필요하다는 근거",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "개인정보와 보안 책임이 AI 사용 규칙에 어떻게 들어가야 하는지 살펴보기",
-        "elementaryReadingFocus": "내 정보를 지키려면 해킹뿐 아니라 실수도 막아야 하는 이유 보기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-011",
-        "perspective": "접근성",
-        "stance": "키오스크와 돌봄 서비스가 모두에게 이용 가능해야 한다는 관점",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          3
-        ],
-        "readingFocus": "디지털 도구가 모두에게 이용 가능하려면 어떤 보조가 필요한지 보기",
-        "elementaryReadingFocus": "컴퓨터 기기와 앱이 누구에게 더 쉽게 바뀌어야 하는지 보기"
       },
       {
         "type": "external",
@@ -2150,19 +2074,6 @@
       "풍자, 실수, 오래된 정보, 의도적인 허위정보를 구별하기 위해 어떤 절차가 필요할까?"
     ],
     "resources": [
-      {
-        "type": "internal",
-        "articleId": "news-036",
-        "perspective": "개인정보 보호",
-        "stance": "디지털 서비스를 믿고 쓰려면 시스템 보안과 사람의 확인 책임이 함께 필요하다는 관점",
-        "usage": "어린이용 재구성 글",
-        "relatedQuestions": [
-          1,
-          3
-        ],
-        "readingFocus": "시스템 보안과 사람의 확인 책임을 허위정보 대응과 연결해 보기",
-        "elementaryReadingFocus": "내 정보를 지키려면 해킹뿐 아니라 실수도 막아야 하는 이유 보기"
-      },
       {
         "type": "internal",
         "articleId": "news-051",
@@ -2523,19 +2434,6 @@
       },
       {
         "type": "internal",
-        "articleId": "news-051",
-        "perspective": "어린이 온라인 안전",
-        "stance": "온라인 정보와 광고, 개인정보를 직접 확인하는 습관이 AI 합성물 판단에도 필요하다는 관점",
-        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글",
-        "relatedQuestions": [
-          1,
-          3
-        ],
-        "readingFocus": "온라인 정보 확인 습관을 AI 합성물 판단에 옮겨 보기",
-        "elementaryReadingFocus": "온라인 정보를 믿기 전에 출처, 날짜, 근거를 확인하는 방법 보기"
-      },
-      {
-        "type": "internal",
         "articleId": "news-056",
         "perspective": "허위정보 확산 조건",
         "stance": "거짓 정보가 퍼지는 구조를 이해하면 AI 합성물 대응 기준도 더 구체적으로 세울 수 있다는 관점",
@@ -2809,31 +2707,6 @@
         "elementaryReadingFocus": "추천 글이 광고인지 확인할 단서를 찾아보기"
       },
       {
-        "type": "internal",
-        "articleId": "news-051",
-        "perspective": "어린이 온라인 안전",
-        "stance": "개인정보, 광고, 사기, 디지털 시민성을 함께 배워야 광고성 정보를 더 잘 판단할 수 있다는 관점",
-        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글",
-        "relatedQuestions": [
-          1,
-          3
-        ],
-        "readingFocus": "광고·개인정보·사기 구분을 어린이가 확인할 수 있는 단서로 보기",
-        "elementaryReadingFocus": "온라인 정보를 믿기 전에 출처, 날짜, 근거를 확인하는 방법 보기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-055",
-        "perspective": "청소년 마음건강",
-        "stance": "소셜미디어 사용 환경과 추천 구조가 학생 생활과 마음건강에 영향을 줄 수 있다는 관점",
-        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글",
-        "relatedQuestions": [
-          3
-        ],
-        "readingFocus": "추천 구조와 소셜미디어 환경이 어린이 보호 기준과 어떻게 연결되는지 보기",
-        "elementaryReadingFocus": "소셜미디어와 마음건강을 말할 때 위험과 도움을 함께 보기"
-      },
-      {
         "type": "external",
         "title": "Disclosures 101 for Social Media Influencers",
         "source": "Federal Trade Commission",
@@ -3095,44 +2968,6 @@
         ],
         "readingFocus": "개인정보 보호 책임이 시스템 점검, 직원 교육, 사고 대응으로 어떻게 나뉘는지 보기",
         "elementaryReadingFocus": "내 정보를 지키려면 해킹뿐 아니라 실수도 막아야 하는 이유 보기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-051",
-        "perspective": "어린이 온라인 안전",
-        "stance": "개인정보, 광고, 사기, 온라인 시민성을 어린이가 직접 확인해야 한다는 관점",
-        "usage": "미국 연방정부 공개 자료를 어린이용으로 재구성한 글",
-        "relatedQuestions": [
-          1,
-          3
-        ],
-        "readingFocus": "어린이가 온라인 서비스에서 개인정보 제공 전 확인할 수 있는 단서를 찾기",
-        "elementaryReadingFocus": "온라인 정보를 믿기 전에 출처, 날짜, 근거를 확인하는 방법 보기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-019",
-        "perspective": "디지털 포용",
-        "stance": "개인정보 보호와 디지털 접근권을 함께 고려해야 한다는 관점",
-        "usage": "공공누리 제1유형 원문을 어린이용으로 재구성한 글",
-        "relatedQuestions": [
-          1,
-          3
-        ],
-        "readingFocus": "개인정보 보호 규칙이 디지털 서비스를 쓰기 어려운 학생에게 어떤 영향을 줄 수 있는지 보기",
-        "elementaryReadingFocus": "컴퓨터와 인터넷 혜택을 모두가 쓰려면 어떤 도움이 필요한지 보기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-050",
-        "perspective": "접근성 조건",
-        "stance": "디지털 서비스는 기기, 인터넷, 도움 인력, 오프라인 선택지를 함께 보장해야 한다는 관점",
-        "usage": "OGL 원문을 어린이용으로 재구성한 글",
-        "relatedQuestions": [
-          3
-        ],
-        "readingFocus": "개인정보를 덜 제공하는 학생도 이용할 수 있는 대안 조건을 생각하기",
-        "elementaryReadingFocus": "기기만 있어도 디지털 격차 없이 모두가 디지털 서비스를 잘 쓸 수 있는지 생각하기"
       },
       {
         "type": "external",
@@ -3448,19 +3283,6 @@
         ],
         "readingFocus": "자료를 가져오기 전에 누가 만들었고 어떤 목적으로 공개했는지 확인하는 절차 찾기",
         "elementaryReadingFocus": "온라인 정보를 믿기 전에 출처, 날짜, 근거를 확인하는 방법 보기"
-      },
-      {
-        "type": "internal",
-        "articleId": "news-042",
-        "perspective": "CC BY 데이터 재구성",
-        "stance": "공개 데이터도 출처와 라이선스를 확인하고 의미가 바뀌지 않게 재구성해야 한다는 사례",
-        "usage": "CC BY 원문을 어린이용으로 재구성한 글",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "데이터를 표나 글로 바꿀 때 출처 표시와 정확한 재생산이 왜 필요한지 보기",
-        "elementaryReadingFocus": "플라스틱을 잘 모으고 처리하는 일이 왜 중요한지 보기"
       },
       {
         "type": "external",
