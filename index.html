@@ -1026,17 +1026,22 @@
             if (!references.length) return '';
 
             return `
-                <section class="rounded-2xl border border-indigo-100 bg-indigo-50/70 p-5 sm:p-6">
-                    <div class="flex flex-wrap items-center justify-between gap-2">
-                        <h3 class="text-[17px] font-black text-indigo-950">
-                            <i class="fa-solid fa-trophy mr-2 text-indigo-600"></i>
-                            실제 대회 논제 참고
-                        </h3>
-                        <span class="rounded-full bg-white px-3 py-1 text-[12px] font-black text-indigo-700 border border-indigo-100">참고 ${references.length}개</span>
-                    </div>
-                    <p class="mt-2 text-[13px] leading-relaxed font-bold text-indigo-900">
-                        그대로 베끼지 않고, 초등·중등 수업에서 근거를 모아 토의할 수 있도록 선택·기준·조건·책임 질문으로 재구성했습니다.
-                    </p>
+                <section class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                    <details>
+                        <summary class="cursor-pointer list-none">
+                            <div class="flex flex-wrap items-center justify-between gap-3">
+                                <div>
+                                    <h3 class="text-[16px] font-black text-slate-900">
+                                        <i class="fa-solid fa-trophy mr-2 text-slate-400"></i>
+                                        실제 대회 논제 참고
+                                    </h3>
+                                    <p class="mt-1 text-[12px] leading-relaxed font-bold text-slate-500">
+                                        이 주제가 실제 토론 맥락과 연결된다는 보조 정보입니다. 수업 근거자료는 위의 근거자료 묶음을 먼저 보세요.
+                                    </p>
+                                </div>
+                                <span class="rounded-full bg-slate-50 px-3 py-1 text-[12px] font-black text-slate-600 border border-slate-200">참고 ${references.length}개</span>
+                            </div>
+                        </summary>
                     <div class="mt-4 grid grid-cols-1 gap-3">
                         ${references.map(reference => {
                             const relatedQuestions = Array.isArray(reference.relatedQuestions)
@@ -1046,15 +1051,15 @@
                                 ? reference.readingMaterials.filter(material => material && material.title && material.url)
                                 : [];
                             return `
-                                <article class="rounded-xl border border-indigo-100 bg-white p-4">
+                                <article class="rounded-xl border border-slate-200 bg-slate-50 p-4">
                                     <div class="flex flex-wrap items-center gap-2">
-                                        <span class="rounded-full bg-indigo-50 px-2.5 py-1 text-[11px] font-black text-indigo-700">${escapeHtml(reference.year || '연도 확인')}</span>
-                                        <span class="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-black text-slate-600">${escapeHtml(reference.source || reference.tournament)}</span>
+                                        <span class="rounded-full bg-white px-2.5 py-1 text-[11px] font-black text-slate-600 border border-slate-200">${escapeHtml(reference.year || '연도 확인')}</span>
+                                        <span class="rounded-full bg-white px-2.5 py-1 text-[11px] font-black text-slate-600 border border-slate-200">${escapeHtml(reference.source || reference.tournament)}</span>
                                     </div>
                                     <h4 class="mt-2 text-[14px] font-black text-slate-900 leading-relaxed">${escapeHtml(reference.tournament)}</h4>
                                     <p class="mt-2 text-[13px] leading-relaxed font-bold text-slate-700">원 논제: ${escapeHtml(reference.originalMotion)}</p>
-                                    <p class="mt-2 text-[12px] leading-relaxed font-bold text-indigo-900">수업용 변환: ${escapeHtml(reference.adaptationNote || '')}</p>
-                                    ${relatedQuestions.length ? `<p class="mt-2 text-[12px] font-black text-indigo-700">연결 질문: ${relatedQuestions.map(number => `질문 ${number}`).join(', ')}</p>` : ''}
+                                    <p class="mt-2 text-[12px] leading-relaxed font-bold text-slate-600">수업용 변환: ${escapeHtml(reference.adaptationNote || '')}</p>
+                                    ${relatedQuestions.length ? `<p class="mt-2 text-[12px] font-black text-slate-600">연결 질문: ${relatedQuestions.map(number => `질문 ${number}`).join(', ')}</p>` : ''}
                                     ${readingMaterials.length ? `
                                         <div class="mt-3 rounded-xl border border-emerald-100 bg-emerald-50/70 p-3">
                                             <p class="text-[12px] font-black text-emerald-800">대회 읽기 자료</p>
@@ -1075,7 +1080,7 @@
                                             </div>
                                         </div>
                                     ` : ''}
-                                    <a href="${escapeHtml(reference.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-2 text-[12px] font-black text-sky-700 hover:text-sky-900">
+                                    <a href="${escapeHtml(reference.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-2 text-[12px] font-black text-slate-600 hover:text-sky-700">
                                         대회·논제 출처 보기
                                         <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
                                     </a>
@@ -1083,6 +1088,7 @@
                             `;
                         }).join('')}
                     </div>
+                    </details>
                 </section>
             `;
         }
@@ -1500,40 +1506,58 @@
                     <nav class="sticky top-16 z-20 rounded-2xl border border-slate-200 bg-white/95 p-2 shadow-sm backdrop-blur">
                         <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
                             <button type="button" onclick="scrollToDiscussionSection('discussion-questions')" class="rounded-xl px-3 py-2 text-[13px] font-black text-slate-700 hover:bg-sky-50 hover:text-sky-700 transition">질문 선택</button>
-                            <button type="button" onclick="scrollToDiscussionSection('discussion-perspectives')" class="rounded-xl px-3 py-2 text-[13px] font-black text-slate-700 hover:bg-sky-50 hover:text-sky-700 transition">생각 관점</button>
                             <button type="button" onclick="scrollToDiscussionSection('discussion-resources')" class="rounded-xl px-3 py-2 text-[13px] font-black text-slate-700 hover:bg-sky-50 hover:text-sky-700 transition">근거자료</button>
+                            <button type="button" onclick="scrollToDiscussionSection('discussion-perspectives')" class="rounded-xl px-3 py-2 text-[13px] font-black text-slate-700 hover:bg-sky-50 hover:text-sky-700 transition">생각 관점</button>
                             <button type="button" onclick="scrollToDiscussionSection('discussion-speaking')" class="rounded-xl px-3 py-2 text-[13px] font-black text-slate-700 hover:bg-sky-50 hover:text-sky-700 transition">말하기</button>
                         </div>
                     </nav>
 
-                    ${renderCompetitionReferences(topic)}
+                    <section id="discussion-resources" class="scroll-mt-28 rounded-2xl border border-sky-100 bg-white p-6 shadow-sm">
+                        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                            <div>
+                                <span class="text-[12px] font-black text-sky-600">먼저 읽을 핵심 자료</span>
+                                <h3 class="mt-1 text-[22px] font-black text-slate-900">
+                                    <i class="fa-regular fa-file-lines mr-2 text-sky-600"></i>
+                                    근거자료 묶음
+                                </h3>
+                                <p class="mt-2 text-[13px] text-slate-500 leading-relaxed font-bold">선택한 질문에 답하기 위해 가장 먼저 볼 자료입니다. 재구성 글, 통계·표, 외부 원문 링크를 함께 확인하세요.</p>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 sm:w-[260px]">
+                                <div class="rounded-xl bg-slate-50 border border-slate-100 px-3 py-2 text-center">
+                                    <strong class="block text-[18px] font-black text-slate-900">${resources.length}</strong>
+                                    <span class="text-[11px] font-bold text-slate-500">전체</span>
+                                </div>
+                                <div class="rounded-xl bg-emerald-50 border border-emerald-100 px-3 py-2 text-center">
+                                    <strong class="block text-[18px] font-black text-emerald-800">${getDiscussionInternalCount(topic)}</strong>
+                                    <span class="text-[11px] font-bold text-emerald-700">재구성</span>
+                                </div>
+                                <div class="rounded-xl bg-amber-50 border border-amber-100 px-3 py-2 text-center">
+                                    <strong class="block text-[18px] font-black text-amber-800">${getDiscussionExternalCount(topic)}</strong>
+                                    <span class="text-[11px] font-bold text-amber-700">원문</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 rounded-xl bg-sky-50 border border-sky-100 px-4 py-3 text-[13px] text-sky-900 leading-relaxed font-semibold">
+                            어린이용 재구성 글은 저작권 조건을 확인한 자료만 본문으로 제공합니다. 외부 원문 카드는 본문을 복사하지 않고 제목·출처·관점만 안내합니다.
+                        </div>
+                        <div class="mt-5 grid grid-cols-1 gap-4">
+                            ${resources.map(resource => renderDiscussionResourceCard(resource)).join('')}
+                        </div>
+                    </section>
+
                     ${renderClassroomReadingMaterials(topic)}
 
-                    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        <div id="discussion-perspectives" class="scroll-mt-28 lg:col-span-1 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                            <h3 class="text-[18px] font-black text-slate-900 mb-4">
-                                <i class="fa-solid fa-scale-balanced mr-2 text-sky-600"></i>
-                                생각해 볼 관점
-                            </h3>
-                            <p class="mb-4 text-[13px] text-slate-500 leading-relaxed font-bold">토의 질문에 답하기 전, 근거를 고르고 기준·조건·책임을 따져 보는 보조 질문입니다.</p>
-                            <ul class="space-y-3">
-                                ${frames.map(frame => `
-                                    <li class="rounded-xl bg-slate-50 border border-slate-100 p-4 text-[14px] text-slate-700 leading-relaxed font-bold">${renderDiscussionText(frame)}</li>
-                                `).join('')}
-                            </ul>
-                        </div>
-                        <div id="discussion-resources" class="scroll-mt-28 lg:col-span-2 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                            <h3 class="text-[18px] font-black text-slate-900 mb-4">
-                                <i class="fa-regular fa-file-lines mr-2 text-sky-600"></i>
-                                근거자료 묶음
-                            </h3>
-                            <div class="mb-5 rounded-xl bg-sky-50 border border-sky-100 px-4 py-3 text-[13px] text-sky-900 leading-relaxed font-semibold">
-                                어린이용 재구성 글은 저작권 조건을 확인한 자료만 본문으로 제공합니다. 외부 원문 카드는 본문을 복사하지 않고 제목·출처·관점만 안내합니다.
-                            </div>
-                            <div class="grid grid-cols-1 gap-4">
-                                ${resources.map(resource => renderDiscussionResourceCard(resource)).join('')}
-                            </div>
-                        </div>
+                    <section id="discussion-perspectives" class="scroll-mt-28 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                        <h3 class="text-[18px] font-black text-slate-900 mb-4">
+                            <i class="fa-solid fa-scale-balanced mr-2 text-sky-600"></i>
+                            생각해 볼 관점
+                        </h3>
+                        <p class="mb-4 text-[13px] text-slate-500 leading-relaxed font-bold">토의 질문에 답하기 전, 근거를 고르고 기준·조건·책임을 따져 보는 보조 질문입니다.</p>
+                        <ul class="grid grid-cols-1 gap-3 md:grid-cols-2">
+                            ${frames.map(frame => `
+                                <li class="rounded-xl bg-slate-50 border border-slate-100 p-4 text-[14px] text-slate-700 leading-relaxed font-bold">${renderDiscussionText(frame)}</li>
+                            `).join('')}
+                        </ul>
                     </section>
 
                     <section id="discussion-speaking" class="scroll-mt-28 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -1545,6 +1569,8 @@
                             ${renderDiscussionText(getDiscussionWritingPrompt(topic))}
                         </div>
                     </section>
+
+                    ${renderCompetitionReferences(topic)}
                 </article>
             `;
         }
