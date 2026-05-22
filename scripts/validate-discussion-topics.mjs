@@ -107,13 +107,13 @@ topics.forEach((topic, index) => {
     return;
   }
 
-  ['id', 'category', 'discussionType', 'discussionTypeDescription', 'title', 'summary', 'essentialQuestion', 'debateReason', 'writingPrompt'].forEach((field) => {
+  ['id', 'category', 'discussionType', 'discussionTypeDescription', 'title', 'summary', 'essentialQuestion', 'discussionMotion', 'debateReason', 'writingPrompt'].forEach((field) => {
     if (!topic[field] || typeof topic[field] !== 'string') {
       issues.push(`${label}: missing string field "${field}"`);
     }
   });
 
-  ['elementaryTitle', 'elementarySummary', 'elementaryWritingPrompt'].forEach((field) => {
+  ['elementaryTitle', 'elementarySummary', 'elementaryDiscussionMotion', 'elementaryWritingPrompt'].forEach((field) => {
     if (!topic[field] || typeof topic[field] !== 'string') {
       issues.push(`${label}: missing elementary string field "${field}"`);
     }
