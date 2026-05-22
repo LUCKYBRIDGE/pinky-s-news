@@ -68,6 +68,16 @@ const rawLegalResourcePatterns = [
   /legal-library\/browse\/rules/i,
   /law\.go\.kr\/LSW\/lsRvsRsnListP/i,
 ];
+const deprecatedExternalUrlPatterns = [
+  /worldbank\.org\/en\/topic\/education\/brief\/learning-poverty$/i,
+  /cisa\.gov\/topics\/election-security\/foreign-influence-operations-and-disinformation/i,
+  /digital-strategy\.ec\.europa\.eu\/en\/policies\/digital-services-act-package/i,
+  /hhs\.gov\/surgeongeneral\/priorities\/youth-mental-health\/social-media/i,
+  /ftc\.gov\/tips-advice\/business-center\/guidance\/complying-coppa-frequently-asked-questions/i,
+  /ftc\.gov\/node\/79016/i,
+  /consumer\.ftc\.gov\/node\/87227/i,
+  /korea\.kr\/policy\/civilView\.do/i,
+];
 
 function isObject(value) {
   return value && typeof value === 'object' && !Array.isArray(value);
@@ -339,6 +349,9 @@ topics.forEach((topic, index) => {
         ].filter(Boolean).join(' ');
         if (rawLegalResourcePatterns.some(pattern => pattern.test(rawLegalBlob))) {
           issues.push(`${resourceLabel}: use accessible legal explainers or issue guides instead of raw legal texts`);
+        }
+        if (deprecatedExternalUrlPatterns.some(pattern => pattern.test(resource.url))) {
+          issues.push(`${resourceLabel}: external url points to an outdated or generic redirect; use the current content-specific URL`);
         }
         if (resource.url && !/^https?:\/\//.test(resource.url)) {
           issues.push(`${resourceLabel}: external url must start with http:// or https://`);
