@@ -806,7 +806,11 @@
         }
 
         function getDiscussionResourceCount(topic) {
-            return Array.isArray(topic.resources) ? topic.resources.length : 0;
+            return (Array.isArray(topic.resources) ? topic.resources.length : 0) + getDiscussionClassroomCount(topic);
+        }
+
+        function getDiscussionClassroomCount(topic) {
+            return getClassroomReadingMaterials(topic).length;
         }
 
         function getDiscussionInternalCount(topic) {
@@ -1127,12 +1131,12 @@
                     <div class="flex flex-wrap items-center justify-between gap-2">
                         <h3 class="text-[17px] font-black text-emerald-950">
                             <i class="fa-solid fa-book-open-reader mr-2 text-emerald-600"></i>
-                            수업용 창작 읽기 자료
+                            쟁점형 읽기 자료
                         </h3>
                         <span class="rounded-full bg-white px-3 py-1 text-[12px] font-black text-emerald-700 border border-emerald-100">창작 ${materials.length}개</span>
                     </div>
                     <p class="mt-2 text-[13px] leading-relaxed font-bold text-emerald-900">
-                        외부 대회 자료나 기사 본문을 옮기지 않고, 이 토의 질문에 맞춰 새로 쓴 읽기 자료입니다.
+                        선택한 질문의 찬반 근거, 조건, 책임 기준을 먼저 잡을 수 있게 새로 쓴 핵심 읽기 자료입니다.
                     </p>
                     <div class="mt-4 grid grid-cols-1 gap-3">
                         ${materials.map(material => {
@@ -1164,7 +1168,7 @@
             const categories = getDiscussionCategories();
             const totalResources = discussionTopics.reduce((total, topic) => total + getDiscussionResourceCount(topic), 0);
             const totalQuestions = discussionTopics.reduce((total, topic) => total + getDiscussionQuestions(topic).length, 0);
-            const totalInternal = discussionTopics.reduce((total, topic) => total + getDiscussionInternalCount(topic), 0);
+            const totalInternal = discussionTopics.reduce((total, topic) => total + getDiscussionClassroomCount(topic) + getDiscussionInternalCount(topic), 0);
             mainContainer.innerHTML = `
                 ${renderModeSwitcher()}
                 ${renderEducationalNotice()}
@@ -1259,8 +1263,8 @@
                                         <span class="text-[11px] font-bold text-slate-500">질문</span>
                                     </div>
                                     <div class="rounded-xl bg-emerald-50 border border-emerald-100 px-3 py-2 text-center">
-                                        <strong class="block text-[18px] font-black text-emerald-800">${getDiscussionInternalCount(topic)}</strong>
-                                        <span class="text-[11px] font-bold text-emerald-700">재구성</span>
+                                        <strong class="block text-[18px] font-black text-emerald-800">${getDiscussionClassroomCount(topic) + getDiscussionInternalCount(topic)}</strong>
+                                        <span class="text-[11px] font-bold text-emerald-700">읽기글</span>
                                     </div>
                                     <div class="rounded-xl bg-sky-50 border border-sky-100 px-3 py-2 text-center">
                                         <strong class="block text-[18px] font-black text-sky-800">${resourceCount}</strong>
@@ -1476,6 +1480,8 @@
             const mainContainer = document.getElementById('app-main');
             const frames = getDiscussionFrames(topic);
             const resources = Array.isArray(topic.resources) ? topic.resources : [];
+            const classroomCount = getDiscussionClassroomCount(topic);
+            const resourceCount = getDiscussionResourceCount(topic);
             const questions = getDiscussionQuestions(topic);
             const questionCounts = getDiscussionQuestionTypeCounts(topic);
 
@@ -1510,11 +1516,11 @@
                                     <span class="text-[11px] font-bold text-rose-700">토론</span>
                                 </div>
                                 <div class="rounded-2xl bg-emerald-50 border border-emerald-100 px-3 py-3 text-center">
-                                    <strong class="block text-[22px] font-black text-emerald-800">${getDiscussionInternalCount(topic)}</strong>
-                                    <span class="text-[11px] font-bold text-emerald-700">재구성</span>
+                                    <strong class="block text-[22px] font-black text-emerald-800">${classroomCount + getDiscussionInternalCount(topic)}</strong>
+                                    <span class="text-[11px] font-bold text-emerald-700">읽기글</span>
                                 </div>
                                 <div class="rounded-2xl bg-sky-50 border border-sky-100 px-3 py-3 text-center">
-                                    <strong class="block text-[22px] font-black text-sky-800">${resources.length}</strong>
+                                    <strong class="block text-[22px] font-black text-sky-800">${resourceCount}</strong>
                                     <span class="text-[11px] font-bold text-sky-700">근거</span>
                                 </div>
                             </div>
@@ -1540,16 +1546,16 @@
                                     <i class="fa-regular fa-file-lines mr-2 text-sky-600"></i>
                                     근거자료 묶음
                                 </h3>
-                                <p class="mt-2 text-[13px] text-slate-500 leading-relaxed font-bold">선택한 질문에 답하기 위해 가장 먼저 볼 자료입니다. 사이트 내 읽기 글, 통계·표, 외부 원문 링크를 함께 확인하세요.</p>
+                                <p class="mt-2 text-[13px] text-slate-500 leading-relaxed font-bold">선택한 질문에 답하기 위해 가장 먼저 볼 자료입니다. 쟁점형 읽기 자료로 기준을 잡고, 사이트 내 읽기 글·통계·표·외부 원문 링크로 근거를 넓히세요.</p>
                             </div>
                             <div class="grid grid-cols-3 gap-2 sm:w-[260px]">
                                 <div class="rounded-xl bg-slate-50 border border-slate-100 px-3 py-2 text-center">
-                                    <strong class="block text-[18px] font-black text-slate-900">${resources.length}</strong>
+                                    <strong class="block text-[18px] font-black text-slate-900">${resourceCount}</strong>
                                     <span class="text-[11px] font-bold text-slate-500">전체</span>
                                 </div>
                                 <div class="rounded-xl bg-emerald-50 border border-emerald-100 px-3 py-2 text-center">
-                                    <strong class="block text-[18px] font-black text-emerald-800">${getDiscussionInternalCount(topic)}</strong>
-                                    <span class="text-[11px] font-bold text-emerald-700">재구성</span>
+                                    <strong class="block text-[18px] font-black text-emerald-800">${classroomCount + getDiscussionInternalCount(topic)}</strong>
+                                    <span class="text-[11px] font-bold text-emerald-700">읽기글</span>
                                 </div>
                                 <div class="rounded-xl bg-amber-50 border border-amber-100 px-3 py-2 text-center">
                                     <strong class="block text-[18px] font-black text-amber-800">${getDiscussionExternalCount(topic)}</strong>
@@ -1558,14 +1564,15 @@
                             </div>
                         </div>
                         <div class="mt-5 rounded-xl bg-sky-50 border border-sky-100 px-4 py-3 text-[13px] text-sky-900 leading-relaxed font-semibold">
-                            사이트 내 읽기 글은 저작권 조건을 확인했거나 자체 창작한 자료만 본문으로 제공합니다. 초등 고학년 보기에서는 더 쉬운 문장과 읽기 초점을 함께 보여줍니다.
+                            맨 앞의 쟁점형 읽기 자료는 외부 본문을 옮기지 않고 토의 질문에 맞춰 새로 쓴 글입니다. 그 다음 사이트 내 읽기 글과 외부 원문 링크로 근거를 넓혀 보세요.
+                        </div>
+                        <div class="mt-5">
+                            ${renderClassroomReadingMaterials(topic)}
                         </div>
                         <div class="mt-5 grid grid-cols-1 gap-4">
                             ${resources.map(resource => renderDiscussionResourceCard(resource)).join('')}
                         </div>
                     </section>
-
-                    ${renderClassroomReadingMaterials(topic)}
 
                     <section id="discussion-perspectives" class="scroll-mt-28 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                         <h3 class="text-[18px] font-black text-slate-900 mb-4">
