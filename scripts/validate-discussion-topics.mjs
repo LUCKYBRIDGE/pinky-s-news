@@ -4,6 +4,7 @@ const articleIds = new Set(JSON.parse(fs.readFileSync('articleList.json', 'utf8'
 const topics = JSON.parse(fs.readFileSync('discussionTopics.json', 'utf8'));
 
 const allowedTypes = new Set(['찬반 토론형', '해결 설계형 토의']);
+const allowedQuestionTypes = new Set(['토론 질문', '토의 질문']);
 const questionKeywords = [
   '어떻게',
   '어디까지',
@@ -124,6 +125,16 @@ topics.forEach((topic, index) => {
     }
   }
 
+  if (!Array.isArray(topic.questionTypes) || !Array.isArray(topic.discussionQuestions) || topic.questionTypes.length !== topic.discussionQuestions.length) {
+    issues.push(`${label}: questionTypes should match discussionQuestions length`);
+  } else {
+    topic.questionTypes.forEach((questionType, questionIndex) => {
+      if (!allowedQuestionTypes.has(questionType)) {
+        issues.push(`${label}: questionTypes[${questionIndex}] must be one of ${Array.from(allowedQuestionTypes).join(', ')}`);
+      }
+    });
+  }
+
   if (!Array.isArray(topic.elementaryDiscussionQuestions) || topic.elementaryDiscussionQuestions.length < 2) {
     issues.push(`${label}: elementaryDiscussionQuestions should contain at least 2 selectable questions`);
   } else {
@@ -145,6 +156,16 @@ topics.forEach((topic, index) => {
     if (Array.isArray(topic.discussionQuestions) && topic.elementaryDiscussionQuestions.length !== topic.discussionQuestions.length) {
       issues.push(`${label}: elementaryDiscussionQuestions should match discussionQuestions length`);
     }
+  }
+
+  if (!Array.isArray(topic.elementaryQuestionTypes) || !Array.isArray(topic.elementaryDiscussionQuestions) || topic.elementaryQuestionTypes.length !== topic.elementaryDiscussionQuestions.length) {
+    issues.push(`${label}: elementaryQuestionTypes should match elementaryDiscussionQuestions length`);
+  } else {
+    topic.elementaryQuestionTypes.forEach((questionType, questionIndex) => {
+      if (!allowedQuestionTypes.has(questionType)) {
+        issues.push(`${label}: elementaryQuestionTypes[${questionIndex}] must be one of ${Array.from(allowedQuestionTypes).join(', ')}`);
+      }
+    });
   }
 
   if (!Array.isArray(topic.discussionFrame) || topic.discussionFrame.length < 2) {
