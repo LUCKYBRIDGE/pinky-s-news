@@ -1,0 +1,82 @@
+{
+  "id": "news-060",
+  "category": "학교와 디지털 생활",
+  "categories": [
+    "학교와 디지털 생활",
+    "과학과 디지털",
+    "함께 사는 사회"
+  ],
+  "isExclusive": false,
+  "title": "학교 사진과 CCTV는 어떤 약속이 필요할까",
+  "subtitle": "사진, 영상, CCTV를 쓸 때 목적·보관·열람 기준을 따져 본다",
+  "author": {
+    "name": "GOV.UK",
+    "email": "",
+    "profile": "./assets/generated/avatar-policy.png",
+    "department": "UK Open Government Licence 자료"
+  },
+  "date": {
+    "published": "2022.09.01. 오전 09:00",
+    "modified": "2022.09.01. 오전 09:00"
+  },
+  "image": {
+    "url": "./assets/generated/news-025.jpg",
+    "caption": "학교에서 사진과 CCTV 사용 기준을 확인하는 장면을 표현한 AI 생성 참고 이미지입니다."
+  },
+  "bodyAssets": [],
+  "content": [
+    "학교는 행사 사진을 찍고, 안전을 위해 CCTV를 둘 수 있다. 하지만 학교 사진과 영상에는 학생의 얼굴, 행동, 위치가 담길 수 있다. 그래서 '안전을 위해 필요하다'는 말만으로 충분하지 않고, 어떤 약속으로 쓰는지가 중요하다.",
+    "영국 GOV.UK의 학교 데이터 보호 안내는 사진·영상·CCTV를 사용할 때 목적을 분명히 하고, 필요한 범위에서만 쓰며, 보관과 접근을 관리해야 한다고 설명한다. 누가 영상을 볼 수 있는지, 얼마나 오래 보관하는지, 어떤 경우에 외부에 제공하는지도 정해야 한다.",
+    "예를 들어 학교 축제 사진을 홍보물에 쓰는 것과, 복도 CCTV를 사고 확인에 쓰는 것은 목적이 다르다. 홍보 사진은 동의와 공개 범위가 중요하고, CCTV는 안전 목적과 열람 권한이 중요하다. 같은 영상이라도 쓰는 목적에 따라 기준이 달라질 수 있다.",
+    "학생 권리도 함께 봐야 한다. 영상에 여러 학생이 함께 나오면 한 학생의 열람 요청이 다른 학생의 사생활과 부딪힐 수 있다. 그래서 학교는 필요한 부분만 보여 주거나, 다른 학생이 누구인지 알기 어렵게 처리하는 방법을 고민해야 한다.",
+    "토론에서는 CCTV를 더 늘릴지 줄일지만 묻지 말고, 장소, 목적, 보관 기간, 열람 권한, 학생과 보호자에게 알리는 방법을 구체적으로 정해야 한다. 안전과 사생활은 둘 중 하나만 고르는 문제가 아니라 조건을 설계해야 하는 문제다."
+  ],
+  "tags": [
+    "CCTV",
+    "학생사생활",
+    "사진영상",
+    "데이터보호",
+    "OGL"
+  ],
+  "reactions": {
+    "좋아요": 688,
+    "응원해요": 477,
+    "놀라워요": 72
+  },
+  "comments": [
+    {
+      "user": "privacy_class****",
+      "time": "2022.09.01. 10:25",
+      "content": "CCTV를 설치하느냐보다 누가 언제 볼 수 있는지가 핵심이라는 점을 토의해 볼 수 있겠어요.",
+      "likes": 126,
+      "dislikes": 2
+    },
+    {
+      "user": "school_rule****",
+      "time": "2022.09.01. 11:18",
+      "content": "행사 사진과 안전 CCTV는 목적이 다르다는 설명이 학생들에게 쉬울 것 같습니다.",
+      "likes": 103,
+      "dislikes": 1
+    }
+  ],
+  "type": "real",
+  "sourceNote": "GOV.UK의 「Data protection in schools: taking and using photos and videos, and using CCTV」 안내를 바탕으로 트루핑키스 뉴스가 어린이 독자를 위해 설명형 기사로 재구성했습니다. GOV.UK 자료는 별도 표시가 없는 경우 UK Open Government Licence v3.0 조건으로 재사용할 수 있습니다. 이 글은 원문 문장·표·이미지를 복사하지 않고 학교 토의에 필요한 목적, 보관 기간, 열람 권한, 사생활 기준을 새 문장으로 풀어 썼습니다. 원문: https://www.gov.uk/guidance/data-protection-in-schools/taking-and-using-photos-and-videos-and-using-cctv-in-schools OGL: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/ 기사 이미지는 원문 자료가 아니라 트루핑키스 뉴스의 기존 AI 생성 참고 이미지를 사용했습니다.",
+  "glossary": [
+    {
+      "term": "CCTV",
+      "definition": "특정 장소를 촬영해 안전 확인이나 기록에 쓰는 영상 장치입니다.",
+      "example": "학교 현관에 설치된 안전 카메라는 CCTV입니다."
+    },
+    {
+      "term": "보관 기간",
+      "definition": "정보나 영상을 저장해 두는 시간입니다.",
+      "example": "CCTV 영상을 30일 뒤 지운다면 보관 기간은 30일입니다."
+    },
+    {
+      "term": "열람 권한",
+      "definition": "자료를 볼 수 있는 자격이나 범위입니다.",
+      "example": "아무나 CCTV 영상을 볼 수 없게 정하는 것은 열람 권한을 정하는 일입니다."
+    }
+  ],
+  "sourceUrl": "https://www.gov.uk/guidance/data-protection-in-schools/taking-and-using-photos-and-videos-and-using-cctv-in-schools"
+}
