@@ -2678,7 +2678,7 @@
         "perspective": "AI 창작과 권리",
         "stance": "AI 생성물은 표시, 사람의 창작 기여, 학습자료 권리 문제와 함께 다뤄야 한다는 관점",
         "license": "미국 연방정부 공개 자료(제3자 자료 제외)",
-        "usage": "외부 원문 링크, 어려운 법률 내용은 교사용 참고로 활용",
+        "usage": "외부 정보성 안내 링크, 교사용 심화 참고. 학생은 읽기 초점에 맞춰 필요한 쟁점만 확인합니다.",
         "resourceKind": "정책/저작권 안내",
         "relatedQuestions": [
           2,
@@ -3248,21 +3248,21 @@
       },
       {
         "type": "external",
-        "title": "Children’s Online Privacy Protection Rule (COPPA)",
+        "title": "Children’s Online Privacy Protection Rule: A Six-Step Compliance Plan for Your Business",
         "source": "Federal Trade Commission",
-        "date": "법규 원문",
-        "url": "https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa",
-        "perspective": "어린이 개인정보 법규",
-        "stance": "어린이 대상 온라인 서비스는 개인정보 수집과 보호자 동의에 특별한 규칙을 따라야 한다는 관점",
+        "date": "사업자 안내",
+        "url": "https://www.ftc.gov/business-guidance/resources/childrens-online-privacy-protection-rule-six-step-compliance-plan-your-business",
+        "perspective": "어린이 개인정보 보호 절차",
+        "stance": "어린이 대상 온라인 서비스가 개인정보 수집 전 확인해야 할 적용 여부, 보호자 동의, 보호 절차를 단계별로 설명합니다.",
         "license": "미국 연방정부 공개 자료",
-        "usage": "외부 원문 링크, 법률 문구는 교사용 참고로 활용",
-        "resourceKind": "법규 원문",
+        "usage": "공식 정보성 안내 링크입니다. 조문 대신 수업에서 읽기 쉬운 절차 설명을 우선 제공합니다.",
+        "resourceKind": "정보성 안내",
         "relatedQuestions": [
           1,
           2
         ],
-        "readingFocus": "어린이 정보 수집에서 보호자 동의와 사업자 책임이 왜 따로 규정되는지 보기",
-        "elementaryReadingFocus": "어린이 정보는 왜 어른 정보보다 더 조심해서 모아야 하는지 생각하기"
+        "readingFocus": "어린이 서비스가 개인정보를 모으기 전 어떤 단계와 책임을 확인해야 하는지 보기",
+        "elementaryReadingFocus": "어린이 정보를 모으기 전에 어떤 설명과 허락이 필요한지 보기"
       },
       {
         "type": "external",
@@ -3595,7 +3595,7 @@
         "perspective": "AI와 저작권 논의",
         "stance": "AI가 만든 결과물과 인간의 창작 기여, 학습자료 사용 문제는 저작권 정책에서 실제로 논의되는 쟁점이라는 관점",
         "license": "미국 연방정부 공개 자료(제3자 자료 제외)",
-        "usage": "외부 원문 링크, 어려운 법률 내용은 교사용 참고로 활용",
+        "usage": "외부 정보성 안내 링크, 교사용 심화 참고. 학생은 읽기 초점에 맞춰 필요한 쟁점만 확인합니다.",
         "resourceKind": "정책/저작권 안내",
         "relatedQuestions": [
           3
@@ -3612,7 +3612,7 @@
         "perspective": "공정이용 판단",
         "stance": "교육 목적이라도 모든 사용이 자동으로 허용되는 것은 아니며 목적, 분량, 시장 영향 등을 함께 따져야 한다는 관점",
         "license": "미국 연방정부 공개 자료(사례 원문 권리 제외)",
-        "usage": "외부 원문 링크, 어려운 법률 내용은 교사용 참고로 활용",
+        "usage": "외부 사례 안내 링크, 교사용 심화 참고. 학생은 읽기 초점에 맞춰 필요한 쟁점만 확인합니다.",
         "resourceKind": "저작권 사례 안내",
         "relatedQuestions": [
           1,
@@ -5211,24 +5211,6 @@
           2,
           3,
           4
-        ]
-      },
-      {
-        "type": "external",
-        "title": "동물원 및 수족관의 관리에 관한 법률 제정·개정이유",
-        "source": "국가법령정보센터",
-        "date": "수시 업데이트",
-        "url": "https://www.law.go.kr/LSW/lsRvsRsnListP.do?chrClsCd=010102&lsId=012882",
-        "perspective": "법적 관리 기준",
-        "stance": "동물원·수족관을 등록제에서 허가제로 전환하고 관리 기준을 강화한 이유를 확인할 수 있습니다.",
-        "license": "공공 법령정보 원문 링크 제공",
-        "usage": "본문을 옮기지 않고 제목·출처·읽기 초점·원문 링크만 제공합니다.",
-        "resourceKind": "법령 정보",
-        "readingFocus": "동물원을 완전히 없앨지보다 허가 기준을 강화하는 접근이 왜 나왔는지 봅니다.",
-        "elementaryReadingFocus": "동물원을 운영하려면 왜 허가와 규칙이 필요한지 보기",
-        "relatedQuestions": [
-          2,
-          3
         ]
       },
       {

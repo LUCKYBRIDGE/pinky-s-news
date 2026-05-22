@@ -61,6 +61,13 @@ const embeddedEvidenceFields = [
   'copyrightBasis',
 ];
 const reconstructionFields = ['title', 'body'];
+const rawLegalResourcePatterns = [
+  /법규 원문/,
+  /법령 정보/,
+  /법 조항/,
+  /legal-library\/browse\/rules/i,
+  /law\.go\.kr\/LSW\/lsRvsRsnListP/i,
+];
 
 function isObject(value) {
   return value && typeof value === 'object' && !Array.isArray(value);
@@ -323,6 +330,16 @@ topics.forEach((topic, index) => {
             issues.push(`${resourceLabel}: missing string field "${field}"`);
           }
         });
+        const rawLegalBlob = [
+          resource.title,
+          resource.date,
+          resource.url,
+          resource.resourceKind,
+          resource.usage,
+        ].filter(Boolean).join(' ');
+        if (rawLegalResourcePatterns.some(pattern => pattern.test(rawLegalBlob))) {
+          issues.push(`${resourceLabel}: use accessible legal explainers or issue guides instead of raw legal texts`);
+        }
         if (resource.url && !/^https?:\/\//.test(resource.url)) {
           issues.push(`${resourceLabel}: external url must start with http:// or https://`);
         }
