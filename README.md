@@ -31,6 +31,7 @@ python -m http.server 8000
 - 사회적으로 필요성이 큰 주제는 `어떻게 할까`를 묻는 `해결 설계형 토의`로 둡니다.
 - 토의 질문은 선택, 기준, 조건, 책임 중 하나 이상을 포함합니다.
 - 하나의 큰 주제에는 여러 `discussionQuestions`를 둘 수 있고, 첫 번째 질문은 대표 질문인 `essentialQuestion`과 같게 둡니다.
+- 찬반 토론형 주제에는 수업에서 바로 읽을 수 있는 명제형 문장을 `debateMotion`으로 둘 수 있으며, 화면에는 `토론 논제`로 함께 표시합니다.
 - 각 주제에는 기존 질문을 유지한 채 `elementaryTitle`, `elementarySummary`, `elementaryDiscussionQuestions`, `elementaryDiscussionFrame`, `elementaryWritingPrompt`로 초등학교 고학년용 쉬운 버전을 함께 둡니다.
 - 초등 고학년 보기에서는 핵심 용어를 쉬운 말로 없애지 않고, 화면에서 용어를 눌러 짧은 설명을 볼 수 있게 합니다.
 - 모든 근거자료는 `readingFocus`, `relatedQuestions`로 읽을 초점과 연결되는 토의 질문을 표시합니다.
