@@ -910,7 +910,7 @@
         }
 
         function getDiscussionQuestionTypeLabel(type) {
-            return type === '토론 질문' ? '토론 질문' : '토의 질문';
+            return type === '토론 질문' ? '찬반 근거 질문' : '해결 설계 질문';
         }
 
         function renderDiscussionQuestionTypeBadge(type, selected = false) {
@@ -926,11 +926,11 @@
             return `
                 <span class="inline-flex items-center gap-1 rounded-full border border-rose-100 bg-rose-50 px-2.5 py-1 text-[11px] font-black text-rose-700">
                     <i class="fa-solid fa-scale-balanced"></i>
-                    토론 질문 ${counts['토론 질문'] || 0}
+                    찬반 근거 ${counts['토론 질문'] || 0}
                 </span>
                 <span class="inline-flex items-center gap-1 rounded-full border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-[11px] font-black text-emerald-700">
                     <i class="fa-solid fa-comments"></i>
-                    토의 질문 ${counts['토의 질문'] || 0}
+                    해결 설계 ${counts['토의 질문'] || 0}
                 </span>
             `;
         }
@@ -1222,12 +1222,12 @@
                         <p class="mt-1 text-[13px] leading-relaxed font-bold text-emerald-950">해결 방법, 기준, 조건, 책임을 정하는 대표 문장입니다.</p>
                     </div>
                     <div class="rounded-2xl border border-rose-100 bg-white px-4 py-3">
-                        <span class="text-[12px] font-black text-rose-700">토론 질문</span>
-                        <p class="mt-1 text-[13px] leading-relaxed font-bold text-slate-700">대표 논제를 좁혀 찬반 근거를 비교하는 활동 질문입니다.</p>
+                        <span class="text-[12px] font-black text-rose-700">찬반 근거 질문</span>
+                        <p class="mt-1 text-[13px] leading-relaxed font-bold text-slate-700">대표 논제를 좁혀 찬성과 반대 근거를 찾는 보조 질문입니다.</p>
                     </div>
                     <div class="rounded-2xl border border-emerald-100 bg-white px-4 py-3">
-                        <span class="text-[12px] font-black text-emerald-700">토의 질문</span>
-                        <p class="mt-1 text-[13px] leading-relaxed font-bold text-slate-700">대표 논제를 좁혀 기준·조건·책임을 설계하는 활동 질문입니다.</p>
+                        <span class="text-[12px] font-black text-emerald-700">해결 설계 질문</span>
+                        <p class="mt-1 text-[13px] leading-relaxed font-bold text-slate-700">대표 논제를 좁혀 기준·조건·책임을 정하는 보조 질문입니다.</p>
                     </div>
                 </section>
 
@@ -1240,11 +1240,11 @@
                         </div>
 
                         <div class="mt-5">
-                            <span class="text-[12px] font-black text-slate-500">질문 유형</span>
+                            <span class="text-[12px] font-black text-slate-500">보조 질문 유형</span>
                             <div class="mt-2 grid grid-cols-1 gap-2">
                                 <button type="button" data-discussion-type-filter="all" onclick="setDiscussionTopicFilter('type', 'all')" class="rounded-xl border px-3 py-2 text-left text-[13px] font-black transition ${getDiscussionFilterButtonClass(true)}">전체 질문</button>
-                                <button type="button" data-discussion-type-filter="토론 질문" onclick="setDiscussionTopicFilter('type', '토론 질문')" class="rounded-xl border px-3 py-2 text-left text-[13px] font-black transition ${getDiscussionFilterButtonClass(false)}">토론 질문 있는 주제</button>
-                                <button type="button" data-discussion-type-filter="토의 질문" onclick="setDiscussionTopicFilter('type', '토의 질문')" class="rounded-xl border px-3 py-2 text-left text-[13px] font-black transition ${getDiscussionFilterButtonClass(false)}">토의 질문 있는 주제</button>
+                                <button type="button" data-discussion-type-filter="토론 질문" onclick="setDiscussionTopicFilter('type', '토론 질문')" class="rounded-xl border px-3 py-2 text-left text-[13px] font-black transition ${getDiscussionFilterButtonClass(false)}">찬반 근거 질문 있는 주제</button>
+                                <button type="button" data-discussion-type-filter="토의 질문" onclick="setDiscussionTopicFilter('type', '토의 질문')" class="rounded-xl border px-3 py-2 text-left text-[13px] font-black transition ${getDiscussionFilterButtonClass(false)}">해결 설계 질문 있는 주제</button>
                             </div>
                         </div>
 
@@ -1466,7 +1466,7 @@
                         <span class="text-[12px] font-black text-sky-600">${getDiscussionQuestionSectionLabel()}</span>
                         <span class="rounded-full bg-white px-3 py-1 text-[12px] font-black text-sky-700 border border-sky-100">질문 ${questions.length}개</span>
                     </div>
-                    <p class="mt-2 text-[13px] leading-relaxed font-bold text-sky-800">위의 대표 논제를 수업에서 더 좁혀 다룰 활동 질문입니다. 토론 질문은 찬반 근거를, 토의 질문은 기준·조건·책임을 모으는 데 씁니다.</p>
+                    <p class="mt-2 text-[13px] leading-relaxed font-bold text-sky-800">위의 대표 논제를 수업에서 더 좁혀 다룰 보조 질문입니다. 찬반 근거 질문은 양쪽 근거를, 해결 설계 질문은 기준·조건·책임을 모으는 데 씁니다.</p>
                     <div class="mt-3 flex flex-wrap items-start gap-3">
                         <span id="selected-discussion-question-type" class="shrink-0">${renderDiscussionQuestionTypeBadge(firstQuestionType, true)}</span>
                         <div>
@@ -1576,7 +1576,7 @@
                                 </div>
                                 <div class="rounded-2xl bg-rose-50 border border-rose-100 px-3 py-3 text-center">
                                     <strong class="block text-[22px] font-black text-rose-800">${questionCounts['토론 질문'] || 0}</strong>
-                                    <span class="text-[11px] font-bold text-rose-700">토론 질문</span>
+                                    <span class="text-[11px] font-bold text-rose-700">찬반 근거</span>
                                 </div>
                                 <div class="rounded-2xl bg-emerald-50 border border-emerald-100 px-3 py-3 text-center">
                                     <strong class="block text-[22px] font-black text-emerald-800">${classroomCount + getDiscussionInternalCount(topic)}</strong>
