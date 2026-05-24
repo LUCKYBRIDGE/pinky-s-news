@@ -160,6 +160,22 @@ topics.forEach((topic, index) => {
     });
   }
 
+  if (!Array.isArray(topic.discussionMotions) || !Array.isArray(topic.discussionQuestions) || topic.discussionMotions.length !== topic.discussionQuestions.length) {
+    issues.push(`${label}: discussionMotions should match discussionQuestions length`);
+  } else {
+    const seenMotions = new Set();
+    topic.discussionMotions.forEach((motion, motionIndex) => {
+      if (typeof motion !== 'string' || !motion.trim() || motion.trim().endsWith('?')) {
+        issues.push(`${label}: discussionMotions[${motionIndex}] should be a non-question motion string`);
+        return;
+      }
+      if (seenMotions.has(motion)) {
+        issues.push(`${label}: discussionMotions[${motionIndex}] duplicates another discussion motion`);
+      }
+      seenMotions.add(motion);
+    });
+  }
+
   if (!Array.isArray(topic.elementaryDiscussionQuestions) || topic.elementaryDiscussionQuestions.length < 2) {
     issues.push(`${label}: elementaryDiscussionQuestions should contain at least 2 selectable questions`);
   } else {
@@ -190,6 +206,22 @@ topics.forEach((topic, index) => {
       if (!allowedQuestionTypes.has(questionType)) {
         issues.push(`${label}: elementaryQuestionTypes[${questionIndex}] must be one of ${Array.from(allowedQuestionTypes).join(', ')}`);
       }
+    });
+  }
+
+  if (!Array.isArray(topic.elementaryDiscussionMotions) || !Array.isArray(topic.elementaryDiscussionQuestions) || topic.elementaryDiscussionMotions.length !== topic.elementaryDiscussionQuestions.length) {
+    issues.push(`${label}: elementaryDiscussionMotions should match elementaryDiscussionQuestions length`);
+  } else {
+    const seenMotions = new Set();
+    topic.elementaryDiscussionMotions.forEach((motion, motionIndex) => {
+      if (typeof motion !== 'string' || !motion.trim() || motion.trim().endsWith('?')) {
+        issues.push(`${label}: elementaryDiscussionMotions[${motionIndex}] should be a non-question motion string`);
+        return;
+      }
+      if (seenMotions.has(motion)) {
+        issues.push(`${label}: elementaryDiscussionMotions[${motionIndex}] duplicates another elementary discussion motion`);
+      }
+      seenMotions.add(motion);
     });
   }
 
