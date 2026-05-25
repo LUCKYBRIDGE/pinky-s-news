@@ -12,7 +12,8 @@ articleIds.forEach((articleId) => {
 });
 
 const allowedTypes = new Set(['찬반 토론형', '해결 설계형 토의']);
-const allowedQuestionTypes = new Set(['토론 질문', '토의 질문']);
+const allowedQuestionTypes = new Set(['토론 논제', '토의 논제']);
+const deprecatedQuestionTypes = new Set(['토론 질문', '토의 질문']);
 const questionKeywords = [
   '어떻게',
   '어디까지',
@@ -157,6 +158,9 @@ topics.forEach((topic, index) => {
       if (!allowedQuestionTypes.has(questionType)) {
         issues.push(`${label}: questionTypes[${questionIndex}] must be one of ${Array.from(allowedQuestionTypes).join(', ')}`);
       }
+      if (deprecatedQuestionTypes.has(questionType)) {
+        issues.push(`${label}: questionTypes[${questionIndex}] should use 논제, not 질문`);
+      }
     });
   }
 
@@ -205,6 +209,9 @@ topics.forEach((topic, index) => {
     topic.elementaryQuestionTypes.forEach((questionType, questionIndex) => {
       if (!allowedQuestionTypes.has(questionType)) {
         issues.push(`${label}: elementaryQuestionTypes[${questionIndex}] must be one of ${Array.from(allowedQuestionTypes).join(', ')}`);
+      }
+      if (deprecatedQuestionTypes.has(questionType)) {
+        issues.push(`${label}: elementaryQuestionTypes[${questionIndex}] should use 논제, not 질문`);
       }
     });
   }

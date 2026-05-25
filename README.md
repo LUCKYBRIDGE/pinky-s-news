@@ -33,7 +33,7 @@ python -m http.server 8000
 - 하나의 큰 주제에는 화면에 보여 줄 여러 문장형 논제를 `discussionMotions`에 두고, 같은 순서의 질문형 판단 초점은 `discussionQuestions`에 호환용으로 둡니다.
 - 첫 번째 논제는 대표 선택 논제로 두고 `essentialQuestion`에도 연결합니다.
 - 찬반 토론형 주제에는 수업에서 바로 읽을 수 있는 명제형 문장을 `debateMotion`으로 둘 수 있으며, 화면에는 `토론 논제`로 함께 표시합니다.
-- 각 논제는 `questionTypes`와 `elementaryQuestionTypes`에서 내부값 `토론 질문` 또는 `토의 질문`으로 구분하고, 화면에서는 `토론 논제`와 `토의 논제` 색 배지로 표시합니다.
+- 각 논제는 `questionTypes`와 `elementaryQuestionTypes`에서 `토론 논제` 또는 `토의 논제`로 구분하고, 화면에서도 같은 이름의 색 배지로 표시합니다.
 - 화면에서는 주제 전체의 `찬반 토론형`/`해결 설계형 토의` 배지를 표시하지 않고, 선택 가능한 논제 단위의 유형만 보여줍니다.
 - 화면의 읽기 수준은 `교사용·일반 보기`와 `초등 고학년 보기`로 구분해 표시합니다.
 - 각 주제에는 기존 논제를 유지한 채 `elementaryTitle`, `elementarySummary`, `elementaryDiscussionMotions`, `elementaryDiscussionQuestions`, `elementaryDiscussionFrame`, `elementaryWritingPrompt`로 초등학교 고학년용 쉬운 버전을 함께 둡니다.

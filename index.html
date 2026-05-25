@@ -890,14 +890,20 @@
             const sourceTypes = useElementaryDiscussionCopy() && Array.isArray(topic.elementaryQuestionTypes)
                 ? topic.elementaryQuestionTypes
                 : topic.questionTypes;
-            return Array.isArray(sourceTypes) ? sourceTypes : [];
+            return Array.isArray(sourceTypes) ? sourceTypes.map(normalizeDiscussionQuestionType) : [];
+        }
+
+        function normalizeDiscussionQuestionType(type) {
+            if (type === '토론 논제' || type === '토론 질문') return '토론 논제';
+            if (type === '토의 논제' || type === '토의 질문') return '토의 논제';
+            return '';
         }
 
         function getDiscussionQuestionType(topic, index) {
             const questionTypes = getDiscussionQuestionTypes(topic);
             const type = questionTypes[index];
-            if (type === '토론 질문' || type === '토의 질문') return type;
-            return (topic.discussionType || '').includes('찬반') ? '토론 질문' : '토의 질문';
+            if (type === '토론 논제' || type === '토의 논제') return type;
+            return (topic.discussionType || '').includes('찬반') ? '토론 논제' : '토의 논제';
         }
 
         function getDiscussionQuestionTypeCounts(topic) {
@@ -905,11 +911,11 @@
                 const type = getDiscussionQuestionType(topic, index);
                 counts[type] = (counts[type] || 0) + 1;
                 return counts;
-            }, { '토론 질문': 0, '토의 질문': 0 });
+            }, { '토론 논제': 0, '토의 논제': 0 });
         }
 
         function getDiscussionQuestionTypeClasses(type, selected = false) {
-            if (type === '토론 질문') {
+            if (type === '토론 논제') {
                 return selected
                     ? 'bg-rose-100 text-rose-700 border-rose-200'
                     : 'bg-rose-50 text-rose-700 border-rose-100';
@@ -920,11 +926,11 @@
         }
 
         function getDiscussionQuestionTypeLabel(type) {
-            return type === '토론 질문' ? '토론 논제' : '토의 논제';
+            return type === '토론 논제' ? '토론 논제' : '토의 논제';
         }
 
         function renderDiscussionQuestionTypeBadge(type, selected = false) {
-            const icon = type === '토론 질문' ? 'fa-scale-balanced' : 'fa-comments';
+            const icon = type === '토론 논제' ? 'fa-scale-balanced' : 'fa-comments';
             return `<span class="discussion-question-type inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] font-black ${getDiscussionQuestionTypeClasses(type, selected)}">
                 <i class="fa-solid ${icon}"></i>
                 ${escapeHtml(getDiscussionQuestionTypeLabel(type))}
@@ -936,11 +942,11 @@
             return `
                 <span class="inline-flex items-center gap-1 rounded-full border border-rose-100 bg-rose-50 px-2.5 py-1 text-[11px] font-black text-rose-700">
                     <i class="fa-solid fa-scale-balanced"></i>
-                    토론 논제: ${counts['토론 질문'] || 0}개
+                    토론 논제: ${counts['토론 논제'] || 0}개
                 </span>
                 <span class="inline-flex items-center gap-1 rounded-full border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-[11px] font-black text-emerald-700">
                     <i class="fa-solid fa-comments"></i>
-                    토의 논제: ${counts['토의 질문'] || 0}개
+                    토의 논제: ${counts['토의 논제'] || 0}개
                 </span>
             `;
         }
@@ -1225,12 +1231,12 @@
 
                 <section class="mb-5 grid grid-cols-1 gap-3 md:grid-cols-2">
                     <div class="rounded-2xl border border-rose-100 bg-rose-50 px-4 py-3">
-                        <span class="text-[12px] font-black text-rose-700">토론 논제</span>
-                        <p class="mt-1 text-[13px] leading-relaxed font-bold text-rose-950">찬성과 반대가 갈리는 논제입니다. 양쪽 근거를 비교해 입장을 정합니다.</p>
+                        <span class="text-[12px] font-black text-rose-700">토론 논제 · 찬반 선택</span>
+                        <p class="mt-1 text-[13px] leading-relaxed font-bold text-rose-950">“해야 한다/해서는 안 된다”처럼 찬성과 반대 입장을 정하고 양쪽 근거를 비교합니다.</p>
                     </div>
                     <div class="rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-3">
-                        <span class="text-[12px] font-black text-emerald-700">토의 논제</span>
-                        <p class="mt-1 text-[13px] leading-relaxed font-bold text-emerald-950">해결 방법, 기준, 조건, 책임을 정하는 논제입니다. 실행 가능한 기준을 설계합니다.</p>
+                        <span class="text-[12px] font-black text-emerald-700">토의 논제 · 기준 설계</span>
+                        <p class="mt-1 text-[13px] leading-relaxed font-bold text-emerald-950">찬반 승패보다 해결 방법, 허용 조건, 예외, 책임 주체를 함께 정합니다.</p>
                     </div>
                 </section>
 
@@ -1246,8 +1252,8 @@
                             <span class="text-[12px] font-black text-slate-500">논제 유형</span>
                             <div class="mt-2 grid grid-cols-1 gap-2">
                                 <button type="button" data-discussion-type-filter="all" onclick="setDiscussionTopicFilter('type', 'all')" class="rounded-xl border px-3 py-2 text-left text-[13px] font-black transition ${getDiscussionFilterButtonClass(true)}">전체 논제</button>
-                                <button type="button" data-discussion-type-filter="토론 질문" onclick="setDiscussionTopicFilter('type', '토론 질문')" class="rounded-xl border px-3 py-2 text-left text-[13px] font-black transition ${getDiscussionFilterButtonClass(false)}">토론 논제 있는 주제</button>
-                                <button type="button" data-discussion-type-filter="토의 질문" onclick="setDiscussionTopicFilter('type', '토의 질문')" class="rounded-xl border px-3 py-2 text-left text-[13px] font-black transition ${getDiscussionFilterButtonClass(false)}">토의 논제 있는 주제</button>
+                                <button type="button" data-discussion-type-filter="토론 논제" onclick="setDiscussionTopicFilter('type', '토론 논제')" class="rounded-xl border px-3 py-2 text-left text-[13px] font-black transition ${getDiscussionFilterButtonClass(false)}">토론 논제 있는 주제</button>
+                                <button type="button" data-discussion-type-filter="토의 논제" onclick="setDiscussionTopicFilter('type', '토의 논제')" class="rounded-xl border px-3 py-2 text-left text-[13px] font-black transition ${getDiscussionFilterButtonClass(false)}">토의 논제 있는 주제</button>
                             </div>
                         </div>
 
@@ -1277,7 +1283,7 @@
                         const questions = getDiscussionQuestions(topic);
                         const motionOptions = getDiscussionMotionOptions(topic);
                         const representativeQuestionType = getDiscussionQuestionType(topic, 0);
-                        const representativeMotion = representativeQuestionType === '토론 질문' && getDebateMotion(topic)
+                        const representativeMotion = representativeQuestionType === '토론 논제' && getDebateMotion(topic)
                             ? getDebateMotion(topic)
                             : (motionOptions[0] || getDiscussionMotion(topic) || questions[0] || '');
                         const questionTypes = getDiscussionQuestionTypes(topic).join(' ');
@@ -1443,7 +1449,7 @@
                         <span class="text-[12px] font-black text-sky-600">${getDiscussionQuestionSectionLabel()}</span>
                         <span class="rounded-full bg-white px-3 py-1 text-[12px] font-black text-sky-700 border border-sky-100">논제 ${motionOptions.length}개</span>
                     </div>
-                    <p class="mt-2 text-[13px] leading-relaxed font-bold text-sky-800">이 큰 주제에서 바로 선택해 진행할 수 있는 논제입니다. 토론 논제는 양쪽 근거를 비교하고, 토의 논제는 기준·조건·책임을 정합니다.</p>
+                    <p class="mt-2 text-[13px] leading-relaxed font-bold text-sky-800">이 큰 주제에서 바로 선택해 진행할 수 있는 논제입니다. 토론 논제는 찬성과 반대 중 입장을 정하고, 토의 논제는 기준·조건·예외·책임을 설계합니다.</p>
                     <div class="mt-3 flex flex-wrap items-start gap-3">
                         <span id="selected-discussion-question-type" class="shrink-0">${renderDiscussionQuestionTypeBadge(firstQuestionType, true)}</span>
                         <div>
@@ -1554,7 +1560,7 @@
                                     <span class="text-[11px] font-bold text-slate-500">논제</span>
                                 </div>
                                 <div class="rounded-2xl bg-rose-50 border border-rose-100 px-3 py-3 text-center">
-                                    <strong class="block text-[22px] font-black text-rose-800">${questionCounts['토론 질문'] || 0}</strong>
+                                    <strong class="block text-[22px] font-black text-rose-800">${questionCounts['토론 논제'] || 0}</strong>
                                     <span class="text-[11px] font-bold text-rose-700">토론 논제</span>
                                 </div>
                                 <div class="rounded-2xl bg-emerald-50 border border-emerald-100 px-3 py-3 text-center">
@@ -1665,7 +1671,7 @@
 
                 const typeBadge = option.querySelector('.discussion-question-type');
                 if (typeBadge) {
-                    const nextClasses = getDiscussionQuestionTypeClasses(option.dataset.questionType || '토의 질문', isSelected).split(' ');
+                    const nextClasses = getDiscussionQuestionTypeClasses(option.dataset.questionType || '토의 논제', isSelected).split(' ');
                     const oldClasses = ['bg-rose-100', 'bg-rose-50', 'text-rose-700', 'border-rose-200', 'border-rose-100', 'bg-emerald-100', 'bg-emerald-50', 'text-emerald-700', 'border-emerald-200', 'border-emerald-100'];
                     typeBadge.classList.remove(...oldClasses);
                     typeBadge.classList.add(...nextClasses);
@@ -1693,7 +1699,7 @@
             if (selectedQuestion) selectedQuestion.innerHTML = renderDiscussionText(selectedOption.dataset.question || '');
             const selectedQuestionType = document.getElementById('selected-discussion-question-type');
             if (selectedQuestionType) {
-                selectedQuestionType.innerHTML = renderDiscussionQuestionTypeBadge(selectedOption.dataset.questionType || '토의 질문', true);
+                selectedQuestionType.innerHTML = renderDiscussionQuestionTypeBadge(selectedOption.dataset.questionType || '토의 논제', true);
             }
         }
 
