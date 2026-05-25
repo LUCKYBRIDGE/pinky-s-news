@@ -83,6 +83,14 @@ const reconstructionBlockedPatterns = [
   /복사하지 않습니다/,
   /원문 링크로만/,
 ];
+const linkOnlyUsagePatterns = [
+  ...reconstructionBlockedPatterns,
+  /옮기지 않습니다/,
+];
+const embeddedEvidenceOnlyUsagePatterns = [
+  /감사된 표·수치만/,
+  /감사된 데이터만/,
+];
 const rawLegalResourcePatterns = [
   /법규 원문/,
   /법령 정보/,
@@ -464,6 +472,16 @@ topics.forEach((topic, index) => {
             if (standardBody && elementaryBody && standardBody === elementaryBody) {
               issues.push(`${resourceLabel}: elementaryKoreanReconstruction must be rewritten for upper elementary readers, not copied from koreanReconstruction`);
             }
+          }
+        }
+        if (!hasKoreanReconstruction && !hasElementaryKoreanReconstruction) {
+          const usageText = resource.usage || '';
+          if (resource.embeddedEvidence !== undefined) {
+            if (!embeddedEvidenceOnlyUsagePatterns.some(pattern => pattern.test(usageText))) {
+              issues.push(`${resourceLabel}: embedded evidence without reconstruction should state that only audited tables or data are reproduced`);
+            }
+          } else if (!linkOnlyUsagePatterns.some(pattern => pattern.test(usageText))) {
+            issues.push(`${resourceLabel}: external resources without reconstruction must clearly say they are link-only`);
           }
         }
         if (resource.embeddedEvidence !== undefined) {
