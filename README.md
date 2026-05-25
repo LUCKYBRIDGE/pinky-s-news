@@ -20,6 +20,7 @@ python -m http.server 8000
 - `news-*.json`: 기사 데이터
 - `assets/`: 기사 본문에 쓰는 로컬 이미지
 - `docs/discussion-topic-guidelines.md`: 토의·토론 주제 편성 지침
+- `docs/discussion-resource-reconstruction-review.md`: 외부 근거자료 재구성 여부 검토 기록
 - `scripts/validate-discussion-topics.mjs`: 토의 주제 데이터 검증 스크립트
 
 ## 토의·토론 주제 편성
