@@ -62,6 +62,27 @@ const embeddedEvidenceFields = [
   'copyrightBasis',
 ];
 const reconstructionFields = ['title', 'body'];
+const reconstructionAllowedPatterns = [
+  /CC BY/i,
+  /CC0/i,
+  /Creative Commons/i,
+  /Open Government Licence/i,
+  /\bOGL\b/i,
+  /공공누리/,
+  /미국 연방정부/,
+  /공공영역/,
+  /공개 자료/,
+  /공공자료/,
+  /NASA 공개/,
+  /public domain/i,
+];
+const reconstructionBlockedPatterns = [
+  /본문을 옮기지 않고/,
+  /최소 설명만/,
+  /본문 재사용 없이/,
+  /복사하지 않습니다/,
+  /원문 링크로만/,
+];
 const rawLegalResourcePatterns = [
   /법규 원문/,
   /법령 정보/,
@@ -98,6 +119,11 @@ function validateReconstruction(resourceLabel, fieldName, reconstruction) {
       issues.push(`${resourceLabel}: ${fieldName}.${field} must be a non-empty string`);
     }
   });
+}
+
+function normalizeReconstructionBody(reconstruction) {
+  if (!isObject(reconstruction) || !Array.isArray(reconstruction.body)) return '';
+  return reconstruction.body.map(paragraph => paragraph.trim()).join('\n');
 }
 
 topics.forEach((topic, index) => {
@@ -416,6 +442,29 @@ topics.forEach((topic, index) => {
         }
         if (resource.elementaryKoreanReconstruction !== undefined) {
           validateReconstruction(resourceLabel, 'elementaryKoreanReconstruction', resource.elementaryKoreanReconstruction);
+        }
+        const hasKoreanReconstruction = resource.koreanReconstruction !== undefined;
+        const hasElementaryKoreanReconstruction = resource.elementaryKoreanReconstruction !== undefined;
+        if (hasKoreanReconstruction || hasElementaryKoreanReconstruction) {
+          const reuseTerms = [
+            resource.license,
+            resource.usage,
+          ].filter(Boolean).join(' ');
+          if (!reconstructionAllowedPatterns.some(pattern => pattern.test(reuseTerms))) {
+            issues.push(`${resourceLabel}: korean reconstruction requires clear reuse terms such as CC BY, CC0, OGL, public domain, or government public material`);
+          }
+          if (reconstructionBlockedPatterns.some(pattern => pattern.test(reuseTerms))) {
+            issues.push(`${resourceLabel}: link-only resources must not include korean reconstruction fields`);
+          }
+          if (!hasKoreanReconstruction || !hasElementaryKoreanReconstruction) {
+            issues.push(`${resourceLabel}: provide both koreanReconstruction and elementaryKoreanReconstruction, or neither`);
+          } else {
+            const standardBody = normalizeReconstructionBody(resource.koreanReconstruction);
+            const elementaryBody = normalizeReconstructionBody(resource.elementaryKoreanReconstruction);
+            if (standardBody && elementaryBody && standardBody === elementaryBody) {
+              issues.push(`${resourceLabel}: elementaryKoreanReconstruction must be rewritten for upper elementary readers, not copied from koreanReconstruction`);
+            }
+          }
         }
         if (resource.embeddedEvidence !== undefined) {
           if (!isObject(resource.embeddedEvidence)) {
