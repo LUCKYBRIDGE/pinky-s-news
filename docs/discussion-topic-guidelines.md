@@ -57,6 +57,24 @@
 - 조건: 어떤 경우에 허용하거나 제한할지 묻는다.
 - 책임: 누가 무엇을 맡아야 하는지 묻는다.
 
+### 외부 우수 사례 참고 기준
+
+논제 기준은 실제 대회와 수업 토의 모델을 함께 참고한다. 단, 외부 논제를 그대로 복사하지 않고 초등·중등 수업에서 읽고 판단할 수 있는 문장으로 변환한다.
+
+- World Schools Debating Championships 계열 자료는 토론 논제가 찬성과 반대가 다툴 수 있는 명제여야 하며, 논제를 임의로 좁혀 유리하게 해석해서는 안 된다는 점을 기준으로 삼는다. 일반 원칙형 논제는 그 자체로 토론 가능해야 하고, 정책 변화형 논제는 문제와 해결 효과를 다툴 수 있어야 한다.
+- 국내 공개 토론대회 자료는 `비례대표국회의원 정수를 확대하여야 한다`처럼 찬반이 바로 갈리는 명제형 문장을 토론 논제의 기준 사례로 삼는다. 논제는 사회적 쟁점성과 찬반 균형이 있어야 하며, 세부 설명은 논제 본문이 아니라 해설·생각 관점으로 둔다.
+- Structured Academic Controversy 자료는 학생이 서로 다른 관점을 연구하고, 상대 논거를 이해한 뒤 공통점을 찾는 구조를 토의 논제의 참고 기준으로 삼는다. 토의 논제는 단순 승패보다 여러 관점을 비교하고 종합할 수 있어야 한다.
+- National Issues Forums 계열 숙의 자료는 어려운 공공 문제에 대해 여러 접근법, 가치, 비용과 결과를 비교하게 하는 방식을 참고한다. 토의 논제는 `기준을 정한다`는 말만 반복하지 않고, 우선순위·허용 범위·책임 주체·해결 방식 중 실제 선택 지점을 드러내야 한다.
+
+참고 출처:
+
+- WSDC Defining Motions: https://www.qsda.org/resources/Defining_Motions.pdf
+- WSDC Tournament and Debate Rules: https://schoolsdebate.com/wp-content/uploads/docs/wsdc.debate.rules.2014.pdf
+- 2024 대한민국 열린 토론대회 요강: https://debates.go.kr/data/file/notice/3076887627_mJevG2rE_28BAD9C0D31292024_B4EBC7D1B9CEB1B9_BFADB8B0_C5E4B7D0B4EBC8B8_BFE4B0AD_01.pdf
+- ASU Center for American Civics, Structured Academic Controversies: https://civics.asu.edu/sac
+- SERC Pedagogy in Action, How to Teach with Structured Academic Controversy: https://serc.carleton.edu/sp/library/sac/how.html
+- National Issues Forums 안내: https://communityscience.astc.org/resources/national-issues-forums/
+
 ### 논제 품질 판정 기준
 
 선택 논제를 새로 쓰거나 고칠 때는 아래 7가지를 모두 확인한다. 하나라도 약하면 문장을 좁히거나, 토론 논제를 토의 논제로 바꾸거나, 생각해 볼 관점으로 낮춘다.
@@ -83,7 +101,8 @@
 
 토의 논제는 찬반 승패보다 함께 정할 기준, 조건, 책임, 절차가 중심이어야 한다.
 
-- `기준을 정해야 한다`, `조건을 나누어야 한다`, `책임을 분명히 해야 한다`, `우선순위를 정해야 한다`처럼 설계 과제가 보여야 한다.
+- `A를 B보다 우선해야 한다`, `어디까지 허용해야 한다`, `누가 더 책임져야 한다`, `어떤 해결 방식이 더 적절하다`처럼 실제 선택 지점이 보여야 한다.
+- `기준을 정해야 한다`는 표현은 보조적으로만 쓴다. 모든 토의 논제가 같은 표현으로 끝나면 학생에게 실제 선택지가 보이지 않으므로 문장을 다시 쓴다.
 - 여러 해결안이 가능해야 한다. 이미 당연한 한 가지 답만 남으면 토의 논제가 아니다.
 - 예산, 시간, 기술 한계, 개인정보, 접근성, 학생 안전, 보호자 동의, 플랫폼 책임 같은 현실 조건이 들어가면 좋다.
 - 토의 논제는 생각해 볼 관점보다 커야 한다. 한 가지 세부 기준만 묻는 문장은 관점으로 낮춘다.
