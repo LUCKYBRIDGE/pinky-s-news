@@ -135,6 +135,11 @@ function normalizeReconstructionBody(reconstruction) {
   return reconstruction.body.map(paragraph => paragraph.trim()).join('\n');
 }
 
+function extractReconstructionNumbers(reconstruction) {
+  const body = normalizeReconstructionBody(reconstruction);
+  return Array.from(new Set(body.match(/[0-9]+(?:\.[0-9]+)?%?/g) || []));
+}
+
 topics.forEach((topic, index) => {
   const label = topic.id || `topic[${index}]`;
 
@@ -480,6 +485,11 @@ topics.forEach((topic, index) => {
             const elementaryBody = normalizeReconstructionBody(resource.elementaryKoreanReconstruction);
             if (standardBody && elementaryBody && standardBody === elementaryBody) {
               issues.push(`${resourceLabel}: elementaryKoreanReconstruction must be rewritten for upper elementary readers, not copied from koreanReconstruction`);
+            }
+            const standardNumbers = extractReconstructionNumbers(resource.koreanReconstruction);
+            const missingElementaryNumbers = standardNumbers.filter(number => !elementaryBody.includes(number));
+            if (missingElementaryNumbers.length) {
+              issues.push(`${resourceLabel}: elementaryKoreanReconstruction should preserve numeric evidence from koreanReconstruction (${missingElementaryNumbers.join(', ')})`);
             }
           }
         }
