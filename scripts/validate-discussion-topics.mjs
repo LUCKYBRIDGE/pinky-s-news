@@ -14,6 +14,7 @@ articleIds.forEach((articleId) => {
 const allowedTypes = new Set(['찬반 토론형', '해결 설계형 토의']);
 const allowedQuestionTypes = new Set(['토론 논제', '토의 논제']);
 const deprecatedQuestionTypes = new Set(['토론 질문', '토의 질문']);
+const allowedElementarySuitability = new Set(['초등 고학년 적합', '교사 지도 권장', '일반용 중심']);
 const questionKeywords = [
   '어떻게',
   '어디까지',
@@ -153,6 +154,14 @@ topics.forEach((topic, index) => {
       issues.push(`${label}: missing elementary string field "${field}"`);
     }
   });
+
+  if (!topic.elementarySuitability || !allowedElementarySuitability.has(topic.elementarySuitability)) {
+    issues.push(`${label}: elementarySuitability must be one of ${Array.from(allowedElementarySuitability).join(', ')}`);
+  }
+
+  if (!topic.elementarySuitabilityNote || typeof topic.elementarySuitabilityNote !== 'string') {
+    issues.push(`${label}: missing elementary string field "elementarySuitabilityNote"`);
+  }
 
   if (topic.discussionType && !allowedTypes.has(topic.discussionType)) {
     issues.push(`${label}: discussionType must be one of ${Array.from(allowedTypes).join(', ')}`);

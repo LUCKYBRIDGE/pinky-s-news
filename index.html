@@ -835,6 +835,23 @@
                 : '같은 주제를 교사와 일반 독자가 수업 설계에 쓰기 좋은 문장으로 봅니다.';
         }
 
+        function renderElementarySuitabilityNote(topic) {
+            if (!useElementaryDiscussionCopy()) return '';
+            const suitability = topic.elementarySuitability || '초등 고학년 적합';
+            const note = topic.elementarySuitabilityNote || '초등 고학년이 읽기 쉬운 문장으로 풀어 둔 보기입니다.';
+            const tone = suitability === '교사 지도 권장'
+                ? 'border-amber-200 bg-amber-50 text-amber-900'
+                : suitability === '일반용 중심'
+                    ? 'border-slate-300 bg-slate-50 text-slate-700'
+                    : 'border-sky-200 bg-sky-50 text-sky-900';
+            return `
+                <div class="mt-4 rounded-2xl border ${tone} px-4 py-3">
+                    <p class="text-[12px] font-black">${escapeHtml(suitability)}</p>
+                    <p class="mt-1 text-[13px] font-bold leading-relaxed">${escapeHtml(note)}</p>
+                </div>
+            `;
+        }
+
         function getDiscussionQuestionSectionLabel() {
             return useElementaryDiscussionCopy() ? '초등 고학년 논제 선택' : '교사용·일반 논제 선택';
         }
@@ -1553,6 +1570,7 @@
                                 <span class="text-[12px] font-black text-slate-400">큰 주제</span>
                                 <h2 class="text-[30px] sm:text-[40px] font-black text-slate-900 tracking-tight leading-tight">${renderDiscussionText(getDiscussionTitle(topic))}</h2>
                                 <p class="mt-3 text-[14px] text-slate-500 leading-relaxed font-medium">${renderDiscussionText(getDiscussionSummary(topic))}</p>
+                                ${renderElementarySuitabilityNote(topic)}
                             </div>
                             <div class="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:w-[440px]">
                                 <div class="rounded-2xl bg-slate-50 border border-slate-100 px-3 py-3 text-center">

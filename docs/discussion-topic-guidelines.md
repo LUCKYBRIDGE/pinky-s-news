@@ -149,6 +149,7 @@
 초등학교 고학년용 문구를 함께 둘 때:
 
 - 기존 큰 주제, 선택 논제, 생각해 볼 관점은 유지하고 `elementaryTitle`, `elementarySummary`, `elementaryDiscussionMotions`, `elementaryDiscussionQuestions`, `elementaryDiscussionFrame`, `elementaryWritingPrompt`를 별도로 둔다.
+- 모든 주제를 무조건 초등 수업용으로 낮추지 않는다. `elementarySuitability`에는 `초등 고학년 적합`, `교사 지도 권장`, `일반용 중심` 중 하나를 적고, `elementarySuitabilityNote`에는 교사가 민감도와 지도 조건을 판단할 수 있는 짧은 안내를 둔다.
 - 초등 고학년용 논제도 선택, 기준, 조건, 책임 중 하나 이상을 포함해야 한다.
 - 쉬운 말로 바꾸되 쟁점의 핵심 판단은 약하게 만들지 않는다.
 - `개인정보`, `플랫폼`, `허위정보`, `AI 합성물`, `라이선스`, `확률형 아이템`처럼 수업에서 익혀야 할 핵심 용어는 초등용에서도 유지하고, 화면에서 용어 설명으로 연결되게 한다.
