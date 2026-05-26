@@ -57,7 +57,7 @@
 - 조건: 어떤 경우에 허용하거나 제한할지 묻는다.
 - 책임: 누가 무엇을 맡아야 하는지 묻는다.
 
-### 외부 우수 사례 참고 기준
+### 연구·우수 사례 참고 기준
 
 논제 기준은 실제 대회와 수업 토의 모델을 함께 참고한다. 단, 외부 논제를 그대로 복사하지 않고 초등·중등 수업에서 읽고 판단할 수 있는 문장으로 변환한다.
 
@@ -65,6 +65,10 @@
 - 국내 공개 토론대회 자료는 `비례대표국회의원 정수를 확대하여야 한다`처럼 찬반이 바로 갈리는 명제형 문장을 토론 논제의 기준 사례로 삼는다. 논제는 사회적 쟁점성과 찬반 균형이 있어야 하며, 세부 설명은 논제 본문이 아니라 해설·생각 관점으로 둔다.
 - Structured Academic Controversy 자료는 학생이 서로 다른 관점을 연구하고, 상대 논거를 이해한 뒤 공통점을 찾는 구조를 토의 논제의 참고 기준으로 삼는다. 토의 논제는 단순 승패보다 여러 관점을 비교하고 종합할 수 있어야 한다.
 - National Issues Forums 계열 숙의 자료는 어려운 공공 문제에 대해 여러 접근법, 가치, 비용과 결과를 비교하게 하는 방식을 참고한다. 토의 논제는 `기준을 정한다`는 말만 반복하지 않고, 우선순위·허용 범위·책임 주체·해결 방식 중 실제 선택 지점을 드러내야 한다.
+- McAvoy와 Hess의 교실 숙의 연구는 논제가 논쟁적 공공 쟁점이어야 하며, 학생이 서로 다른 합리적 관점을 듣고 민주적 숙의를 경험할 수 있어야 한다는 점을 기준으로 삼는다. 토의 논제는 이미 정답이 있는 도덕 훈화가 아니라, 자료를 읽은 뒤에도 여러 책임 있는 선택지가 남는 문제여야 한다.
+- Soter, Wilkinson, Murphy 등의 토의 담화 연구는 좋은 토의가 구조화되고 초점이 있으며, 열린 질문과 학생의 길어진 설명, 서로의 말에 이어 받는 발화, 이유 제시를 끌어낸다고 본다. 논제는 한 단어 답이나 단순 찬반 표결이 아니라 근거 설명과 반론·재설명을 자연스럽게 요구해야 한다.
+- Sampson과 Clark의 논증 평가 연구는 좋은 논증을 `구조`, `정당화`, `내용`의 세 측면에서 본다. 논제도 주장 구조가 세워지고, 자료로 정당화할 수 있으며, 내용 지식이 필요한 방식으로 작성한다.
+- Johnson과 Johnson의 constructive controversy 연구는 지적 충돌이 학습에 도움이 되려면 구조와 절차가 있어야 한다고 본다. 논제는 서로 다른 정보·가치·해석이 충돌하되, 상대 관점을 이해하고 종합할 수 있는 여지를 남겨야 한다.
 
 참고 출처:
 
@@ -74,10 +78,14 @@
 - ASU Center for American Civics, Structured Academic Controversies: https://civics.asu.edu/sac
 - SERC Pedagogy in Action, How to Teach with Structured Academic Controversy: https://serc.carleton.edu/sp/library/sac/how.html
 - National Issues Forums 안내: https://communityscience.astc.org/resources/national-issues-forums/
+- McAvoy & Hess, Classroom Deliberation in an Era of Political Polarization: https://eric.ed.gov/?id=EJ1009808
+- Soter et al., What the Discourse Tells Us: https://pure.psu.edu/en/publications/what-the-discourse-tells-us-talk-and-indicators-of-high-level-com/
+- Sampson & Clark, Assessment of the Ways Students Generate Arguments in Science Education: https://eric.ed.gov/?id=EJ790461
+- Johnson & Johnson, Energizing Learning: The Instructional Power of Conflict: https://journals.sagepub.com/doi/10.3102/0013189X08330540
 
 ### 논제 품질 판정 기준
 
-선택 논제를 새로 쓰거나 고칠 때는 아래 7가지를 모두 확인한다. 하나라도 약하면 문장을 좁히거나, 토론 논제를 토의 논제로 바꾸거나, 생각해 볼 관점으로 낮춘다.
+선택 논제를 새로 쓰거나 고칠 때는 아래 10가지를 모두 확인한다. 하나라도 약하면 문장을 좁히거나, 토론 논제를 토의 논제로 바꾸거나, 생각해 볼 관점으로 낮춘다.
 
 - 쟁점성: 실제 사회, 학교, 가정, 플랫폼, 정부 정책에서 의견이 갈리는 문제인가?
 - 명확성: 누가 무엇을 어디까지 해야 하는지, 또는 어떤 기준·조건·책임을 정해야 하는지 문장 안에 보이는가?
@@ -85,6 +93,9 @@
 - 근거성: 찬반 근거, 비교 사례, 통계·조사, 연구, 법·정책 해설, 현장 사례를 자료로 모을 수 있는가?
 - 수업성: 한 차시 안에 학생이 자료를 읽고 입장이나 기준을 세울 수 있을 만큼 범위가 좁은가?
 - 확장성: 학생들이 큰 가치 충돌을 볼 수 있을 만큼 충분히 넓고, 교사가 수업 맥락에 맞게 선택할 수 있는 중심 쟁점인가?
+- 합리적 다원성: 자료를 읽은 뒤에도 서로 다른 책임 있는 입장이나 해결안이 남는가?
+- 논증 가능성: 학생이 주장, 근거, 이유, 반론을 세울 수 있는가?
+- 담화 생산성: 열린 질문, 길어진 설명, 서로의 주장에 이어 말하기, 관점 수정이 일어날 수 있는가?
 - 표현성: 화면에 보이는 `discussionMotions`와 `elementaryDiscussionMotions`는 물음표가 없는 문장형 논제인가?
 
 ### 토론 논제 판정 기준
