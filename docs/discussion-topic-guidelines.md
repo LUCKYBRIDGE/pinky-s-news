@@ -148,7 +148,9 @@
 
 초등학교 고학년용 문구를 함께 둘 때:
 
-- 기존 큰 주제, 선택 논제, 생각해 볼 관점은 유지하고 `elementaryTitle`, `elementarySummary`, `elementaryDiscussionMotions`, `elementaryDiscussionQuestions`, `elementaryDiscussionFrame`, `elementaryWritingPrompt`를 별도로 둔다.
+- 기존 큰 주제와 선택 논제는 가능한 한 유지한다. `elementaryDiscussionMotions`와 `elementaryDiscussionQuestions`는 일반 논제가 초등 고학년에게도 적합하면 같은 문장을 그대로 둔다.
+- 일반 논제가 초등 고학년에게 부적합하거나 너무 추상적일 때만 초등용 논제를 별도로 바꾼다. 이때도 핵심 쟁점과 자료 연결 번호는 유지한다.
+- `elementaryTitle`, `elementarySummary`, `elementaryDiscussionFrame`, `elementaryWritingPrompt`, `elementaryKoreanReconstruction`은 초등 고학년이 읽기 쉽게 풀어 쓸 수 있다.
 - 모든 주제를 무조건 초등 수업용으로 낮추지 않는다. `elementarySuitability`에는 `초등 고학년 적합`, `교사 지도 권장`, `일반용 중심` 중 하나를 적고, `elementarySuitabilityNote`에는 교사가 민감도와 지도 조건을 판단할 수 있는 짧은 안내를 둔다.
 - 초등 고학년용 논제도 선택, 기준, 조건, 책임 중 하나 이상을 포함해야 한다.
 - 쉬운 말로 바꾸되 쟁점의 핵심 판단은 약하게 만들지 않는다.
