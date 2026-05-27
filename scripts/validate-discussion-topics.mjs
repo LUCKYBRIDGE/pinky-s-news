@@ -89,6 +89,20 @@ const reconstructionBlockedPatterns = [
   /복사하지 않습니다/,
   /원문 링크로만/,
 ];
+const reconstructionMetaInstructionPatterns = [
+  /토의에서는/,
+  /토론에서는/,
+  /토의할 때/,
+  /토론할 때/,
+  /이 자료를 (보며|읽으며)/,
+  /근거로 (쓸|삼을) 수 있다/,
+  /근거가 된다/,
+  /생각할 수 있다/,
+  /생각해 볼 수 있다/,
+  /생각하게 해 준다/,
+  /따져 볼 수 있다/,
+  /논의할 수 있다/,
+];
 const linkOnlyUsagePatterns = [
   ...reconstructionBlockedPatterns,
   /옮기지 않습니다/,
@@ -122,11 +136,23 @@ const deprecatedExternalUrlPatterns = [
   /consumer\.ftc\.gov\/node\/87227/i,
   /korea\.kr\/policy\/civilView\.do/i,
 ];
+const articleMetaInstructionPatterns = [
+  /토의에서는/,
+  /토론에서는/,
+  /이 뉴스를 읽을 때는/,
+];
 
 articleIds.forEach((articleId) => {
   const articlePath = `${articleId}.json`;
   if (!fs.existsSync(articlePath)) return;
   const article = JSON.parse(fs.readFileSync(articlePath, 'utf8'));
+  if (Array.isArray(article.content)) {
+    article.content.forEach((paragraph, paragraphIndex) => {
+      if (typeof paragraph === 'string' && articleMetaInstructionPatterns.some(pattern => pattern.test(paragraph))) {
+        issues.push(`${articleId}: content[${paragraphIndex}] should explain the source or issue directly, not tell readers how to discuss it`);
+      }
+    });
+  }
   if (typeof article.sourceUrl !== 'string' || !article.sourceUrl.trim()) return;
   const sourceBlob = [
     article.sourceUrl,
@@ -153,6 +179,12 @@ function validateReconstruction(resourceLabel, fieldName, reconstruction) {
     if (field === 'body') {
       if (!Array.isArray(reconstruction.body) || reconstruction.body.length === 0 || reconstruction.body.some(paragraph => typeof paragraph !== 'string' || !paragraph.trim())) {
         issues.push(`${resourceLabel}: ${fieldName}.body must contain non-empty paragraph strings`);
+      } else {
+        reconstruction.body.forEach((paragraph, paragraphIndex) => {
+          if (reconstructionMetaInstructionPatterns.some(pattern => pattern.test(paragraph))) {
+            issues.push(`${resourceLabel}: ${fieldName}.body[${paragraphIndex}] should translate or reconstruct source content, not tell readers how to use it for discussion`);
+          }
+        });
       }
     } else if (!reconstruction[field] || typeof reconstruction[field] !== 'string') {
       issues.push(`${resourceLabel}: ${fieldName}.${field} must be a non-empty string`);
