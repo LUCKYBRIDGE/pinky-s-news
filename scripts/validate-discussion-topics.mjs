@@ -53,6 +53,7 @@ const questionKeywords = [
 
 const issues = [];
 const evidenceInfoFields = ['sourceDetail', 'sampleOrScope', 'timeRange', 'caution'];
+const dataEvidenceKindPattern = /통계|데이터|조사|연구|논문|지표/i;
 const embeddedAuditKeys = new Set();
 const embeddedEvidenceFields = [
   'title',
@@ -460,6 +461,13 @@ topics.forEach((topic, index) => {
             issues.push(`${resourceLabel}: optional field "${field}" must be a string`);
           }
         });
+        ['evidenceHighlights', 'elementaryEvidenceHighlights'].forEach((field) => {
+          if (resource[field] !== undefined) {
+            if (!Array.isArray(resource[field]) || resource[field].length === 0 || resource[field].some(item => typeof item !== 'string' || !item.trim())) {
+              issues.push(`${resourceLabel}: optional field "${field}" must be a non-empty array of strings`);
+            }
+          }
+        });
         if (resource.evidenceInfo !== undefined) {
           if (!isObject(resource.evidenceInfo)) {
             issues.push(`${resourceLabel}: evidenceInfo must be an object when present`);
@@ -516,6 +524,9 @@ topics.forEach((topic, index) => {
           }
         }
         if (resource.embeddedEvidence !== undefined) {
+          if (!Array.isArray(resource.evidenceHighlights) || resource.evidenceHighlights.length === 0) {
+            issues.push(`${resourceLabel}: embeddedEvidence resources should surface key numbers in evidenceHighlights`);
+          }
           if (!isObject(resource.embeddedEvidence)) {
             issues.push(`${resourceLabel}: embeddedEvidence must be an object when present`);
           } else {
@@ -555,6 +566,19 @@ topics.forEach((topic, index) => {
                 });
               }
             }
+          }
+        }
+        const dataEvidenceLabel = [
+          resource.resourceKind,
+          resource.perspective,
+          resource.title,
+        ].filter(Boolean).join(' ');
+        if (dataEvidenceKindPattern.test(dataEvidenceLabel) && (hasKoreanReconstruction || resource.embeddedEvidence !== undefined)) {
+          if (!Array.isArray(resource.evidenceHighlights) || resource.evidenceHighlights.length === 0) {
+            issues.push(`${resourceLabel}: data, survey, research, or report resources with site-readable text should include evidenceHighlights`);
+          }
+          if (!Array.isArray(resource.elementaryEvidenceHighlights) || resource.elementaryEvidenceHighlights.length === 0) {
+            issues.push(`${resourceLabel}: data, survey, research, or report resources should include elementaryEvidenceHighlights`);
           }
         }
       } else {
