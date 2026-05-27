@@ -3034,38 +3034,20 @@
       },
       {
         "type": "external",
-        "title": "Children and Digital Marketing",
+        "title": "Children and digital marketing",
         "source": "UNICEF Child Rights and Business",
-        "date": "수시 업데이트",
-        "url": "https://www.unicef.org/childrightsandbusiness/workstreams/responsible-technology/digital-marketing",
-        "perspective": "아동권리와 디지털 마케팅",
-        "stance": "디지털 광고는 건강, 개인정보, 상업적 이용 문제를 함께 만들 수 있다는 관점",
+        "date": "2018.03.01",
+        "url": "https://www.unicef.org/childrightsandbusiness/reports/children-and-digital-marketing",
+        "perspective": "어린이 디지털 광고와 권리",
+        "stance": "디지털 광고가 어린이의 개인정보, 상업적 영향, 권리에 어떤 위험을 만들 수 있는지 살펴보는 보고서",
         "license": "UNICEF 저작권, 본문 재사용 없이 원문 링크 제공",
-        "usage": "외부 원문 링크와 최소 설명만 제공",
-        "resourceKind": "국제기구 해설",
-        "relatedQuestions": [
-          2,
-          3
-        ],
-        "readingFocus": "어린이 대상 광고 규칙을 광고 표시뿐 아니라 개인정보와 상업적 이용 문제까지 넓혀 보기",
-        "elementaryReadingFocus": "어린이가 보는 광고가 건강, 개인정보, 돈 쓰는 행동에 어떤 영향을 줄 수 있는지 보기"
-      },
-      {
-        "type": "external",
-        "title": "Children in the digital environment",
-        "source": "OECD",
-        "date": "정책 주제 안내",
-        "url": "https://www.oecd.org/en/topics/sub-issues/children-in-the-digital-environment.html",
-        "perspective": "디지털 환경의 위험과 기회 균형",
-        "stance": "어린이 보호 정책은 위험을 줄이되 학습, 놀이, 정보 접근의 기회도 함께 고려해야 한다는 관점",
-        "license": "OECD 저작권, 본문 재사용 없이 원문 링크 제공",
-        "usage": "외부 원문 링크와 최소 설명만 제공",
-        "resourceKind": "정책 안내",
+        "usage": "본문을 옮기지 않고 원문 보고서 링크와 최소 설명만 제공",
+        "resourceKind": "보고서",
         "relatedQuestions": [
           3
         ],
-        "readingFocus": "광고 추천 제한과 보호자 안내를 정할 때 위험 줄이기와 디지털 참여 기회를 함께 보기",
-        "elementaryReadingFocus": "광고를 줄이는 규칙이 어린이의 배움과 놀이 기회와 어떻게 균형을 이뤄야 하는지 보기"
+        "readingFocus": "어린이 대상 디지털 광고에서 개인정보 수집과 상업적 설득이 왜 쟁점인지 확인하기",
+        "elementaryReadingFocus": "온라인 광고가 어린이의 정보와 선택에 어떤 영향을 줄 수 있는지 보기"
       }
     ],
     "writingPrompt": "나는 온라인 추천 콘텐츠가 광고일 때 ___ 방식으로 표시해야 한다고 생각한다. 그 이유는 ___ 자료에서 ___를 확인할 수 있기 때문이다.",
@@ -3314,12 +3296,12 @@
       },
       {
         "type": "external",
-        "title": "Student Privacy Policy Office",
-        "source": "U.S. Department of Education",
+        "title": "Legal Basics",
+        "source": "U.S. Department of Education Student Privacy Policy Office",
         "date": "학생 개인정보 안내",
-        "url": "https://studentprivacy.ed.gov/",
-        "perspective": "학생 개인정보",
-        "stance": "학교와 교육기관은 학생 기록과 학습 데이터를 보호하고 알맞게 사용해야 한다는 관점",
+        "url": "https://studentprivacy.ed.gov/legal-basics",
+        "perspective": "학생 개인정보 법 기본 설명",
+        "stance": "FERPA와 PPRA처럼 학생 개인정보 권리를 설명하는 공식 기본 안내",
         "license": "미국 연방정부 공개 자료",
         "usage": "출처 표시 후 어린이용 재구성 가능",
         "relatedQuestions": [
@@ -3327,8 +3309,8 @@
           2,
           3
         ],
-        "readingFocus": "학교가 가진 학생 정보와 앱이 모으는 정보의 보호 책임을 비교하기",
-        "elementaryReadingFocus": "학교가 가진 내 정보는 누가 어떻게 지켜야 하는지 생각하기",
+        "readingFocus": "학생 개인정보를 학교가 다룰 때 어떤 권리와 기본 규칙이 있는지 확인하기",
+        "elementaryReadingFocus": "학교가 학생 정보를 다룰 때 학생과 보호자에게 어떤 권리가 있는지 보기",
         "koreanReconstruction": {
           "title": "학교가 가진 학생 정보도 보호해야 한다",
           "body": [
@@ -5322,24 +5304,6 @@
       },
       {
         "type": "external",
-        "title": "전시동물 보호·복지: 전시시설 및 인력 기준",
-        "source": "찾기쉬운 생활법령정보",
-        "date": "수시 업데이트",
-        "url": "https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=4&cnpClsNo=1&csmSeq=1968&popMenu=ov",
-        "perspective": "동물복지 기준",
-        "stance": "동물 전시시설이 갖춰야 할 기준과 관리 의무를 설명합니다.",
-        "license": "공공 법령 안내 원문 링크 제공",
-        "usage": "본문을 옮기지 않고 제목·출처·읽기 초점·원문 링크만 제공합니다.",
-        "resourceKind": "법령 해설",
-        "readingFocus": "동물복지 기준을 지키면 동물원 유지 논거가 강해지는지 판단합니다.",
-        "elementaryReadingFocus": "동물이 지낼 공간과 돌봄 기준이 왜 중요한지 보기",
-        "relatedQuestions": [
-          2,
-          3
-        ]
-      },
-      {
-        "type": "external",
         "title": "WAZA Conservation",
         "source": "World Association of Zoos and Aquariums",
         "date": "수시 업데이트",
@@ -5540,24 +5504,6 @@
           2,
           3,
           4
-        ]
-      },
-      {
-        "type": "external",
-        "title": "사전연명의료결정",
-        "source": "질병관리청 국가건강정보포털",
-        "date": "2025",
-        "url": "https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=6728",
-        "perspective": "건강정보 안내",
-        "stance": "사전연명의료결정의 의미와 절차를 건강정보 관점에서 설명합니다.",
-        "license": "공공기관 원문 링크 제공",
-        "usage": "본문을 옮기지 않고 제목·출처·읽기 초점·원문 링크만 제공합니다.",
-        "resourceKind": "건강정보",
-        "readingFocus": "환자 본인의 뜻을 어떻게 남기고 확인하는지 봅니다.",
-        "elementaryReadingFocus": "미리 뜻을 남기는 일이 왜 중요한지 보기",
-        "relatedQuestions": [
-          2,
-          3
         ]
       },
       {

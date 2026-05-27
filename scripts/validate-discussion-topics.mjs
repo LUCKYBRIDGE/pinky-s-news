@@ -109,11 +109,36 @@ const deprecatedExternalUrlPatterns = [
   /cisa\.gov\/topics\/election-security\/foreign-influence-operations-and-disinformation/i,
   /digital-strategy\.ec\.europa\.eu\/en\/policies\/digital-services-act-package/i,
   /hhs\.gov\/surgeongeneral\/priorities\/youth-mental-health\/social-media/i,
+  /fns\.usda\.gov\/nslp\/national-school-lunch-program-nslp$/i,
+  /fns\.usda\.gov\/schoolmeals\/nutrition-standards$/i,
+  /studentprivacy\.ed\.gov\/?$/i,
+  /oecd\.org\/en\/topics\/sub-issues\/children-in-the-digital-environment\.html/i,
+  /oecd\.org\/en\/publications\/children-in-the-digital-environment_9b8f222e-en\.html/i,
+  /oecd\.org\/content\/dam\/oecd\/en\/publications\/reports\/2021\/01\/children-in-the-digital-environment_9d454872\/9b8f222e-en\.pdf/i,
+  /unicef\.org\/childrightsandbusiness\/workstreams\/responsible-technology\/digital-marketing/i,
+  /law\.go\.kr\/LSW\/lsRvsRsnListP/i,
   /ftc\.gov\/tips-advice\/business-center\/guidance\/complying-coppa-frequently-asked-questions/i,
   /ftc\.gov\/node\/79016/i,
   /consumer\.ftc\.gov\/node\/87227/i,
   /korea\.kr\/policy\/civilView\.do/i,
 ];
+
+articleIds.forEach((articleId) => {
+  const articlePath = `${articleId}.json`;
+  if (!fs.existsSync(articlePath)) return;
+  const article = JSON.parse(fs.readFileSync(articlePath, 'utf8'));
+  if (typeof article.sourceUrl !== 'string' || !article.sourceUrl.trim()) return;
+  const sourceBlob = [
+    article.sourceUrl,
+    article.sourceNote,
+  ].filter(Boolean).join(' ');
+  if (rawLegalResourcePatterns.some(pattern => pattern.test(sourceBlob))) {
+    issues.push(`${articleId}: use accessible explainers or issue guides instead of raw legal source links`);
+  }
+  if (deprecatedExternalUrlPatterns.some(pattern => pattern.test(article.sourceUrl))) {
+    issues.push(`${articleId}: sourceUrl points to an outdated, generic, inaccessible, or redirect-prone page`);
+  }
+});
 
 function isObject(value) {
   return value && typeof value === 'object' && !Array.isArray(value);

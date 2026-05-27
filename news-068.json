@@ -60,7 +60,7 @@
     }
   ],
   "type": "real",
-  "sourceNote": "동물원 존폐 토론을 위해 트루핑키스 리터러시가 새로 쓴 수업용 설명 글입니다. 국가법령정보센터의 「동물원 및 수족관의 관리에 관한 법률」 및 찾기쉬운 생활법령정보의 전시동물 보호·복지 안내를 사실 확인용 배경자료로 참고했지만, 원문 문장·표·이미지를 복사하지 않았습니다. 법령과 공공기관 안내는 원문 링크로 함께 제공합니다. 참고: https://www.law.go.kr/LSW/lsRvsRsnListP.do?chrClsCd=010102&lsId=012882 참고: https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=4&cnpClsNo=1&csmSeq=1968&popMenu=ov 기사 이미지는 트루핑키스 뉴스의 기존 AI 생성 참고 이미지를 사용했습니다.",
+  "sourceNote": "동물원 존폐 토론을 위해 트루핑키스 리터러시가 새로 쓴 수업용 설명 글입니다. 찾기쉬운 생활법령정보의 전시동물 보호·복지 안내를 사실 확인용 배경자료로 참고했지만, 원문 문장·표·이미지를 복사하지 않았습니다. 어려운 법령 원문 대신 수업에서 확인하기 쉬운 공공 법령 해설 링크를 제공합니다. 참고: https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=4&cnpClsNo=1&csmSeq=1968&popMenu=ov 기사 이미지는 트루핑키스 뉴스의 기존 AI 생성 참고 이미지를 사용했습니다.",
   "glossary": [
     {
       "term": "동물복지",
@@ -78,5 +78,5 @@
       "example": "동물을 사람의 재미만을 위해 억지로 공연시키는 것은 전시 윤리 문제가 될 수 있습니다."
     }
   ],
-  "sourceUrl": "https://www.law.go.kr/LSW/lsRvsRsnListP.do?chrClsCd=010102&lsId=012882"
+  "sourceUrl": "https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=4&cnpClsNo=1&csmSeq=1968&popMenu=ov"
 }
