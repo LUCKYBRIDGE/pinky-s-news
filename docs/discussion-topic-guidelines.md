@@ -242,6 +242,8 @@
 - 초등용 `elementaryEvidenceHighlights`는 같은 숫자를 빼지 않고, 단위와 의미를 쉬운 말로 덧붙인다. 숫자를 `많다`, `적다`로만 바꾸지 않는다.
 - CC BY, CC0, 공공누리 제1유형, OGL, 미국 연방정부 공개 자료처럼 재사용 조건이 명확하고 원자료 CSV/API를 확인할 수 있는 경우에는 `embeddedEvidence`로 작은 표를 재생산할 수 있다.
 - `embeddedEvidence`에는 원자료 링크, 라이선스, 단위, 발췌 기준, 반올림·단위 변환 같은 재생산 방법을 반드시 적는다. 두 개 이상의 원자료를 조합하면 `sourceUrls`에 각각의 원자료 링크를 적는다.
+- 재생산 그래프는 원본 이미지를 캡처하지 않고, 검산된 `embeddedEvidence.rows`에서 만든다. 그래프 설정은 `visualization`에 두고, 어떤 열을 막대그래프로 썼는지 `labelColumn`, `valueColumn`, `unit`, `note`로 밝힌다.
+- 내부 재구성 기사에서 같은 검산 표·그래프가 필요하면 기사 JSON의 `evidenceBlocks`에 같은 감사 대상 데이터를 둔다. 이 경우에도 `scripts/audit-embedded-evidence.mjs`가 원자료와 표·그래프 설정을 함께 대조해야 한다.
 - 재생산 표에는 `auditKey`, `verificationNote`, `copyrightBasis`를 두고 `scripts/audit-embedded-evidence.mjs`로 원자료 값과 표시값을 대조한다.
 - 감사 스크립트는 일괄 통과만 확인하지 않고 재생산 항목마다 제목, 단위, 열, 원자료 링크, 행 값을 별도 케이스로 검산해야 한다. 새 `embeddedEvidence`를 추가하면 같은 커밋에서 전용 감사 케이스도 추가한다.
 - 원자료와 표시값이 맞지 않거나, 라이선스·재사용 조건을 확인할 수 없거나, 자동 대조가 어려운 복잡한 그래프는 폐기하고 외부 원문 링크 카드만 남긴다.

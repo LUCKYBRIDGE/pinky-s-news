@@ -90,5 +90,81 @@
       "example": "태양광 패널과 풍력발전기는 재생에너지를 이용합니다."
     }
   ],
-  "sourceUrl": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country"
+  "sourceUrl": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country",
+  "evidenceBlocks": [
+    {
+      "title": "2024년 이산화탄소 배출량과 1인당 배출량 비교",
+      "auditKey": "co2-emissions-2024",
+      "source": "Our World in Data Grapher: annual-co2-emissions-per-country.csv, co-emissions-per-capita.csv",
+      "sourceUrl": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country.csv",
+      "sourceUrls": [
+        {
+          "label": "총배출량 CSV",
+          "url": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country.csv"
+        },
+        {
+          "label": "1인당 배출량 CSV",
+          "url": "https://ourworldindata.org/grapher/co-emissions-per-capita.csv"
+        }
+      ],
+      "license": "CC BY",
+      "unit": "총배출량: 십억 톤, 1인당 배출량: 톤/명",
+      "columns": [
+        "지역",
+        "연도",
+        "총배출량",
+        "1인당 배출량"
+      ],
+      "rows": [
+        [
+          "세계",
+          "2024",
+          "38.6",
+          "4.7"
+        ],
+        [
+          "중국",
+          "2024",
+          "12.3",
+          "8.7"
+        ],
+        [
+          "미국",
+          "2024",
+          "4.9",
+          "14.2"
+        ],
+        [
+          "인도",
+          "2024",
+          "3.2",
+          "2.2"
+        ],
+        [
+          "일본",
+          "2024",
+          "1.0",
+          "7.8"
+        ],
+        [
+          "대한민국",
+          "2024",
+          "0.6",
+          "11.3"
+        ]
+      ],
+      "note": "총배출량과 1인당 배출량은 서로 다른 원자료 CSV에서 같은 연도 값을 맞춰 가져왔습니다.",
+      "reproductionNote": "총배출량은 톤 단위를 십억 톤으로 바꾸고, 표시는 소수 한 자리로 반올림했습니다.",
+      "verificationNote": "scripts/audit-embedded-evidence.mjs로 두 원자료 CSV의 같은 지역·연도 값을 조합해 대조했습니다.",
+      "copyrightBasis": "Our World in Data 지표 메타데이터의 nonRedistributable=false와 CC BY 재사용 안내를 확인했습니다.",
+      "visualization": {
+        "type": "bar",
+        "title": "2024년 1인당 CO₂ 배출량 비교",
+        "labelColumn": "지역",
+        "valueColumn": "1인당 배출량",
+        "unit": "톤/명",
+        "note": "표에는 총배출량도 함께 두고, 그래프는 생활·산업 구조 비교에 쓰기 쉬운 1인당 배출량을 표시했습니다."
+      }
+    }
+  ]
 }

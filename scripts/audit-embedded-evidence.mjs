@@ -30,6 +30,20 @@ function getEmbeddedEvidenceItems() {
       }
     }
   }
+  const articleIds = JSON.parse(fs.readFileSync('articleList.json', 'utf8'));
+  for (const articleId of articleIds) {
+    const articlePath = `${articleId}.json`;
+    if (!fs.existsSync(articlePath)) continue;
+    const article = JSON.parse(fs.readFileSync(articlePath, 'utf8'));
+    (article.evidenceBlocks || []).forEach((evidence, evidenceIndex) => {
+      items.push({
+        topicId: articleId,
+        resourceIndex: `evidenceBlocks[${evidenceIndex}]`,
+        resourceTitle: article.title,
+        evidence,
+      });
+    });
+  }
   return items;
 }
 
@@ -120,6 +134,7 @@ function expectEvidence(auditKey, evidence, expected) {
   expectEqual(auditKey, 'columns', evidence.columns, expected.columns);
   expectEqual(auditKey, 'sourceUrls', evidence.sourceUrls, expected.sourceUrls);
   expectEqual(auditKey, 'rows', evidence.rows, expected.rows);
+  expectEqual(auditKey, 'visualization', evidence.visualization, expected.visualization);
 }
 
 async function assertOwidRedistributable(auditKey, metadataUrl) {
@@ -166,6 +181,14 @@ async function buildPlasticAudit() {
         '2020',
         formatInteger(getCsvValue(rows, entity, 2020, 'Total plastic pollution')),
       ]),
+      visualization: {
+        type: 'bar',
+        title: '2020년 총 플라스틱 오염량 비교',
+        labelColumn: '지역',
+        valueColumn: '총 플라스틱 오염량',
+        unit: '톤',
+        note: '막대 길이는 원자료 값을 그대로 비례해 표시했습니다. 세계 값이 매우 커서 일부 국가는 짧게 보입니다.',
+      },
     },
   };
 }
@@ -204,6 +227,14 @@ async function buildWorldBankAudit() {
         if (!latest) throw new Error(`Missing World Bank row for ${iso3}`);
         return [label, latest.date, formatTwoDecimals(latest.value)];
       }),
+      visualization: {
+        type: 'bar',
+        title: '초등학교 나이 학교 밖 아동 비율 비교',
+        labelColumn: '국가',
+        valueColumn: '학교 밖 아동 비율',
+        unit: '%',
+        note: '각 국가는 World Bank API의 최신 비공백 자료 연도가 다를 수 있습니다.',
+      },
     },
   };
 }
@@ -246,6 +277,14 @@ async function buildCo2Audit() {
         formatOneDecimal(Number(getCsvValue(totalRows, entity, 2024, 'Annual CO₂ emissions')) / 1_000_000_000),
         formatOneDecimal(getCsvValue(perCapitaRows, entity, 2024, 'CO₂ emissions per capita')),
       ]),
+      visualization: {
+        type: 'bar',
+        title: '2024년 1인당 CO₂ 배출량 비교',
+        labelColumn: '지역',
+        valueColumn: '1인당 배출량',
+        unit: '톤/명',
+        note: '표에는 총배출량도 함께 두고, 그래프는 생활·산업 구조 비교에 쓰기 쉬운 1인당 배출량을 표시했습니다.',
+      },
     },
   };
 }
@@ -268,12 +307,12 @@ try {
 
   audits.forEach(({ auditKey, description, expected }) => {
     const matches = getEvidenceByAuditKey(auditKey);
-    if (matches.length !== 1) {
-      issues.push(`${auditKey}: expected exactly one embeddedEvidence item, found ${matches.length}`);
+    if (matches.length < 1) {
+      issues.push(`${auditKey}: expected at least one embeddedEvidence item, found ${matches.length}`);
       return;
     }
-    expectEvidence(auditKey, matches[0].evidence, expected);
-    passes.push(`${auditKey}: checked ${description}`);
+    matches.forEach(match => expectEvidence(auditKey, match.evidence, expected));
+    passes.push(`${auditKey}: checked ${description} in ${matches.length} place(s)`);
   });
 } catch (error) {
   issues.push(error.message);
@@ -285,4 +324,4 @@ if (issues.length) {
 }
 
 passes.forEach(pass => console.log(`ok: ${pass}`));
-console.log(`ok: ${passes.length} embedded evidence items match source data and checked reuse terms`);
+console.log(`ok: ${embeddedEvidenceItems.length} embedded evidence placements match source data, chart settings, and checked reuse terms`);

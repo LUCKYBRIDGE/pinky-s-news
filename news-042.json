@@ -89,5 +89,70 @@
       "example": "쓰레기차, 수거장, 처리장 같은 시설은 폐기물 관리 인프라입니다."
     }
   ],
-  "sourceUrl": "https://ourworldindata.org/why-cheap-waste-management-is-key-to-stopping-plastic-pollution"
+  "sourceUrl": "https://ourworldindata.org/why-cheap-waste-management-is-key-to-stopping-plastic-pollution",
+  "evidenceBlocks": [
+    {
+      "title": "2020년 총 플라스틱 오염량 일부 지역 비교",
+      "auditKey": "plastic-pollution-2020",
+      "source": "Our World in Data Grapher: plastic-pollution.csv",
+      "sourceUrl": "https://ourworldindata.org/grapher/plastic-pollution.csv",
+      "sourceUrls": [
+        {
+          "label": "원자료 CSV",
+          "url": "https://ourworldindata.org/grapher/plastic-pollution.csv"
+        }
+      ],
+      "license": "CC BY",
+      "unit": "톤",
+      "columns": [
+        "지역",
+        "연도",
+        "총 플라스틱 오염량"
+      ],
+      "rows": [
+        [
+          "세계",
+          "2020",
+          "52,106,292"
+        ],
+        [
+          "인도",
+          "2020",
+          "9,275,777"
+        ],
+        [
+          "중국",
+          "2020",
+          "2,808,179"
+        ],
+        [
+          "미국",
+          "2020",
+          "47,649"
+        ],
+        [
+          "일본",
+          "2020",
+          "6,185"
+        ],
+        [
+          "대한민국",
+          "2020",
+          "2,857"
+        ]
+      ],
+      "note": "원자료의 Entity, Year, Total plastic pollution 열에서 수업 비교에 필요한 일부 지역만 발췌했습니다.",
+      "reproductionNote": "소수점은 반올림하고 천 단위 구분 기호를 붙였습니다.",
+      "verificationNote": "scripts/audit-embedded-evidence.mjs로 원자료 CSV의 같은 지역·연도 값과 대조했습니다.",
+      "copyrightBasis": "Our World in Data 지표 메타데이터의 nonRedistributable=false와 CC BY 재사용 안내를 확인했습니다.",
+      "visualization": {
+        "type": "bar",
+        "title": "2020년 총 플라스틱 오염량 비교",
+        "labelColumn": "지역",
+        "valueColumn": "총 플라스틱 오염량",
+        "unit": "톤",
+        "note": "막대 길이는 원자료 값을 그대로 비례해 표시했습니다. 세계 값이 매우 커서 일부 국가는 짧게 보입니다."
+      }
+    }
+  ]
 }

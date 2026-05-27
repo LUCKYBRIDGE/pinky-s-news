@@ -135,6 +135,66 @@ function validateReconstruction(resourceLabel, fieldName, reconstruction) {
   });
 }
 
+function validateEmbeddedEvidence(resourceLabel, evidence, allowDuplicateAuditKey = false) {
+  if (!isObject(evidence)) {
+    issues.push(`${resourceLabel}: embeddedEvidence must be an object when present`);
+    return;
+  }
+  embeddedEvidenceFields.forEach((field) => {
+    if (!evidence[field] || typeof evidence[field] !== 'string') {
+      issues.push(`${resourceLabel}: embeddedEvidence.${field} must be a non-empty string`);
+    }
+  });
+  if (evidence.auditKey) {
+    if (!allowDuplicateAuditKey && embeddedAuditKeys.has(evidence.auditKey)) {
+      issues.push(`${resourceLabel}: embeddedEvidence.auditKey duplicates another embeddedEvidence`);
+    }
+    if (!allowDuplicateAuditKey) embeddedAuditKeys.add(evidence.auditKey);
+  }
+  const columns = evidence.columns;
+  const rows = evidence.rows;
+  if (!Array.isArray(columns) || columns.length < 2 || columns.some(column => typeof column !== 'string' || !column.trim())) {
+    issues.push(`${resourceLabel}: embeddedEvidence.columns must contain at least 2 string columns`);
+  }
+  if (!Array.isArray(rows) || rows.length === 0) {
+    issues.push(`${resourceLabel}: embeddedEvidence.rows must not be empty`);
+  } else if (Array.isArray(columns)) {
+    rows.forEach((row, rowIndex) => {
+      if (!Array.isArray(row) || row.length !== columns.length || row.some(cell => typeof cell !== 'string')) {
+        issues.push(`${resourceLabel}: embeddedEvidence.rows[${rowIndex}] must contain ${columns.length} string cells`);
+      }
+    });
+  }
+  if (evidence.sourceUrls !== undefined) {
+    if (!Array.isArray(evidence.sourceUrls) || evidence.sourceUrls.length === 0) {
+      issues.push(`${resourceLabel}: embeddedEvidence.sourceUrls must be a non-empty array when present`);
+    } else {
+      evidence.sourceUrls.forEach((link, linkIndex) => {
+        if (!isObject(link) || !link.label || !link.url || typeof link.label !== 'string' || typeof link.url !== 'string') {
+          issues.push(`${resourceLabel}: embeddedEvidence.sourceUrls[${linkIndex}] must include label and url strings`);
+        }
+      });
+    }
+  }
+  if (!isObject(evidence.visualization) || evidence.visualization.type !== 'bar') {
+    issues.push(`${resourceLabel}: embeddedEvidence.visualization must define a bar chart`);
+  } else {
+    ['title', 'labelColumn', 'valueColumn', 'unit', 'note'].forEach((field) => {
+      if (!evidence.visualization[field] || typeof evidence.visualization[field] !== 'string') {
+        issues.push(`${resourceLabel}: embeddedEvidence.visualization.${field} must be a non-empty string`);
+      }
+    });
+    if (Array.isArray(columns)) {
+      if (!columns.includes(evidence.visualization.labelColumn)) {
+        issues.push(`${resourceLabel}: embeddedEvidence.visualization.labelColumn must match an existing column`);
+      }
+      if (!columns.includes(evidence.visualization.valueColumn)) {
+        issues.push(`${resourceLabel}: embeddedEvidence.visualization.valueColumn must match an existing column`);
+      }
+    }
+  }
+}
+
 function normalizeReconstructionBody(reconstruction) {
   if (!isObject(reconstruction) || !Array.isArray(reconstruction.body)) return '';
   return reconstruction.body.map(paragraph => paragraph.trim()).join('\n');
@@ -144,6 +204,21 @@ function extractReconstructionNumbers(reconstruction) {
   const body = normalizeReconstructionBody(reconstruction);
   return Array.from(new Set(body.match(/[0-9]+(?:\.[0-9]+)?%?/g) || []));
 }
+
+articleIds.forEach((articleId) => {
+  const articlePath = `${articleId}.json`;
+  if (!fs.existsSync(articlePath)) return;
+  const article = JSON.parse(fs.readFileSync(articlePath, 'utf8'));
+  if (article.evidenceBlocks !== undefined) {
+    if (!Array.isArray(article.evidenceBlocks) || article.evidenceBlocks.length === 0) {
+      issues.push(`${articleId}: evidenceBlocks must be a non-empty array when present`);
+    } else {
+      article.evidenceBlocks.forEach((evidence, evidenceIndex) => {
+        validateEmbeddedEvidence(`${articleId}.evidenceBlocks[${evidenceIndex}]`, evidence, true);
+      });
+    }
+  }
+});
 
 topics.forEach((topic, index) => {
   const label = topic.id || `topic[${index}]`;
@@ -527,46 +602,7 @@ topics.forEach((topic, index) => {
           if (!Array.isArray(resource.evidenceHighlights) || resource.evidenceHighlights.length === 0) {
             issues.push(`${resourceLabel}: embeddedEvidence resources should surface key numbers in evidenceHighlights`);
           }
-          if (!isObject(resource.embeddedEvidence)) {
-            issues.push(`${resourceLabel}: embeddedEvidence must be an object when present`);
-          } else {
-            embeddedEvidenceFields.forEach((field) => {
-              if (!resource.embeddedEvidence[field] || typeof resource.embeddedEvidence[field] !== 'string') {
-                issues.push(`${resourceLabel}: embeddedEvidence.${field} must be a non-empty string`);
-              }
-            });
-            if (resource.embeddedEvidence.auditKey) {
-              if (embeddedAuditKeys.has(resource.embeddedEvidence.auditKey)) {
-                issues.push(`${resourceLabel}: embeddedEvidence.auditKey duplicates another embeddedEvidence`);
-              }
-              embeddedAuditKeys.add(resource.embeddedEvidence.auditKey);
-            }
-            const columns = resource.embeddedEvidence.columns;
-            const rows = resource.embeddedEvidence.rows;
-            if (!Array.isArray(columns) || columns.length < 2 || columns.some(column => typeof column !== 'string' || !column.trim())) {
-              issues.push(`${resourceLabel}: embeddedEvidence.columns must contain at least 2 string columns`);
-            }
-            if (!Array.isArray(rows) || rows.length === 0) {
-              issues.push(`${resourceLabel}: embeddedEvidence.rows must not be empty`);
-            } else if (Array.isArray(columns)) {
-              rows.forEach((row, rowIndex) => {
-                if (!Array.isArray(row) || row.length !== columns.length || row.some(cell => typeof cell !== 'string' || !cell.trim())) {
-                  issues.push(`${resourceLabel}: embeddedEvidence.rows[${rowIndex}] must contain ${columns.length} string cells`);
-                }
-              });
-            }
-            if (resource.embeddedEvidence.sourceUrls !== undefined) {
-              if (!Array.isArray(resource.embeddedEvidence.sourceUrls) || resource.embeddedEvidence.sourceUrls.length === 0) {
-                issues.push(`${resourceLabel}: embeddedEvidence.sourceUrls must be a non-empty array when present`);
-              } else {
-                resource.embeddedEvidence.sourceUrls.forEach((link, linkIndex) => {
-                  if (!isObject(link) || typeof link.label !== 'string' || !link.label.trim() || typeof link.url !== 'string' || !link.url.trim()) {
-                    issues.push(`${resourceLabel}: embeddedEvidence.sourceUrls[${linkIndex}] must include label and url strings`);
-                  }
-                });
-              }
-            }
-          }
+          validateEmbeddedEvidence(resourceLabel, resource.embeddedEvidence);
         }
         const dataEvidenceLabel = [
           resource.resourceKind,
