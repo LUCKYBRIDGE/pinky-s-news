@@ -3,12 +3,16 @@ import fs from 'node:fs';
 const articleIds = new Set(JSON.parse(fs.readFileSync('articleList.json', 'utf8')));
 const topics = JSON.parse(fs.readFileSync('discussionTopics.json', 'utf8'));
 const articleTypes = new Map();
+const articleSourceUrls = new Map();
 
 articleIds.forEach((articleId) => {
   const articlePath = `${articleId}.json`;
   if (!fs.existsSync(articlePath)) return;
   const article = JSON.parse(fs.readFileSync(articlePath, 'utf8'));
   articleTypes.set(articleId, article.type);
+  if (typeof article.sourceUrl === 'string' && article.sourceUrl.trim()) {
+    articleSourceUrls.set(articleId, article.sourceUrl.trim());
+  }
 });
 
 const allowedTypes = new Set(['찬반 토론형', '해결 설계형 토의']);
@@ -396,6 +400,11 @@ topics.forEach((topic, index) => {
     issues.push(`${label}: resources must not be empty`);
   } else {
     const discussionQuestionCount = Array.isArray(topic.discussionQuestions) ? topic.discussionQuestions.length : 0;
+    const internalSourceUrls = new Set(
+      topic.resources
+        .filter(resource => resource.type === 'internal' && articleSourceUrls.has(resource.articleId))
+        .map(resource => articleSourceUrls.get(resource.articleId))
+    );
     topic.resources.forEach((resource, resourceIndex) => {
       const resourceLabel = `${label}.resources[${resourceIndex}]`;
 
@@ -442,6 +451,9 @@ topics.forEach((topic, index) => {
         }
         if (resource.url && !/^https?:\/\//.test(resource.url)) {
           issues.push(`${resourceLabel}: external url must start with http:// or https://`);
+        }
+        if (resource.url && internalSourceUrls.has(resource.url.trim())) {
+          issues.push(`${resourceLabel}: duplicate source URL already appears as an internal reading article; keep the translated/reconstructed article and link its original source there`);
         }
         ['resourceKind', 'readingFocus'].forEach((field) => {
           if (resource[field] !== undefined && typeof resource[field] !== 'string') {

@@ -69,59 +69,6 @@
       },
       {
         "type": "external",
-        "title": "Why cheap waste management is key to stopping plastic pollution",
-        "source": "Our World in Data",
-        "date": "2026.03.16",
-        "url": "https://ourworldindata.org/why-cheap-waste-management-is-key-to-stopping-plastic-pollution",
-        "perspective": "원문 데이터",
-        "stance": "플라스틱 오염을 줄이려면 기본 폐기물 관리 인프라가 중요하다는 원문 자료",
-        "license": "CC BY",
-        "usage": "CC BY 영문 원문을 바탕으로 일반용 한국어 해석 글과 초등 고학년용 쉬운 재구성 글을 제공합니다. 원문 링크를 함께 제공합니다.",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "플라스틱 오염을 줄이는 데 개인 행동과 폐기물 관리 체계 중 무엇이 더 큰 조건인지 비교하기",
-        "elementaryReadingFocus": "플라스틱 오염이 개인 행동만이 아니라 쓰레기 관리 체계와 어떻게 연결되는지 보기",
-        "evidenceSuitability": "핵심 근거자료",
-        "evidenceReviewNote": "일회용품 금지 논제보다 폐기물 관리 체계와 책임 주체 논제에 직접 연결되는 핵심 근거입니다.",
-        "koreanReconstruction": {
-          "title": "플라스틱 오염은 사용량만이 아니라 폐기물 관리 체계의 문제다",
-          "body": [
-            "Our World in Data의 2026년 글은 전 세계 플라스틱 폐기물 5kg 중 약 1kg이 환경 오염으로 이어진다고 설명한다. 고소득 국가는 1인당 플라스틱 사용량이 많아도 수거, 매립, 소각, 재활용 체계가 있어 1인당 오염량은 저소득 국가보다 훨씬 낮다.",
-            "글은 모든 나라가 고소득 국가처럼 폐기물을 관리한다면 세계 플라스틱 오염을 98% 넘게 줄일 수 있다고 본다. 특히 저소득·중간소득 국가에서는 고급 재활용 시설보다 기본 수거와 관리형 매립 같은 기초 체계가 더 큰 효과를 낼 수 있다고 설명한다.",
-            "이 자료는 플라스틱 문제를 개인의 분리배출만으로 볼지, 기업·정부·지역사회가 폐기물 관리 체계를 책임져야 하는 문제로 볼지 토의하는 데 직접 쓸 수 있다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "플라스틱 오염을 줄이려면 잘 버리는 체계가 필요하다",
-          "body": [
-            "이 2026년 글은 전 세계 플라스틱 쓰레기 5kg 중 약 1kg이 자연으로 새어 나가 오염이 된다고 설명한다. 플라스틱을 많이 쓰는 나라라도 쓰레기를 잘 모으고 처리하면 오염을 크게 줄일 수 있다.",
-            "Our World in Data는 모든 나라가 고소득 국가처럼 폐기물을 관리하면 플라스틱 오염을 98% 넘게 줄일 수 있다고 본다. 그래서 비싼 새 기술보다 쓰레기 수거, 안전한 매립, 제대로 된 처리 시설이 먼저 중요할 수 있다.",
-            "이 자료를 읽으면 “개인이 컵을 덜 쓰면 된다”와 “정부와 기업이 처리 체계를 책임져야 한다”를 근거로 비교할 수 있다."
-          ]
-        }
-      },
-      {
-        "type": "external",
-        "title": "정부, 탈탄소 사회 견인…일상부터 산업까지 순환경제 전환",
-        "source": "정책브리핑",
-        "date": "2026.01.27",
-        "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148958573",
-        "perspective": "정책 원문",
-        "stance": "생활 속 실천과 산업 정책을 함께 다루는 정부 발표 원문",
-        "license": "공공누리 확인 필요",
-        "usage": "외부 원문 링크와 최소 설명만 제공합니다. 본문·표·이미지는 앱에 옮기지 않습니다.",
-        "relatedQuestions": [
-          1,
-          2,
-          3
-        ],
-        "readingFocus": "정부 정책이 생활 실천과 산업 책임을 어떻게 함께 다루는지 보기",
-        "elementaryReadingFocus": "우리나라가 일회용품과 폐자원을 줄이기 위해 어떤 제도와 규칙을 쓰는지 보기"
-      },
-      {
-        "type": "external",
         "title": "What You Can Do to Reduce Plastic Waste",
         "source": "U.S. Environmental Protection Agency",
         "date": "2026.04.13",
@@ -165,37 +112,6 @@
         ],
         "readingFocus": "포장 설계와 회수 책임을 기업에 요구하는 기준을 찾아보기",
         "elementaryReadingFocus": "포장 쓰레기를 줄이려면 회사와 소비자가 어떤 약속을 해야 하는지 보기"
-      },
-      {
-        "type": "external",
-        "title": "Single-use plastics bans and restrictions",
-        "source": "GOV.UK / DEFRA",
-        "date": "2024.10.07",
-        "url": "https://www.gov.uk/guidance/single-use-plastics-bans-and-restrictions",
-        "perspective": "규제 정책",
-        "stance": "일부 일회용 플라스틱은 개인 선택만으로 줄이기 어려워 판매·공급 규제가 필요하다는 관점",
-        "license": "Open Government Licence v3.0",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
-        "relatedQuestions": [
-          2,
-          3
-        ],
-        "readingFocus": "일회용품 금지에서 예외와 책임 기준이 어떻게 정해지는지 보기",
-        "koreanReconstruction": {
-          "title": "일회용품을 줄일 때도 예외와 맡을 일을 정해야 한다",
-          "body": [
-            "이 자료는 일부 일회용 플라스틱 제품을 팔거나 공급하는 것을 제한하는 규칙을 설명한다. 일회용품을 줄이려면 개인 선택만이 아니라 판매자와 공급자에게도 규칙이 필요하다는 관점을 보여 준다.",
-            "동시에 모든 상황을 똑같이 금지할 수는 없으므로 어떤 예외가 필요한지, 작은 가게나 소비자에게 생기는 부담은 어떻게 줄일지도 따져야 한다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "일회용품을 줄일 때도 예외와 맡을 일을 정해야 한다",
-          "body": [
-            "일회용품을 줄이려면 “쓰지 말자”라고 말하는 것만으로는 부족할 수 있다. 가게에서 팔 수 있는지, 어떤 경우는 예외인지도 정해야 한다.",
-            "이 자료를 보며 어떤 물건을 못 쓰게 할지, 가게와 손님은 무엇을 해야 할지 생각할 수 있다."
-          ]
-        },
-        "elementaryReadingFocus": "어떤 일회용품을 못 쓰게 하는지 보기"
       },
       {
         "type": "external",
@@ -689,37 +605,6 @@
       },
       {
         "type": "external",
-        "title": "School attendance and absence",
-        "source": "GOV.UK",
-        "date": "안내 페이지",
-        "url": "https://www.gov.uk/school-attendance-absence",
-        "perspective": "교육 의무",
-        "stance": "교육을 받을 권리와 보호자의 책임, 지역기관의 지원을 함께 볼 수 있는 관점",
-        "license": "Open Government Licence v3.0",
-        "usage": "출처 표시 후 번역·어린이용 재구성 가능",
-        "relatedQuestions": [
-          1,
-          3
-        ],
-        "readingFocus": "교육받을 권리와 보호자·학교·지역기관 책임을 함께 보기",
-        "koreanReconstruction": {
-          "title": "결석은 혼내기와 돕기를 함께 생각해야 한다",
-          "body": [
-            "이 자료는 학교 출석과 결석에 관한 기본 안내를 제공한다. 학생이 학교에 나오는 일은 중요하지만, 결석의 이유가 건강, 가정 상황, 이동 문제, 학교 적응 문제와 연결될 수 있다는 점도 함께 생각해야 한다.",
-            "교육 지원 기준을 토의할 때 결석을 단순히 벌로 다룰지, 학교와 가정과 지역기관이 함께 도울지 판단하는 근거가 된다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "결석은 혼내기와 돕기를 함께 생각해야 한다",
-          "body": [
-            "학교에 빠지는 일이 생기면 무조건 혼내기보다 왜 그런지 살펴봐야 할 때가 있다.",
-            "이 자료는 출석의 중요성과 도움이 필요한 학생을 어떻게 볼지 생각하게 해 준다."
-          ]
-        },
-        "elementaryReadingFocus": "학교에 자주 빠지는 일을 학교가 어떻게 살펴보는지 보기"
-      },
-      {
-        "type": "external",
         "title": "Toolkit for schools: communicating with families to support attendance",
         "source": "GOV.UK / Department for Education",
         "date": "지원 도구",
@@ -1025,55 +910,6 @@
         ],
         "readingFocus": "교통 전환 비용을 누가 부담해야 하는지 정책 사례로 따져 보기",
         "elementaryReadingFocus": "매연이 적은 교통을 늘릴 때 정부와 공공기관이 무엇을 해야 하는지 보기"
-      },
-      {
-        "type": "external",
-        "title": "Annual CO₂ emissions",
-        "source": "Our World in Data",
-        "date": "데이터 페이지",
-        "url": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country",
-        "perspective": "원문 데이터",
-        "stance": "나라별 이산화탄소 배출량을 비교할 수 있는 공개 데이터",
-        "license": "CC BY",
-        "usage": "외부 원문 링크와 최소 설명만 제공합니다. 본문·표·이미지는 앱에 옮기지 않습니다.",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "나라별 총배출량을 비교하되 인구 규모와 1인당 기준의 차이를 함께 생각하기",
-        "elementaryReadingFocus": "나라별 탄소 배출량을 비교할 때 전체 양과 사람 수 차이를 함께 보기"
-      },
-      {
-        "type": "external",
-        "title": "Evidence - Climate Change",
-        "source": "NASA Science",
-        "date": "기후 과학 안내",
-        "url": "https://science.nasa.gov/climate-change/evidence/",
-        "perspective": "과학 근거",
-        "stance": "기후변화를 주장이나 느낌이 아니라 관측 자료와 과학 근거로 살펴보는 관점",
-        "license": "NASA 공개 재사용 가능 자료",
-        "usage": "NASA 외 제3자 권리 표시 확인 후 출처 표시·번역·어린이용 재구성 가능",
-        "relatedQuestions": [
-          1
-        ],
-        "readingFocus": "정책 속도 논쟁 전에 과학적으로 확인된 근거와 의견을 구분하기",
-        "koreanReconstruction": {
-          "title": "기후변화는 여러 증거를 함께 보고 판단한다",
-          "body": [
-            "이 자료는 지구 기온, 바다, 얼음, 해수면 같은 여러 관측 증거를 통해 기후변화를 설명한다. NASA는 지구 평균 표면 온도가 19세기 후반 이후 약 섭씨 1도 올랐고, 바다 위쪽 100미터는 1969년 이후 약 섭씨 0.33도 따뜻해졌다고 제시한다.",
-            "얼음과 바다 자료도 함께 봐야 한다. 1993~2019년 그린란드는 해마다 평균 2790억 톤, 남극은 해마다 평균 1480억 톤의 얼음을 잃었고, 세계 해수면은 지난 세기에 약 20센티미터 올랐다고 설명한다.",
-            "기후 대응 속도를 토론할 때 과학적 근거와 정책 선택을 구분하는 데 도움이 된다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "기후변화는 여러 증거를 함께 보고 판단한다",
-          "body": [
-            "기후변화는 하루 날씨만 보고 판단하지 않는다. NASA 자료는 지구 평균 온도가 19세기 후반보다 약 섭씨 1도 올랐고, 바다 위쪽 100미터는 1969년 이후 약 섭씨 0.33도 따뜻해졌다고 설명한다.",
-            "얼음과 바다 자료도 중요하다. 1993~2019년 그린란드는 해마다 평균 2790억 톤, 남극은 해마다 평균 1480억 톤의 얼음을 잃었다. 세계 해수면은 지난 세기에 약 20센티미터 올랐다고 설명한다.",
-            "이 숫자들은 기후 대응 속도를 토론할 때 왜 과학 증거를 함께 봐야 하는지 알려 준다."
-          ]
-        },
-        "elementaryReadingFocus": "기후변화 증거가 어떤 관찰 자료에서 나오는지 보기"
       },
       {
         "type": "external",
@@ -1593,46 +1429,16 @@
         "elementaryReadingFocus": "기술이 공부에 도움을 주려면 어떤 조건이 필요한지 보기"
       },
       {
-        "type": "external",
-        "resourceKind": "조사/통계 분석",
-        "title": "Frequent Social Media Use and Experiences with Bullying Victimization, Persistent Feelings of Sadness or Hopelessness, and Suicide Risk Among High School Students",
-        "source": "CDC MMWR",
-        "date": "2024.10.10",
-        "url": "https://www.cdc.gov/mmwr/volumes/73/su/su7304a3.htm",
+        "type": "internal",
+        "articleId": "news-059",
         "perspective": "마음건강",
         "stance": "미국 고등학생 2023 YRBS 자료로 소셜미디어 사용 빈도와 괴롭힘·마음건강 지표의 관련을 분석한 자료",
-        "license": "미국 연방정부 공개 자료",
-        "usage": "미국 연방정부 공개 자료를 바탕으로 일반용 한국어 해석 글과 초등 고학년용 쉬운 재구성 글을 제공합니다. 원문 링크를 함께 제공합니다.",
         "readingFocus": "자주 쓰는 소셜미디어와 괴롭힘·슬픔·자살 위험의 관련을 보되, 원인이라고 단정하지 않기",
+        "elementaryReadingFocus": "소셜미디어 사용 조사에서 관련성과 원인을 구분하며 근거 찾기",
         "relatedQuestions": [
           1,
           3
-        ],
-        "evidenceInfo": {
-          "sourceDetail": "CDC MMWR에 실린 2023 Youth Risk Behavior Survey 분석 보고서입니다.",
-          "sampleOrScope": "미국 9~12학년 공·사립학교 학생을 대표하도록 설계한 표본 조사이며, 보고서 분석에는 20,103명의 응답이 포함되었습니다.",
-          "timeRange": "2023년 조사 자료를 2024년 10월 10일 MMWR Supplement로 공개했습니다.",
-          "caution": "단면 조사라 소셜미디어 사용이 마음건강 문제의 직접 원인이라고 단정할 수 없고, 미국 고등학생 자료라는 범위를 확인해야 합니다."
-        },
-        "elementaryReadingFocus": "소셜미디어 사용 조사에서 관련성과 원인을 구분하며 근거 찾기",
-        "evidenceSuitability": "핵심 근거자료",
-        "evidenceReviewNote": "소셜미디어 제한·플랫폼 책임 논제에 쓰일 수 있는 조사 근거입니다. 단, 관련성이 곧 원인이라는 뜻은 아니라는 한계를 함께 제시합니다.",
-        "koreanReconstruction": {
-          "title": "미국 고등학생의 잦은 소셜미디어 사용과 건강 위험 지표",
-          "body": [
-            "CDC MMWR의 2024년 분석은 2023년 미국 Youth Risk Behavior Survey 자료를 사용했다. 미국 고등학생의 77.0%가 소셜미디어를 하루에 여러 번 이상 쓰는 잦은 사용자로 분류되었다.",
-            "잦은 사용자는 학교 괴롭힘, 온라인 괴롭힘, 지속적인 슬픔이나 절망감, 자살 생각과 계획 같은 지표를 더 많이 보고한 것으로 나타났다. 다만 이 조사는 한 시점의 관련성을 본 것이므로 소셜미디어가 모든 문제의 직접 원인이라고 단정할 수는 없다.",
-            "이 자료는 학교 스마트폰 규칙이나 플랫폼 책임을 논의할 때 “사용을 줄여야 한다”는 주장뿐 아니라 “어떤 학생이 더 취약한지, 어떤 보호 장치가 필요한지”를 묻는 근거로 쓸 수 있다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "소셜미디어를 자주 쓰는 학생과 마음건강 자료 읽기",
-          "body": [
-            "CDC의 2024년 분석은 2023년 미국 고등학생 조사 자료를 보았다. 이 조사에서 학생의 77.0%는 소셜미디어를 하루에 여러 번 이상 쓰는 잦은 사용자였다.",
-            "잦은 사용 학생들은 괴롭힘, 온라인 괴롭힘, 계속되는 슬픔이나 절망감, 자살 생각과 계획을 더 많이 보고했다. 하지만 이 자료만으로 소셜미디어가 바로 원인이라고 말할 수는 없다.",
-            "이 자료는 스마트폰을 학교에서 제한해야 하는지, 플랫폼이 학생을 더 보호해야 하는지 말할 때 근거와 한계를 함께 생각하게 해 준다."
-          ]
-        }
+        ]
       },
       {
         "type": "external",
@@ -1673,44 +1479,6 @@
           "caution": "검토한 연구들의 국가, 학년, 정책 강도가 다르므로 하나의 결론으로 모든 학교에 적용하기 어렵습니다."
         },
         "elementaryReadingFocus": "학교 스마트폰 금지 연구가 어떤 효과와 한계를 말하는지 보기"
-      },
-      {
-        "type": "external",
-        "resourceKind": "공공 보건 보고서",
-        "title": "Social Media and Youth Mental Health",
-        "source": "U.S. Surgeon General / HHS",
-        "date": "2023 Advisory",
-        "url": "https://www.hhs.gov/surgeongeneral/reports-and-publications/youth-mental-health/social-media/index.html",
-        "perspective": "청소년 마음건강",
-        "stance": "소셜미디어의 이익과 위험을 함께 보며 청소년, 가족, 기업, 정책 담당자의 역할을 제시하는 공공 보고서",
-        "license": "미국 연방정부 공개 자료",
-        "usage": "미국 연방정부 공개 자료를 바탕으로 일반용 번역형 재구성과 초등 고학년용 쉬운 재구성을 제공합니다. 원문 PDF 표·디자인은 사용하지 않습니다.",
-        "readingFocus": "소셜미디어 사용 시간만이 아니라 수면, 관계, 괴롭힘, 보호 장치를 함께 보기",
-        "relatedQuestions": [
-          1,
-          3
-        ],
-        "evidenceInfo": {
-          "sourceDetail": "미국 Surgeon General이 낸 청소년 소셜미디어와 마음건강 공공 보건 권고 자료입니다.",
-          "sampleOrScope": "청소년, 가족, 기술기업, 정책 담당자, 연구자를 대상으로 한 공공 보건 근거와 권고입니다.",
-          "timeRange": "2023년 Advisory 자료입니다.",
-          "caution": "소셜미디어의 위험과 이익을 함께 다루며, 사용 시간만으로 원인을 단정하지 않도록 읽어야 합니다."
-        },
-        "elementaryReadingFocus": "소셜미디어가 마음건강과 연결될 때 학생, 보호자, 회사가 무엇을 해야 하는지 보기",
-        "koreanReconstruction": {
-          "title": "소셜미디어는 청소년에게 이익과 위험을 함께 만든다",
-          "body": [
-            "미국 공중보건서비스단장 자문은 소셜미디어가 청소년의 정신건강에 미치는 영향을 다룬다. 자료는 13~17세 청소년의 최대 95%가 소셜미디어 플랫폼을 사용한다고 보고하며, 매일 사용하는 청소년이 거의 3분의 2, 거의 계속 사용하는 청소년이 3분의 1이라고 제시한다.",
-            "이 자료는 소셜미디어가 관계와 표현의 기회를 줄 수 있지만, 유해한 콘텐츠, 괴롭힘, 수면 부족, 몸 이미지 걱정 같은 위험도 있다고 본다. 그래서 개인 절제만이 아니라 보호자, 학교, 플랫폼, 정책 담당자가 각각 맡을 책임을 함께 논의해야 한다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "소셜미디어는 도움이 되기도 하고 위험할 수도 있다",
-          "body": [
-            "미국 공중보건서비스단장 자료는 13~17세 청소년의 최대 95%가 소셜미디어를 쓴다고 설명한다. 또 매일 쓰는 청소년이 거의 3분의 2, 거의 계속 쓰는 청소년이 3분의 1이라고 제시한다.",
-            "소셜미디어는 친구와 이야기하고 정보를 얻는 데 도움이 될 수 있다. 하지만 잠을 줄이거나, 괴롭힘을 당하거나, 내 모습이 싫어지는 마음이 생길 수도 있다. 그래서 학생, 보호자, 학교, 플랫폼이 각각 무엇을 해야 하는지 생각해야 한다."
-          ]
-        }
       },
       {
         "type": "external",
@@ -1928,55 +1696,16 @@
         "elementaryReadingFocus": "기기만 있어도 디지털 격차(컴퓨터와 인터넷 차이)가 해결되는지 생각하기"
       },
       {
-        "type": "external",
-        "title": "공공 개인정보 보호 강화…해킹·인적과실 모두 잡는다",
-        "source": "정책브리핑",
-        "date": "2026.03.26",
-        "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148961531",
+        "type": "internal",
+        "articleId": "news-036",
         "perspective": "정책 원문",
         "stance": "AI와 디지털 학습 도구를 쓸 때 개인정보 보호 원칙을 함께 봐야 하는 근거",
-        "license": "공공누리 확인 필요",
-        "usage": "외부 원문 링크와 최소 설명만 제공합니다. 본문·표·이미지는 앱에 옮기지 않습니다.",
+        "readingFocus": "AI 학습 도구 사용에서 개인정보와 보안 책임을 어디에 넣을지 보기",
+        "elementaryReadingFocus": "AI와 학교 앱을 쓸 때 내 정보를 왜 조심해서 지켜야 하는지 보기",
         "relatedQuestions": [
           1,
           2
-        ],
-        "readingFocus": "AI 학습 도구 사용에서 개인정보와 보안 책임을 어디에 넣을지 보기",
-        "elementaryReadingFocus": "AI와 학교 앱을 쓸 때 내 정보를 왜 조심해서 지켜야 하는지 보기"
-      },
-      {
-        "type": "external",
-        "title": "Digital Inclusion Action Plan: One Year On",
-        "source": "GOV.UK",
-        "date": "2026.03",
-        "url": "https://www.gov.uk/government/publications/digital-inclusion-action-plan-one-year-on/digital-inclusion-action-plan-one-year-on",
-        "perspective": "디지털 접근권",
-        "stance": "AI 학습 도구가 늘어날수록 기기·인터넷·교육 접근권을 함께 보장해야 한다는 관점",
-        "license": "Open Government Licence v3.0",
-        "usage": "Open Government Licence v3.0 영문 원문을 바탕으로 일반용 한국어 해석 글과 초등 고학년용 쉬운 재구성 글을 제공합니다. 원문 링크를 함께 제공합니다.",
-        "relatedQuestions": [
-          3
-        ],
-        "readingFocus": "AI 학습 도구 접근성을 보장하려면 기기·인터넷·교육 지원이 어떻게 필요할지 보기",
-        "elementaryReadingFocus": "AI 도구를 쓰기 전 기기, 인터넷, 도움의 차이를 어떻게 줄일지 보기",
-        "evidenceSuitability": "핵심 근거자료",
-        "evidenceReviewNote": "AI 학습 도구 접근 격차를 학교·정부 책임으로 다룰 근거입니다.",
-        "koreanReconstruction": {
-          "title": "디지털 포용은 접속, 기기, 기술, 도움을 함께 보는 문제다",
-          "body": [
-            "GOV.UK의 2026년 자료는 디지털 포용을 모든 사람이 안전하고 자신 있게 온라인에 접속하고 디지털 서비스를 이용할 수 있게 하는 일로 설명한다. 영국 정부는 160만 명이 인터넷 연결 자체가 없고, 더 많은 사람이 적절한 기기나 기술을 갖지 못했다고 본다.",
-            "자료는 2025년에 발표한 디지털 포용 계획이 4가지 영역, 곧 디지털 기술, 인터넷과 기기 접근, 쉬운 온라인 서비스와 오프라인 대안, 신뢰할 수 있는 지역 지원을 다룬다고 설명한다. 또한 2026년에는 필수 디지털 기술 기준을 AI 같은 새 기술까지 반영하도록 갱신하겠다고 한다.",
-            "이 자료는 AI 학습 도구 사용을 학생 개인 책임으로만 볼 것이 아니라 기기, 인터넷, 교육 지원, 오프라인 대안을 함께 설계해야 한다는 근거가 된다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "AI 도구를 쓰려면 먼저 디지털 접근이 필요하다",
-          "body": [
-            "이 2026년 영국 정부 자료는 모든 사람이 인터넷에 접속하고, 필요한 기기를 가지고, 안전하게 온라인 서비스를 쓸 수 있어야 한다고 설명한다. 영국에는 인터넷 연결이 전혀 없는 사람이 160만 명 있고, 기기나 사용 기술이 부족한 사람도 많다고 본다.",
-            "자료는 2025년 계획에서 4가지 일을 강조했다. 디지털 기술 배우기, 인터넷과 기기 얻기, 쉬운 온라인 서비스와 오프라인 방법 마련하기, 믿을 수 있는 지역 도움 만들기이다.",
-            "이 자료는 AI 과제나 AI 학습 도구를 이야기할 때 “쓸 수 있는 학생만 쓰면 된다”가 아니라 학교와 정부가 접근 격차를 어떻게 줄일지도 생각해야 한다는 근거가 된다."
-          ]
-        }
+        ]
       },
       {
         "type": "external",
@@ -2375,23 +2104,6 @@
       },
       {
         "type": "external",
-        "title": "Youville",
-        "source": "Federal Trade Commission",
-        "date": "어린이 온라인 안전 교육",
-        "url": "https://consumer.ftc.gov/features/youville",
-        "perspective": "어린이 실천",
-        "stance": "어린이가 개인정보, 온라인 시민성, 광고 이해, 사기 피하기를 활동으로 배울 수 있는 자료",
-        "license": "미국 연방정부 공개 자료",
-        "usage": "외부 원문 링크와 최소 설명만 제공합니다. 본문·표·이미지는 앱에 옮기지 않습니다.",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "어린이가 직접 적용할 수 있는 온라인 정보 확인 활동을 찾기",
-        "elementaryReadingFocus": "광고와 내 정보를 배울 때 어떤 상황을 조심해야 하는지 보기"
-      },
-      {
-        "type": "external",
         "resourceKind": "조사/통계",
         "title": "Spotting disinformation: How confident are Europeans in a digital age?",
         "source": "data.europa.eu",
@@ -2413,48 +2125,6 @@
           "caution": "유럽 시민 대상 조사이므로 한국 어린이의 행동과 바로 같다고 볼 수 없고, 자기보고 응답의 한계를 고려해야 합니다."
         },
         "elementaryReadingFocus": "사람들이 거짓 정보를 얼마나 잘 알아본다고 생각하는지 조사로 보기"
-      },
-      {
-        "type": "external",
-        "resourceKind": "연구/논문",
-        "title": "Why do people spread false information online?",
-        "source": "PLOS ONE",
-        "date": "2020.10.07",
-        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0239666",
-        "perspective": "허위정보 공유 연구",
-        "stance": "사람들이 온라인 허위정보를 공유할 가능성에 영향을 주는 메시지·이용자 요인을 조사한 공개 논문",
-        "license": "CC BY",
-        "usage": "CC BY 논문을 바탕으로 일반용 한국어 해석 글과 초등 고학년용 쉬운 재구성 글을 제공합니다. 원문 링크를 함께 제공합니다.",
-        "readingFocus": "허위정보가 퍼지는 이유를 개인 책임만이 아니라 메시지 형식과 플랫폼 환경까지 넓혀 보기",
-        "relatedQuestions": [
-          1,
-          3
-        ],
-        "evidenceInfo": {
-          "sourceDetail": "PLOS ONE에 공개된 온라인 허위정보 공유 가능성 연구 논문입니다.",
-          "sampleOrScope": "소셜미디어 이용자가 허위정보를 공유할 가능성에 영향을 주는 메시지와 이용자 특성을 조사했습니다.",
-          "timeRange": "2020년 공개 논문입니다.",
-          "caution": "자기보고식 공유 가능성을 다룬 연구라 실제 플랫폼 행동과 차이가 있을 수 있습니다."
-        },
-        "elementaryReadingFocus": "거짓 정보 공유를 개인 잘못과 온라인 환경 문제로 나누어 보기",
-        "evidenceSuitability": "핵심 근거자료",
-        "evidenceReviewNote": "허위정보 공유 책임을 개인 습관과 플랫폼 환경 양쪽에서 볼 수 있게 하는 연구 근거입니다.",
-        "koreanReconstruction": {
-          "title": "사람들이 온라인 허위정보를 공유하는 이유를 연구한 논문",
-          "body": [
-            "PLOS ONE의 2020년 논문은 사람들이 온라인 허위정보를 공유할 가능성이 메시지의 특징과 보는 사람의 특징에 따라 달라질 수 있다고 분석한다. 연구는 허위정보 공유를 단순히 “사람들이 조심하지 않아서”로만 볼 수 없고, 메시지 형식과 이용자의 믿음, 온라인 환경을 함께 봐야 한다는 점을 보여 준다.",
-            "이 자료는 허위정보를 공유한 학생을 바로 처벌할지, 확인 방법을 가르치고 정정 기회를 줄지 토론할 때 근거가 된다. 또한 플랫폼이 어떤 글을 더 잘 보이게 만드는지도 책임 논의에 포함할 수 있다.",
-            "다만 연구 결과를 모든 나라와 모든 연령에 그대로 적용할 수는 없으므로, 수업에서는 “왜 사람들이 공유하게 되는가”를 이해하는 보조 근거로 쓰는 것이 적절하다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "거짓 정보는 왜 퍼질까",
-          "body": [
-            "이 2020년 논문은 사람들이 온라인에서 거짓 정보를 왜 공유하는지 살펴본 연구이다. 거짓 정보가 퍼지는 이유는 “사람이 나빠서”만이 아니라 글의 모양, 보는 사람의 생각, 온라인에서 글이 퍼지는 방식과도 관련될 수 있다.",
-            "그래서 학생이 거짓 정보를 공유했을 때 바로 벌을 주는 것만이 답인지 생각해 볼 수 있다. 확인하는 방법을 배우고, 잘못된 정보를 고칠 기회를 주는 방법도 근거를 가지고 토의할 수 있다.",
-            "다만 이 연구가 모든 학생에게 똑같이 맞는 것은 아니다. 수업에서는 거짓 정보가 퍼지는 이유를 이해하는 참고 근거로 읽는 것이 좋다."
-          ]
-        }
       },
       {
         "type": "external",
@@ -2682,23 +2352,6 @@
         ],
         "readingFocus": "합성물이 허위정보로 퍼지는 조건을 메시지와 플랫폼 환경에서 찾기",
         "elementaryReadingFocus": "사람들이 거짓 정보를 퍼뜨리는 이유를 실수와 일부러 한 행동으로 나누어 보기"
-      },
-      {
-        "type": "external",
-        "title": "AI Act",
-        "source": "European Commission",
-        "date": "정책 안내",
-        "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
-        "perspective": "AI 투명성 규칙",
-        "stance": "딥페이크와 일부 AI 생성 공개 콘텐츠에는 투명한 표시 의무가 필요하다는 규제 관점",
-        "license": "EU 저작권 고지에 따라 CC BY 4.0 적용 가능 범위 확인",
-        "usage": "외부 원문 링크와 최소 설명만 제공합니다. 본문·표·이미지는 앱에 옮기지 않습니다.",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "readingFocus": "AI 합성물 표시 의무가 어떤 경우에 필요한지 규칙 관점에서 보기",
-        "elementaryReadingFocus": "AI가 만든 사진·글·영상을 왜 알려야 하는지 보기"
       },
       {
         "type": "external",
@@ -4268,47 +3921,6 @@
       },
       {
         "type": "external",
-        "title": "Frequent Social Media Use and Experiences with Bullying Victimization...",
-        "source": "CDC MMWR",
-        "date": "2024",
-        "url": "https://www.cdc.gov/mmwr/volumes/73/su/su7304a3.htm",
-        "perspective": "연구·조사 해설",
-        "stance": "잦은 소셜미디어 사용과 괴롭힘·정신건강 지표의 관련성을 다룹니다.",
-        "license": "미국 연방정부 공개 자료",
-        "usage": "미국 연방정부 공개 자료를 바탕으로 일반용 한국어 해석 글과 초등 고학년용 쉬운 재구성 글을 제공합니다. 원문 링크를 함께 제공합니다.",
-        "resourceKind": "연구·조사",
-        "evidenceInfo": {
-          "sourceDetail": "CDC MMWR에 실린 2023 YRBS 분석 글입니다.",
-          "sampleOrScope": "미국 고등학생 조사 응답 분석입니다.",
-          "timeRange": "2023년 조사 자료 분석입니다.",
-          "caution": "관련성이 인과관계를 바로 뜻하지는 않으므로 정책 근거로 쓸 때 조심해서 읽습니다."
-        },
-        "readingFocus": "나이 제한 찬성 근거와 한계를 함께 찾습니다.",
-        "elementaryReadingFocus": "소셜미디어 사용 조사에서 관련성과 원인을 구분하며 근거 찾기",
-        "relatedQuestions": [
-          1
-        ],
-        "evidenceSuitability": "핵심 근거자료",
-        "evidenceReviewNote": "소셜미디어 제한·플랫폼 책임 논제에 쓰일 수 있는 조사 근거입니다. 단, 관련성이 곧 원인이라는 뜻은 아니라는 한계를 함께 제시합니다.",
-        "koreanReconstruction": {
-          "title": "미국 고등학생의 잦은 소셜미디어 사용과 건강 위험 지표",
-          "body": [
-            "CDC MMWR의 2024년 분석은 2023년 미국 Youth Risk Behavior Survey 자료를 사용했다. 미국 고등학생의 77.0%가 소셜미디어를 하루에 여러 번 이상 쓰는 잦은 사용자로 분류되었다.",
-            "잦은 사용자는 학교 괴롭힘, 온라인 괴롭힘, 지속적인 슬픔이나 절망감, 자살 생각과 계획 같은 지표를 더 많이 보고한 것으로 나타났다. 다만 이 조사는 한 시점의 관련성을 본 것이므로 소셜미디어가 모든 문제의 직접 원인이라고 단정할 수는 없다.",
-            "이 자료는 학교 스마트폰 규칙이나 플랫폼 책임을 논의할 때 “사용을 줄여야 한다”는 주장뿐 아니라 “어떤 학생이 더 취약한지, 어떤 보호 장치가 필요한지”를 묻는 근거로 쓸 수 있다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "소셜미디어를 자주 쓰는 학생과 마음건강 자료 읽기",
-          "body": [
-            "CDC의 2024년 분석은 2023년 미국 고등학생 조사 자료를 보았다. 이 조사에서 학생의 77.0%는 소셜미디어를 하루에 여러 번 이상 쓰는 잦은 사용자였다.",
-            "잦은 사용 학생들은 괴롭힘, 온라인 괴롭힘, 계속되는 슬픔이나 절망감, 자살 생각과 계획을 더 많이 보고했다. 하지만 이 자료만으로 소셜미디어가 바로 원인이라고 말할 수는 없다.",
-            "이 자료는 스마트폰을 학교에서 제한해야 하는지, 플랫폼이 학생을 더 보호해야 하는지 말할 때 근거와 한계를 함께 생각하게 해 준다."
-          ]
-        }
-      },
-      {
-        "type": "external",
         "title": "Keeping children safe online",
         "source": "UNICEF",
         "date": "수시 업데이트",
@@ -4348,45 +3960,6 @@
           1,
           3
         ]
-      },
-      {
-        "type": "external",
-        "title": "Social Media and Youth Mental Health",
-        "source": "U.S. Surgeon General / HHS",
-        "date": "2023",
-        "url": "https://www.hhs.gov/surgeongeneral/reports-and-publications/youth-mental-health/social-media/index.html",
-        "perspective": "청소년 정신건강",
-        "stance": "소셜미디어와 청소년 정신건강 위험, 가족·플랫폼·정책 담당자의 역할을 제시합니다.",
-        "license": "미국 연방정부 공공자료",
-        "usage": "미국 연방정부 공개 자료를 바탕으로 일반용 번역형 재구성과 초등 고학년용 쉬운 재구성을 제공합니다. 원문 PDF 표·디자인은 사용하지 않습니다.",
-        "resourceKind": "보건 권고",
-        "evidenceInfo": {
-          "sourceDetail": "미국 공중보건서비스단장 청소년 소셜미디어 권고 페이지입니다.",
-          "sampleOrScope": "청소년 정신건강과 소셜미디어 사용에 관한 연구와 정책 제언을 종합합니다.",
-          "timeRange": "2023년 권고 및 HHS 업데이트 자료입니다.",
-          "caution": "미국 보건 권고이므로 한국 수업에서는 정책 선택의 참고 근거로 사용합니다."
-        },
-        "readingFocus": "소셜미디어를 개인 습관 문제가 아니라 공중보건과 플랫폼 책임 문제로 볼 근거를 찾습니다.",
-        "elementaryReadingFocus": "소셜미디어가 마음건강과 연결될 때 학생, 보호자, 회사가 무엇을 해야 하는지 보기",
-        "relatedQuestions": [
-          1,
-          4,
-          5
-        ],
-        "koreanReconstruction": {
-          "title": "소셜미디어는 청소년에게 이익과 위험을 함께 만든다",
-          "body": [
-            "미국 공중보건서비스단장 자문은 소셜미디어가 청소년의 정신건강에 미치는 영향을 다룬다. 자료는 13~17세 청소년의 최대 95%가 소셜미디어 플랫폼을 사용한다고 보고하며, 매일 사용하는 청소년이 거의 3분의 2, 거의 계속 사용하는 청소년이 3분의 1이라고 제시한다.",
-            "이 자료는 소셜미디어가 관계와 표현의 기회를 줄 수 있지만, 유해한 콘텐츠, 괴롭힘, 수면 부족, 몸 이미지 걱정 같은 위험도 있다고 본다. 그래서 개인 절제만이 아니라 보호자, 학교, 플랫폼, 정책 담당자가 각각 맡을 책임을 함께 논의해야 한다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "소셜미디어는 도움이 되기도 하고 위험할 수도 있다",
-          "body": [
-            "미국 공중보건서비스단장 자료는 13~17세 청소년의 최대 95%가 소셜미디어를 쓴다고 설명한다. 또 매일 쓰는 청소년이 거의 3분의 2, 거의 계속 쓰는 청소년이 3분의 1이라고 제시한다.",
-            "소셜미디어는 친구와 이야기하고 정보를 얻는 데 도움이 될 수 있다. 하지만 잠을 줄이거나, 괴롭힘을 당하거나, 내 모습이 싫어지는 마음이 생길 수도 있다. 그래서 학생, 보호자, 학교, 플랫폼이 각각 무엇을 해야 하는지 생각해야 한다."
-          ]
-        }
       },
       {
         "type": "external",
@@ -4567,24 +4140,6 @@
       },
       {
         "type": "external",
-        "title": "Data protection in schools: taking and using photos and videos, and using CCTV",
-        "source": "GOV.UK",
-        "date": "2022",
-        "url": "https://www.gov.uk/guidance/data-protection-in-schools/taking-and-using-photos-and-videos-and-using-cctv-in-schools",
-        "perspective": "학교 CCTV·사진 처리 기준",
-        "stance": "학교가 사진·영상·CCTV를 사용할 때 데이터 보호 기준을 설명합니다.",
-        "license": "UK Open Government Licence 적용 가능 공공자료",
-        "usage": "외부 원문 링크와 최소 설명만 제공합니다. 본문·표·이미지는 앱에 옮기지 않습니다.",
-        "resourceKind": "정책 안내",
-        "readingFocus": "학교가 사진과 CCTV를 쓸 때 목적과 권리를 어떻게 설명해야 하는지 봅니다.",
-        "elementaryReadingFocus": "학교 사진과 CCTV를 쓸 때 지켜야 할 약속을 찾아보기",
-        "relatedQuestions": [
-          1,
-          2
-        ]
-      },
-      {
-        "type": "external",
         "title": "Facial Recognition Technology and surveillance",
         "source": "Information Commissioner’s Office",
         "date": "수시 업데이트",
@@ -4675,43 +4230,6 @@
           2,
           3
         ]
-      },
-      {
-        "type": "external",
-        "title": "Protection of children’s biometric information in schools",
-        "source": "GOV.UK",
-        "date": "2022",
-        "url": "https://www.gov.uk/government/publications/protection-of-biometric-information-of-children-in-schools",
-        "perspective": "학생 생체정보 보호",
-        "stance": "학교에서 지문·얼굴 같은 생체정보를 쓸 때 동의와 대체수단을 어떻게 다뤄야 하는지 안내합니다.",
-        "license": "Open Government Licence v3.0",
-        "usage": "Open Government Licence v3.0 영문 원문을 바탕으로 일반용 한국어 해석 글과 초등 고학년용 쉬운 재구성 글을 제공합니다. 원문 링크를 함께 제공합니다.",
-        "resourceKind": "정책 안내",
-        "readingFocus": "생체정보 동의가 일반 동의보다 더 엄격해야 하는 이유를 봅니다.",
-        "elementaryReadingFocus": "학교 생체정보 사용에서 동의와 다른 방법이 왜 중요한지 보기",
-        "relatedQuestions": [
-          1,
-          2,
-          3
-        ],
-        "evidenceSuitability": "핵심 근거자료",
-        "evidenceReviewNote": "학교 생체정보 사용에서 동의와 대체 방법을 논의하는 핵심 공식 안내입니다.",
-        "koreanReconstruction": {
-          "title": "학교가 학생 생체정보를 쓸 때 필요한 책임",
-          "body": [
-            "GOV.UK의 학교 생체정보 안내는 자동 생체 인식 시스템을 쓰려는 학교와 대학이 지켜야 할 법적 의무를 설명한다. 이 안내는 2012년에 처음 공개되었고 2022년에 Data Protection Act 2018과 UK GDPR을 반영해 갱신되었다.",
-            "자료는 학생의 민감한 정보를 처리할 때 학교가 데이터 관리자로서 책임을 져야 하며, 관련 법과 보호 절차를 이해해야 한다고 설명한다.",
-            "이 자료는 얼굴인식 출입·급식 시스템을 학교에 도입해도 되는지, 동의와 대체 절차가 없으면 문제가 되는지 토론할 때 핵심 근거로 쓸 수 있다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "학교가 얼굴이나 지문 정보를 쓸 때 조심해야 할 점",
-          "body": [
-            "이 GOV.UK 안내는 학교가 학생의 얼굴, 지문 같은 생체정보를 자동으로 알아보는 시스템에 쓸 때 지켜야 할 책임을 설명한다. 이 안내는 2012년에 처음 나왔고 2022년에 Data Protection Act 2018과 새 개인정보 보호 법 내용을 반영해 고쳐졌다.",
-            "생체정보는 쉽게 바꾸기 어렵고 아주 민감한 정보이다. 그래서 학교는 왜 필요한지, 누가 관리하는지, 원하지 않는 학생에게 다른 방법이 있는지 설명해야 한다.",
-            "이 자료는 학교에서 얼굴인식 출입이나 급식 시스템을 써도 되는지 토론할 때 동의와 대체 방법의 근거가 된다."
-          ]
-        }
       },
       {
         "type": "external",
@@ -4893,42 +4411,6 @@
       },
       {
         "type": "external",
-        "title": "Commission approves Notification of Disposition, Interpretive Rule on artificial intelligence in campaign ads",
-        "source": "Federal Election Commission",
-        "date": "2024",
-        "url": "https://www.fec.gov/updates/commission-approves-notification-of-disposition-interpretive-rule-on-artificial-intelligence-in-campaign-ads/",
-        "perspective": "미국 선거 광고 규제",
-        "stance": "미국 연방선거위원회가 AI 선거 광고 규칙 논의를 어떻게 처리했는지 보여줍니다.",
-        "license": "미국 연방정부 공개 자료",
-        "usage": "미국 연방정부 공개 자료를 바탕으로 일반용 한국어 해석 글과 초등 고학년용 쉬운 재구성 글을 제공합니다. 원문 링크를 함께 제공합니다.",
-        "resourceKind": "정책 결정",
-        "readingFocus": "기존 선거법으로 AI 광고를 다룰 수 있는지와 한계를 봅니다.",
-        "elementaryReadingFocus": "AI 선거 광고를 전면 금지할지, 거짓 사칭과 표시 문제로 다룰지 비교하기",
-        "relatedQuestions": [
-          1,
-          3
-        ],
-        "evidenceSuitability": "핵심 근거자료",
-        "evidenceReviewNote": "AI 선거 광고를 새 금지 규칙이 아니라 기존 허위 대리·사칭 규정으로 볼 수 있는지 판단하는 근거입니다.",
-        "koreanReconstruction": {
-          "title": "AI 선거 광고를 기존 허위 표시 규정으로 다룰 수 있는가",
-          "body": [
-            "미국 연방선거위원회(FEC)는 2024년 9월 19일 AI 선거 광고에 관한 새 규칙 제정 절차를 열지 않기로 결정하고, 기존 허위 표시 규정이 어떻게 적용되는지 설명하는 해석 규칙을 채택했다.",
-            "FEC는 특정 후보나 정당을 사칭하거나, 후보·정당을 대신해 말하는 것처럼 속여 기부를 요청하는 행위가 금지된다고 설명한다. 2023년 청원에는 AI로 만든 기만적 콘텐츠도 이 규정에 포함되도록 명확히 해 달라는 요구가 있었고, 2,000건이 넘는 의견이 제출되었다.",
-            "이 자료는 AI 선거 광고를 전면 금지할지, 허위 사칭과 표시 의무를 중심으로 규제할지 토론할 때 실제 정책 선택의 근거가 된다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "AI 선거 광고를 어떻게 다룰지 본 미국 사례",
-          "body": [
-            "미국 연방선거위원회는 2024년 9월 19일 AI 선거 광고에 대한 새 규칙을 바로 만들지는 않기로 했다. 대신 기존의 거짓 사칭 금지 규칙을 AI 광고에도 어떻게 적용할지 설명했다.",
-            "2023년에 시민단체가 AI로 만든 속임수 광고도 규칙에 넣어 달라고 요구했고, 2,000건이 넘는 의견이 모였다. FEC는 후보나 정당이 말한 것처럼 속이는 행위는 기술이 AI인지 아닌지와 상관없이 문제가 될 수 있다고 보았다.",
-            "이 자료는 AI 선거 광고를 모두 금지해야 하는지, 거짓 사칭과 표시를 중심으로 막아야 하는지 토론할 때 근거가 된다."
-          ]
-        }
-      },
-      {
-        "type": "external",
         "title": "Transparency and targeting of political advertising",
         "source": "European Commission",
         "date": "수시 업데이트",
@@ -5004,24 +4486,6 @@
         "relatedQuestions": [
           2,
           3
-        ]
-      },
-      {
-        "type": "external",
-        "title": "Fact Sheet: Disclosure of AI-Generated Content in Political Ads on TV and Radio",
-        "source": "Federal Communications Commission",
-        "date": "2024",
-        "url": "https://docs.fcc.gov/public/attachments/DOC-404389A1.pdf",
-        "perspective": "방송 정치광고 표시안",
-        "stance": "TV·라디오 정치광고에서 AI 생성 콘텐츠 표시를 검토한 FCC 자료입니다.",
-        "license": "미국 연방정부 공공자료",
-        "usage": "공식기관 자료를 원문 링크로만 제공합니다. 본문·표·이미지는 복사하지 않습니다.",
-        "resourceKind": "정책 제안",
-        "readingFocus": "AI 표시를 어디에 어떤 방식으로 할지 방송광고 기준을 참고합니다.",
-        "elementaryReadingFocus": "AI 광고 표시가 화면이나 소리에 어떻게 나와야 할지 보기",
-        "relatedQuestions": [
-          1,
-          4
         ]
       },
       {
@@ -5206,61 +4670,6 @@
           1,
           3
         ]
-      },
-      {
-        "type": "external",
-        "title": "FTC Staff Issue Perspective Paper on Video Game Loot Boxes Workshop",
-        "source": "Federal Trade Commission",
-        "date": "2020",
-        "url": "https://www.ftc.gov/news-events/news/press-releases/2020/08/ftc-staff-issue-perspective-paper-video-game-loot-boxes-workshop",
-        "perspective": "소비자 보호",
-        "stance": "미국 FTC가 루트박스 워크숍과 소비자 이슈를 정리했습니다.",
-        "license": "미국 연방정부 공공자료",
-        "usage": "공식기관 자료를 원문 링크로만 제공합니다. 본문·표·이미지는 복사하지 않습니다.",
-        "resourceKind": "소비자 보호 보고",
-        "readingFocus": "루트박스를 소비자 보호 문제로 보는 이유를 확인합니다.",
-        "elementaryReadingFocus": "확률형 아이템이 소비자 보호(돈을 쓰는 사람 보호) 문제인 이유 보기",
-        "relatedQuestions": [
-          1,
-          2,
-          3
-        ]
-      },
-      {
-        "type": "external",
-        "title": "FTC settlement order bans sales of Genshin Impact loot boxes to kids under 16 without parents’ consent",
-        "source": "FTC Consumer Advice",
-        "date": "2025",
-        "url": "https://consumer.ftc.gov/consumer-alerts/2025/01/ftc-settlement-order-bans-sales-genshin-impact-loot-boxes-kids-under-16-without-their-parents",
-        "perspective": "실제 집행 사례",
-        "stance": "특정 게임의 루트박스 판매에 대해 어린이 보호와 부모 동의 조건을 제시한 사례입니다.",
-        "license": "미국 연방정부 공개 자료",
-        "usage": "미국 연방정부 공개 자료를 바탕으로 일반용 한국어 해석 글과 초등 고학년용 쉬운 재구성 글을 제공합니다. 원문 링크를 함께 제공합니다.",
-        "resourceKind": "집행 사례",
-        "readingFocus": "구체적인 보호 조건이 어떻게 적용될 수 있는지 봅니다.",
-        "elementaryReadingFocus": "루트박스 판매에서 나이 제한, 보호자 동의, 가격과 확률 표시가 왜 중요한지 보기",
-        "relatedQuestions": [
-          1,
-          3
-        ],
-        "evidenceSuitability": "핵심 근거자료",
-        "evidenceReviewNote": "확률형 아이템 판매 제한, 보호자 동의, 실제 돈 표시와 확률 공개 조건을 보여 주는 집행 사례입니다.",
-        "koreanReconstruction": {
-          "title": "16세 미만 루트박스 판매와 보호자 동의 조건을 다룬 FTC 사례",
-          "body": [
-            "FTC 소비자 안내는 2025년 HoYoverse의 게임 Genshin Impact 루트박스 사건 합의를 설명한다. FTC는 게임 안 구매 구조가 복잡했고, 이용자가 원하는 상품을 얻을 확률에 대해 오해할 수 있었다고 보았다.",
-            "합의에 따라 회사는 16세 미만 어린이에게 보호자 동의 없이 루트박스를 팔 수 없고, 13세 미만 어린이에게는 COPPA 보호를 적용해야 한다. 또한 각 루트박스의 실제 돈 가격과 상품을 얻을 확률을 분명하게 알려야 한다.",
-            "이 자료는 어린이에게 확률형 아이템 판매를 금지해야 하는지, 아니면 보호자 동의와 가격·확률 공개를 조건으로 허용할지 토론하는 데 직접 근거가 된다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "어린이 루트박스 판매에 보호자 동의를 요구한 사례",
-          "body": [
-            "FTC는 2025년에 Genshin Impact라는 게임의 루트박스 문제를 설명했다. 루트박스는 무엇이 나올지 정확히 모르는 게임 속 뽑기 상자와 비슷하다.",
-            "합의 뒤 회사는 16세 미만에게 보호자 동의 없이 루트박스를 팔 수 없게 되었다. 또 13세 미만 어린이는 개인정보 보호 규칙인 COPPA의 보호를 받아야 한다. 회사는 루트박스가 실제 돈으로 얼마인지, 원하는 상품이 나올 확률이 얼마인지도 분명히 알려야 한다.",
-            "이 자료는 어린이에게 확률형 아이템 판매를 금지해야 하는지, 아니면 보호자 동의와 확률 공개를 조건으로 허용할지 토론할 때 근거가 된다."
-          ]
-        }
       },
       {
         "type": "external",
@@ -5614,60 +5023,6 @@
           3,
           4
         ]
-      },
-      {
-        "type": "external",
-        "title": "National School Lunch Program",
-        "source": "USDA Food and Nutrition Service",
-        "date": "2026",
-        "url": "https://www.fns.usda.gov/nslp/national-school-lunch-program-nslp",
-        "perspective": "학교급식 프로그램",
-        "stance": "미국의 저비용·무료 학교급식 제도와 영양 균형 기준을 설명합니다.",
-        "license": "미국 연방정부 공개 자료",
-        "usage": "미국 연방정부 공개 자료를 바탕으로 일반용 한국어 해석 글과 초등 고학년용 쉬운 재구성 글을 제공합니다. 원문 링크를 함께 제공합니다.",
-        "resourceKind": "정책 안내",
-        "readingFocus": "보편·선별 지원과 영양 기준이 어떻게 함께 설계되는지 봅니다.",
-        "elementaryReadingFocus": "학교급식이 비용 지원과 건강한 식사 기준을 함께 다루는 정책인지 보기",
-        "relatedQuestions": [
-          1,
-          2
-        ],
-        "evidenceSuitability": "핵심 근거자료",
-        "evidenceReviewNote": "무상·저가 급식과 영양 균형을 함께 보는 공식 정책 안내입니다.",
-        "koreanReconstruction": {
-          "title": "학교급식은 비용 지원과 영양 기준을 함께 다루는 정책이다",
-          "body": [
-            "USDA Food and Nutrition Service는 National School Lunch Program을 공립학교, 비영리 사립학교, 거주시설에서 운영되는 연방 지원 급식 프로그램으로 설명한다. 이 프로그램은 학교가 열리는 날 어린이에게 영양적으로 균형 잡힌 점심을 낮은 가격 또는 무료로 제공한다.",
-            "이 프로그램은 1946년 Harry Truman 대통령이 서명한 National School Lunch Act에 따라 만들어졌다. 자료는 급식을 단순한 식사 제공이 아니라 학생 건강과 학습 조건을 지원하는 제도로 볼 근거를 준다.",
-            "토론에서는 학교급식을 모두에게 무상으로 제공해야 하는지, 예산을 무상 제공과 식재료 질·안전 중 어디에 우선 써야 하는지 판단할 때 쓸 수 있다."
-          ]
-        },
-        "elementaryKoreanReconstruction": {
-          "title": "학교급식은 무료 지원과 건강한 식사를 함께 생각해야 한다",
-          "body": [
-            "USDA 자료는 미국의 National School Lunch Program이 학교에서 어린이에게 점심을 제공하는 연방 지원 프로그램이라고 설명한다. 이 급식은 학교가 열리는 날 영양 균형을 맞춘 점심을 낮은 가격이나 무료로 제공한다.",
-            "이 제도는 1946년에 만들어졌다. 그래서 학교급식은 “밥값을 누가 낼까”만이 아니라 건강한 식사와 배움의 조건을 함께 보는 문제이다.",
-            "이 자료는 학교급식을 모든 학생에게 무상으로 줘야 하는지, 또는 식재료 질과 안전에도 예산을 먼저 써야 하는지 토론할 때 근거가 된다."
-          ]
-        }
-      },
-      {
-        "type": "external",
-        "title": "Nutrition Standards for School Meals",
-        "source": "USDA Food and Nutrition Service",
-        "date": "2025",
-        "url": "https://www.fns.usda.gov/schoolmeals/nutrition-standards",
-        "perspective": "영양 기준",
-        "stance": "학교급식에서 열량, 영양, 식품군 기준을 어떻게 정하는지 보여줍니다.",
-        "license": "미국 연방정부 공공자료",
-        "usage": "공식기관 자료를 원문 링크로만 제공합니다. 본문·표·이미지는 복사하지 않습니다.",
-        "resourceKind": "영양 기준",
-        "readingFocus": "급식 질 논의에서 구체적인 영양 기준이 왜 필요한지 봅니다.",
-        "elementaryReadingFocus": "좋은 급식은 맛뿐 아니라 영양도 필요하다는 점 보기",
-        "relatedQuestions": [
-          2,
-          5
-        ]
       }
     ],
     "discussionMotion": "학교급식 정책은 무상 제공 확대, 급식 질, 안전과 선택권 중 무엇을 우선할지 선택해야 한다.",
@@ -6001,25 +5356,6 @@
       },
       {
         "type": "external",
-        "title": "연명의료결정제도",
-        "source": "국립연명의료관리기관",
-        "date": "수시 업데이트",
-        "url": "https://www.lst.go.kr/decn/maincontent.do",
-        "perspective": "제도 안내",
-        "stance": "사전연명의료의향서와 연명의료계획서 등 한국의 연명의료결정제도 구조를 안내합니다.",
-        "license": "공공기관 원문 링크 제공",
-        "usage": "본문을 옮기지 않고 제목·출처·읽기 초점·원문 링크만 제공합니다.",
-        "resourceKind": "제도 안내",
-        "readingFocus": "존엄사 논쟁을 실제 제도와 절차 기준으로 좁혀 봅니다.",
-        "elementaryReadingFocus": "생명 유지 치료를 결정할 때 어떤 제도가 있는지 보기",
-        "relatedQuestions": [
-          1,
-          2,
-          3
-        ]
-      },
-      {
-        "type": "external",
         "title": "사전연명의료결정",
         "source": "질병관리청 국가건강정보포털",
         "date": "2025",
@@ -6253,25 +5589,6 @@
           2,
           3,
           4
-        ]
-      },
-      {
-        "type": "external",
-        "title": "위화도 회군",
-        "source": "우리역사넷",
-        "date": "수시 업데이트",
-        "url": "https://contents.history.go.kr/mobile/tg/view.do?ganada=&levelId=tg_003_1350&pageUnit=10&subjectCode=tg_age_50&tabId=01",
-        "perspective": "역사 개요",
-        "stance": "요동 정벌과 위화도 회군의 배경, 권력 장악 과정을 정리합니다.",
-        "license": "우리역사넷 원문 링크 제공",
-        "usage": "본문을 옮기지 않고 제목·출처·읽기 초점·원문 링크만 제공합니다.",
-        "resourceKind": "역사 해설",
-        "readingFocus": "사건의 기본 흐름을 확인하고 토론의 사실 기반을 세웁니다.",
-        "elementaryReadingFocus": "위화도 회군이 어떤 사건인지 먼저 확인하기",
-        "relatedQuestions": [
-          1,
-          2,
-          3
         ]
       },
       {
