@@ -262,6 +262,10 @@ function extractReconstructionNumbers(reconstruction) {
   return Array.from(new Set(body.match(/[0-9]+(?:\.[0-9]+)?%?/g) || []));
 }
 
+function extractTextNumbers(text) {
+  return Array.from(new Set(String(text || '').match(/[0-9]+(?:\.[0-9]+)?%?/g) || []));
+}
+
 articleIds.forEach((articleId) => {
   const articlePath = `${articleId}.json`;
   if (!fs.existsSync(articlePath)) return;
@@ -642,6 +646,14 @@ topics.forEach((topic, index) => {
             const missingElementaryNumbers = standardNumbers.filter(number => !elementaryBody.includes(number));
             if (missingElementaryNumbers.length) {
               issues.push(`${resourceLabel}: elementaryKoreanReconstruction should preserve numeric evidence from koreanReconstruction (${missingElementaryNumbers.join(', ')})`);
+            }
+            const highlightedNumbers = extractTextNumbers([
+              ...(Array.isArray(resource.evidenceHighlights) ? resource.evidenceHighlights : []),
+              ...(Array.isArray(resource.elementaryEvidenceHighlights) ? resource.elementaryEvidenceHighlights : []),
+            ].join(' '));
+            const missingHighlightedNumbers = highlightedNumbers.filter(number => !standardBody.includes(number) || !elementaryBody.includes(number));
+            if (missingHighlightedNumbers.length) {
+              issues.push(`${resourceLabel}: korean reconstructions should not omit numeric evidence surfaced in evidenceHighlights (${missingHighlightedNumbers.join(', ')})`);
             }
           }
         }
